@@ -1,0 +1,76 @@
+pl:
+  application:
+    '404':
+      title: Błąd 404
+      message: Nie znaleziono szukanej strony
+  newsletter:
+    info: "Wpisz swój adres e-mail, aby otrzymywać nasz biuletyn elektroniczny."
+    wait: "Proszę czekać..."    
+    added: "Adres został dodany."
+    confirmation:
+      subject: "Newsletter - Potwierdź swój adres email"
+      confirmed: "Subskrypcja została potwierdzona."
+      error: "Nie udało się potwierdzić adresu e-mail."
+    send_mail:
+      subject: "Newsletter"
+      no_emails: "Nie wybrano żadnego odbiorcy."
+      sended: "Wiadomość została wysłana do %{count} odbiorców."
+  sort:
+    asc: "Sortuj rosnąco"
+    desc: "Sortuj malejąco"
+  menu:
+    pages: "Strony"
+    login: "Zaloguj"
+    logout: "Wyloguj"
+  meta:
+    description: "Opis strony"
+    keywords: "Słowa kluczowe"
+    title: "Trippro" 
+  create:
+    success: "Pomyślnie utworzono."
+    fail: "Nie udało się zapisać."
+  update:
+    success: "Zapisano zmiany."
+    fail: "Nie udało się zapisać zmian."
+  delete:
+    success: "Pomyślnie usunięto."
+    fail: "Nie udało się usunąć."
+  unauthorized:
+    default: Nie masz dostępu do wybranej strony.
+  activerecord:
+    models:
+      user: Użytkownik
+      attachment: Załącznik
+    attributes:
+      user:
+        email: "Adres email"
+        password: "Hasło"
+        password_confirmation: "Powtórz hasło"
+        set_role: "Wybierz uprawnienia"
+        role : Uprawnienia
+        remember_me: Zapamiętaj
+        current_password: "Aktualne hasło"
+      attachment:
+        upload: Plik
+        upload_content_type: 'Typ pliku'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: " jest wymagany."
+              taken: " już istnieje."
+              invalid: jest niepoprawny.
+            password:
+              blank: " jest wymagane."
+              confirmation: "i powtórzenie hasła nie są zgodne."
+        attachment:
+          attributes:
+            upload:
+              blank: "nie został wybrany"
+            upload_content_type:
+              invalid: "jest nieprawidołowy (dozwolone *.png i *.jpg)"
+  will_paginate:
+    previous_label: "&#8592; Poprzednia"
+    next_label: "Następna &#8594;"
+    page_gap: "&hellip;"
