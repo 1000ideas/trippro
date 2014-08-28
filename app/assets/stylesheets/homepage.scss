@@ -1,0 +1,123 @@
+@import '_overrides';
+@import 'compass/css3/transform';
+
+section.video {
+  height: 480px;
+  overflow: hidden;
+  position: relative;
+
+  h2 {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 40px;
+    font-weight: 200;
+    margin: 129px auto 0;
+  }
+
+  h3 {
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 16px;
+
+  }
+
+  .buttons {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin: 0 .6rem;
+      padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
+      font-weight: 600;
+
+      &:active {
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+
+  .infobar {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: rgba(#333, .7);
+    width: 100%;
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .5rem;
+    }
+
+    a {
+      padding: .5rem 0;
+      display: block;
+      font-size: 1rem;
+      color: #fff;
+      margin: 0;
+    }
+  }
+
+  .video-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: -1;
+
+    @media only screen and (max-width: 1200px) {
+      width: 1200px;
+      left: 50%;
+      margin-left: -600px;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+    }
+  }
+
+
+}
+
+
+.with-arrow {
+  &:after {
+    content: '';
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAMAAAC6CgRnAAAAh1BMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9qkf8RAAAALXRSTlMAL++f/rp/VgkF+d3Pi3lyXygD4b+qkW1FQDsZEw8B9MSzo5WQgk00JOzXZx9BRGBaAAAA90lEQVQoz22PB46DMBREBzCm995DDSn3P99qE7Ad4EmWxnr2fH2INDUuuTt218nmU1mMgylvtnfXASPwe8tvwTFSogkNSlyxi65Ovz00WrcU9g4OeNH2001xgqqfmatZ4czgA4Di4YLSCoHG1Nnq4is1B7SEXd+ywt1rBKYMDEmQkg30CzgLYVI3gVsJAZ/QPZrGwTWWvEfSItFEZ8vSluoHMFNwFKZQxP/nUoFSIIzefAWu8AwAuA4ueKmfRSLtrGryrchJcHLpvIVsPMopCbFL8lMbjIMBRmE5KxvldlkLAd2zbMfPc82NH2mFI5I7qGoyFyF2/gDfeA2rORkarAAAAABJRU5ErkJggg==');
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 0 0 .5rem;
+  }
+
+  &.arrow-down:after { @include transform(rotate(90deg)); }
+  &.arrow-left:after { @include transform(rotate(180deg)); }
+  &.arrow-top:after { @include transform(rotate(270deg)); }
+}
+
+
+.button.white-one {
+  background: #fff;
+  color: $primary-color;
+  &:hover, &:focus {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+.button.red-one {
+  background: $primary-color;
+  color: #fff;
+  &:hover, &:focus {
+    background: #fff;
+    color: $primary-color;
+  }
+}
