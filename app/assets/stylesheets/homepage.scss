@@ -1,5 +1,6 @@
 @import '_overrides';
 @import 'compass/css3/transform';
+@import 'compass/css3/transition';
 
 section.video {
   height: 480px;
@@ -119,5 +120,63 @@ section.video {
   &:hover, &:focus {
     background: #fff;
     color: $primary-color;
+  }
+}
+
+
+section.features {
+  ul {
+    max-width: 1240px;
+    display: block;
+    text-align: center;
+    margin: 3.8em auto;
+    list-style: none;
+
+    li {
+       vertical-align: top;
+       display: inline-block;
+       padding: 0 1.5rem;
+       width: 25%;
+
+       &:hover .red-icon {
+        border-width: 0px;
+        box-shadow: 0 0 0 10px rgba($primary-color, .8);
+       }
+    }
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+
+}
+
+
+span.red-icon {
+  background: $primary-color;
+  border-radius: 100%;
+  width: 75px;
+  height: 75px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  position: relative;
+  box-shadow: 0 0 0 0 rgba($primary-color, .8);
+  border: 10px solid $primary-color;
+  @include transition(300ms);
+
+  img {
+    display: block;
+  }
+
+
+  &:hover {
+    border-width: 0px;
+    box-shadow: 0 0 0 10px rgba($primary-color, .8);
   }
 }
