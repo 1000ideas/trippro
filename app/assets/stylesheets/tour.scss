@@ -1,0 +1,33 @@
+section.featured-video {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+
+  .poster {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      min-width: 1280px;
+      width: 100%;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 3.375rem;
+    font-weight: 200;
+    margin: 2.7em 0 0.5em 0;
+  }
+
+  a.play-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 94px;
+  }
+
+
+}

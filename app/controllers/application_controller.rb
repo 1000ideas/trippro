@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 
   layout 'application'
 
+  respond_to :html
+
   rescue_from CanCan::AccessDenied do
     if current_user
       redirect_to root_path, flash: I18n.t('access_denied')
@@ -13,6 +15,15 @@ class ApplicationController < ActionController::Base
   end
 
   def index
+
+  end
+
+  def tour
+
+  end
+
+  def contact
+
   end
 
   private
