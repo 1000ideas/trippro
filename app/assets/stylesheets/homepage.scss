@@ -345,6 +345,49 @@ section.benefits {
 }
 
 
+section.benefits-at-your-service {
+  padding-top: 4.5rem;
+  padding-bottom: 5.625rem;
+
+  h2 {
+    color: #333;
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 0 2em 0;
+  }
+
+  ul {
+    margin: 0 auto;
+    max-width: 1040px;
+    text-align: center;
+    list-style: none;
+
+  }
+
+  li {
+    display: inline-block;;
+    vertical-align: top;
+    margin-bottom: 2em;
+    width: 340px;
+  }
+
+  h3 {
+    font-size: 1.85rem;
+    color: #333;
+    font-weight: 200;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #333;
+    font-weight: 200;
+    margin: 0;
+
+  }
+}
+
+
 span.red-icon {
   background: $primary-color;
   border-radius: 100%;
