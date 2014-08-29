@@ -29,6 +29,38 @@
       </div>
     </header>
     <%= yield %>
+    <footer>
+      <div class="wrapper">
+        <div class="row links collapse">
+          <div class="columns small-4">
+            <%= link_to 'Tour', '#' %>
+            <%= link_to 'Get Started', '#' %>
+            <%= link_to 'News', '#' %>
+          </div>
+          <div class="columns small-4">
+            <%= link_to 'Terms of Service', '#' %>
+            <%= link_to 'Privacy Policy', '#' %>
+            <%= link_to 'FAQ', '#' %>
+          </div>
+          <div class="columns small-4">
+            <%= link_to 'Support', '#' %>
+            <%= link_to 'Contact us', '#' %>
+          </div>
+
+        </div>
+        <div class="social">
+          <p>
+            <strong>Follow us:</strong>
+            <%= link_to fa_icon('facebook'), '#', class: :facebook %>
+            <%= link_to fa_icon('twitter'), '#', class: :twitter %>
+            <%= link_to fa_icon('linkedin'), '#', class: :linkedin %>
+          </p>
+          <p class="copy">
+            Call Us +1 866 855 9630 &copy; 2014 Mondee Inc.
+          </p>
+        </div>
+      </div>
+    </footer>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

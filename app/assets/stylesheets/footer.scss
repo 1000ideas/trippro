@@ -1,0 +1,68 @@
+@import 'compass/css3/transition';
+
+footer {
+  border-top: 1px solid #f5f5f5;
+  .wrapper {
+    margin: 0 auto;
+    max-width: 850px;
+    padding: 2.5em 1em;
+    &:after { content: ''; clear: both; display: block; }
+  }
+
+  .social,
+  .links {
+    width: 50%;
+    float: left;
+  }
+  .links {
+    padding-right: 1rem;
+  }
+  .social {
+    text-align: right;
+
+    p {
+      font-size: .85rem;
+      margin-bottom: .3rem;
+    }
+
+
+    a {
+      position: relative;
+      border-radius: 50%;
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: #f5f5f5;
+      color: #fff;
+      margin: 0 .2rem;
+      padding: 8px 0 5px 1px;
+      text-align: center;
+      top: 0;
+      @include transition(top 500ms cubic-bezier(1.000, -0.8, 0.405, 1.425));
+
+      .fa {
+        font-size: 1.3rem;
+      }
+
+      &:hover, &:focus {
+        top: -10px;
+      }
+
+
+      &.facebook {background: #3a589b}
+      &.twitter {background: #55acee}
+      &.linkedin {background: #007ab9}
+    }
+  }
+
+  .links a {
+    display: block;
+    color: #555;
+    font-size: .85rem;
+
+    &:hover, &:focus {
+      color: #333;
+    }
+  }
+
+}
