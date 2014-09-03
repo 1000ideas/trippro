@@ -107,8 +107,22 @@ section.feature {
 section.other-feature {
   text-align: center;
   padding-top: 3rem;
-
-  > .row {
+   > .row {
     max-width:700px;
   }
 }
+
+
+section.get_started {
+  padding-bottom: 52px;
+  background-color: #f5f5f5;
+  h3 {
+  padding-top: 99px;
+    text-align: center
+
+  }
+
+  p.get-started {
+  padding-bottom: 57px;
+  }
+  }
