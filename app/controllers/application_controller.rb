@@ -9,8 +9,8 @@ class ApplicationController < ActionController::Base
     if current_user
       redirect_to root_path, flash: I18n.t('access_denied')
     else
-      @session[:requested_path] = request.path
-      redirect_to new_session_path, flash: I18n.t('access_denied')
+      session[:requested_path] = request.path
+      redirect_to new_user_session_path#, flash: I18n.t('access_denied')
     end
   end
 
@@ -23,6 +23,10 @@ class ApplicationController < ActionController::Base
   end
 
   def contact
+
+  end
+
+  def faq
 
   end
 

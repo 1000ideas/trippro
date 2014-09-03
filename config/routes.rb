@@ -32,6 +32,7 @@ Trippro::Application.routes.draw do
   scope controller: :application do
     get :contact
     get :tour
+    get :faq
     root action: :index, via: :get
   end
 
