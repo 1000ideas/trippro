@@ -23,7 +23,7 @@
               --><li><%= link_to 'Tour', tour_path(format: :html) %></li><!--
               --><li><%= link_to 'Contact Us', '#' %></li><!--
               --><li><%= link_to 'Login', '#' %></li><!--
-              --><li><%= link_to 'Get started', '#', class: :highlight %></li><!--
+              --><li><%= link_to 'Get started', get_started_path, class: :highlight %></li><!--
             --></ul>
         </nav>
       </div>
@@ -34,7 +34,7 @@
         <div class="row links collapse">
           <div class="columns small-4">
             <%= link_to 'Tour', '#' %>
-            <%= link_to 'Get Started', '#' %>
+            <%= link_to 'Get Started', get_started_path %>
             <%= link_to 'News', '#' %>
           </div>
           <div class="columns small-4">

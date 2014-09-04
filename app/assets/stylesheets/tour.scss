@@ -80,6 +80,7 @@ section.feature {
     list-style: none;
     li {
       position: relative;
+      
       &:before {
         position: absolute;
         content: '•';

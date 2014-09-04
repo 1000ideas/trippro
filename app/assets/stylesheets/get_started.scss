@@ -1,0 +1,180 @@
+@import 'overrides';
+
+section.sign_demo{
+	background: #f5f5f5;
+	height: 351px;
+ 
+  h2 {
+    text-align: center;
+    color: black;
+    display: block;
+    font-size: 40px;
+    font-weight: 200;
+    margin: 129px auto 0;
+  }
+
+  h3 {
+    text-align: center;
+    color: black;
+    display: block;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 16px;
+
+  }
+    ul {
+    	padding-top: 79px;
+    max-width: 1240px;
+    display: block;
+    text-align: center;
+    margin: 3.8em auto;
+    list-style: none;
+
+    li {
+       vertical-align: top;
+       display: inline-block;
+       padding: 0 1.5rem;
+       width: 40%;
+
+
+       &:hover .red-icon {
+        border-width: 0px;
+        box-shadow: 0 0 0 10px rgba($primary-color, .8);
+       }
+    }
+  }
+
+	p{
+		display: inline-block;
+	}
+
+ .buttons {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      margin: 0 .6rem;
+      padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
+      font-weight: 600;
+
+      &:active {
+        position: relative;
+        top: 1px;
+
+      }
+    }
+  }
+}
+#myModal{
+  text-align: center;
+
+    h2 {
+      font-size: 28px;
+      font-weight: 15px;
+      text-align: center;
+      color: #333333;
+  }
+
+  p {
+    text-align: center;
+
+  }
+
+  input {
+     margin: 0 auto;
+  }
+  input[type="text"] {
+    text-align: center;
+    width: 286px;
+
+  }
+
+
+     .button {
+      padding: 36px;
+      height: 60px;
+      width: 291px;
+      text {
+        padding-top: 20px;
+        text-align: center;
+      }
+       a {
+          display: inline-block;
+          margin: 0 .6rem;
+          padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
+          font-weight: 600;
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+}
+
+section.webinars{
+
+	h2 {
+    text-align: center;
+    color: black;
+    display: block;
+    font-size: 40px;
+    font-weight: 650;
+    margin: 129px auto 0;
+  }
+  h3 {
+    text-align: center;
+    color: black;
+    display: block;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 1.2;
+    margin: 16px;
+
+  }
+
+  ul {
+    padding-top: 20px;
+    padding-left: 700px;
+    text-align: center;
+    list-style-type: none;
+
+    li {
+       text-align: center;
+       max-width: 596px;
+        
+        .lang {
+          text{
+            color: green;
+          }
+                    
+        }
+
+        p {
+            display: inline-block;
+            #lang{
+              color: green;
+            }
+          }
+    }
+
+    .button {
+      padding: 9px;
+      height: 39px;
+      width: 118px;
+      text {
+        text-align: center;
+      }
+       a {
+          display: inline-block;
+          margin: 0 .6rem;
+          padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
+          font-weight: 600;
+        &:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+}

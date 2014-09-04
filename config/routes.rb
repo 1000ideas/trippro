@@ -33,6 +33,7 @@ Trippro::Application.routes.draw do
     get :contact
     get :tour
     get :faq
+    get :get_started
     root action: :index, via: :get
   end
 
