@@ -21,7 +21,7 @@
         <nav class="main-menu">
           <ul><!--
               --><li><%= link_to 'Tour', tour_path(format: :html) %></li><!--
-              --><li><%= link_to 'Contact Us', '#' %></li><!--
+              --><li><%= link_to 'Contact Us', contact_path %></li><!--
               --><li><%= link_to 'Login', '#' %></li><!--
               --><li><%= link_to 'Get started', get_started_path, class: :highlight %></li><!--
             --></ul>
@@ -33,7 +33,7 @@
       <div class="wrapper">
         <div class="row links collapse">
           <div class="columns small-4">
-            <%= link_to 'Tour', '#' %>
+            <%= link_to 'Tour', tour_path %>
             <%= link_to 'Get Started', get_started_path %>
             <%= link_to 'News', '#' %>
           </div>
@@ -44,7 +44,7 @@
           </div>
           <div class="columns small-4">
             <%= link_to 'Support', '#' %>
-            <%= link_to 'Contact us', '#' %>
+            <%= link_to 'Contact us', contact_path %>
           </div>
 
         </div>
