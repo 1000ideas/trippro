@@ -26,16 +26,20 @@
 			text-align: center;
 			padding-bottom: 20px
 		}
+		label{
+			display: inline-block;
+			float: left;
+			
+		    
+		}
 		p {
 			display: inline-block;
 		}
 		input {
 			margin: 0 auto;
-       		
     	}
     
 	    input[type="text"] {
-	      
 	      text-align: center;
 	      width: 286px;
 	    }
