@@ -2,6 +2,11 @@ class TripPro
   constructor: ->
     $( => @loaded())
     @init()
+    $(".more_info_expander").click (event) ->
+      event.preventDefault
+      exp_target = $(this).data("target")
+      $(this).find('i').toggleClass('clicked')
+      $(".#{exp_target}").slideToggle("fast")
 
   init: ->
     $(window).scroll (event) ->
