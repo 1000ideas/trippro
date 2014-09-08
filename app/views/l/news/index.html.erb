@@ -24,7 +24,7 @@ and ticketing technology providing the best international fares.</h2>
           <%= news.title %>
         </h3>
         <%= content_tag :div, class: 'image' do %>
-          <%= image_tag news.photo.url(:thumb) %>
+          <%= image_tag news.photo.url(:small) %>
         <% end if news.photo? %>
         <div class="content"><%=short news.content, 160 %></div>
         <div class="more"><%= link_to t('helpers.actions.more'), news_path(news) %></div>
