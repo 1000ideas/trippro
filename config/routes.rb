@@ -11,11 +11,21 @@ Trippro::Application.routes.draw do
       :registration => 'account'
     }
 
+  resources :news, only: [:index, :show]
+
+
   scope path: 'admin', as: :admin do
     scope module: :admin do
     end
 
     scope module: 'l/admin' do
+      resources :news, except: [:show] do
+        collection do
+          constraints(lambda {|req| req.params.has_key?(:ids)}) do
+            delete :bulk_destroy, action: :selection, defaults: {bulk_action: :destroy}
+          end
+        end
+      end
       resources :users do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do

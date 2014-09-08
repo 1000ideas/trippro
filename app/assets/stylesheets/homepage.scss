@@ -147,12 +147,13 @@ section.features {
     text-align: center;
     margin: 3.8em auto;
     list-style: none;
+    overflow: auto;
 
     li {
-       vertical-align: top;
-       display: inline-block;
+       // vertical-align: top;
+       // display: inline-block;
        padding: 0 1.5rem;
-       width: 25%;
+       // width: 25%;
 
        &:hover .red-icon {
         border-width: 0px;

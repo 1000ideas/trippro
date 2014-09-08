@@ -2,12 +2,12 @@
 
 <div class="buttons">
 <ul>
-	<li>
+	<li class="small-12 medium-3 columns">
 	<h3>Sign up for TripPro</h3>
 	<h5>Please fill out the application form. You will be given<br> a unique name, password, and link to our member<br> site, and you can start using TripPro right away.</h5>
 <%= link_to "Sign up", '#', class: 'button red-one radius' %>
 	</li>
-<li>
+<li class="small-12 medium-3 columns">
 	<h3>Demo</h3>
 	<h5>Our expert will be right back in touch<br> to find the best time for you to show<br> you the TripPro features.</h5>
 <%= link_to "Request a Demo", '#', class: 'button red-one radius', "data-reveal-id" => "myModal" %>
@@ -21,47 +21,50 @@
 </section>
 
 <div id="myModal" class="reveal-modal" data-reveal>
+	<div class="row">
 	  <h2>Sign up for a demo</h2>
 	  <div id="get_form">
-	  Name:<input type="text" name="fname"><br>
-	  Phone number:<input type="text" name="fname"><br>
-	  Email:<input type="text" name="fname"><br>
-	  Company (optional):<input type="text" name="fname"><br>
-	</div>
+		  Name:<input type="text" name="fname"><br>
+		  Phone number:<input type="text" name="fname"><br>
+		  Email:<input type="text" name="fname"><br>
+		  Company (optional):<input type="text" name="fname"><br>
+	  </div>
 	  <a class="close-reveal-modal">&#215;</a>
 
 	  <%= link_to "Request a demo", '#', class: 'button red-one radius' %>
+	</div>
 </div>
 
 <section class="webinars">
 
 <h2>Take part in a webinar</h2>
 <h3>Join our free webinar to learn more about TripPro. </h3>
+<div id="registerweb">
+	<ul>
+		<li class ="item1">
+		<p>balbalblabal</p> <p id="lang">fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
 
-<ul>
-	<li class ="item1">
-	<p>balbalblabal</p> <p id="lang">fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
+		<li>
+		<p>balbalblabal</p> <p class="lang">fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
 
-	<li>
-	<p>balbalblabal</p> <p class="lang">fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
+		<li>
+		balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
 
-	<li>
-	balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
+		<li>
+		balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
 
-	<li>
-	balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
+		<li>
+		balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
 
-	<li>
-	balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
-
-	<li>
-	balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
-	</li>
-</ul>
+		<li>
+		balbalblabal <p>fjasfja</p> <%= link_to "Register",'#', class: 'button red-one radius' %>
+		</li>
+	</ul>
+</div>
 
 </section> 

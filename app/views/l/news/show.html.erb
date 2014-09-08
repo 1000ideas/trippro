@@ -1,0 +1,7 @@
+<% title @news.title  %>
+<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
+
+<h2><%= @news.title %></h2>
+<div class="date"><%= l @news.created_at, format: '%d-%m-%Y %H:%M' %></div>
+<%= image_tag @news.photo.url(:medium) if @news.photo? %>
+<div class="content"><%= raw @news.content %></div>

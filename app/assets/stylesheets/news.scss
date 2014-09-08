@@ -1,0 +1,36 @@
+@import 'overrides';
+
+section.top_img {
+  position: relative;
+  overflow: hidden;
+  height: 480px;
+  padding-bottom: 50px;
+
+  .row{
+  	position: relative;
+  }
+  .poster {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+
+    img {
+      min-width: 1280px;
+      width: 100%;
+    }
+  }
+  h1 {
+  	text-align: center;
+  	color: #fff;
+  	font-size: 39px;
+    font-weight: 200;
+    margin: 2.0em;
+  }
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: 200;
+    margin: -4em 0 0.5em 0;
+  }
+}

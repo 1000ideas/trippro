@@ -11,9 +11,9 @@
 
 	p{
 	  text-align: center;
-	#red{
-		color: #ed1c24;
-	  }
+		strong{
+			color: red;
+		}
 	}
 }
 
@@ -44,23 +44,12 @@
 	      width: 286px;
 	    }
 
+
 	    .button {
-        padding: 36px;
-        height: 45px;
-        width: 291px;
-        text {
-          padding-top: 20px;
-          text-align: center;
-        }
-         a {
-            display: inline-block;
-            margin: 0 .6rem;
-            padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
-            font-weight: 600;
-          &:active {
-            position: relative;
-            top: 1px;
-          }
-        }
+	    margin: 20px;
+   	    font-weight: 800;
+	    padding-left: 4.5em;
+		padding-right: 4.5em;
+
       }
 	}

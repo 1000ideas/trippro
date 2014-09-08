@@ -38,51 +38,6 @@ section.feature {
   padding-top: 5rem;
   padding-bottom: 3rem;
 
-  .learn_book{
-    background: #f7f7f7;
-    display: inline-block;
-   
-    img{
-     max-width: 70%;
-     padding-bottom: 0px;
-    }
-    ul{
-      padding-top: 25px;
-      list-style-type: none;
-      content: "";
-      li{
-        text-align: center;
-        list-style-type: none;
-        padding-bottom: 150px;
-      }
-    }
-
-    section.benefits-at-your-service{
-        padding-left: 132px;
-        padding-top: 4.5rem;
-        padding-bottom: 5.625rem;
-        display: inline-block;
-      h2 {
-          color: #333;
-          font-size: 2.25rem;
-          font-weight: 600;
-          text-align: center;
-          margin: 0 0 2em 0;
-      }
-      ul {
-            max-width: 1040px;
-            display: block;
-            text-align: center;
-            list-style: none;
-      li {
-        display: inline-block;
-        vertical-align: top;
-        margin-bottom: -7em;
-        width: 340px;      
-      }
-    }
-    }
-  }
   > .row {
     position: relative;
 
@@ -102,6 +57,9 @@ section.feature {
     padding-right: 20px;
     position: relative;
 
+    @media only screen and (max-width: 40em) {
+      padding-left: 20px;
+    }
     .red-icon {
       position: absolute;
       margin: 0 0 0 -100px;
@@ -143,6 +101,10 @@ section.feature {
     .text {
       padding-right: 640px;
       padding-left: 120px;
+
+      @media only screen and (max-width: 40em) {
+      padding-left: 120px;
+      }
     }
   }
   div.learn_book{
