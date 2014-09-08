@@ -30,8 +30,6 @@ section.featured-video {
     text-align: center;
     width: 94px;
   }
-
-
 }
 
 
@@ -43,13 +41,13 @@ section.feature {
   .learn_book{
     background: #f7f7f7;
     display: inline-block;
+   
     img{
      max-width: 70%;
      padding-bottom: 0px;
     }
     ul{
       padding-top: 25px;
-      padding-right: 400px;
       list-style-type: none;
       content: "";
       li{
@@ -59,42 +57,30 @@ section.feature {
       }
     }
 
-    .benefits-at-your-service{
-        padding-left: 419px;
+    section.benefits-at-your-service{
+        padding-left: 132px;
         padding-top: 4.5rem;
         padding-bottom: 5.625rem;
         display: inline-block;
-        img {
-
-
-        }
-      h2{
+      h2 {
           color: #333;
           font-size: 2.25rem;
           font-weight: 600;
           text-align: center;
-          margin: 0 0 0em 0;
-          padding-right: 361px
-        }
-         ul {
-            max-width: 1240px;
+          margin: 0 0 2em 0;
+      }
+      ul {
+            max-width: 1040px;
             display: block;
             text-align: center;
-            margin: 3.8em auto;
             list-style: none;
-
-            li {
-               vertical-align: top;
-               display: inline-block;
-               padding: 0 1.5rem;
-               width: 25%;
-
-               &:hover .red-icon {
-                border-width: 0px;
-                box-shadow: 0 0 0 10px rgba($primary-color, .8);
-               }
-            }
-          }
+      li {
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: -7em;
+        width: 340px;      
+      }
+    }
     }
   }
   > .row {
@@ -161,6 +147,10 @@ section.feature {
   }
   div.learn_book{
     display: none;
+    .red-icon {
+      position: absolute;
+      margin: 0 0 0 -100px;
+    }
     ul {
       list-style-type: none;
       li{
@@ -172,7 +162,6 @@ section.feature {
 
     }
   }
-
 }
 
 .embedded_video {
@@ -304,6 +293,12 @@ div.learn_qc {
       margin: 0 2.5em;
       border-radius: 100%;
       white-space: nowrap;
+      &:before {
+        position: absolute;
+        content: "";
+        color: $primary-color;
+        margin: 0 0 0 -1rem;
+      }
 
       > p {
         display: inline-block;
@@ -332,13 +327,15 @@ div.learn_qc {
   }
   #cos{ 
     padding-bottom: 140px;
-    margin-left: 520px;
+    margin-left: 100px;
+    margin-right: auto;
     display: inline-block;
 
     h1 {
       font-size: 22px;
       font-weight: 5px;
       padding-bottom: 23px;
+      float: left;
     }
 
    
@@ -352,6 +349,12 @@ div.learn_qc {
     ul{
       list-style-type: none;
       padding-left: 150px;
+      &:before {
+        position: absolute;
+        content: "";
+        color: $primary-color;
+        margin: 0 0 0 -1rem;
+      }
       li{
         padding-bottom: 140px;
       }
@@ -360,6 +363,12 @@ div.learn_qc {
       font-weight: 5px;
       font-size: 18px;
       padding-top: -20px;
+    }
+
+    .profit{
+      li{
+      content: "";
+      }
     }
   }
   #extra{ 
@@ -411,8 +420,6 @@ div.learn_qc {
   }
 }
 
-
-
 section.other-feature {
   text-align: center;
   padding-top: 3rem;
@@ -434,4 +441,4 @@ section.get_started {
   p.get-started {
   padding-bottom: 57px;
   }
-  }
+}
