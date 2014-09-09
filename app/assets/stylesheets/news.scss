@@ -78,15 +78,48 @@ section.news_content{
 section.news_post
 {
   padding-bottom: 80px;
+    h4{
+        text-align: center;
+        color: black;
+        font-size: 3.375rem;
+        font-weight: 200;
+        margin: 2.7em 0 0.5em 0;
+        margin-right: 580px
+        }
+
+    h2{
+      font-size: 18px;
+      margin-top: -101px;
+      margin-left: 100px;
+      position: absolute;
+    }
+
+    h1{
+      margin-top: -78px;
+      margin-left: 93px;
+      position: absolute;
+    }
+    p{
+      display: inline;
+    }
+
+    .date{
+      display: inline;
+    }
 }
 section.post_image
   {
+    a{
+      color: white;
+    }
     div.poster{
+      width: 100%;
       margin: 0 auto;
     }
   }
 
 section.post_content{
+  padding-bottom: 75px;
     .row{
       text-align: center;
     }
