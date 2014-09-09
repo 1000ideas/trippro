@@ -7,7 +7,7 @@
 		<div class="row">
 			<div class="small-12 poster">
 			<%= image_tag @news.photo.url(:large) if @news.photo? %>
-				<h2><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
+				<h2><p><%= link_to "News", news_index_path%></p> <p> > </p> <p><%= l @news.created_at, format: '%d-%m-%Y' %></p></h2>
 				<h1><%= @news.title %></h1>
 			</div>
 		<!-- 	<h4>News (link)</h4> -->
