@@ -88,7 +88,24 @@ section.videos {
 }
   section.quote{
     background-color: white;
+
+    div{
+      text-align: left;
   }
+  img{
+    text-align: right;
+  }
+  div.ptext{
+    text-align: left;
+  }
+
+  div.president{
+      display: inline-block;
+      text-align: right;
+      position: relative;
+      padding-left: 1000px;
+  }
+}
 
   > .row {
     position: relative;
