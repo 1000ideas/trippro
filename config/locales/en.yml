@@ -3,3 +3,6 @@
 
 en:
   title: 'TripPro by Mondee'
+  helpers:
+    actions:
+      more: 'Read More'

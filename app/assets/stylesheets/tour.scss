@@ -38,10 +38,16 @@ section.feature {
   padding-top: 5rem;
   padding-bottom: 3rem;
 
-    section.videos {
+section.videos {
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
 
+  img{
+    height: auto;
+    width: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
   h2 {
     color: #333;
     font-size: 2.25rem;
@@ -80,6 +86,9 @@ section.feature {
   }
 
 }
+  section.quote{
+    background-color: white;
+  }
 
   > .row {
     position: relative;
@@ -424,7 +433,59 @@ div.learn_qc {
       }
     }
   }
+
+  div.liimg{
+    strong{
+      display: inline-block;
+    }
+    p{
+      text-align: center;
+    }
+  ul {
+    margin: 0 auto 5rem auto;
+    max-width: 1040px;
+    text-align: center;
+    list-style: none;
+  }
+
+    li:before {
+      content: "";
+      vertical-align: top;
+      margin-bottom: 2em;
+    }
+    li{
+      img{
+        position:absolute;
+      }
+    }
+
+    ul.demodown{
+      li:before {
+      content: "";
+      vertical-align: top;
+      margin-bottom: 2em;
+    }
+    }
+  }
+
+  div.demodown{
+    ul{
+      margin: 0 auto 5rem auto;
+      max-width: 1040px;
+      text-align: center;
+      list-style: none;
+    }
+    li:before {
+      content: "";
+      vertical-align: top;
+      margin-bottom: 2em;
+      display: inline-block;
+    }
+  }
 }
+
+
+
 
 section.other-feature {
   text-align: center;
@@ -433,6 +494,7 @@ section.other-feature {
     max-width:700px;
   }
 }
+
 
 
 section.get_started {

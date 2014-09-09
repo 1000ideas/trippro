@@ -13,8 +13,8 @@ and ticketing technology providing the best international fares.</h2>
 <% title t('.title') %>
 <section class="news_content">
 <div class="row">
-  <div class="small-9 columns">
-  <h2><%= t('.title') %></h2>
+  <div class="small-8 columns">
+  <!-- <h2><%= t('.title') %></h2> -->
   <% unless @news.blank? %>
   <ul id="news_list">
     <% @news.each do |news| %>
@@ -24,7 +24,7 @@ and ticketing technology providing the best international fares.</h2>
           <%= news.title %>
         </h3>
         <%= content_tag :div, class: 'image' do %>
-          <%= image_tag news.photo.url(:small) %>
+          <%= image_tag news.photo.url(:medium) %>
         <% end if news.photo? %>
         <div class="content"><%=short news.content, 160 %></div>
         <div class="more"><%= link_to t('helpers.actions.more'), news_path(news) %></div>
@@ -34,7 +34,7 @@ and ticketing technology providing the best international fares.</h2>
   <% end %>
   <%= will_paginate @news %>
 </div>
-  <div class="small-3 columns">
+  <div class="small-4 columns">
   <h1>Twitt</h1>
   </div>
 </div>

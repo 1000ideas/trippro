@@ -1,7 +1,29 @@
-<% title @news.title  %>
-<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
+<section class="news_post">
+  <div class="row">
+	<div class="small-12 large-12 small-centered large-centered">
+	<% title @news.title  %>
+	<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
 
-<h2><%= @news.title %></h2>
-<div class="date"><%= l @news.created_at, format: '%d-%m-%Y %H:%M' %></div>
-<%= image_tag @news.photo.url(:medium) if @news.photo? %>
-<div class="content"><%= raw @news.content %></div>
+	<h2><%= @news.title %></h2>
+	<div class="date"><%= l @news.created_at, format: '%d-%m-%Y %H:%M' %></div>
+		<section="post_image">
+			<div class="small-12 poster">
+			<%= image_tag @news.photo.url(:medium) if @news.photo? %>
+			</div>
+		</section>
+	<!-- <div class="small-12 content"><p><%= raw @news.content %></p></div> -->
+  </div>
+</section>
+<section class="post_content">
+  <div class="row">
+	<div class="small-12 content"><%= raw @news.content %></div>
+  </div> <!-- row -->
+</section>
+
+<section class="get_started">
+<div class="row">
+  <h3>Start using TripPro today, boost sales within weeks</h3>
+
+  <p class='get-started'><%= link_to 'Get Started', '#', class: 'button red-one radius' %></p>
+</div>
+</section>
