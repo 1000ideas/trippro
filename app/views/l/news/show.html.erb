@@ -3,8 +3,6 @@
 	<div class="small-12 large-12 small-centered large-centered">
 	<% title @news.title  %>
 	<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
-
-	<div class="date"><%= l @news.created_at, format: '%d-%m-%Y %H:%M' %></div>
 		<section="post_image">
 		<div class="row">
 			<div class="small-12 poster">
@@ -28,6 +26,6 @@
 <div class="row">
   <h3>Start using TripPro today, boost sales within weeks</h3>
 
-  <p class='get-started'><%= link_to 'Get Started', '#', class: 'button red-one radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
 </div>
 </section>
