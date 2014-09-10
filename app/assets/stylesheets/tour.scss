@@ -87,8 +87,9 @@ section.videos {
 
 }
   section.quote{
-    background-color: white;
-
+    p{
+     background: #f9f9f9;
+    }
     div{
       text-align: left;
   }
@@ -458,12 +459,12 @@ div.learn_qc {
     p{
       text-align: center;
     }
-  ul {
+    ul {
     margin: 0 auto 5rem auto;
     max-width: 1040px;
     text-align: center;
     list-style: none;
-  }
+    }
 
     li:before {
       content: "";
@@ -482,6 +483,20 @@ div.learn_qc {
       vertical-align: top;
       margin-bottom: 2em;
     }
+    }
+  }
+
+  div.profits{
+    ul{
+      text-align: center;
+      li{
+        h2{
+          float: left;
+        }
+        p{
+          color: green;
+        }
+      }
     }
   }
 
