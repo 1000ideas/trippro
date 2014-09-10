@@ -6,7 +6,8 @@
 </p>
 <div class="signup_form">
 	<div class ="smaller-12">
-	  <p>First Name</p><input type="text" name="fname"><br>
+	  <p><strong>1.Personal Data</strong></p>
+	  <p>First Name</p><input type="text" name="fname" style="width:333px;"><br>
 	  <p>Last name</p><input type="text" name="fname"><br>
 	  <p>Phone number</p><input type="text" name="fname"><br>
 	  <p>Email </p><input type="text" name="fname"><br>
@@ -33,42 +34,56 @@
 	  <option value="mercedes">Mercedes</option>
 	  <option value="audi">Audi</option>
 	   </select> <br>
-	  <p>State/Province</p><input type="text" name="fname"><br>
-	  <p>Zip/Postal Code</p><input type="text" name="fname"><br>
-	<div class="checkboxes">
-	  <form>
-	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander">Different from address specified above<br>
-	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander">I want to add additional Agency data (IATA, GDS, Memberships)<br>
-	  <input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br>
-	  </form>
-	</div>
-
-	  <div class="diffaddress">
-	  <p>Street Address</p><input type="text" name="fname"><br>
-
-	  <p>City </p><input type="text" name="fname"><br>
-	  <p>Country </p>
-	   <select>
+	  <p>State/Province</p><select>
 	  <option value="volvo">Volvo</option>
 	  <option value="saab">Saab</option>
 	  <option value="mercedes">Mercedes</option>
 	  <option value="audi">Audi</option>
-	   </select> <br>
-	  <p>State/Province</p><input type="text" name="fname"><br>
+	   </select> <br><br>
 	  <p>Zip/Postal Code</p><input type="text" name="fname"><br>
-	  </div>
+	<div class="checkboxes">
+	  <form>
+	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br>
+	  <div class="diffaddress">
+		  <p>Street Address</p><input type="text" name="fname"><br>
 
-	  <div class="extradata">
-		  <p>First Name</p><input type="text" name="fname"><br>
-		  <p>Last name</p><input type="text" name="fname"><br>
-		  <p>Phone number</p><input type="text" name="fname"><br>
-		  <p>Email </p><input type="text" name="fname"><br>
-		  <p>Password</p><input type="text" name="fname"><br>
-		  <p>Retype Password</p><input type="text" name="fname"><br>
-		  <p>Job Title</p><input type="text" name="fname"><br>
-		  <p>Referrer</p><input type="text" name="fname"><br>
-		  <p>Email </p><input type="text" name="fname"><br>
+		  <p>City </p><input type="text" name="fname"><br>
+		  <p>Country </p>
+		   <select>
+		  <option value="volvo">Volvo</option>
+		  <option value="saab">Saab</option>
+		  <option value="mercedes">Mercedes</option>
+		  <option value="audi">Audi</option>
+		   </select> <br>
+		  <p>State/Province</p><input type="text" name="fname"><br>
+		  <p>Zip/Postal Code</p><input type="text" name="fname"><br>
 	  </div>
+	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships)<br>
+	  <div class="extradata">
+		  <p>ARC</p><input type="text" name="fname"><br>
+		  <p>IATA</p><input type="text" name="fname"><br>
+		  <p>TRUE/TICO/TIDS</p><input type="text" name="fname"><br>
+		  <p>CLIA</p><input type="text" name="fname"><br>
+		  <p>Agency website address (url)</p><input type="text" name="fname"><br>
+		  <p>Business Type</p><input type="text" name="fname"><br>
+
+		  <p>Membership<br></p>
+		  <p>HBA</p><input type="text" name="fname"><br>
+		  <p>HOST</p><input type="text" name="fname"><br>
+		  <p>Consortium/Affiliate</p><input type="text" name="fname"><br>
+		  <p>ASTA</p><input type="text" name="fname"><br>
+
+		  <p>GDS<br></p>
+
+		  <p>Sabre PCC</p><input type="text" name="fname"><br>
+		  <p>Galileo PCC</p><input type="text" name="fname"><br>
+		  <p>Worldspan PCC</p><input type="text" name="fname"><br>
+		  <p>Amadeus PCC</p><input type="text" name="fname"><br>
+		  <p>Apollo PCC</p><input type="text" name="fname"><br>
+	  </div>
+	  <input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br>
+	  </form>
+	</div>
 </div>
 <%= link_to "Send Message", '#', class: 'button red-one radius' %>
 </div>

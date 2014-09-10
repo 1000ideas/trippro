@@ -280,7 +280,7 @@ i.red-arrow {
 }
 
 div.learn_qc {
-  display: none;
+  // display: none;
   background: #f7f7f7;
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
@@ -453,16 +453,28 @@ div.learn_qc {
   }
 
   div.liimg{
+    text-align: left;
     strong{
       display: inline-block;
     }
-    p{
-      text-align: center;
+
+    .liimg-text {
+      // @include inline-block();
+      display: inline-block;
+      width: 60%;
+    }
+
+    .liimg-img{
+      display: inline-block
+    }
+
+    p, h2 {
+      text-align: left;
+      display: inline-block;
     }
     ul {
     margin: 0 auto 5rem auto;
     max-width: 1040px;
-    text-align: center;
     list-style: none;
     }
 
@@ -472,8 +484,21 @@ div.learn_qc {
       margin-bottom: 2em;
     }
     li{
+      span.red-icon{
+        @include transition(none);
+
+        &:hover {
+          border-width: 0px;
+          box-shadow: 0 0 0 0 rgba($primary-color, .8);
+        }       
+        display: inline-block;
+        h1{
+          color: #FFF;
+          text-align: center;
+          }
+      }
       img{
-        position:absolute;
+        padding-left: 148px;
       }
     }
 
@@ -488,13 +513,22 @@ div.learn_qc {
 
   div.profits{
     ul{
-      text-align: center;
+      text-align: left;
+      h2{
+        text-align: left;
+      }
+      p{
+        text-align: left;
+      }
+      li:before{
+        content: "";
+      }
       li{
+        width: 60%;
+        padding-left: 104px;
+        content: "";
         h2{
-          float: left;
-        }
-        p{
-          color: green;
+          
         }
       }
     }
