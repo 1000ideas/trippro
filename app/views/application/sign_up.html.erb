@@ -35,11 +35,13 @@
 	   </select> <br>
 	  <p>State/Province</p><input type="text" name="fname"><br>
 	  <p>Zip/Postal Code</p><input type="text" name="fname"><br>
+	<div class="checkboxes">
 	  <form>
-	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander"><p>Different from address specified above</p><br>
+	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander">Different from address specified above<br>
 	  <input type="checkbox" name="vehicle" value="Bike" class="box_expander">I want to add additional Agency data (IATA, GDS, Memberships)<br>
-	  <input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ Terms and Conditions<br>
+	  <input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br>
 	  </form>
+	</div>
 
 	  <div class="diffaddress">
 	  <p>Street Address</p><input type="text" name="fname"><br>

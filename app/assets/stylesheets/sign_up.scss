@@ -46,15 +46,17 @@ section.signup{
 		padding-right: 4.5em;
       }
 
-      form{
-      	display: inline;
+      .red{
+      	color: red;
       }
-
       .diffadress{
-      	display: none;
+      	// display: none;
       }
       .extradata{
-      	display: none;
+      	// display: none;
+      }
+      .checkboxes{
+      	margin: 0 auto;
       }
 	}
 
