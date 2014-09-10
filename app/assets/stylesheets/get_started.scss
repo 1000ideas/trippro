@@ -121,11 +121,16 @@ section.webinars{
     li {
        text-align: center;
        max-width: 596px;
+
        p.date{
        }
         p {
             display: inline-block;
             padding-left: 25px;
+            margin-right: 65px;
+            .strong{
+              font-weight: 150px;
+            }
           }
         a{
           padding-left: 10px;
