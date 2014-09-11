@@ -107,6 +107,9 @@ section.videos {
       text-align: right;
       position: relative;
       padding-left: 1000px;
+      p.chris{
+        text-align: left;
+      }
   }
 }
 
@@ -468,6 +471,8 @@ div.learn_qc {
 
     .liimg-img{
       display: inline-block
+
+      
     }
 
     p, h2 {
@@ -518,6 +523,7 @@ div.learn_qc {
       text-align: left;
       h2{
         text-align: left;
+        margin: 0px 0px -0.7em;
       }
       p{
         text-align: left;

@@ -116,7 +116,10 @@ section.webinars{
     display: block;
     text-align: center;
     list-style-type: none;
-
+    hr{
+      width: 50%;
+      margin-left: 325px;
+    }
     li {
        text-align: center;
        p.date{
