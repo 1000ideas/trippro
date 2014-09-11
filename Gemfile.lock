@@ -125,6 +125,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mercury-rails (0.9.0)
+      coffee-rails
+      railties (~> 3.2)
     mime-types (1.25.1)
     multi_json (1.10.1)
     orm_adapter (0.0.7)
@@ -221,6 +224,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   l!
+  mercury-rails
   paperclip
   paranoia
   public_activity

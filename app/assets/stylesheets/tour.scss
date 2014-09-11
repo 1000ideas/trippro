@@ -88,7 +88,9 @@ section.videos {
 }
   section.quote{
     p{
-     background: #f9f9f9;
+     padding: 20px 10px;
+     border: 1px solid gray;
+     border-radius: 10px;
     }
     div{
       text-align: left;

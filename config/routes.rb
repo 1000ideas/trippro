@@ -1,5 +1,7 @@
 Trippro::Application.routes.draw do
 
+  mount Mercury::Engine => '/'
+
   devise_for :users,
     path: '',
     path_names: {
