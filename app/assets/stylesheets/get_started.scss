@@ -111,6 +111,23 @@ section.webinars{
 
   }
   div.registerweb{
+    table{
+      border:0;
+      width: 50%;
+      margin-left: 315px;
+      tr{
+         height: 70px;
+          td{
+            margin-right: 10px;
+          }  
+          td.register{
+            width: 150px;
+            a{
+              padding-top:20px
+            }
+          }
+          }
+       }
   ul {
     padding-top: 40px;
     display: block;
