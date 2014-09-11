@@ -40,7 +40,7 @@ gem "globalize3", "~> 0.3.0"
 gem "rails-i18n"
 gem "will_paginate", "~> 3.0.0"
 gem "acts_as_tree", "~> 0.1.1"
-# gem "mysql2"
+gem "mysql2"
 gem "tinymce-rails", :github => "1000ideas/tinymce-rails", :branch => "rails_3_2"
 
 group :development do

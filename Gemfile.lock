@@ -127,6 +127,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     multi_json (1.10.1)
+    mysql2 (0.3.16)
     orm_adapter (0.0.7)
     paper_trail (2.7.2)
       activerecord (~> 3.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   l!
+  mysql2
   paperclip
   paranoia
   public_activity
