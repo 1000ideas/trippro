@@ -40,7 +40,7 @@ section.feature {
 
 section.videos {
   padding-top: 4.5rem;
-  padding-bottom: 5.625rem;
+  padding-bottom: -0.075rem;
 
   img{
     height: auto;
@@ -86,27 +86,60 @@ section.videos {
   }
 
 }
-  section.quote{
-    p{
+/*section.quote{
+    p.quote{
+      background-color: white;
      padding: 20px 10px;
      border: 1px solid gray;
      border-radius: 10px;
+    }
+    p.chris{
+      font-size: 18px;
     }
     div{
       text-align: left;
   }
   img{
-    text-align: right;
+    float: right;
   }
   div.ptext{
     text-align: left;
   }
 
   div.president{
-      display: inline-block;
-      text-align: right;
-      position: relative;
-      padding-left: 1000px;
+    text-align: right;
+      p.chris{
+        
+      }
+  }
+}*/
+
+section.quote{
+
+  p.quote{
+    background-color: white;
+    padding: 20px 10px;
+    border: 1px rgba(128, 128, 128, 0.27);
+    border-radius: 15px;
+    width: 67%;
+    float: right;
+  }
+  p.chris{
+    float: right;
+    padding-right: 47px;
+
+    span.chris{
+      padding-right: 20px;
+    }
+    strong{
+      padding-right: 10px;
+    }
+    a{
+      background: no-repeat;
+      .play-button{
+        float: right;
+      }
+    }
   }
 }
 
@@ -181,7 +214,8 @@ section.videos {
     }
   }
   div.learn_book{
-    display: none;
+    /*display: none;*/
+    background-color: #f7f7f7;
     .red-icon {
       position: absolute;
       margin: 0 0 0 -100px;
@@ -205,9 +239,7 @@ section.videos {
   margin: 0 auto;
   width: 800px;
   position: relative;
-  padding-top: 56px;
-  padding-bottom: 98px;
-
+  padding-bottom: 20px;
   > ul {
     position: absolute;
     top: 20px;
@@ -310,6 +342,9 @@ div.learn_qc {
       font-weight: 300;
       text-align: center;
       margin: 0 0 .5em 0;
+      .numbers{
+        background: blue;
+      }
     }
   >ul {
     list-style: none;
@@ -342,6 +377,9 @@ div.learn_qc {
         text-align: center;
         font-weight: 200;
         margin: 0;
+        .numbers{
+        background: blue;
+          }
 
         strong {
           display: block;
@@ -468,11 +506,26 @@ div.learn_qc {
 
     .liimg-img{
       display: inline-block
+
+
     }
 
     p, h2 {
       text-align: left;
       display: inline-block;
+    }
+
+    p.numbers{
+      background: none repeat scroll 0% 0% rgba(255, 0, 0, 1);
+      height: 50px;
+      padding-bottom: 10px;
+      width: 50px;
+      text-align: center;
+      border-radius: 37px;
+      margin-right: 20px;
+      font-size: 32px;
+      color: white;
+      padding-top: 0px;
     }
     ul {
     margin: 0 auto 5rem auto;
@@ -514,10 +567,12 @@ div.learn_qc {
   }
 
   div.profits{
+    text-align: center;
     ul{
       text-align: left;
       h2{
         text-align: left;
+        margin: 0px 0px -0.7em;
       }
       p{
         text-align: left;

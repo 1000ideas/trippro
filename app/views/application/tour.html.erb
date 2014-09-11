@@ -31,6 +31,7 @@
   <div class="learn_book">
     <div class="row">
     <section class="videos">
+        
       <ul><!--
            --><li>
             <%= image_tag 'tour/emb_video.png' %>
@@ -61,15 +62,14 @@
     </section> <!-- videos -->
 
     <section class="quote">
-        <div class="ptext columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
+        <div class="row">
+        <div class="ptext columns">
+        <p class="quote">“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
       </div>
       <div class="president">
-        <div class="row">
-       <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
-      <%= image_tag('faces/3.png') %>
-    </div>
-    </div>
+          <p class="chris"><span class="chris"><strong>Chris Dane,</strong>president of Hickory Global Partners</span> <%= image_tag('faces/3.png') %></p>
+        </div>
+       </div>
     </section>
     
     <section class="benefits-at-your-service">
@@ -103,7 +103,7 @@
         </ul>
         <ul>
           <li><i class="custom-icon red-arrow"></i>Request a Free Demo</li>
-          <li><i class="custom-icon red-arrow"></i>Download Brochure (PDF)</li>
+          <li><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)</li>
         </ul>
       </section>
     </div><!-- row -->
@@ -140,15 +140,16 @@
 
       <div class="embedded_video">
         <%= image_tag('tour/emb_video.png') %>
+        <i class="custom-icon play"></i>
       </div>
       <div class="liimg">
         <ul>
-          <li><span class="red-icon"><h1>1</h1></span><div class="liimg-text"><h2>Instant Ticketing</h2> <br><p>Connect to TripPro and confirm seats and ticket instantly with one click. It’s that simple!</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
-          <li><span class="red-icon"><h1>2</h1></span><div class="liimg-text"><h2>Intuitive Interface</h2><p>Works seamlessly delivering multiple consolidator fares alongside your GDS screen or web browser.</p></div><div class="liimg-img"><%= image_tag('tour/b.png') %></div></li>
+          <li><p class="numbers">1</p><div class="liimg-text"><h2>Instant Ticketing</h2> <br><p>Connect to TripPro and confirm seats and ticket instantly with one click. It’s that simple!</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
+          <li><div class="liimg-text"><p class="numbers">2</p><h2>Intuitive Interface</h2><p>Works seamlessly delivering multiple consolidator fares alongside your GDS screen or web browser.</p></div><div class="liimg-img"><%= image_tag('tour/b.png') %></div></li>
 
-          <li><span class="red-icon"><h1>3</h1></span><div class="liimg-text"><h2>Single Source Platform</h2><p>Search exclusive global content from your choice of Mondee’s four leading consolidators and multiple GDS from a single screen.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
+          <li><div class="liimg-text"><p class="numbers">3</p><h2>Single Source Platform</h2><p>Search exclusive global content from your choice of Mondee’s four leading consolidators and multiple GDS from a single screen.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
 
-          <li><span class="red-icon"><h1>4</h1></span><div class="liimg-text"><h2>24/7 support</h1><p>Customer support available around the clock to solve problems quickly.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
+          <li><div class="liimg-text"><p class="numbers">4</p><h2>24/7 support</h1><p>Customer support available around the clock to solve problems quickly.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
         </ul>
       </div>
 
@@ -165,7 +166,7 @@
       <section class="benefits-at-your-service">
         <ul>
           <li style=><i class="custom-icon red-arrow"></i>Request a Free Demo</li>
-          <li><i class="custom-icon red-arrow"></i>Download Brochure (PDF)</li>
+          <li><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)</li>
         </ul>
     </section>
 </section>
@@ -226,10 +227,12 @@
       <h3>Cross-platform Availability</h3>
       <p>TripPro is available on all major platforms</p>
       <p>
-        <%= link_to "Sabre Red", '#' %> •
-        <%= link_to "Desktop", '#' %> •
-        <%= link_to "Web", '#' %> •
-        <%= link_to "TriPro API", '#' %>
+         
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Through the Sabre travel marketplace, our GDS, gain global access to more than 400 airlines, 125,000 hotel properties, 16 cruise lines and 25 car rental brands. You will have a mile-long list of travel options to provide to your customers. "><%= link_to "Sabre Red", '#' %> •</span>
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"><%= link_to "Desktop", '#' %> •</span>
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"> <%= link_to "Web", '#' %> •</span>       
+        <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"><%= link_to "TriPro API", '#' %></span>
+        
       </p>
     </div>
   </div>
