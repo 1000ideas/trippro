@@ -87,10 +87,13 @@ section.videos {
 
 }
   section.quote{
-    p{
+    p.quote{
      padding: 20px 10px;
      border: 1px solid gray;
      border-radius: 10px;
+    }
+    p.chris{
+      font-size: 18px;
     }
     div{
       text-align: left;
@@ -103,10 +106,7 @@ section.videos {
   }
 
   div.president{
-      display: inline-block;
-      text-align: right;
-      position: relative;
-      padding-left: 1000px;
+    text-align: right;
       p.chris{
         text-align: left;
       }
