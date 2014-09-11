@@ -20,10 +20,10 @@
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
         <nav class="main-menu">
           <ul><!--
-              --><li><%= link_to 'Tour', tour_path(format: :html) %></li><!--
-              --><li><%= link_to 'Contact Us', contact_path %></li><!--
-              --><li><%= link_to 'Login', '#' %></li><!--
-              --><li><%= link_to 'Get started', get_started_path, class: :highlight %></li><!--
+              --><li><%= nav_link 'Tour', tour_path(format: :html) %></li><!--
+              --><li><%= nav_link 'Contact Us', contact_path %></li><!--
+              --><li><%= nav_link 'Login', '#' %></li><!--
+              --><li><%= nav_link 'Get started', get_started_path %></li><!--
             --></ul>
         </nav>
       </div>
