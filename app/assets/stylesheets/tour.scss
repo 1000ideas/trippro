@@ -88,6 +88,7 @@ section.videos {
 }
   section.quote{
     p.quote{
+      background-color: white;
      padding: 20px 10px;
      border: 1px solid gray;
      border-radius: 10px;
@@ -99,7 +100,7 @@ section.videos {
       text-align: left;
   }
   img{
-    text-align: right;
+    float: right;
   }
   div.ptext{
     text-align: left;
@@ -108,7 +109,7 @@ section.videos {
   div.president{
     text-align: right;
       p.chris{
-        text-align: left;
+        
       }
   }
 }
