@@ -133,7 +133,8 @@ section.webinars{
           td.register{
             width: 150px;
             a{
-              padding-top:20px
+              padding-top: 5px;
+              margin: 0 0;
             }
           }
           td.data{
@@ -149,8 +150,9 @@ section.webinars{
           }
 
           .button{
-            padding-left: 61px;
-            padding-right: 61px;
+           padding-left: 42px;
+padding-right: 42px;
+margin: -28px -20px -28px -22px;
           }
           }
        }
