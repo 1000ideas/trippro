@@ -3,6 +3,12 @@
 section.signup{
 	text-align: center;
 		
+		div.diffaddress{
+			display: none;
+		}
+		div.extradata{
+			display: none;
+		}
 		background-color: #f5f5f5;
 		textarea {
 		text-align: center;
@@ -16,6 +22,7 @@ section.signup{
 			text-align: right;
 			display: inline-block;
 			width: 150px; 
+			font-size: 18px;
 		}
 		p {
 			display: inline-block;
@@ -26,7 +33,13 @@ section.signup{
     	}
     
 	    input[type="text"] {
-	      text-align: center;
+			width: 470px;
+			display: inline-block;
+			margin-bottom: 11px;
+			margin-right: 150px;
+	    }
+
+	     input[type="password"] {
 			width: 470px;
 			display: inline-block;
 			margin-bottom: 11px;

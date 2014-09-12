@@ -65,6 +65,7 @@
         <div class="row">
         <div class="ptext columns">
         <p class="quote">“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
+        <div id="triangle"></div>
       </div>
       <div class="president">
           <p class="chris"><span class="chris"><strong>Chris Dane,</strong>president of Hickory Global Partners</span> <%= image_tag('faces/3.png') %></p>
@@ -139,17 +140,19 @@
     </ul>
 
       <div class="embedded_video">
-        <%= image_tag('tour/emb_video.png') %>
+        <%= image_tag('tour/emb_video.png', class: "emb_vid") %>
+        <div id="play">
         <i class="custom-icon play"></i>
+      </div>
       </div>
       <div class="liimg">
         <ul>
           <li><div class="liimg-text"><p class="numbers">1</p><h2>Instant Ticketing</h2> <br><p>Connect to TripPro and confirm seats and ticket instantly with one click. It’s that simple!</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
           <li><div class="liimg-text"><p class="numbers">2</p><h2>Intuitive Interface</h2><p>Works seamlessly delivering multiple consolidator fares alongside your GDS screen or web browser.</p></div><div class="liimg-img"><%= image_tag('tour/b.png') %></div></li>
 
-          <li><div class="liimg-text"><p class="numbers">3</p><h2>Single Source Platform</h2><p>Search exclusive global content from your choice of Mondee’s four leading consolidators and multiple GDS from a single screen.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
+          <li><div class="liimg-text"><p class="numbers">3</p><h2>Single Source Platform</h2><p>Search exclusive global content from your choice of Mondee’s four leading consolidators and multiple GDS from a single screen.</p></div><div class="liimg-img"><%= image_tag('tour/c.png') %></div></li>
 
-          <li><div class="liimg-text"><p class="numbers">4</p><h2>24/7 support</h1><p>Customer support available around the clock to solve problems quickly.</p></div><div class="liimg-img"><%= image_tag('tour/a.png') %></div></li>
+          <li><div class="liimg-text"><p class="numbers">4</p><h2>24/7 support</h1><p>Customer support available around the clock to solve problems quickly.</p></div><div class="liimg-img"><%= image_tag('tour/d.png') %></div></li>
         </ul>
       </div>
 
@@ -165,7 +168,7 @@
       </div>
       <section class="benefits-at-your-service">
         <ul>
-          <li style=><i class="custom-icon red-arrow"></i>Request a Free Demo</li>
+          <li style=><i class="custom-icon webinar"></i>Request a Free Demo</li>
           <li><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)</li>
         </ul>
     </section>

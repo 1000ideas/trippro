@@ -9,7 +9,7 @@
 <div class="contact_form">
 	<p><strong>1.Personal Data</strong></p>
 	  <div>
-		<label for="Name">FirstName</label>
+		<label for="Name">First Name</label>
 		<input name="Name" type="text" style="width: 356px;"></input>
 	  </div>
 	  <div>
@@ -26,11 +26,11 @@
 	  </div>
 	  <div>
 		<label for="Name">Password</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="password"></input>
 	  </div>
 	  <div>
 		<label for="Name">Retype Password</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="password"></input>
 	  </div>
 	  	  <div>
 		<label for="Name">Job Title</label>
@@ -78,7 +78,8 @@
 		<label for="Name">Zip/Postal Code</label>
 		<input name="Name" type="text"></input>
 	  </div>
-<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br>
+		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br>
+	  <div class="diffaddress">
 	  <div>
 		<label for="Name">Street Address</label>
 		<input name="Name" type="text"></input>
@@ -99,7 +100,10 @@
 		<label for="Name">Zip/Postal Code</label>
 		<input name="Name" type="text"></input>
 	  </div>
-<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br>
+	  <hr>
+	</div>
+		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships)
+		<div class="extradata">
 	  <div>
 		<label for="Name">ARC</label>
 		<input name="Name" type="text"></input>
@@ -125,7 +129,6 @@
 		<input name="Name" type="text"></input>
 	  </div>
 	  <h3> membership</h3>
-
 	    <div>
 		<label for="Name">HBA</label>
 		<input name="Name" type="text"></input>
@@ -163,8 +166,10 @@
 		<label for="Name">Apollo PCC</label>
 		<input name="Name" type="text"></input>
 	  </div>
-
-	  <h3> checkbox</h3>
+	</div>
+	<div>
+	<input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br>
+</div>
 	</div>
 
 	
