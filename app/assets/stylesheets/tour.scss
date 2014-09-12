@@ -494,6 +494,7 @@ div.learn_qc {
 
   div.liimg{
     text-align: left;
+    padding-left: 244px;
     strong{
       display: inline-block;
     }
@@ -567,9 +568,12 @@ div.learn_qc {
   }
 
   div.profits{
-    text-align: center;
+    text-align: left;
+padding-left: 244px;
     ul{
-      text-align: left;
+        margin: 0px auto 5rem;
+        margin-left: 130px;
+        list-style: none outside none;
       h2{
         text-align: left;
         margin: 0px 0px -0.7em;
@@ -586,6 +590,12 @@ div.learn_qc {
         content: "";
         h2{
           
+        }
+      }
+      section.benefits-at-your-service{
+        ul{
+          content: "";
+
         }
       }
     }
