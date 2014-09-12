@@ -5,6 +5,10 @@ section.signup{
 	h3{
 		text-align: left;
 	}
+	strong{
+		text-align: left;
+		    padding-right: 329px;
+		}
 		hr{
 			width: 500px;
 			margin-left: 415px;
@@ -12,6 +16,9 @@ section.signup{
 		div.checkboxes{
 			text-align: left;
 			margin-left: 364px;
+			p{
+				float: left;
+			}
 			hr{
 				width: 500px;
 				margin-left: 49px;
