@@ -527,10 +527,12 @@ div.learn_qc {
       // @include inline-block();
       display: inline-block;
       width: 60%;
+      vertical-align: top;
     }
 
     .liimg-img{
-      display: inline-block
+      display: inline-block;
+      vertical-align: top;
 
 
     }
@@ -551,7 +553,7 @@ div.learn_qc {
       font-size: 32px;
       color: white;
       padding-top: 0px;
-      float: left;
+      vertical-align: top;
     }
     ul {
     margin: 0 auto 5rem auto;

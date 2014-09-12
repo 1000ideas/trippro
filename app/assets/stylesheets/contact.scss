@@ -33,6 +33,10 @@
 			text-align: right;
 			display: inline-block;
 			width: 150px; 
+			&.text{
+				vertical-align: top;
+				margin-top: 6px;
+			}
 		}
 		p {
 			display: inline-block;
