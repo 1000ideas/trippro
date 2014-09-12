@@ -10,7 +10,7 @@
 	<p><strong>1.Personal Data</strong></p>
 	  <div>
 		<label for="Name">First Name</label>
-		<input name="Name" type="text" style="width: 356px;"></input>
+		<input name="Name" type="text"></input>
 	  </div>
 	  <div>
 		<label for="Name"> Last Name</label>
@@ -78,7 +78,10 @@
 		<label for="Name">Zip/Postal Code</label>
 		<input name="Name" type="text"></input>
 	  </div>
-		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br>
+	  <hr>
+	  <div class="checkboxes">
+		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above<br><hr>
+	  </div>	
 	  <div class="diffaddress">
 	  <div>
 		<label for="Name">Street Address</label>
@@ -99,10 +102,13 @@
 	  <div>
 		<label for="Name">Zip/Postal Code</label>
 		<input name="Name" type="text"></input>
+		  <hr>
 	  </div>
-	  <hr>
 	</div>
+	<div class="checkboxes">
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships)
+		<hr>
+	</div>
 		<div class="extradata">
 	  <div>
 		<label for="Name">ARC</label>
@@ -168,7 +174,9 @@
 	  </div>
 	</div>
 	<div>
-	<input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br>
+	<div class="checkboxes">
+		<input type="checkbox" name="vehicle" value="Bike">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %><br><hr>
+	</div>
 </div>
 	</div>
 
