@@ -124,9 +124,19 @@ section.quote{
     width: 67%;
     float: right;
   }
+  #triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 50px 50px 0 0px;
+    border-color: white transparent transparent transparent;
+    position: absolute;
+    margin-left: 1200px;
+    margin-top: 83px;
+  }
   p.chris{
     float: right;
-    padding-right: 47px;
+    padding-right: 27px;
 
     span.chris{
       padding-right: 20px;
@@ -256,7 +266,6 @@ section.quote{
       display: inline-block;
       vertical-align: top;
     }
-
   }
 
   > a {
@@ -319,6 +328,19 @@ div.learn_qc {
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
 
+    div.embedded_video{
+      img.emb_vid{
+      z-index: 9;
+      text-align: center;
+    }
+
+      #play{
+            margin: -240px 10px 0px 350px;
+            height: 140px;
+            position: relative;
+            z-index: 10;
+        }
+    }
     h2 {
       white-space:nowrap;
       color: #333;
@@ -494,6 +516,9 @@ div.learn_qc {
 
   div.liimg{
     text-align: left;
+    padding-left: 244px;
+    margin-top: 88px;
+    padding-top: 88px;
     strong{
       display: inline-block;
     }
@@ -502,10 +527,12 @@ div.learn_qc {
       // @include inline-block();
       display: inline-block;
       width: 60%;
+      vertical-align: top;
     }
 
     .liimg-img{
-      display: inline-block
+      display: inline-block;
+      vertical-align: top;
 
 
     }
@@ -526,6 +553,7 @@ div.learn_qc {
       font-size: 32px;
       color: white;
       padding-top: 0px;
+      vertical-align: top;
     }
     ul {
     margin: 0 auto 5rem auto;
@@ -553,7 +581,8 @@ div.learn_qc {
           }
       }
       img{
-        padding-left: 148px;
+        padding-left: 70px;
+        margin-bottom: 74px;
       }
     }
 
@@ -567,9 +596,11 @@ div.learn_qc {
   }
 
   div.profits{
-    text-align: center;
+      padding-left: 265px;
     ul{
-      text-align: left;
+        margin: 0px auto 5rem;
+        margin-left: 130px;
+        list-style: none outside none;
       h2{
         text-align: left;
         margin: 0px 0px -0.7em;
@@ -586,6 +617,12 @@ div.learn_qc {
         content: "";
         h2{
           
+        }
+      }
+      section.benefits-at-your-service{
+        ul{
+          content: "";
+
         }
       }
     }

@@ -117,14 +117,43 @@ section.webinars{
       margin-left: 315px;
       tr{
          height: 70px;
+         width: 576px;
           td{
             margin-right: 10px;
+            h4{
+              font-size: 21px;
+            }
+            h5{
+              font-size: 12px;
+            }
           }  
+          td.lang{
+            width: 100px;
+          }
           td.register{
             width: 150px;
             a{
-              padding-top:20px
+              padding-top: 5px;
+              padding-bottom: 5px;
+              margin: 0 0;
             }
+          }
+          td.data{
+            width: 91px;
+          }
+          td.time{
+            text-align: center;
+            p{
+              color: gray;
+              font-size: 18px;
+              padding-top: 16px;
+            }
+          }
+
+          .button{
+           padding-left: 42px;
+            padding-right: 42px;
+            margin: -28px -20px -28px -22px;
           }
           }
        }
