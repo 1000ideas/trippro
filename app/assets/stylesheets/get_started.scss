@@ -121,7 +121,7 @@ section.webinars{
     table{
       border: none;
       width: 597px;
-      margin-left: 315px;
+      margin-left: 340px;
       tr{
          height: 70px;
 
@@ -129,14 +129,22 @@ section.webinars{
           td{
             margin-right: 10px;
             h4{
-              font-size: 21px;
+              text-align: center;
+              font-size: 28px;
+              font-weight: 600;
+              margin-bottom: -7px;
             }
             h5{
+              text-align: center;
               font-size: 12px;
+            }
+            h6{
+              font-size: 18px;
+              font-weight: 400;
             }
           }  
           td.lang{
-            width: 100px;
+            width: 120px;
           }
           td.register{
             width: 150px;
@@ -144,7 +152,10 @@ section.webinars{
               width: 118px;
               height: 38px;
               margin: 0 0;
+              font-weight: 600;
               &.button{
+                margin-left: 10px;
+                padding-left: 26px;
                  padding-top: 9px;
               }
             }
@@ -155,9 +166,12 @@ section.webinars{
           td.time{
             text-align: center;
             p{
-              color: gray;
+              color: #808080;
               font-size: 18px;
+              font-weight: 500;
               padding-top: 16px;
+              margin-top: -27px;
+              margin-bottom: -10px;
             }
           }
           }
