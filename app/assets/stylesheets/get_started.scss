@@ -144,10 +144,8 @@ section.webinars{
               width: 118px;
               height: 38px;
               margin: 0 0;
-              .button{
-                 padding-left: 42px;
-                  padding-right: 42px;
-                  margin: -28px -20px -28px -22px;
+              &.button{
+                 padding-top: 9px;
               }
             }
           }
