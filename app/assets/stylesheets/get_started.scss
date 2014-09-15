@@ -76,7 +76,14 @@ section.sign_demo{
 
     p {
       text-align: center;
+    }
 
+    a.button{
+      width: 288px;
+      border-radius: 5px;
+    }
+    label{
+      text-align: left;
     }
 
     #get_form{
@@ -85,7 +92,7 @@ section.sign_demo{
     }
     input[type="text"] {
       text-align: center;
-      width: 286px;
+      width: 288px;
     }
   }
 }
@@ -112,11 +119,12 @@ section.webinars{
   }
   div.registerweb{
     table{
-      border:0;
-      width: 50%;
+      border: none;
+      width: 597px;
       margin-left: 315px;
       tr{
          height: 70px;
+
          width: 576px;
           td{
             margin-right: 10px;
@@ -133,9 +141,14 @@ section.webinars{
           td.register{
             width: 150px;
             a{
-              padding-top: 5px;
-              padding-bottom: 5px;
+              width: 118px;
+              height: 38px;
               margin: 0 0;
+              .button{
+                 padding-left: 42px;
+                  padding-right: 42px;
+                  margin: -28px -20px -28px -22px;
+              }
             }
           }
           td.data{
@@ -148,12 +161,6 @@ section.webinars{
               font-size: 18px;
               padding-top: 16px;
             }
-          }
-
-          .button{
-           padding-left: 42px;
-            padding-right: 42px;
-            margin: -28px -20px -28px -22px;
           }
           }
        }

@@ -344,8 +344,8 @@ div.learn_qc {
     h2 {
       white-space:nowrap;
       color: #333;
-      font-size: 2.25rem;
-      font-weight: 600;
+      font-size: 30px;
+      font-weight: 5;
       text-align: center;
       margin: 0 0 .3em 0;
     }
@@ -360,7 +360,7 @@ div.learn_qc {
 
     p {
       color: #777;
-      font-size: 1.125rem;
+      font-size: 18px;;
       font-weight: 300;
       text-align: center;
       margin: 0 0 .5em 0;
@@ -596,7 +596,7 @@ div.learn_qc {
   }
 
   div.profits{
-      padding-left: 265px;
+      padding-left: 100px;
     ul{
         margin: 0px auto 5rem;
         margin-left: 130px;
@@ -607,6 +607,7 @@ div.learn_qc {
       }
       p{
         text-align: left;
+        font-size: 16px;
       }
       li:before{
         content: "";
@@ -650,6 +651,7 @@ div.learn_qc {
 section.other-feature {
   text-align: center;
   padding-top: 3rem;
+  padding-bottom: 77px;
    > .row {
     max-width:700px;
   }

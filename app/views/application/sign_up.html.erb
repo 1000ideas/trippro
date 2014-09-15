@@ -3,12 +3,12 @@
 	<div class="signup_text">
 <h1>Sign up</h1>
 
-<p class="info">Please fill out the application form below. You should hear back from us within 1-2<br> business days and you can start using TripPro right away.
+<p class="hide-for-small-only info">Please fill out the application form below. You should hear back from us within 1-2<br> business days and you can start using TripPro right away.
 </p>
 	</div>
 <div class="contact_form">
 	<p><strong>1.Personal Data</strong></p>
-	  <div>
+	  <div class=>
 		<label for="Name">First Name</label>
 		<input name="Name" type="text"></input>
 	  </div>
@@ -52,7 +52,7 @@
 	  </div>
 	  <div>
 		<label for="Name">Agency Phone</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="text" width=560px></input>
 	  </div>
 	  <div>
 		<label for="Name">Owner or President</label>
@@ -64,15 +64,14 @@
 	  </div>
 	  <div>
 		<label for="Name">City</label>
-		<input name="Name" type="text"></input>
-	  </div>
+		<input name="Name" type="text"></input>	  </div>
 	  <div>
 		<label for="Name">Country</label>
-		<input name="Name" type="text"></input>
+		<select></select>
 	  </div>
 	  	  <div>
 		<label for="Name">State/Province</label>
-		<input name="Name" type="text"></input>
+		<select></select>
 	  </div>
 	  <div>
 		<label for="Name">Zip/Postal Code</label>
@@ -106,7 +105,8 @@
 	  </div>
 	</div>
 	<div class="checkboxes">
-		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships)
+		<p>Additional Data</p><br><p>optional</p>
+		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships) 
 		<hr>
 	</div>
 		<div class="extradata">
@@ -134,7 +134,7 @@
 		<label for="Name">Business Type</label>
 		<input name="Name" type="text"></input>
 	  </div>
-	  <h3> membership</h3>
+	  <strong>Membership</strong>
 	    <div>
 		<label for="Name">HBA</label>
 		<input name="Name" type="text"></input>
@@ -151,7 +151,7 @@
 		<label for="Name">ASTA</label>
 		<input name="Name" type="text"></input>
 	  </div>
-	  <h3> gds</h3>
+	<strong>gds</strong>
 	    <div>
 		<label for="Name">Sabre PCC</label>
 		<input name="Name" type="text"></input>
