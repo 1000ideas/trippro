@@ -3,7 +3,18 @@
 section.sign_demo{
 	background: #f5f5f5;
 	height: 351px;
-  width: 
+  .row{
+    width: 1216px;
+    height: 351px;
+  }
+  p.or{
+    float: left;
+    font-size: 18px;
+    padding-left: 59px;
+    margin-right: 41px;
+    padding-top: 176px;
+    color: #a6a6a6;
+  }
   h2 {
     text-align: center;
     color: black;
@@ -17,7 +28,7 @@ section.sign_demo{
     text-align: center;
     color: black;
     display: block;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.2;
     margin: 16px;
@@ -30,12 +41,13 @@ section.sign_demo{
         text-align: center;
         margin: 3.8em auto;
         list-style: none;
+        margin-top: 0px;
 
     li {
        vertical-align: top;
        display: inline-block;
        padding: 0 1.5rem;
-       width: 40%;
+       width: 45%;
        &:hover .red-icon {
         border-width: 0px;
         box-shadow: 0 0 0 10px rgba($primary-color, .8);
@@ -65,8 +77,10 @@ section.sign_demo{
   }
 }
   #myModal{
-    text-align: center;
-
+    text-align: left;
+    .row{
+      width: 286px;
+    }
       h2 {
         font-size: 28px;
         font-weight: 15px;
@@ -76,7 +90,14 @@ section.sign_demo{
 
     p {
       text-align: center;
+    }
 
+    a.button{
+      width: 288px;
+      border-radius: 5px;
+    }
+    label{
+      text-align: left;
     }
 
     #get_form{
@@ -85,7 +106,7 @@ section.sign_demo{
     }
     input[type="text"] {
       text-align: center;
-      width: 286px;
+      width: 288px;
     }
   }
 }
@@ -102,6 +123,7 @@ section.webinars{
   }
   h3 {
     text-align: center;
+    padding-bottom: 28px;
     color: black;
     display: block;
     font-size: 24px;
@@ -112,30 +134,45 @@ section.webinars{
   }
   div.registerweb{
     table{
-      border:0;
-      width: 50%;
-      margin-left: 315px;
+      border: none;
+      width: 597px;
+      margin-left: 340px;
       tr{
          height: 70px;
+
          width: 576px;
           td{
             margin-right: 10px;
             h4{
-              font-size: 21px;
+              text-align: center;
+              font-size: 28px;
+              font-weight: 600;
+              margin-bottom: -7px;
             }
             h5{
+              text-align: center;
               font-size: 12px;
+            }
+            h6{
+              font-size: 18px;
+              font-weight: 400;
             }
           }  
           td.lang{
-            width: 100px;
+            width: 120px;
           }
           td.register{
             width: 150px;
             a{
-              padding-top: 5px;
-              padding-bottom: 5px;
+              width: 118px;
+              height: 38px;
               margin: 0 0;
+              font-weight: 600;
+              &.button{
+                margin-left: 10px;
+                padding-left: 26px;
+                 padding-top: 9px;
+              }
             }
           }
           td.data{
@@ -144,16 +181,13 @@ section.webinars{
           td.time{
             text-align: center;
             p{
-              color: gray;
+              color: #808080;
               font-size: 18px;
+              font-weight: 500;
               padding-top: 16px;
+              margin-top: -27px;
+              margin-bottom: -10px;
             }
-          }
-
-          .button{
-           padding-left: 42px;
-            padding-right: 42px;
-            margin: -28px -20px -28px -22px;
           }
           }
        }

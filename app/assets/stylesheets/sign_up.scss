@@ -2,12 +2,20 @@
 
 section.signup{
 	text-align: center;
+	h1{
+		font-size: 54px;
+	}
+	p.info{
+		font-size: 24px;
+		font-weight: 1;
+	}
 	h3{
 		text-align: left;
 	}
 	strong{
 		text-align: left;
-		    padding-right: 329px;
+		padding-right: 266px;
+		font-size: 18px;
 		}
 		hr{
 			width: 500px;
@@ -48,6 +56,10 @@ section.signup{
 		p {
 			display: inline-block;
 		}
+		select{
+			margin: 0 auto;
+			width: 475px;
+		}
 		input {
 			margin: 0 auto;
 			width: 100px;
@@ -66,7 +78,6 @@ section.signup{
 			margin-bottom: 11px;
 			margin-right: 150px;
 	    }
-
 	    .button {
 	    margin: 20px;
    	    font-weight: 800;

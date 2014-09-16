@@ -374,7 +374,7 @@ section.benefits-at-your-service {
     width: 340px;
   }
 
-  h3 {
+  ul li h3 {
     font-size: 1.85rem;
     color: #333;
     font-weight: 200;
@@ -386,6 +386,7 @@ section.benefits-at-your-service {
     font-weight: 200;
     margin: 0;
     text-align: center;
+    line-height: 1.4rem;
   }
 
 }
@@ -492,4 +493,8 @@ span.red-icon {
     border-width: 0px;
     box-shadow: 0 0 0 10px rgba($primary-color, .8);
   }
+}
+
+.clearer{
+  clear: both;
 }
