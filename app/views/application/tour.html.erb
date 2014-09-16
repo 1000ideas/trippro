@@ -68,14 +68,15 @@
     </section> <!-- videos -->
 
     <section class="quote">
-        <div class="row">
+        <div class="quote_cont">
         <div class="ptext columns">
         <p class="quote">“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
         <div id="triangle"></div>
       </div>
-      <div class="president">
-          <p class="chris"><span class="chris"><strong>Chris Dane,</strong>president of Hickory Global Partners</span> <%= image_tag('faces/3.png') %></p>
+        <div class="president">
+          <p class="chris"><span class="chris"><strong>Chris Dane,</strong>president of Hickory Global Partners</span> <%= image_tag('faces/3.png', size: "115x115") %></p>
         </div>
+        <div class="clearer"></div>
        </div>
     </section>
     
@@ -113,6 +114,8 @@
           <li><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)</li>
         </ul>
       </section>
+       <div class="close">
+      </div>
     </div><!-- row -->
   </div><!-- learn_book -->
 </section>
@@ -132,7 +135,7 @@
         <li>Pre/Post ticket QC</li>
         <li>Price validation</li>
       </ul>
-      <p><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_qc" } do %>
+      <p class="expander"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_qc" } do %>
         <i class="custom-icon red-arrow"></i> Learn more about Ticketing and QC
         <% end %></p>
     </div>

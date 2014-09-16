@@ -36,8 +36,11 @@ section.featured-video {
 section.feature {
   border-top: 1px solid #f5f5f5;
   padding-top: 5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 
+  h3~p{
+    font-size: 1.1rem;   
+  }
 section.videos {
   padding-top: 4.5rem;
   padding-bottom: -0.075rem;
@@ -116,13 +119,24 @@ section.videos {
 
 section.quote{
 
+  div.quote_cont{
+    max-width: 1040px;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    &:after{
+      clear:both;
+    }
+  }
+
   p.quote{
     background-color: white;
-    padding: 20px 10px;
+    padding: 2rem 1.5rem;
     border: 1px rgba(128, 128, 128, 0.27);
     border-radius: 15px;
-    width: 67%;
+    width: 100%;
     float: right;
+    
   }
   #triangle{
     width: 0;
@@ -131,13 +145,13 @@ section.quote{
     border-width: 50px 50px 0 0px;
     border-color: white transparent transparent transparent;
     position: absolute;
-    margin-left: 1200px;
-    margin-top: 83px;
+    bottom: 0;
+    right: 15px;
   }
   p.chris{
     float: right;
-    padding-right: 27px;
-
+    padding-right: 40px;
+    margin-top: 1rem;
     span.chris{
       padding-right: 20px;
     }
@@ -213,6 +227,10 @@ section.quote{
       right: 0;
     }
 
+    p.expander{
+      margin-bottom: 3rem;
+    }
+
     .text {
       padding-right: 640px;
       padding-left: 120px;
@@ -224,8 +242,17 @@ section.quote{
     }
   }
   div.learn_book{
-    /*display: none;*/
+    display: none;
     background-color: #f7f7f7;
+    .row{
+      position:relative;
+      .close{
+        background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
+        position: absolute;
+        top: 33px;
+        right: 0;
+      }
+    }
     .red-icon {
       position: absolute;
       margin: 0 0 0 -100px;
@@ -323,7 +350,7 @@ i.red-arrow {
 }
 
 div.learn_qc {
-  // display: none;
+  display: none;
   background: #f7f7f7;
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
@@ -545,6 +572,10 @@ div.learn_qc {
       display: inline-block;
     }
 
+    h2{
+      font-weight: 600;
+    }
+
     p.numbers{
       background: none repeat scroll 0% 0% rgba(255, 0, 0, 1);
       height: 50px;
@@ -557,6 +588,7 @@ div.learn_qc {
       color: white;
       padding-top: 0px;
       vertical-align: top;
+      font-weight: 400;
     }
     ul {
     margin: 0 auto 5rem auto;
@@ -617,7 +649,7 @@ div.learn_qc {
         content: "";
       }
       li{
-        width: 60%;
+        width: 100%;
         padding-left: 104px;
         content: "";
         h2{
