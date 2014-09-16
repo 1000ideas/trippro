@@ -28,7 +28,7 @@ section.sign_demo{
     text-align: center;
     color: black;
     display: block;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
     line-height: 1.2;
     margin: 16px;
@@ -47,7 +47,7 @@ section.sign_demo{
        vertical-align: top;
        display: inline-block;
        padding: 0 1.5rem;
-       width: 40%;
+       width: 45%;
        &:hover .red-icon {
         border-width: 0px;
         box-shadow: 0 0 0 10px rgba($primary-color, .8);
