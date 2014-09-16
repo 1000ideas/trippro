@@ -391,7 +391,9 @@ div.learn_qc {
         color: $primary-color;
         margin: 0 0 0 -1rem;
       }
-
+        ul.dow{
+          background: blue !important;
+        }
       > p {
         display: inline-block;
         vertical-align: middle;
@@ -622,8 +624,9 @@ div.learn_qc {
       }
       section.benefits-at-your-service{
         ul{
+          li{
           content: "";
-
+          }
         }
       }
     }
