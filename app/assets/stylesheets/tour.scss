@@ -528,15 +528,16 @@ div.learn_qc {
     .liimg-text {
       // @include inline-block();
       display: inline-block;
-      width: 60%;
+      width: 50%;
       vertical-align: top;
     }
 
     .liimg-img{
       display: inline-block;
       vertical-align: top;
-
-
+      &.ticket{
+        padding-left: 32px;
+      }
     }
 
     p, h2 {
@@ -598,7 +599,8 @@ div.learn_qc {
   }
 
   div.profits{
-      padding-left: 100px;
+      padding-left: 50px;
+      margin-top: -107px;
     ul{
         margin: 0px auto 5rem;
         margin-left: 130px;
