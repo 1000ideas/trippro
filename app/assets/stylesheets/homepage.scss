@@ -372,6 +372,9 @@ section.benefits-at-your-service {
     vertical-align: top;
     margin-bottom: 2em;
     width: 340px;
+    &:before{
+      content: "" !important;
+    }
   }
 
   ul li h3 {
