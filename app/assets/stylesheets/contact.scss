@@ -7,7 +7,7 @@
 	h1{
 		text-align: center;
 		font-size: 54px;
-		padding-top: 128px;
+		padding-top: 5rem;
 		font-weight: 300;
 	}
 
@@ -15,6 +15,7 @@
 		font-size: 24px;
 	  	text-align: center;
 	  	margin-bottom: 0;
+	  	line-height: 110%;
 		strong{
 			color: red;
 			font-weight: 400;
@@ -32,17 +33,19 @@
 		textarea {
 		padding-bottom: 20px;
 		resize: none;
-		width: 466px;
+		width: 35%;
 		height: 279px;
 		display: inline-block;
-		margin: 0px 150px 0px auto;
 		border-radius: 5px;
 		}
 		label{
+			padding-right: 0.5rem;
 			text-align: right;
 			display: inline-block;
-			width: 150px; 
-			font-weight: 600;
+			width: 20%; 
+			font-weight: 500;
+			font-size: 1.1rem;
+			margin-left: -20%;
 			&.text{
 				vertical-align: top;
 				margin-top: 6px;
@@ -58,17 +61,16 @@
     
 	    input[type="text"] {
 	    	border-radius: 5px;
-			width: 466px;
+			width: 35%;
 			display: inline-block;
 			margin-bottom: 11px;
-			margin-right: 150px;
 	    }
 
 	    .button {
-	       margin: 20px;
+	       margin: 20px 0;
 		   font-weight: 800;
-		   padding-left: 160px;
-		   padding-right: 160px;
 		   font-size: 21px;
+		   width: 35%;
+		   display: inline-block;
       	}
 	}
