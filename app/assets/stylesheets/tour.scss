@@ -36,10 +36,11 @@ section.featured-video {
 section.feature {
   border-top: 1px solid #f5f5f5;
   padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
 
   h3~p{
     font-size: 1.1rem;   
+    line-height: 110%;
   }
 section.videos {
   padding-top: 4.5rem;
@@ -173,11 +174,9 @@ section.quote{
   }
   .image {
     position: absolute;
-    top: 50%;
     left: 0;
     width: 609px;
     height: 383px;
-    margin-top: -191px;
     background: image-url('laptop-plain.png') no-repeat 0 0;
   }
 
@@ -227,9 +226,7 @@ section.quote{
       right: 0;
     }
 
-    p.expander{
-      margin-bottom: 3rem;
-    }
+  
 
     .text {
       padding-right: 640px;
@@ -354,11 +351,27 @@ div.learn_qc {
   background: #f7f7f7;
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
+  position: relative;
+  &:after{
+    border-color: transparent transparent #F7F7F7;
+    border-style: solid;
+    border-width: 0px 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 0px;
+    left: 50%;
+    position: absolute;
+    top: -20px;
+    width: 0px;
+    margin-left: -33rem;
+  }
   .close{
-        background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
-        position: absolute;
-        top: -341px;
-        right: -243px;
+        background: url('sprites.png') no-repeat scroll -80px 0px transparent;
+        width: 57px;
+        height: 57px;
+        top: 20px;
+        float: right;
+        margin-top: -40px;
       }
     div.embedded_video{
       img.emb_vid{
@@ -404,7 +417,7 @@ div.learn_qc {
     list-style: none;
     max-width: 1140px;
     width: 100%;
-    margin: 3em auto;
+    margin: 0em auto 3em;
     text-align: center;
 
     li {
@@ -427,6 +440,8 @@ div.learn_qc {
           background: blue !important;
         }
       > p {
+        color: #323232;
+        line-height: 120%;
         display: inline-block;
         vertical-align: middle;
         width: 100%;
@@ -573,6 +588,8 @@ div.learn_qc {
     }
 
     p, h2 {
+      color: #323232;
+      line-height: 120%;
       text-align: left;
       display: inline-block;
     }
@@ -582,21 +599,21 @@ div.learn_qc {
     }
 
     p.numbers{
-      background: none repeat scroll 0% 0% rgba(255, 0, 0, 1);
-      height: 50px;
-      padding-bottom: 10px;
-      width: 50px;
+      background: none repeat scroll 0% 0% #ed1b24;
+      height: 45px;
+      width: 45px;
+      line-height: 175%;
       text-align: center;
       border-radius: 37px;
       margin-right: 20px;
-      font-size: 32px;
+      font-size: 1.5rem;
       color: white;
       padding-top: 0px;
       vertical-align: top;
       font-weight: 400;
     }
     ul {
-    margin: 0 auto 5rem auto;
+    margin: 0 auto 2rem auto;
     max-width: 1040px;
     list-style: none;
     }
@@ -637,16 +654,17 @@ div.learn_qc {
 
   div.profits{
       padding-left: 50px;
-      margin-top: -107px;
     ul{
         margin: 0px auto 5rem;
         margin-left: 130px;
         list-style: none outside none;
       h2{
         text-align: left;
-        margin: 0px 0px -0.7em;
+        margin: 0;
       }
       p{
+        color: #323232;
+        line-height: 110%;
         text-align: left;
         font-size: 16px;
       }
@@ -657,20 +675,25 @@ div.learn_qc {
         width: 100%;
         padding-left: 104px;
         content: "";
+        margin-bottom: 3rem;
         h2{
           
         }
       }
-      section.benefits-at-your-service{
-        ul{
-          li{
-          content: "";
-          }
-        }
-      }
+
     }
   }
 
+  section.benefits-at-your-service.benefits-tour{
+    padding-top: 1.5rem;
+    padding-bottom: 0;
+    ul{
+      margin: 0px auto 0rem;
+      li{
+      content: "";
+      }
+    }
+  }
   div.demodown{
     ul{
       margin: 0 auto 5rem auto;
@@ -693,6 +716,22 @@ div.learn_qc {
 section.other-feature {
   text-align: center;
   padding-top: 3rem;
+  border-top: 1px solid #f5f5f5;
+  margin-bottom: 2rem;
+  h3{
+    font-weight: 600;
+  }
+  p{
+    font-size: 1.1rem;
+  }
+  .has-tip{
+    border-bottom: 0px;
+    a{
+      font-weight: 200;
+      font-size: 1.1rem;
+      padding: 0 0.5rem;
+    }
+  }
    > .row {
     max-width:700px;
   }
@@ -713,3 +752,14 @@ section.get_started {
   padding-bottom: 57px;
   }
 }
+
+ p.expander{
+  margin-bottom: 6rem;
+ }
+
+ ul.section_list{
+  li{
+    // color: #656565;
+    font-weight: 200;
+  }
+ }

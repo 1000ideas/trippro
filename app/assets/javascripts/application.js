@@ -15,4 +15,8 @@
 //= require foundation
 //= require trippro
 
-$(function(){ $(document).foundation(); });
+$(function(){ $(document).foundation({
+equalizer : {
+    equalize_on_stack: false
+  }
+}); });
