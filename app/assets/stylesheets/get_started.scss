@@ -90,6 +90,9 @@ section.sign_demo{
 
     p {
       text-align: center;
+      &.gray{
+        color: gray;
+      }
     }
 
     a.button{

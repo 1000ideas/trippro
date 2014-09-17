@@ -354,7 +354,12 @@ div.learn_qc {
   background: #f7f7f7;
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
-
+  .close{
+        background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
+        position: absolute;
+        top: -341px;
+        right: -243px;
+      }
     div.embedded_video{
       img.emb_vid{
       z-index: 9;
