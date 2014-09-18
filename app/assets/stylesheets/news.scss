@@ -76,6 +76,20 @@ section.news_content{
   .twitter{
     padding-top: 51px;
   }
+
+  .categories{
+    padding-top:10px;
+    p{
+      color: lightgray;
+    }
+    ul{
+      li{
+        margin-left: -1.1rem;
+        color: red;
+        font-weight: 800;
+      }
+    }
+  }
 }
 
  // SHOW 

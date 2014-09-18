@@ -178,7 +178,15 @@ section.quote{
     width: 609px;
     height: 383px;
     background: image-url('laptop-plain.png') no-repeat 0 0;
+    &.slider{
+    position: absolute;
+    left: 0;
+    width: 609px;
+    height: 442px;
+    background: image-url('slider.png') no-repeat 0 0;
+    }
   }
+
 
   .text {
     padding-left: 740px;
