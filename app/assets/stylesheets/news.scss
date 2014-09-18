@@ -73,6 +73,10 @@ section.news_content{
     padding-top: 20px;
     word-wrap: break-word;
   }
+  .more{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1rem;
+  }
 
   .twitter{
     padding-top: 51px;
@@ -82,13 +86,15 @@ section.news_content{
     padding-top:10px;
     p{
       color: lightgray;
+      margin-bottom: -0.5rem;
+      font-size: 18px;
     }
-    ul{
+    ul.categories{
       li{
         margin-left: -1.1rem;
         color: red;
         font-weight: 800;
-        margin-bottom: -0.7rem;
+        margin-bottom: -0.6rem;
       }
     }
   }

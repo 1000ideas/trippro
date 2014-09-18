@@ -13,6 +13,7 @@ and ticketing technology providing the best international fares.</h2>
 <% title t('.title') %>
 <section class="news_content">
 <div class="row">
+  <div class="news">
   <div class="small-8 columns">
   <!-- <h2><%= t('.title') %></h2> -->
   <% unless @news.blank? %>
@@ -29,16 +30,16 @@ and ticketing technology providing the best international fares.</h2>
         <div class="content"><%=short news.content, 160 %></div>
         <div class="more"><%= link_to t('helpers.actions.more'), news_path(news) %></div>
       </li>
-      <hr>
     <% end %>
   </ul>
   <% end %>
   <%= will_paginate @news %>
 </div>
+</div>
   <div class="small-4 columns">
     <div class="categories">
       <p>News Category</p>
-      <ul>
+      <ul class="categories">
         <li>News</li>
         <li>Reports</li>
         <li>Multimedia</li>
