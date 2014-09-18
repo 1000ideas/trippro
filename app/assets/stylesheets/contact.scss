@@ -51,6 +51,7 @@
 			border-top: 1px solid lightgray;
 			padding-top: 12px;
 			padding-bottom: 12px;
+			width: 65%;
 			p{
 				float: left
 			}
@@ -128,5 +129,11 @@
 		   font-size: 21px;
 		   width: 35%;
 		   display: inline-block;
+      	}
+
+      	.extradata{
+      		strong{
+      			font-weight: 200;
+       		}
       	}
 	}
