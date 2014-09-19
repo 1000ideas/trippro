@@ -1,7 +1,7 @@
 @import 'overrides';
 
 section.sign_demo{
-  
+
 	background: #f5f5f5;
   padding-top: 4rem;
   .row{
@@ -168,9 +168,17 @@ section.webinars{
           }  
           td.lang{
             width: 120px;
+            @media #{$small-only} {
+             width:7%;
+            }
+
           }
           td.register{
             width: 150px;
+             @media #{$small-only} {
+             width: 43%;
+            }
+
             a{
               width: 118px;
               margin: 0 0;
@@ -186,9 +194,17 @@ section.webinars{
           }
           td.data{
             width: 91px;
+             @media #{$small-only} {
+             width: 9%;
+            }
+
           }
           td.time{
             text-align: center;
+             @media #{$small-only} {
+             width:9%;
+            }
+
             p{
               color: #808080;
               font-size: 18px;
