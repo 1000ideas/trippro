@@ -178,7 +178,15 @@ section.quote{
     width: 609px;
     height: 383px;
     background: image-url('laptop-plain.png') no-repeat 0 0;
+    &.slider{
+    position: absolute;
+    left: 0;
+    width: 609px;
+    height: 442px;
+    background: image-url('slider.png') no-repeat 0 0;
+    }
   }
+
 
   .text {
     padding-left: 740px;
@@ -234,19 +242,40 @@ section.quote{
       position: relative;
 
       @media only screen and (max-width: 40em) {
-      padding-right: 160px;
+      padding-right: 0;
+      span.red-icon{
+        display: none;
+      }
       }
     }
   }
   div.learn_book{
     display: none;
     background-color: #f7f7f7;
-    .row{
+    padding-top: 4.5rem;
+    padding-bottom: 5.625rem;
+    position: relative;
+    margin-top: 4rem;
+
+   &:after{
+    border-color: transparent transparent #F7F7F7;
+    border-style: solid;
+    border-width: 0px 25px 25px;
+    content: "";
+    display: inline-block;
+    height: 0px;
+    right: 42.2%;
+    position: absolute;
+    top: -20px;
+    width: 0px;
+    margin-left: -33rem;
+  }
+  .row{
       position:relative;
       .close{
         background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
         position: absolute;
-        top: 33px;
+        top: -33px;
         right: 0;
       }
     }

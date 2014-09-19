@@ -19,6 +19,7 @@
 		strong{
 			color: red;
 			font-weight: 400;
+			
 		}
 	}
 }
@@ -27,16 +28,49 @@
 		text-align: center;
 		background-color: #f5f5f5;
 		padding-bottom: 113px;
-		.row{
-			padding-top:50px;
+		div.diffaddress{
+			display: none;
+		}
+		div.extradata{
+			display: none;
+		}
+		&.signup{
+			text-align: center;
+			margin-top: 6rem;
+		}
+		div.checkboxes{
+			border-top: 1px solid lightgray;
+			padding-top: 12px;
+			padding-bottom: 12px;
+			width: 65%;
+			p{
+				float: left
+			}
+			hr{
+				width: 500px;
+				margin-left: 49px;
+			}
+		}
+		.labels{
+			text-align: left;
+		}
+		select{
+			@media #{$small-only} {
+				      width: 100%;
+				    }
+			display: inline-block;
+			width: 326px;
 		}
 		textarea {
 		padding-bottom: 20px;
 		resize: none;
 		width: 35%;
-		height: 279px;
+		height: 219px;
 		display: inline-block;
 		border-radius: 5px;
+		@media #{$small-only} {
+				      width: 93%;
+				    }
 		}
 		label{
 			padding-right: 0.5rem;
@@ -46,6 +80,16 @@
 			font-weight: 500;
 			font-size: 1.1rem;
 			margin-left: -20%;
+
+			@media #{$small-only} {
+			 font-weight: 500;
+			 font-size: 1.1rem;
+			 padding-right: 0.5rem;
+			 width: 100%;
+			 margin-left: 0%;
+			 text-align: center;
+			}
+
 			&.text{
 				vertical-align: top;
 				margin-top: 6px;
@@ -56,7 +100,6 @@
 		}
 		input {
 			margin: 0 auto;
-			width: 100px;
     	}
     
 	    input[type="text"] {
@@ -64,7 +107,46 @@
 			width: 35%;
 			display: inline-block;
 			margin-bottom: 11px;
+			@media #{$small-only} {
+				      width: 93%;
+				    }
+			&.std{
+				width: 25%;
+				   @media #{$small-only} {
+				      width: 100%;
+				    }
+			}
+			&.phone{
+				width: 20%;
+				@media #{$small-only} {
+				      width: 100%;
+				    }
+			}
+			&.short{
+				width: 15%;
+				@media #{$small-only} {
+				      width: 100%;
+				    }
+			}
+			&.long{
+				width: 45%;
+				@media #{$small-only} {
+				      width: 100%;
+				    }
+			}
 	    }
+	    input[type="password"] {
+		    border-radius: 5px;
+		    width: 35%;
+		    display: inline-block;
+		    margin-bottom: 11px;
+		    &.std{
+		    	width: 326px;
+		    	@media #{$small-only} {
+				      width: 100%;
+				    }
+		    }
+		}
 
 	    .button {
 	       margin: 20px 0;
@@ -72,5 +154,15 @@
 		   font-size: 21px;
 		   width: 35%;
 		   display: inline-block;
+		   @media #{$small-only} {
+				      width: 93%;
+				    }
+      	}
+
+      	.extradata{
+      		strong{
+      			font-weight: 200;
+      			padding-right: 208px;
+       		}
       	}
 	}

@@ -19,7 +19,7 @@
   </div>
 </section>
 <section class="features">
-  <ul><!--
+  <ul ><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%= image_tag('icons/plane.png') %></span>
       <h3>Advanced Booking Tools</h3>
@@ -55,7 +55,7 @@
   <p>TripPro gives you the best international fares, lets you save search time<br />
  and automate ticketing, which result in new sales, increased profits and happy customers.</p>
 
-  <ul>
+  <ul class="hide-for-small-only">
       <li><p><strong>30% more</strong>unique itineraries</p></li>
       <li><p><strong>save 10h</strong>per agent on average</p></li>
       <li><p><strong>10% increase</strong>in agency profits</p></li>
@@ -71,13 +71,13 @@
     <a href="#" class='prev inactive'></a>
     <a href="#" class='next'></a>
     <p class="slide-title">Desktop tool integrated seamlessly into the GDS</p>
-    <p><%= link_to 'See All Features', '#', class: 'red-chevron' %></p>
   </div>
+    <p><%= link_to 'See All Features', '#', class: 'red-chevron' %></p>
 
-  <h3>Ready for a journay?</h3>
-  <p class="get-started"><%= link_to 'Get Started', '#', class: 'button red-one radius' %></p>
+  <h3>Ready for a journey?</h3>
+  <p class="get-started"><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
 </section>
-<section class="benefits-at-your-service">
+<section class="benefits-at-your-service hide-for-small-only">
   <h2>Benefits at your service</h2>
   <ul><!--
      --><li>
@@ -108,7 +108,7 @@
    --></ul>
    <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
 </section>
-<section class="testimonials">
+<section class="testimonials hide-for-small-only">
   <h2>Testimonials</h2>
   <ul>
     <li class="row collapse" data-equalizer>

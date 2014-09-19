@@ -32,49 +32,90 @@ section.top_img {
   	color: #fff;
   	font-size: 39px;
     font-weight: 400;
-    margin: 1.5em;
+    margin: 1.5em auto 0;
   }
   h2 {
     text-align: center;
     color: #fff;
     font-size: 24px;
-    font-weight: 200;
-    margin: -4em 0 0.5em 0;
+    font-weight: 400;
   }
 }
 
 section.news_content{
-	padding-top: 100px;
+	padding-top: 4rem;
 	padding-bottom: 10px;
 	
   h3{
       word-wrap: break-word;
-      font-weight: 500;
+      font-weight: 700;
+      width: 90%;
     }
 
     ul{
       list-style-type: none;
       position: relative;
+      margin-left: 0;
       li{
         padding-bottom:10px;
       }
     }
+  .news{
+    padding-right: 4rem;
+    padding-left: 4rem;
+     @media only screen and (max-width: 640px) {
+             padding-right: 0.9375rem;
+             padding-left: 0.9375rem;
+    }
+  }
   .date {
     	color: #9a9a9a;
-      padding-bottom: 10px;
+      font-size: 0.9rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0;
     }
   .image{
     	margin-left: auto;
     	margin-right: auto;
+      img{
+        width: 100%;
+      }
     	// display: block;
     }
   .content{
     padding-top: 20px;
     word-wrap: break-word;
   }
+  .more{
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid lightgray;
+    a{
+      font-weight: 600;
+      color: #ee1d23;
+    }
+  }
 
   .twitter{
-    padding-top: 51px;
+    margin-top: 3rem;
+  }
+
+  .categories{
+    padding-top:10px;
+    p{
+      color: lightgray;
+      margin-bottom: -0.5rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+    ul.categories{
+      li{
+        margin-left: -1.1rem;
+        color: red;
+        font-weight: 800;
+        margin-bottom: -0.6rem;
+      }
+    }
   }
 }
 
@@ -96,25 +137,28 @@ section.news_post
         }
 
     h2{
-      font-size: 18px;
-      margin-top: -101px;
-      margin-left: 100px;
+      font-size: 19px;
+      margin-top: -10rem;
       position: absolute;
+      margin-left: 91px;;
+      color: rgba(251, 251, 251, 1);
+      text-shadow: 1px 1px #C3C3C3;
     }
 
     h1{
-      margin-top: -78px;
-      margin-left: 93px;
+      margin-top: -8rem;
+      margin-left: 90px;
       position: absolute;
-      font-size: 18px;
-      color: white;
+      font-size: 2.3rem;
+      color: rgba(251, 251, 251, 1);
+      text-shadow: 1px 1px #C3C3C3;
     }
     p{
       display: inline;
       color: white;
     }
     a{
-      color: white;
+      color: rgba(251, 251, 251, 1);
     }
     .date{
       display: inline;

@@ -39,8 +39,7 @@ section.faq-logo {
 
 section.faq_content{
   position: relative;
-  padding-top: 47px;
-  padding-bottom: 85px;
+  padding-bottom: 3rem;
   overflow: auto;
   ul {
     list-style-type: none;
@@ -49,10 +48,12 @@ section.faq_content{
     font-weight: 800;
     padding-top: 30px;
     }
-    h6 {
+    p {
     max-width: 700px;
     margin: 0 auto;
     color: gray;
+    font-size: 1.1rem;
+    line-height: 125%;
     }
   }
   
@@ -71,13 +72,12 @@ section.get_started {
   background-color: #f5f5f5;
   
   h3 {
-  padding-top: 99px;
+    padding-top: 5rem;
     text-align: center;
-
+    font-weight: 600;
   }
 
   p.get-started {
-  padding-top:22px;
   padding-bottom: 0px;
   }
   }
