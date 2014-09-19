@@ -242,7 +242,10 @@ section.quote{
       position: relative;
 
       @media only screen and (max-width: 40em) {
-      padding-right: 160px;
+      padding-right: 0;
+      span.red-icon{
+        display: none;
+      }
       }
     }
   }

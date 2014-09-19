@@ -1,0 +1,63 @@
+@import 'overrides';
+
+div.signup{
+	label{
+		margin-left: 0;
+	}
+	p{
+		&.bold{
+			font-weight: 600;
+			padding-bottom:2rem;
+			padding-top:1rem;
+		}
+		.sign{
+
+		}
+	}
+	label~div{
+		width: 45%;
+		display: inline-block;
+		input[type="text"].std,
+		input[type="text"].long,
+		input[type="text"].phone,
+		input[type="text"].short,
+		input[type="password"].std, 
+		select{
+			width: 100%;
+			padding-right: 50%;
+			@media #{$small-only} {
+				      width: 93%;
+				      padding-right:0%;
+				    }
+		}
+		&.std{
+			padding-right: 20%;
+			@media #{$small-only} {
+				      width: 93%;
+				      padding-right:0%;
+				    }
+		}
+
+		&.long{
+			padding-right: 5%;
+			@media #{$small-only} {
+				      width: 93%;
+				      padding-right:0%;
+				    }
+		}
+		&.phone{
+			padding-right: 30%;
+			@media #{$small-only} {
+				      width: 93%;
+				      padding-right:0%;
+				    }
+		}
+		&.short{
+			padding-right:30%;
+			@media #{$small-only} {
+				      width: 93%;
+				      padding-right:0%;
+				    }
+		}
+	}
+}
