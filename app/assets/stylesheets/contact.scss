@@ -38,16 +38,10 @@
 			display: none;
 		}
 		&.signup{
-			text-align: left;
-			margin-left: 19rem;
-			padding-left: 15rem;
+			text-align: center;
 			margin-top: 6rem;
 		}
-		.row{
-			padding-top:50px;
-		}
 		div.checkboxes{
-			text-align: left;
 			border-top: 1px solid lightgray;
 			padding-top: 12px;
 			padding-bottom: 12px;
@@ -64,6 +58,9 @@
 			text-align: left;
 		}
 		select{
+			@media #{$small-only} {
+				      width: 50%;
+				    }
 			display: inline-block;
 			width: 326px;
 		}
@@ -83,6 +80,16 @@
 			font-weight: 500;
 			font-size: 1.1rem;
 			margin-left: -20%;
+
+			@media #{$small-only} {
+			 font-weight: 500;
+			 font-size: 1.1rem;
+			 padding-right: 0.5rem;
+			 width: 100%;
+			 margin-left: 0%;
+			 text-align: center;
+			}
+
 			&.text{
 				vertical-align: top;
 				margin-top: 6px;
@@ -101,16 +108,28 @@
 			display: inline-block;
 			margin-bottom: 11px;
 			&.std{
-				width: 326px;
+				width: 25%;
+				   @media #{$small-only} {
+				      width: 50%;
+				    }
 			}
 			&.phone{
-				width: 265px;
+				width: 20%;
+				@media #{$small-only} {
+				      width: 50%;
+				    }
 			}
 			&.short{
-				width: 156px;
+				width: 15%;
+				@media #{$small-only} {
+				      width: 50%;
+				    }
 			}
 			&.long{
-				width: 506px;
+				width: 45%;
+				@media #{$small-only} {
+				      width: 50%;
+				    }
 			}
 	    }
 	    input[type="password"] {
@@ -120,6 +139,9 @@
 		    margin-bottom: 11px;
 		    &.std{
 		    	width: 326px;
+		    	@media #{$small-only} {
+				      width: 50%;
+				    }
 		    }
 		}
 
@@ -129,6 +151,9 @@
 		   font-size: 21px;
 		   width: 35%;
 		   display: inline-block;
+		   @media #{$small-only} {
+				      width: 50%;
+				    }
       	}
 
       	.extradata{

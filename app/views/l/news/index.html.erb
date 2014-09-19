@@ -3,7 +3,7 @@
   <div class="small-12 poster">
     <%= image_tag('news/header.jpg') %>
   </div>
-  <h1>NEWS</h1>
+  <h1>News</h1>
   <h2>TripPro® is a revolutionary next generation search, book<br> 
 and ticketing technology providing the best international fares.</h2>
 <!-- </div> -->
@@ -13,21 +13,21 @@ and ticketing technology providing the best international fares.</h2>
 <% title t('.title') %>
 <section class="news_content">
 <div class="row">
-  <div class="news">
-  <div class="small-12 medium-8 columns">
+  <div class="news small-12 medium-8 columns">
+  <div>
   <!-- <h2><%= t('.title') %></h2> -->
   <% unless @news.blank? %>
   <ul id="news_list">
     <% @news.each do |news| %>
       <li>
-        <div class="date"><%= l news.created_at, format: '%B %d, %Y' %></div>
+        <p class="date"><%= l news.created_at, format: '%B %d, %Y' %></p>
         <h3>
           <%= news.title %>
         </h3>
         <%= content_tag :div, class: 'image' do %>
           <%= image_tag news.photo.url(:medium) %>
         <% end if news.photo? %>
-        <div class="content"><%=short news.content, 160 %></div>
+        <p class="content"><%=short news.content, 160 %></p>
         <div class="more"><%= link_to t('helpers.actions.more'), news_path(news) %></div>
       </li>
     <% end %>
@@ -36,11 +36,12 @@ and ticketing technology providing the best international fares.</h2>
   <%= will_paginate @news %>
 </div>
 </div>
-  <div class="medium-4 hide-for-small-only columns">
+  <div class="medium-3 end hide-for-small-only columns">
     <div class="categories">
       <p>News Category</p>
       <ul class="categories">
         <li>News</li>
+        <li>Press Releases</li>
         <li>Reports</li>
         <li>Multimedia</li>
       </ul>

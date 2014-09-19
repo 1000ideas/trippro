@@ -1,10 +1,10 @@
 <section class="news_post">
 	<%= image_tag @news.photo.url(:large_cropped) if @news.photo? %>
   <div class="row">
-	<div class="small-12 large-12 small-centered large-centered">
+	<div class="small-12 medium-12 medium-centered">
 	<% title @news.title  %>
 	<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
-		<section="post_image">
+		<!-- <section="post_image"> -->
 		<div class="row">
 			<div class="small-12 poster">
 				<h2><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
@@ -12,7 +12,7 @@
 			</div>
 		<!-- 	<h4>News (link)</h4> -->
 		</div>
-		</section>
+<!-- 		</section> -->
 	<!-- <div class="small-12 content"><p><%= raw @news.content %></p></div> -->
   </div>
 </section>
