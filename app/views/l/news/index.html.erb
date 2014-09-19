@@ -14,13 +14,13 @@ and ticketing technology providing the best international fares.</h2>
 <section class="news_content">
 <div class="row">
   <div class="news">
-  <div class="small-8 columns">
+  <div class="small-12 medium-8 columns">
   <!-- <h2><%= t('.title') %></h2> -->
   <% unless @news.blank? %>
   <ul id="news_list">
     <% @news.each do |news| %>
       <li>
-        <div class="date"><%= l news.created_at, format: '%d-%m-%Y %H:%M' %></div>
+        <div class="date"><%= l news.created_at, format: '%B %d, %Y' %></div>
         <h3>
           <%= news.title %>
         </h3>
@@ -36,7 +36,7 @@ and ticketing technology providing the best international fares.</h2>
   <%= will_paginate @news %>
 </div>
 </div>
-  <div class="small-4 columns">
+  <div class="medium-4 hide-for-small-only columns">
     <div class="categories">
       <p>News Category</p>
       <ul class="categories">
