@@ -82,6 +82,10 @@ section.video {
       display: block;
       width: 100%;
     }
+    img.poster_img{
+      width: 100%;
+      height: auto;
+    }
   }
 
 
@@ -98,7 +102,9 @@ section.video {
     vertical-align: middle;
     margin: -2px 0 0 .5rem;
   }
-
+  &:hover{
+    color: #333;
+  }
   &.arrow-down:after { @include transform(rotate(90deg)); }
   &.arrow-left:after { @include transform(rotate(180deg)); }
   &.arrow-top:after { @include transform(rotate(270deg)); }
@@ -108,7 +114,9 @@ section.video {
   font-size: 1.125rem;
   font-weight: bold;
   color: $primary-color;
-
+  &:hover{
+    color: #333;
+  }
   &:after {
     content: '';
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMBAMAAABcu7ojAAAAElBMVEUAAADtHCTtHCTtHCTtHCTtHCSbN0rqAAAABXRSTlMAYJ/P31UMCrsAAAAdSURBVAjXYwADQxChKgAkmALRmK5gFlgMzoDqAABNqQLIVXUXjAAAAABJRU5ErkJggg==');
@@ -117,6 +125,9 @@ section.video {
     display: inline-block;
     vertical-align: middle;
     margin: -2px 0 0 1rem;
+    &:hover{
+      color: #333;
+    }
   }
 }
 
@@ -136,6 +147,7 @@ section.video {
   &:hover, &:focus {
     background: #fff;
     color: $primary-color;
+    transition: background-color 100ms ease-out 0s;
   }
 }
 
@@ -469,8 +481,8 @@ section.testimonials {
   .button {
     margin: 0;
     font-weight: 800;
-    padding-left: 4.5em;
-    padding-right: 4.5em;
+    padding-left: 5.5em;
+    padding-right: 5.5em;
   }
 }
 

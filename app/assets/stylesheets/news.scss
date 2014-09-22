@@ -6,6 +6,8 @@ section.top_img {
   height: 350px;
   padding-bottom: 50px;
   width: 100%;
+  background: white url('/assets/news/header.jpg') no-repeat center center;
+  background-size: cover;
   h1{
     font-size: 54px !important;
   	font-weight: 500;
@@ -51,6 +53,12 @@ section.news_content{
       font-weight: 700;
       width: 90%;
     }
+    a{
+      color: black;
+      &:hover{
+        color: red;
+      }
+    }
 
     ul{
       list-style-type: none;
@@ -89,7 +97,7 @@ section.news_content{
   .more{
     margin-top: 1rem;
     padding-bottom: 1.5rem;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #eeeeee;
     a{
       font-weight: 600;
       color: #ee1d23;
@@ -110,7 +118,6 @@ section.news_content{
     }
     ul.categories{
       li{
-        margin-left: -1.1rem;
         color: red;
         font-weight: 800;
         margin-bottom: -0.6rem;
