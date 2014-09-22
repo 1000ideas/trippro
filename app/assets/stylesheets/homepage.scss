@@ -241,6 +241,9 @@ section.benefits {
     font-weight: 300;
     text-align: center;
     margin: 0 0 .5em 0;
+    &:hover{
+      color: #333;
+    }
   }
 
   > ul {
@@ -386,6 +389,10 @@ section.benefits-at-your-service {
     width: 340px;
     &:before{
       content: "" !important;
+    }
+    span{
+      color: red;
+      font-weight: 500;
     }
   }
 

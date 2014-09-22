@@ -712,6 +712,16 @@ div.learn_qc {
 
     }
   }
+  section.benefits-at-your-service{
+    ul{
+      li{
+        span{
+          color: red;
+          font-size: 500;
+        }
+      }
+    }
+  }
 
   section.benefits-at-your-service.benefits-tour{
     padding-top: 1.5rem;
@@ -720,6 +730,10 @@ div.learn_qc {
       margin: 0px auto 0rem;
       li{
       content: "";
+      span{
+        color: red;  
+        font-weight: 500;
+      }
       }
     }
   }
