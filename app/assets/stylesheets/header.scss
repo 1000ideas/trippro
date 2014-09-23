@@ -113,12 +113,20 @@ nav.main-menu {
     &:hover, &:focus {
       color: lighten($primary-color, 10%);
       border: 1px solid lighten($primary-color, 10%);
-      
-    }
+      }
 
+    &.navbold{
+      color: red;
+      font-weight: 500;
+      border: none;
+    }
     &.highlight {
       color: $primary-color;
       border: 1px solid $primary-color;
+      &:hover{
+        color: #333;
+        border: 1px solid #333;
+      }
     }
   }
 }

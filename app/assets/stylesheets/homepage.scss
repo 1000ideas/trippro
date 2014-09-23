@@ -138,6 +138,7 @@ section.video {
   &:hover, &:focus {
     background: $primary-color;
     color: #fff;
+    transition: background-color 100ms ease-out 0s;
   }
 }
 
@@ -167,7 +168,14 @@ section.features {
        // display: inline-block;
        padding: 0 1.5rem;
        // width: 25%;
-
+       h3{
+        :hover{
+        color: #555;
+        }
+       }
+       a {
+        color: black;
+       }
        &:hover .red-icon {
         border-width: 0px;
         box-shadow: 0 0 0 10px rgba($primary-color, .8);
@@ -183,6 +191,9 @@ section.features {
   p {
     font-size: 0.9rem;
     font-weight: normal;
+    :hover{
+      color: #555;
+    }
   }
 
 }
@@ -241,9 +252,6 @@ section.benefits {
     font-weight: 300;
     text-align: center;
     margin: 0 0 .5em 0;
-    &:hover{
-      color: #333;
-    }
   }
 
   > ul {
@@ -364,7 +372,7 @@ section.benefits {
 
 section.benefits-at-your-service {
   padding-top: 4.5rem;
-  padding-bottom: 5.625rem;
+  padding-bottom: 6.625rem;
 
   h2 {
     color: #333;

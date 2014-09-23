@@ -22,24 +22,24 @@
 <section class="features">
   <ul ><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/plane.png') %></span>
-      <h3>Advanced Booking Tools</h3>
-      <p>More itineraries<br/>from multiple consolidators.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
+      <span class="hoverit"><h3><%= link_to "Advanced Booking Tools", tour_path%></h3>
+      <p><%=link_to "More itineraries<br/>from multiple consolidators.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/card.png') %></span>
-      <h3>Automated Ticketing</h3>
-      <p>Confirm and ticket instantly.<br />It’s that simple.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/card.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Automated Ticketing", tour_path%></h3>
+      <p><%=link_to "Confirm and ticket instantly.<br />It’s that simple.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/laptop.png') %></span>
-      <h3>Profit Manager</h3>
-      <p>Exclusive content from Mondee<br />consolidators all on one screen.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/laptop.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Profit Manager", tour_path%></h3>
+      <p><%= link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/chart.png') %></span>
-      <h3>Reporting &amp; Analytics</h3>
-      <p>Exclusive content from Mondee<br />consolidators all on one screen.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/chart.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Reporting &amp; Analytics".html_safe, tour_path%></h3>
+      <p><%=link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
     </li><!--
    --></ul>
 </section>
