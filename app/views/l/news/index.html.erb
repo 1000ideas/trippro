@@ -1,8 +1,8 @@
 <section class="top_img">
   <!-- <div class="row"> -->
-  <div class="small-12 poster">
+<!--   <div class="small-12 poster">
     <%= image_tag('news/header.jpg') %>
-  </div>
+  </div> -->
   <h1>News</h1>
   <h2>TripPro® is a revolutionary next generation search, book<br> 
 and ticketing technology providing the best international fares.</h2>
@@ -22,10 +22,10 @@ and ticketing technology providing the best international fares.</h2>
       <li>
         <p class="date"><%= l news.created_at, format: '%B %d, %Y' %></p>
         <h3>
-          <%= news.title %>
+          <%= link_to  news.title, news_path(news) %>
         </h3>
         <%= content_tag :div, class: 'image' do %>
-          <%= image_tag news.photo.url(:medium) %>
+          <%= link_to image_tag(news.photo.url(:medium)), news_path(news) %> 
         <% end if news.photo? %>
         <p class="content"><%=short news.content, 160 %></p>
         <div class="more"><%= link_to t('helpers.actions.more'), news_path(news) %></div>

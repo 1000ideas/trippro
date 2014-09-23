@@ -82,6 +82,10 @@ section.video {
       display: block;
       width: 100%;
     }
+    img.poster_img{
+      width: 100%;
+      height: auto;
+    }
   }
 
 
@@ -98,7 +102,9 @@ section.video {
     vertical-align: middle;
     margin: -2px 0 0 .5rem;
   }
-
+  &:hover{
+    color: #333;
+  }
   &.arrow-down:after { @include transform(rotate(90deg)); }
   &.arrow-left:after { @include transform(rotate(180deg)); }
   &.arrow-top:after { @include transform(rotate(270deg)); }
@@ -108,7 +114,9 @@ section.video {
   font-size: 1.125rem;
   font-weight: bold;
   color: $primary-color;
-
+  &:hover{
+    color: #333;
+  }
   &:after {
     content: '';
     background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMBAMAAABcu7ojAAAAElBMVEUAAADtHCTtHCTtHCTtHCTtHCSbN0rqAAAABXRSTlMAYJ/P31UMCrsAAAAdSURBVAjXYwADQxChKgAkmALRmK5gFlgMzoDqAABNqQLIVXUXjAAAAABJRU5ErkJggg==');
@@ -117,6 +125,9 @@ section.video {
     display: inline-block;
     vertical-align: middle;
     margin: -2px 0 0 1rem;
+    &:hover{
+      color: #333;
+    }
   }
 }
 
@@ -127,15 +138,27 @@ section.video {
   &:hover, &:focus {
     background: $primary-color;
     color: #fff;
+    transition: background-color 100ms ease-out 0s;
   }
 }
 
-.button.red-one {
+.button.red-one.white {
   background: $primary-color;
   color: #fff;
   &:hover, &:focus {
     background: #fff;
     color: $primary-color;
+    transition: background-color 100ms ease-out 0s;
+  }
+}
+
+.button.red-one.grey {
+  background: $primary-color;
+  color: #fff;
+  &:hover, &:focus {
+    background: #333;
+    color: white;
+    transition: background-color 100ms ease-out 0s;
   }
 }
 
@@ -155,7 +178,14 @@ section.features {
        // display: inline-block;
        padding: 0 1.5rem;
        // width: 25%;
-
+       h3{
+        :hover{
+        color: #555;
+        }
+       }
+       a {
+        color: black;
+       }
        &:hover .red-icon {
         border-width: 0px;
         box-shadow: 0 0 0 10px rgba($primary-color, .8);
@@ -171,6 +201,9 @@ section.features {
   p {
     font-size: 0.9rem;
     font-weight: normal;
+    :hover{
+      color: #555;
+    }
   }
 
 }
@@ -349,7 +382,7 @@ section.benefits {
 
 section.benefits-at-your-service {
   padding-top: 4.5rem;
-  padding-bottom: 5.625rem;
+  padding-bottom: 6.625rem;
 
   h2 {
     color: #333;
@@ -374,6 +407,10 @@ section.benefits-at-your-service {
     width: 340px;
     &:before{
       content: "" !important;
+    }
+    span{
+      color: red;
+      font-weight: 500;
     }
   }
 
@@ -469,8 +506,8 @@ section.testimonials {
   .button {
     margin: 0;
     font-weight: 800;
-    padding-left: 4.5em;
-    padding-right: 4.5em;
+    padding-left: 5.5em;
+    padding-right: 5.5em;
   }
 }
 

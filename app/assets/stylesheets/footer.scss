@@ -39,7 +39,7 @@ footer {
       padding: 8px 0 5px 1px;
       text-align: center;
       top: 0;
-      @include transition(top 500ms cubic-bezier(1.000, -0.8, 0.405, 1.425));
+      @include transition(top 300ms);
 
       .fa {
         font-size: 1.3rem;

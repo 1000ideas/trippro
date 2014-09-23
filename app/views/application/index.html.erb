@@ -1,14 +1,15 @@
 <section class="video">
   <div class="video-wrapper">
-    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="img/0.png">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/example-slide.png">
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.mp4" type="video/mp4" />
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.webm" type="video/webm" />
+     <%= image_tag('example-slide.png', class: "poster_img" ) %>
     </video>
   </div>
   <h2>Empower your agency with power of TripPro<sup>&reg;</sup></h2>
   <h3>Discover revolutionary next generation search, book<br>and ticketing technology providing the best international fares.</h3>
   <div class="buttons">
-    <%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %>
+    <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius' %>
     <%= link_to 'Take the Tour', tour_path, class: 'button white-one radius' %>
   </div>
   <div class="infobar">
@@ -21,24 +22,24 @@
 <section class="features">
   <ul ><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/plane.png') %></span>
-      <h3>Advanced Booking Tools</h3>
-      <p>More itineraries<br/>from multiple consolidators.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
+      <span class="hoverit"><h3><%= link_to "Advanced Booking Tools", tour_path%></h3>
+      <p><%=link_to "More itineraries<br/>from multiple consolidators.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/card.png') %></span>
-      <h3>Automated Ticketing</h3>
-      <p>Confirm and ticket instantly.<br />It’s that simple.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/card.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Automated Ticketing", tour_path%></h3>
+      <p><%=link_to "Confirm and ticket instantly.<br />It’s that simple.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/laptop.png') %></span>
-      <h3>Profit Manager</h3>
-      <p>Exclusive content from Mondee<br />consolidators all on one screen.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/laptop.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Profit Manager", tour_path%></h3>
+      <p><%= link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
-      <span class="red-icon"><%= image_tag('icons/chart.png') %></span>
-      <h3>Reporting &amp; Analytics</h3>
-      <p>Exclusive content from Mondee<br />consolidators all on one screen.</p>
+      <span class="red-icon"><%=link_to image_tag('icons/chart.png'), tour_path %></span>
+      <span class="hoverit"><h3><%=link_to "Reporting &amp; Analytics".html_safe, tour_path%></h3>
+      <p><%=link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
     </li><!--
    --></ul>
 </section>
@@ -75,7 +76,7 @@
     <p><%= link_to 'See All Features', '#', class: 'red-chevron' %></p>
 
   <h3>Ready for a journey?</h3>
-  <p class="get-started"><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
+  <p class="get-started"><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
 </section>
 <section class="benefits-at-your-service hide-for-small-only">
   <h2>Benefits at your service</h2>
@@ -106,7 +107,7 @@
       <p>Built for travel professionals by travel experts<br />with over 120 years of experience<br />helping agencies grow.</p>
     </li><!--
    --></ul>
-   <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
+   <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
 </section>
 <section class="testimonials hide-for-small-only">
   <h2>Testimonials</h2>
@@ -139,5 +140,5 @@
       </div>
     </li>
   </ul>
-  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
 </section>

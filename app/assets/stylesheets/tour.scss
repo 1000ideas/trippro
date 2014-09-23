@@ -32,7 +32,9 @@ section.featured-video {
   }
 }
 
-
+section.benefits-at-your-service.tour{
+  margin-bottom: -15rem;
+}
 section.feature {
   border-top: 1px solid #f5f5f5;
   padding-top: 5rem;
@@ -76,9 +78,9 @@ section.videos {
   }
 
   h3 {
-    font-size: 1.85rem;
+    font-size: 1.55rem;
     color: #333;
-    font-weight: 200;
+    font-weight: 600;
   }
 
   p {
@@ -137,6 +139,7 @@ section.quote{
     border-radius: 15px;
     width: 100%;
     float: right;
+    font-size: 1.1rem;
     
   }
   #triangle{
@@ -272,7 +275,7 @@ section.quote{
   }
   .row{
       position:relative;
-      .close{
+      .close_book{
         background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
         position: absolute;
         top: -33px;
@@ -394,7 +397,7 @@ div.learn_qc {
     width: 0px;
     margin-left: -33rem;
   }
-  .close{
+  .close_qc{
         background: url('sprites.png') no-repeat scroll -80px 0px transparent;
         width: 57px;
         height: 57px;
@@ -712,6 +715,16 @@ div.learn_qc {
 
     }
   }
+  section.benefits-at-your-service{
+    ul{
+      li{
+        span{
+          color: red;
+          font-size: 500;
+        }
+      }
+    }
+  }
 
   section.benefits-at-your-service.benefits-tour{
     padding-top: 1.5rem;
@@ -720,6 +733,10 @@ div.learn_qc {
       margin: 0px auto 0rem;
       li{
       content: "";
+      span{
+        color: red;  
+        font-weight: 500;
+      }
       }
     }
   }
