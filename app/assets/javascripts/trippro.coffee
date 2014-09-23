@@ -14,6 +14,13 @@ class TripPro
       exp_target = $(this).data("target")  
       $(".#{exp_target}").slideToggle("fast")
 
+    $(".close_book").click (event) ->
+      event.preventDefault
+      $(".learn_book").css("display", "none")
+
+    $(".close_qc").click (event) ->
+      event.preventDefault
+      $(".learn_qc").css("display", "none")
   init: ->
     $(window).scroll (event) ->
       $('header').toggleClass('smaller', $(event.target).scrollTop() > 50)

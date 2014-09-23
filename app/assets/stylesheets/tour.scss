@@ -275,7 +275,7 @@ section.quote{
   }
   .row{
       position:relative;
-      .close{
+      .close_book{
         background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
         position: absolute;
         top: -33px;
@@ -397,7 +397,7 @@ div.learn_qc {
     width: 0px;
     margin-left: -33rem;
   }
-  .close{
+  .close_qc{
         background: url('sprites.png') no-repeat scroll -80px 0px transparent;
         width: 57px;
         height: 57px;
