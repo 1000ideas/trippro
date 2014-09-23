@@ -21,6 +21,8 @@ class TripPro
     $(".close_qc").click (event) ->
       event.preventDefault
       $(".learn_qc").css("display", "none")
+
+      
   init: ->
     $(window).scroll (event) ->
       $('header').toggleClass('smaller', $(event.target).scrollTop() > 50)

@@ -142,12 +142,22 @@ section.video {
   }
 }
 
-.button.red-one {
+.button.red-one.white {
   background: $primary-color;
   color: #fff;
   &:hover, &:focus {
     background: #fff;
     color: $primary-color;
+    transition: background-color 100ms ease-out 0s;
+  }
+}
+
+.button.red-one.grey {
+  background: $primary-color;
+  color: #fff;
+  &:hover, &:focus {
+    background: #333;
+    color: white;
     transition: background-color 100ms ease-out 0s;
   }
 }
