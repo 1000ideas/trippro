@@ -6,28 +6,38 @@ class TripPro
     $(".more_info_expander").click (event) ->
       event.preventDefault
       exp_target = $(this).data("target")
+      to_close = $(".expandable").not($(".#{exp_target}")).find(".close")
+      for close_it in to_close
+        close_it.click()
       $(this).find('i').toggleClass('clicked')
-      $(".#{exp_target}").slideToggle("fast")
-
-    $(".box_expander").click (event) ->
-      event.preventDefault
-      exp_target = $(this).data("target")  
-      $(".#{exp_target}").slideToggle("fast")
+      $(".#{exp_target}").slideToggle "fast", ->
+        $("body, html").animate
+          scrollTop: $($(".#{exp_target}")).offset().top - 100
+        , 500
 
     $(".close").click (event) ->
       event.preventDefault
       exp_target = $(this).data("target")
-      $("i.clicked").removeClass("clicked")
-      $(".#{exp_target}").css("display", "none")
+      $(".#{exp_target}").prev().find("i.clicked").removeClass("clicked")
+      $("body, html").animate
+        scrollTop: $($(".#{exp_target}")).offset().top - 100
+      , 500, ->
+        $(".#{exp_target}").slideUp "fast"
 
-    # $(".close_qc").click (event) ->
-    #   event.preventDefault
-    #   $(".learn_qc").css("display", "none")
+    $(".box_expander").click (event) ->
+      event.preventDefault
+      exp_target = $(this).data("target")
+      $(".#{exp_target}").slideToggle("fast")
 
-      
   init: ->
     $(window).scroll (event) ->
       $('header').toggleClass('smaller', $(event.target).scrollTop() > 50)
+
+      if $('.close:visible').length > 0
+        if ($(document).scrollTop() > $('.close:visible').parent().parent().offset().top) and ($(document).scrollTop() < ($('.close:visible').parent().parent().offset().top + $('.close:visible').parent().parent().height()))
+          $('.close:visible').css("top", $(document).scrollTop() - $('.close:visible').parent().parent().offset().top)
+        else
+          $('.close:visible').css("top", 0)
     true
 
   loaded: ->
