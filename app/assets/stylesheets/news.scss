@@ -14,6 +14,7 @@ section.top_img {
   	padding-top: 15px;
   	padding-bottom: 32px;
   }
+
   .row{
   	position: relative;
   }
@@ -48,6 +49,13 @@ section.news_content{
 	padding-top: 4rem;
 	padding-bottom: 10px;
 	
+  .cont{
+    position: relative;
+    overflow: auto;
+    padding-left: 3.5%;
+    padding-right: 3.5%;
+  }
+
   h3{
       word-wrap: break-word;
       font-weight: 700;
@@ -70,7 +78,6 @@ section.news_content{
     }
   .news{
     padding-right: 4rem;
-    padding-left: 4rem;
      @media only screen and (max-width: 640px) {
              padding-right: 0.9375rem;
              padding-left: 0.9375rem;

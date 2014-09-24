@@ -275,11 +275,12 @@ section.quote{
   }
   .row{
       position:relative;
-      .close_book{
+      .close{
         background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
         position: absolute;
         top: -33px;
         right: 0;
+        margin-right: 10px;
       }
     }
     .red-icon {
@@ -397,13 +398,14 @@ div.learn_qc {
     width: 0px;
     margin-left: -33rem;
   }
-  .close_qc{
+  .close{
         background: url('sprites.png') no-repeat scroll -80px 0px transparent;
         width: 57px;
         height: 57px;
         top: 20px;
         float: right;
         margin-top: -40px;
+        margin-right: 10px;
       }
     div.embedded_video{
       img.emb_vid{
