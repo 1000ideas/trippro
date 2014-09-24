@@ -33,7 +33,7 @@ section.featured-video {
 }
 
 section.benefits-at-your-service.tour{
-  margin-bottom: -15rem;
+  padding-bottom: 0;
 }
 section.feature {
   border-top: 1px solid #f5f5f5;
@@ -41,7 +41,7 @@ section.feature {
   padding-bottom: 2rem;
 
   h3~p{
-    font-size: 1.1rem;   
+    font-size: 1.1rem;
     line-height: 110%;
   }
 section.videos {
@@ -115,7 +115,7 @@ section.videos {
   div.president{
     text-align: right;
       p.chris{
-        
+
       }
   }
 }*/
@@ -140,7 +140,7 @@ section.quote{
     width: 100%;
     float: right;
     font-size: 1.1rem;
-    
+
   }
   #triangle{
     width: 0;
@@ -221,7 +221,7 @@ section.quote{
     list-style-type: none;
     li {
       position: relative;
-      
+
       &:before {
         position: absolute;
         content: '•';
@@ -237,7 +237,7 @@ section.quote{
       right: 0;
     }
 
-  
+
 
     .text {
       padding-right: 640px;
@@ -260,29 +260,30 @@ section.quote{
     position: relative;
     margin-top: 4rem;
 
-   &:after{
-    border-color: transparent transparent #F7F7F7;
-    border-style: solid;
-    border-width: 0px 25px 25px;
-    content: "";
-    display: inline-block;
-    height: 0px;
-    right: 42.2%;
-    position: absolute;
-    top: -20px;
-    width: 0px;
-    margin-left: -33rem;
-  }
-  .row{
-      position:relative;
-      .close{
-        background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
-        position: absolute;
-        top: -33px;
-        right: 0;
-        margin-right: 10px;
-      }
+    &:after{
+      border-color: transparent transparent #F7F7F7;
+      border-style: solid;
+      border-width: 0px 25px 25px;
+      content: "";
+      display: inline-block;
+      height: 0px;
+      right: 42.2%;
+      position: absolute;
+      top: -20px;
+      width: 0px;
+      margin-left: -33rem;
     }
+    .row{
+        position:relative;
+        .close{
+          background: url('sprites.png') no-repeat -80px 0; width: 57px; height: 57px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-right: 10px;
+          z-index: 5;
+        }
+      }
     .red-icon {
       position: absolute;
       margin: 0 0 0 -100px;
@@ -295,7 +296,19 @@ section.quote{
           content: ""
         }
       }
+    }
+    section.benefits-at-your-service.tour{
+      ul {
+        margin: 0 auto 1.5rem;
+      }
+    }
+    section.benefits-at-your-service.benefits-tour{
+      padding-top: 1.5rem;
+      padding-bottom: 0;
 
+      ul {
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -385,6 +398,11 @@ div.learn_qc {
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
   position: relative;
+
+  .row {
+    position: relative;
+  }
+
   &:after{
     border-color: transparent transparent #F7F7F7;
     border-style: solid;
@@ -398,56 +416,63 @@ div.learn_qc {
     width: 0px;
     margin-left: -33rem;
   }
+
   .close{
-        background: url('sprites.png') no-repeat scroll -80px 0px transparent;
-        width: 57px;
-        height: 57px;
-        top: 20px;
-        float: right;
-        margin-top: -40px;
-        margin-right: 10px;
-      }
-    div.embedded_video{
-      img.emb_vid{
+    background: url('sprites.png') no-repeat scroll -80px 0px transparent;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 57px;
+    height: 57px;
+    margin-right: 10px;
+    z-index: 5;
+  }
+
+  div.embedded_video{
+
+    img.emb_vid{
       z-index: 9;
       text-align: center;
     }
 
-      #play{
-            margin: -240px 10px 0px 350px;
-            height: 140px;
-            position: relative;
-            z-index: 10;
-        }
+    #play{
+      margin: -240px 10px 0px 350px;
+      height: 140px;
+      position: relative;
+      z-index: 10;
     }
-    h2 {
-      white-space:nowrap;
-      color: #333;
-      font-size: 30px;
-      font-weight: 5;
-      text-align: center;
-      margin: 0 0 .3em 0;
-    }
+  }
 
-    h3 {
-      color: #333;
-      font-size: 1.75rem;
-      font-weight: 600;
-      text-align: center;
-      margin: 4rem 0 .8em 0;
-    }
+  h2 {
+    white-space:nowrap;
+    color: #333;
+    font-size: 30px;
+    font-weight: 5;
+    text-align: center;
+    margin: 0 0 .3em 0;
+  }
 
-    p {
-      color: #777;
-      font-size: 18px;;
-      font-weight: 300;
-      text-align: center;
-      margin: 0 0 .5em 0;
-      .numbers{
-        background: blue;
-      }
+  h3 {
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 4rem 0 .8em 0;
+  }
+
+  p {
+    color: #777;
+    font-size: 18px;;
+    font-weight: 300;
+    text-align: center;
+    margin: 0 0 .5em 0;
+
+    .numbers{
+      background: blue;
     }
-  >ul {
+  }
+
+  .row>ul.round-items {
     list-style: none;
     max-width: 1140px;
     width: 100%;
@@ -464,15 +489,18 @@ div.learn_qc {
       margin: 0 2.5em;
       border-radius: 100%;
       white-space: nowrap;
+
       &:before {
         position: absolute;
         content: "";
         color: $primary-color;
         margin: 0 0 0 -1rem;
       }
-        ul.dow{
-          background: blue !important;
-        }
+
+      ul.dow{
+        background: blue !important;
+      }
+
       > p {
         color: #323232;
         line-height: 120%;
@@ -482,9 +510,10 @@ div.learn_qc {
         text-align: center;
         font-weight: 200;
         margin: 0;
+
         .numbers{
-        background: blue;
-          }
+          background: blue;
+        }
 
         strong {
           display: block;
@@ -503,7 +532,8 @@ div.learn_qc {
       }
     }
   }
-  #cos{ 
+
+  #cos{
     padding-bottom: 140px;
     margin-left: 100px;
     margin-right: auto;
@@ -516,27 +546,32 @@ div.learn_qc {
       float: left;
     }
 
-   
     strong {
-      display: inline-block;  
+      display: inline-block;
     }
+
     img{
      position: absolute;
      padding-left: 550px;
     }
+
     ul{
       list-style-type: none;
       padding-left: 150px;
+
       &:before {
         position: absolute;
         content: "";
         color: $primary-color;
         margin: 0 0 0 -1rem;
       }
+
       li{
         padding-bottom: 140px;
       }
+
     }
+
     p{
       font-weight: 5px;
       font-size: 18px;
@@ -549,8 +584,9 @@ div.learn_qc {
       }
     }
   }
-  #extra{ 
-    
+
+  #extra{
+
     h1{
       font-size: 30px;
       font-weight: 5px;
@@ -561,7 +597,7 @@ div.learn_qc {
     display: inline-block;
 
     strong {
-      display: inline-block;  
+      display: inline-block;
     }
     img{
      position: absolute;
@@ -616,6 +652,7 @@ div.learn_qc {
     .liimg-img{
       display: inline-block;
       vertical-align: top;
+
       &.ticket{
         padding-left: 32px;
       }
@@ -664,7 +701,7 @@ div.learn_qc {
         &:hover {
           border-width: 0px;
           box-shadow: 0 0 0 0 rgba($primary-color, .8);
-        }       
+        }
         display: inline-block;
         h1{
           color: #FFF;
@@ -711,7 +748,7 @@ div.learn_qc {
         content: "";
         margin-bottom: 3rem;
         h2{
-          
+
         }
       }
 
@@ -736,7 +773,7 @@ div.learn_qc {
       li{
       content: "";
       span{
-        color: red;  
+        color: red;
         font-weight: 500;
       }
       }
@@ -758,8 +795,10 @@ div.learn_qc {
   }
 }
 
-
-
+.learn_profit,
+.learn_reporting {
+  display: none;
+}
 
 section.other-feature {
   text-align: center;
@@ -784,8 +823,6 @@ section.other-feature {
     max-width:700px;
   }
 }
-
-
 
 section.get_started {
   padding-bottom: 52px;
