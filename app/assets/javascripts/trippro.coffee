@@ -14,13 +14,15 @@ class TripPro
       exp_target = $(this).data("target")  
       $(".#{exp_target}").slideToggle("fast")
 
-    $(".close_book").click (event) ->
+    $(".close").click (event) ->
       event.preventDefault
-      $(".learn_book").css("display", "none")
+      exp_target = $(this).data("target")
+      $("i.clicked").removeClass("clicked")
+      $(".#{exp_target}").css("display", "none")
 
-    $(".close_qc").click (event) ->
-      event.preventDefault
-      $(".learn_qc").css("display", "none")
+    # $(".close_qc").click (event) ->
+    #   event.preventDefault
+    #   $(".learn_qc").css("display", "none")
 
       
   init: ->
@@ -39,8 +41,11 @@ class TripPro
 
       $('.next', slider).click (event) ->
         event.preventDefault()
-        return if current >= slides - 1
-        current += 1
+        # return if current >= slides - 1
+        if current >= slides - 1
+          current = 0
+        else
+          current += 1
         margin = 0
         list = $('ul li', slider).slice(0, current).each (idx, el) ->
           margin -= $(el).outerWidth();
@@ -48,7 +53,7 @@ class TripPro
         title = $('ul li', slider).slice(current).find('img').data('title')
         $('.slide-title', slider).fadeOut ->
           $(this).text(title).fadeIn()
-        $(event.target).toggleClass('inactive', current == slides - 1)
+        # $(event.target).toggleClass('inactive', current == slides - 1)
         $(event.target).prev().toggleClass('inactive', current == 0)
 
       $('.prev', slider).click (event) ->
