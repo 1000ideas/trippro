@@ -12,12 +12,19 @@
     <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius' %>
     <%= link_to 'Take the Tour', tour_path, class: 'button white-one radius' %>
   </div>
-  <div class="infobar">
+  <div class="infobar hide-for-small-only">
     <a href="" class="with-arrow arrow-right">
       <%= image_tag('infobar-icon.png')  %>
       Download TripPro From Sabre Red App Centre
     </a>
   </div>
+   <div class="infobar show-for-small-only">
+    <a href="" class="with-arrow arrow-right">
+      <%= image_tag('infobar-icon.png')  %>
+      Sign up for webinar
+    </a>
+  </div>
+
 </section>
 <section class="features">
   <ul ><!--
@@ -56,7 +63,7 @@
   <p>TripPro gives you the best international fares, lets you save search time<br />
  <span class="hide-for-small-only">and automate ticketing, which result in new sales, increased profits and happy customers.</span></p>
 
-  <ul class="hide-for-small-only">
+  <ul class="">
       <li><p><strong>30% more</strong>unique itineraries</p></li>
       <li><p><strong>save 10h</strong>per agent on average</p></li>
       <li><p><strong>10% increase</strong>in agency profits</p></li>
