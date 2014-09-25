@@ -31,32 +31,47 @@
     <%= yield %>
     <footer>
       <div class="wrapper">
-        <div class="row links collapse">
-          <div class="columns small-4">
+        <div class="small-12 medium-6 links collapse">
+          <div class=" columns small-12 show-for-small-only ">
+            <%= link_to 'back to top', '#', :class => "right" %>
+          </div>
+          <div class="columns small-12 medium-4">
             <%= link_to 'Tour', tour_path %>
             <%= link_to 'Get Started', get_started_path %>
             <%= link_to 'News', news_index_path %>
           </div>
-          <div class="columns small-4">
+          <div class="columns small-12 medium-4">
             <%= link_to 'Terms of Service', '#' %>
             <%= link_to 'Privacy Policy', '#' %>
             <%= link_to 'FAQ', faq_path %>
           </div>
-          <div class="columns small-4">
+          <div class="columns small-12 medium-4">
             <%= link_to 'Support', '#' %>
             <%= link_to 'Contact us', contact_path %>
           </div>
 
         </div>
-        <div class="social">
+        <div class="social small-12 medium-6 hide-for-small-only">
           <p>
-            <strong>Follow us:</strong>
+            <p><strong>Follow us:</strong></p>
             <%= link_to fa_icon('facebook'), '#', class: :facebook %>
             <%= link_to fa_icon('twitter'), '#', class: :twitter %>
             <%= link_to fa_icon('linkedin'), '#', class: :linkedin %>
           </p>
           <p class="copy">
             Call Us +1 866 855 9630 &copy; 2014 Mondee Inc.
+          </p>
+        </div>
+         <div class="social small-12 medium-6 show-for-small-only">
+          <p class="call">Call Us +1 866 855 9630</p>
+          <p>
+            <p><strong>Follow us</strong></p>
+            <%= link_to fa_icon('facebook'), '#', class: :facebook %>
+            <%= link_to fa_icon('twitter'), '#', class: :twitter %>
+            <%= link_to fa_icon('linkedin'), '#', class: :linkedin %>
+          </p>
+          <p class="copy">
+            &copy; 2014 Mondee Inc.
           </p>
         </div>
       </div>

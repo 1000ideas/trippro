@@ -1177,8 +1177,8 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: white;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 // $topbar-height: 45px;
@@ -1189,7 +1189,7 @@ $small-only: "#{$screen} and (max-width: #{upper-bound($small-range)})";
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+ $topbar-dropdown-bg: white;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: $font-weight-normal;
