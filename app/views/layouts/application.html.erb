@@ -16,7 +16,7 @@
       <div class="small-links wrapper">
         <p>Call Us +1 866 855 9630 | <span class="hov"><a href="#">Download TripPro Sabre App</a></span></p>
       </div>
-      <div class="wrapper">
+      <div class="wrapper hide-for-small-only">
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
         <nav class="main-menu">
           <ul><!--
@@ -27,13 +27,37 @@
             --></ul>
         </nav>
       </div>
+      <!-- test zajebistego menu -->
+        <nav class="top-bar show-for-small-only" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
+              </li>
+               <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+              <li class="toggle-topbar menu-icon mn"><a href="#"><span>Menu</span></a></li>
+            </ul>
+             <section class="top-bar-section">
+                <!-- Right Nav Section -->
+                <ul class="right">
+                  <li><%= link_to ' Take the Tour', tour_path %></li>
+                  <li><%= link_to 'Get Started', get_started_path %></li>
+                  <li><%= link_to 'News', news_index_path %></li>
+                  <li><%= link_to 'Terms of Service', "#" %></li>
+                  <li><%= link_to 'Privacy Policy', "#" %></li>
+                  <li><%= link_to 'FAQ', faq_path %></li>
+                  <li><%= link_to 'Support', "#" %></li>
+                  <li><%= link_to 'Contact Us', contact_path %></li>
+                </ul>
+              </section>
+        </nav>
+      <!-- koniec testu zajebistosci -->
     </header>
     <%= yield %>
     <footer>
       <div class="wrapper">
         <div class="small-12 medium-6 links collapse">
           <div class=" columns small-12 show-for-small-only ">
-            <%= link_to 'back to top', '#', :class => "right" %>
+            <%= link_to 'back to top ^', '#', :class => "right" %>
           </div>
           <div class="columns small-12 medium-4">
             <%= link_to 'Tour', tour_path %>
