@@ -1,5 +1,5 @@
+@import 'overrides';
 @import 'compass/css3/transition';
-
 footer {
   border-top: 1px solid #f5f5f5;
   .wrapper {
@@ -11,19 +11,35 @@ footer {
 
   .social,
   .links {
+    @media #{$small-only} { 
+      width: 100%;
+    }
     width: 50%;
     float: left;
   }
   .links {
-    padding-right: 1rem;
+    a{
+      @media #{$small-only}{
+      font-size: 18px;
+    }
+    }
   }
   .social {
     text-align: right;
+    @media #{$small-only}{
+      text-align: center;
+    }
 
     p {
       font-size: .85rem;
       margin-bottom: .3rem;
       color: #555555;
+      &.call{
+        font-size: 18px;
+        font-weight: 500;
+        padding-top: 1rem;
+        padding-bottom: 0.8rem;
+      }
     }
 
 
@@ -60,10 +76,22 @@ footer {
     display: block;
     color: #555;
     font-size: .85rem;
-
+    @media #{$small-only}{
+      font-size: 18px;
+      border-top: 1px solid #eeeeee;
+      border-bottom: 0px;
+      border-width: 100%;
+      padding: 5px 0px 5px 10px;
+      font-weight: 300;
+    }
+    &.right{
+        border-top: none;
+        color: #ed1c24;
+     }
     &:hover, &:focus {
       color: #333;
     }
   }
 
 }
+

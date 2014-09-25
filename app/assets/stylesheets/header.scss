@@ -3,6 +3,14 @@
 
 body {
   padding-top: 109px;
+     @media #{$small-only} {
+      padding-top:0;
+    }
+}
+
+li.mn{
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
 }
 
 header {
