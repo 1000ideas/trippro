@@ -42,10 +42,14 @@ header {
       .hov{
         a{
         color: #c8c8c8;
+        border: 1px solid transparent;
+        padding: 0 2px;
         }
         a:hover{
         border: 1px solid #EA4F4F;
+        border-radius: 4px;
         color: #EA4F4F;
+        padding: 0 2px;
         }
       }
     }
