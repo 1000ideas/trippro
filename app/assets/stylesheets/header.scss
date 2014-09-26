@@ -13,6 +13,14 @@ li.mn{
   border-radius: 4px;
 }
 
+ul.menu_list{
+  li{
+    a{
+      border-bottom: 1px solid #eeeeee;
+    }
+  }
+}
+
 header {
   position: fixed;
   top: 0;
