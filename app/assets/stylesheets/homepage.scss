@@ -449,6 +449,13 @@ section.testimonials {
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
 
+  &.rwd{
+    p{
+      padding-left:15px;
+      padding-right:15px;
+    }
+  }
+
   h2 {
     color: #333;
     font-size: 2.25rem;
