@@ -20,7 +20,7 @@
   </div>
    <div class="infobar show-for-small-only">
     <a href="" class="with-arrow arrow-right">
-      <%= image_tag('infobar-icon.png')  %>
+      <%= image_tag('infobar-icon.png', :class => "hide-for-small-only") %>
       Sign up for webinar
     </a>
   </div>
@@ -85,7 +85,7 @@
   <h3>Ready for a journey?</h3>
   <p class="get-started"><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
 </section>
-<section class="benefits-at-your-service hide-for-small-only">
+<section class="benefits-at-your-service">
   <h2>Benefits at your service</h2>
   <ul><!--
      --><li>
@@ -116,7 +116,7 @@
    --></ul>
    <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
 </section>
-<section class="testimonials hide-for-small-only">
+<section class="testimonials ">
   <h2>Testimonials</h2>
   <ul>
     <li class="row collapse" data-equalizer>
