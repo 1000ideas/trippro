@@ -24,6 +24,8 @@
 	  	line-height: 110%;
 		@media #{$small-only} {
 			 font-size: 18px;
+			 padding-left: 0.5rem;
+			 padding-right: 0.5rem;
 			}
 		strong{
 			color: red;

@@ -4,6 +4,9 @@ section.faq-logo {
 	position: relative;
 	overflow: hidden;
 	height: 380px;
+  @media #{$small-only} {
+  margin-bottom: -4rem;
+  }
 
 	.poster {
     position: absolute;
