@@ -22,13 +22,16 @@ section.featured-video {
     font-size: 3.375rem;
     font-weight: 200;
     margin: 2.7em 0 0.5em 0;
+   @media #{$small-only}{
+    font-size: 34px;
+   }
   }
 
   a.play-button {
     display: block;
     margin: 0 auto;
     text-align: center;
-    width: 94px;
+    width:30%;
   }
 }
 
