@@ -246,12 +246,19 @@
       <span class="red-icon"><%= image_tag('icons/platform.png') %></span>
       <h3>Cross-platform Availability</h3>
       <p>TripPro is available on all major platforms</p>
-      <p>
+      <p class="hide-for-small-only">
         <span data-tooltip aria-haspopup="true" class="has-tip" title="Through the Sabre travel marketplace, our GDS, gain global access to more than 400 airlines, 125,000 hotel properties, 16 cruise lines and 25 car rental brands. You will have a mile-long list of travel options to provide to your customers. "><%= link_to "Sabre Red", '#' %> •</span>
         <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"><%= link_to "Desktop", '#' %> •</span>
         <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"> <%= link_to "Web", '#' %> •</span>
         <span data-tooltip aria-haspopup="true" class="has-tip" title="Tooltips are awesome, you should totally use them!"><%= link_to "TriPro API", '#' %></span>
       </p>
+
+      <ul class="show-for-small-only other_feat">
+        <li><%= link_to "Sabre Red", '#' %> </li>
+        <li><%= link_to "Desktop", '#' %></li>
+        <li><%= link_to "Web", '#' %></li>
+        <li><%= link_to "TriPro API", '#' %></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -264,7 +271,7 @@
         <%= link_to "",'#'%>
       </span>
       <h3>24/7 Support</h3>
-      <p>In an industry where customer service is paramount, we deliver 24/7 customer support to solve problems quickly, allowing agents to focus on their customers.</p>
+      <p class="support">In an industry where customer service is paramount, we deliver 24/7 customer support to solve problems quickly, allowing agents to focus on their customers.</p>
     </div>
   </div>
 </section>

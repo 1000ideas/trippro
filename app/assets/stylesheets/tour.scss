@@ -1,3 +1,4 @@
+
 @import 'overrides';
 @import "compass/css3/transition";
 section.featured-video {
@@ -43,9 +44,18 @@ section.feature {
   padding-top: 5rem;
   padding-bottom: 2rem;
 
+  h3{
+   @media #{$small-only}{
+    text-align: center;
+   }   
+  }
+
   h3~p{
     font-size: 1.1rem;
     line-height: 110%;
+   @media #{$small-only}{
+    text-align: left;
+   }
   }
 section.videos {
   padding-top: 4.5rem;
@@ -84,6 +94,7 @@ section.videos {
     font-size: 1.55rem;
     color: #333;
     font-weight: 600;
+    text-align: center;
   }
 
   p {
@@ -248,9 +259,10 @@ section.quote{
       position: relative;
 
       @media only screen and (max-width: 40em) {
-      padding-right: 0;
+      padding-right: 20px;
+      padding-left:20px;
       span.red-icon{
-        display: none;
+        // display: none;
       }
       }
     }
@@ -810,10 +822,16 @@ section.other-feature {
   margin-bottom: 2rem;
   h3{
     font-weight: 600;
+    font-size: 24px;
   }
   p{
     font-size: 1.1rem;
+    &.support{
+      text-align: left;
+      font-size: 18px;
+    }
   }
+
   .has-tip{
     border-bottom: 0px;
     a{
@@ -825,6 +843,10 @@ section.other-feature {
    > .row {
     max-width:700px;
   }
+  ul.other_feat{
+    list-style-type: none;
+  }
+
 }
 
 section.get_started {
