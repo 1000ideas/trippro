@@ -1,9 +1,9 @@
 <section class="video">
   <div class="video-wrapper">
-    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/example-slide.png">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/prev_post.jpg">
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.mp4" type="video/mp4" />
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.webm" type="video/webm" />
-     <%= image_tag('example-slide.png', class: "poster_img" ) %>
+     <%= image_tag('prev_post.jpg', class: "poster_img" ) %>
     </video>
   </div>
   <h2 class="hide-for-small-only">Empower your agency with power of TripPro<sup>&reg;</sup></h2>
@@ -30,7 +30,7 @@
   <ul ><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
-      <span class="hoverit"><h3><%= link_to "Advanced Booking Tools", tour_path%></h3>
+      <span class="hoverit"><div id="page_content" class="mercury-region" data-type="editable"> <h3><%= link_to "Advanced Booking Tools", tour_path%></h3></div>
       <p><%=link_to "More itineraries<br/>from multiple consolidators.".html_safe, tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">

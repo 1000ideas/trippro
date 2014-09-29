@@ -19,7 +19,9 @@
       <div class="wrapper hide-for-small-only">
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
         <nav class="main-menu">
-          <ul><!--
+          <ul>
+                 <li><%= link_to "Edit", "/editor" + request.path%></li>
+          <!--
               --><li><%= nav_link 'Tour', tour_path(format: :html) %></li><!--
               --><li><%= nav_link 'Contact Us', contact_path %></li><!--
               --><li><%= nav_link 'Login', '#' %></li><!--
