@@ -20,3 +20,35 @@ Content.create id: 'home-content-18', content: "unique itineraries"
 Content.create id: 'home-content-19', content: "per agent on average"
 Content.create id: 'home-content-20', content:  "in agency profits"
 Content.create id: 'home-content-21', content: "ticket reservations"
+Content.create id: 'home-content-22', content: "Benefits at your service"
+Content.create id: 'home-content-23', content: "Maximize Profits"
+Content.create id: 'home-content-24', content: "Easy to Use"
+Content.create id: 'home-content-25', content: "Saves Time"
+Content.create id: 'home-content-26', content: "Price Assurance"
+Content.create id: 'home-content-27', content: "Experience and Trust"
+Content.create id: 'home-content-28', content: "Complete control over commission and profit with one click access to unparalleled consolidator inventory."
+Content.create id: 'home-content-29', content: "Fares displayed seamlessly via browser
+												or with anypreferred GDS partner on
+												the same screen, no training needed."
+Content.create id: 'home-content-30', content: "One-click booking eliminates manual
+												processing time and reduces new
+												agent training time."
+Content.create id: 'home-content-31', content: "Fares from the world’s leading
+												consolidators, available instantly."
+Content.create id: 'home-content-32', content: "Built for travel professionals by travel experts
+												with over 120 years of experience
+												helping agencies grow."
+Content.create id: 'home-content-33', content: "Ready for a journey?"
+Content.create id: 'home-content-34', content: "Benefits at your service"
+Content.create id: 'home-content-35', content: "Benefits at your service"
+Content.create id: 'home-content-36', content: "Benefits at your service"
+Content.create id: 'home-content-37', content: "Benefits at your service"
+Content.create id: 'home-content-38', content: "Benefits at your service"
+Content.create id: 'home-content-39', content: "Benefits at your service"
+Content.create id: 'home-content-40', content: "Benefits at your service"
+Content.create id: 'home-content-41', content: "Benefits at your service"
+Content.create id: 'home-content-42', content: "Benefits at your service"
+Content.create id: 'home-content-43', content: "Benefits at your service"
+Content.create id: 'home-content-44', content: "Benefits at your service"
+Content.create id: 'home-content-45', content: "Benefits at your service"
+Content.create id: 'home-content-46', content: "Benefits at your service"
