@@ -6,8 +6,8 @@
      <%= image_tag('prev_post.jpg', class: "poster_img" ) %>
     </video>
   </div>
-  <h2 class="hide-for-small-only">Empower your agency with power of TripPro<sup>&reg;</sup></h2>
-  <h3>Discover revolutionary next generation search, book<br>and ticketing technology providing the best international fares.</h3>
+  <h2 id="home-content-1" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('home-content-1')%></h2>
+  <h3 id="home-content-2" class="mercury-region" data-mercury="full"><%= content('home-content-2')%></h3>
   <div class="buttons">
     <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius' %>
     <%= link_to 'Take the Tour', tour_path, class: 'button white-one radius' %>
@@ -30,23 +30,23 @@
   <ul ><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
-      <span class="hoverit"><div id="page_content" class="mercury-region" data-type="editable"> <h3><%= link_to "Advanced Booking Tools", tour_path%></h3></div>
-      <p><%=link_to "More itineraries<br/>from multiple consolidators.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%= content('home-content-3')%></h3></div>
+      <p id="home-content-7" class="mercury-region" data-mercury="full"><%=link_to content('home-content-7'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/card.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Automated Ticketing", tour_path%></h3>
-      <p><%=link_to "Confirm and ticket instantly.<br />It’s that simple.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-4" class="mercury-region" data-mercury="full"><h3><%= content('home-content-4')%></h3></div>
+      <p id="home-content-8" class="mercury-region" data-mercury="full"><%=link_to content('home-content-8'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/laptop.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Profit Manager", tour_path%></h3>
-      <p><%= link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-5" class="mercury-region" data-mercury="full"><h3><%=content('home-content-5')%></h3></div>
+      <p id="home-content-9" class="mercury-region" data-mercury="full" ><%= link_to content('home-content-9'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/chart.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Reporting &amp; Analytics".html_safe, tour_path%></h3>
-      <p><%=link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-6" class="mercury-region" data-mercury="full"><h3><%=content('home-content-6')%> </h3></div>
+      <p id="home-content-10" class="mercury-region" data-mercury="full"><%=link_to content('home-content-10'), tour_path%></p></span>
     </li><!--
    --></ul>
 </section>
@@ -59,15 +59,16 @@
   </ul>
 </section>
 <section class="benefits">
-  <h2>More savings for customers, more profit for you.</h2>
-  <p>TripPro gives you the best international fares, lets you save search time<br />
- <span class="hide-for-small-only">and automate ticketing, which result in new sales, increased profits and happy customers.</span></p>
+  <h2 id="home-content-11" class="mercury-region" data-mercury="full"><%= content('home-content-11')%></h2>
+  <p id="home-content-12" class="mercury-region" data-mercury="full"><%= content('home-content-12')%></p> 
+  <p id="home-content-13" class="mercury-region" data-mercury="full">
+ <span class="hide-for-small-only"><%=content('home-content-13')%></span></p>
 
   <ul class="">
-      <li><p><strong>30% more</strong>unique itineraries</p></li>
-      <li><p><strong>save 10h</strong>per agent on average</p></li>
-      <li><p><strong>10% increase</strong>in agency profits</p></li>
-      <li><p><strong>50% faster</strong>ticket reservations</p></li>
+      <li><p id="home-content-18" class="mercury-region" data-mercury="full"><strong id="home-content-14" class="mercury-region" data-mercury="full"><%= content('home-content-14')%></strong><%= content('home-content-18')%></p></li>
+      <li><p id="home-content-19" class="mercury-region" data-mercury="full"><strong id="home-content-15" class="mercury-region" data-mercury="full"><%= content('home-content-15')%></strong><%= content('home-content-19')%></p></li>
+      <li><p id="home-content-20" class="mercury-region" data-mercury="full"><strong id="home-content-16" class="mercury-region" data-mercury="full"><%= content('home-content-16')%></strong><%= content('home-content-20')%></p></li>
+      <li><p id="home-content-21" class="mercury-region" data-mercury="full"><strong id="home-content-17" class="mercury-region" data-mercury="full"><%= content('home-content-17')%></strong><%= content('home-content-21')%></p></li>
   </ul>
 
   <div class="hide-for-small-only laptop-slider">

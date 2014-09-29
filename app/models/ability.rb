@@ -7,6 +7,7 @@ class Ability
     if user.has_role? :admin
       can :display, :dashboard
       can :manage, User
+      can :manage, Content
       can :manage, L::Page
       can :manage, L::News
       can :manage, L::Gallery

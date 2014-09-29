@@ -1,5 +1,7 @@
 Trippro::Application.routes.draw do
 
+  get "content/update"
+
   mount Mercury::Engine => '/'
 
   devise_for :users,
@@ -18,6 +20,9 @@ Trippro::Application.routes.draw do
 
   scope path: 'admin', as: :admin do
     scope module: :admin do
+      get :settings, controller: :content, action: :settings
+      post :settings, controller: :content, action: :settings_update
+      resource :content, controller: :content, only: :update
     end
 
     scope module: 'l/admin' do
