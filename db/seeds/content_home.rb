@@ -58,7 +58,7 @@ Content.create id: 'tour-content-video-4', content: " <li>Abecadlo GDS integrate
         <li>Search multiple GDS</li>
         <li>Advanced filters</li>"
 #koniec_listy
-
+puts "Homepage done"
 Content.create id: 'tour-content-video-5', content: "Automated Ticketing and QC"
 Content.create id: 'tour-content-video-6', content: "Connect to TripPro in real-time and take advantage of instant 
 													ticketing technology. Confirm seats and 
@@ -89,19 +89,20 @@ Content.create id: 'tour-content-video-17', content: "In an industry where custo
 													customer support to solve problems quickly, allowing agents to focus on their customers."
 Content.create id: 'tour-content-video-18', content: "Start using TripPro today, boost sales within weeks"
 
-
+puts "Tour done"
 
 #Contact
-Content.create id: 'contact-content-1', content: "We’d love to hear from you. We have a team who are ready to help you.<br>
+Content.create id: 'contact-content-1', content: "Contact Us"
+Content.create id: 'contact-content-2', content: "We’d love to hear from you. We have a team who are ready to help you.<br>
 If you need immediate help, you can simply contact one of our product experts at"
-Content.create id: 'contact-content-2', content: "Contact Us"
-Content.create id: 'contact-content-3', content: "Contact Us"
-Content.create id: 'contact-content-4', content: "Contact Us"
+Content.create id: 'contact-mail-1', content: "reservations@trippro.com"
+Content.create id: 'contact-phone-1', content: "+1 866-855-9630"
 Content.create id: 'contact-content-5', content: "Contact Us"
 Content.create id: 'contact-content-6', content: "Contact Us"
 Content.create id: 'contact-content-7', content: "Contact Us"
 #Get_started
 
+puts "Contact done"
 Content.create id: 'get_started-content-1', content: "Sign up for TripPro "
 Content.create id: 'get_started-content-2', content: "Please fill out the application form. You will be given a unique name, password,
  and link to our member site, and you can start using TripPro right away. "
@@ -111,3 +112,5 @@ find the best time for you to show you the TripPro features."
 
 Content.create id: 'get_started-content-5', content: "Take part in a webinar"
 Content.create id: 'get_started-content-6', content: "Join our free webinar to learn more about TripPro. "
+
+puts "get started done"
