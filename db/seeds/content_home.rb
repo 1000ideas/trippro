@@ -50,33 +50,64 @@ Content.create id: 'tour-content-video-3', content: "Search global content from 
 													innovative algorithms uncover hidden 
 													routings and recommend the best custom itineraries."
 #lista
-Content.create id: 'tour-content-video-4', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-5', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-6', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-4', content: " <li>Abecadlo GDS integrated on the desktop</li>
+        <li>One click booking</li>
+        <li>+/- 3 day fares</li>
+        <li>Unique itineraries</li>
+        <li>30+ day real-time fare calendar</li>
+        <li>Search multiple GDS</li>
+        <li>Advanced filters</li>"
+#koniec_listy
+
+Content.create id: 'tour-content-video-5', content: "Automated Ticketing and QC"
+Content.create id: 'tour-content-video-6', content: "Connect to TripPro in real-time and take advantage of instant 
+													ticketing technology. Confirm seats and 
+													ticket instantly with one click. It’s that simple!"
+#lista
 Content.create id: 'tour-content-video-7', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-8', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-9', content: "Discover the power behind TripPro"
+#koniec listy
 
-
-
+Content.create id: 'tour-content-video-8', content: "Profit Manager"
+Content.create id: 'tour-content-video-9', content: "Directly control commissions to stay competitive and increase profits. Advanced markup features are 
+													completely configurable to manage the right 
+													balance of profitability and customer value."
+#lista
 Content.create id: 'tour-content-video-10', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-11', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-12', content: "Discover the power behind TripPro"
+#koniec listy
+
+Content.create id: 'tour-content-video-11', content: "Reporting &amp; Analytics"
+Content.create id: 'tour-content-video-12', content: "Lorem ipsum dolor sit amet, 
+													consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+													ercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+#lista
 Content.create id: 'tour-content-video-13', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-14', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-15', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-16', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-17', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-18', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-19', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-20', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-21', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-22', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-23', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-24', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-25', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-26', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-27', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-28', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-29', content: "Discover the power behind TripPro"
-Content.create id: 'tour-content-video-30', content: "Discover the power behind TripPro"
+#koniec listy
+Content.create id: 'tour-content-video-14', content: "Cross-platform Availability"
+Content.create id: 'tour-content-video-15', content: "TripPro is available on all major platforms"
+Content.create id: 'tour-content-video-16', content: "24/7 Support"
+Content.create id: 'tour-content-video-17', content: "In an industry where customer service is paramount, we deliver 24/7 
+													customer support to solve problems quickly, allowing agents to focus on their customers."
+Content.create id: 'tour-content-video-18', content: "Start using TripPro today, boost sales within weeks"
+
+
+
+#Contact
+Content.create id: 'contact-content-1', content: "We’d love to hear from you. We have a team who are ready to help you.<br>
+If you need immediate help, you can simply contact one of our product experts at"
+Content.create id: 'contact-content-2', content: "Contact Us"
+Content.create id: 'contact-content-3', content: "Contact Us"
+Content.create id: 'contact-content-4', content: "Contact Us"
+Content.create id: 'contact-content-5', content: "Contact Us"
+Content.create id: 'contact-content-6', content: "Contact Us"
+Content.create id: 'contact-content-7', content: "Contact Us"
+#Get_started
+
+Content.create id: 'get_started-content-1', content: "Sign up for TripPro "
+Content.create id: 'get_started-content-2', content: "Please fill out the application form. You will be given a unique name, password,
+ and link to our member site, and you can start using TripPro right away. "
+Content.create id: 'get_started-content-3', content: "Demo "
+Content.create id: 'get_started-content-4', content: "Our expert will be right back in touch to 
+find the best time for you to show you the TripPro features."
+
+Content.create id: 'get_started-content-5', content: "Take part in a webinar"
+Content.create id: 'get_started-content-6', content: "Join our free webinar to learn more about TripPro. "
