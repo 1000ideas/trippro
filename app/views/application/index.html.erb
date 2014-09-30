@@ -9,13 +9,13 @@
   <h2 id="home-content-1" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('home-content-1')%></h2>
   <h3 id="home-content-2" class="mercury-region" data-mercury="full"><%= content('home-content-2')%></h3>
   <div class="buttons">
-    <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius' %>
+    <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius mercury-region', id: "home-content-35", data: {"mercury" => "full"} %>
     <%= link_to 'Take the Tour', tour_path, class: 'button white-one radius' %>
   </div>
   <div class="infobar hide-for-small-only">
-    <a href="" class="with-arrow arrow-right">
+    <a href="" class="with-arrow arrow-right mercury-region" data-mercury="full">
       <%= image_tag('infobar-icon.png')  %>
-      Download TripPro From Sabre Red App Centre
+      <span><%= content('home-content-34')%></span>
     </a>
   </div>
    <div class="infobar show-for-small-only">
@@ -106,7 +106,7 @@
     </li><!--
      --><li>
       <%= image_tag 'benefits/price.png' %>
-      <h3 id="home-content-26" class="mercury-region" data-mercury="full">P<%=content('home-content-26')%></h3>
+      <h3 id="home-content-26" class="mercury-region" data-mercury="full"><%=content('home-content-26')%></h3>
       <p id="home-content-31" class="mercury-region" data-mercury="full"><%= content('home-content-31')%></p>
     </li><!--
      --><li>

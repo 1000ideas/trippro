@@ -1,4 +1,6 @@
 Content.destroy_all
+Content.create id: 'home-button-1', content: "Get Started"
+Content.create id: 'home-button-2', content: "Take the Tour"
 Content.create id: 'home-content-1', content: "Empower your agency with power of TripPro®"
 Content.create id: 'home-content-2', content: "Discover revolutionary next generation search, book<br>and ticketing technology providing the best international fares."
 Content.create id: 'home-content-3', content: "Advanced Booking Tools"
@@ -39,16 +41,42 @@ Content.create id: 'home-content-32', content: "Built for travel professionals b
 												with over 120 years of experience
 												helping agencies grow."
 Content.create id: 'home-content-33', content: "Ready for a journey?"
-Content.create id: 'home-content-34', content: "Benefits at your service"
-Content.create id: 'home-content-35', content: "Benefits at your service"
-Content.create id: 'home-content-36', content: "Benefits at your service"
-Content.create id: 'home-content-37', content: "Benefits at your service"
-Content.create id: 'home-content-38', content: "Benefits at your service"
-Content.create id: 'home-content-39', content: "Benefits at your service"
-Content.create id: 'home-content-40', content: "Benefits at your service"
-Content.create id: 'home-content-41', content: "Benefits at your service"
-Content.create id: 'home-content-42', content: "Benefits at your service"
-Content.create id: 'home-content-43', content: "Benefits at your service"
-Content.create id: 'home-content-44', content: "Benefits at your service"
-Content.create id: 'home-content-45', content: "Benefits at your service"
-Content.create id: 'home-content-46', content: "Benefits at your service"
+Content.create id: 'home-content-34', content: "Download TripPro From Sabre Red App Centre"
+
+#TOUR
+Content.create id: 'tour-content-video-1', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-2', content: "Advanced Booking Tool"
+Content.create id: 'tour-content-video-3', content: "Search global content from four consolidators through a single source. Trippro’s 
+													innovative algorithms uncover hidden 
+													routings and recommend the best custom itineraries."
+#lista
+Content.create id: 'tour-content-video-4', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-5', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-6', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-7', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-8', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-9', content: "Discover the power behind TripPro"
+
+
+
+Content.create id: 'tour-content-video-10', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-11', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-12', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-13', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-14', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-15', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-16', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-17', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-18', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-19', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-20', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-21', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-22', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-23', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-24', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-25', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-26', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-27', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-28', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-29', content: "Discover the power behind TripPro"
+Content.create id: 'tour-content-video-30', content: "Discover the power behind TripPro"
