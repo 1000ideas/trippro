@@ -71,14 +71,14 @@
 	  </div>
 	  <div>
 		<label for="Name">Country</label>
-		 <div class="std">
+		 <div class="select">
 		 <select>
 		  <option value="volvo">Select</option>
 		</select></div> 
 	  </div>
 	  	  <div class="std">
 		<label for="Name">State/Province</label>
-		<div class="std">
+		<div class="select">
 		<select>
 		  <option value="volvo">Select</option>
 		</select></div> 
@@ -87,7 +87,7 @@
 		<label for="Name">Zip/Postal Code</label>
 		<div class="short"><input name="Name" type="text" class="short"></input></div>
 	  </div>
-	  <div >
+	  <div class="checkboxes" >
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above
 	  </div>	
 	<div class="diffaddress">
@@ -118,7 +118,7 @@
 		<div class="short"><input name="Name" type="text" class="short"></input></div>
 	  </div>
 	</div>
-	<div>
+	<div class="checkboxes">
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships) 
 	</div>
 	<div class="extradata">
@@ -185,7 +185,7 @@
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
 	</div>
-		<div>
+		<div class="checkboxes">
 			<input type="checkbox" name="vehicle" value="Bike" class="">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %>
 		</div>
 
