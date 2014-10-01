@@ -10,12 +10,12 @@
 	<div class="small-12 medium-4 end columns" data-equalizer-watch>
 		<h3 id="get_started-content-3" class="mercury-region" data-mercury="full"><%= content('get_started-content-3')%></h3>
 		<h5 id="get_started-content-4" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('get_started-content-4')%></h5>
-		<%= link_to "Request a Demo", '#', class: 'button red-one radius', "data-reveal-id" => "myModal" %>
+		<%= link_to "Request a Demo", demo_path, class: 'button red-one radius'%>
 	</div>
 </div>
 </section>
 
-<div id="myModal" class="reveal-modal" data-reveal>
+<!-- <div id="myModal" class="reveal-modal" data-reveal>
 	<div class="row">
 	  <h2>Sign up for a demo</h2>
 	  <div id="get_form">
@@ -28,7 +28,7 @@
 
 	  <%= link_to "Request a demo", '#', class: 'button red-one radius' %>
 	</div>
-</div>
+</div> -->
 
 <section class="webinars">
 <div class="row">
