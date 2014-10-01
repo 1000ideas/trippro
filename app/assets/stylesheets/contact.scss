@@ -52,9 +52,14 @@
 		}
 		div.checkboxes{
 			text-align: left;
-			margin-left: 28%;
-			border-top: 1px solid lightgray;
+			margin-left: 33%;
+			// border-top: 1px solid lightgray;
 			padding: 1rem 0;
+
+			@media #{$small-only}{
+				text-align: left;
+				margin-left: 5%;
+			}
 			p{
 				float: left
 			}
