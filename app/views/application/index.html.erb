@@ -9,7 +9,7 @@
   <h2 id="home-content-1" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('home-content-1')%></h2>
   <h3 id="home-content-2" class="mercury-region" data-mercury="full"><%= content('home-content-2')%></h3>
   <div class="buttons">
-    <%= link_to content('home-button-1'), get_started_path, class: 'button red-one white radius mercury-region', id: "home-button-1", data: {"mercury" => "full"} %>
+    <%= link_to content('home-button-1'), webinars_path, class: 'button red-one white radius mercury-region', id: "home-button-1", data: {"mercury" => "full"} %>
     <%= link_to content('home-button-2'), tour_path, class: 'button white-one radius mercury-region', id: "home-button-2", data: {"mercury"=>"full"} %>
   </div>
   <div class="infobar hide-for-small-only">
@@ -84,7 +84,7 @@
     <p><%= link_to 'See All Features  >', '#', class: 'red-chevron' %></p>
 
   <h3 id="home-content-33" class="mercury-region" data-mercury="full"><%=content('home-content-33')%></h3>
-  <p class="get-started"><%= link_to content('home-button-1'), get_started_path, class: 'button red-one grey radius mercury-region', id: 'home-button-1', data:{"mercury"=>"full"} %></p>
+  <p class="get-started"><%= link_to content('home-button-1'), webinars_path, class: 'button red-one grey radius mercury-region', id: 'home-button-1', data:{"mercury"=>"full"} %></p>
 </section>
 <section class="benefits-at-your-service">
   <h2 id="home-content-22" class="mercury-region" data-mercury="full"><%=content('home-content-22')%></h2>
@@ -115,7 +115,7 @@
       <p id="home-content-32" class="mercury-region" data-mercury="full"><%= content('home-content-32')%></p>
     </li><!--
    --></ul>
-   <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
 <section class="testimonials hide-for-small-only ">
   <h2>Testimonials</h2>
@@ -148,7 +148,7 @@
       </div>
     </li>
   </ul>
-  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
 
 <section class="testimonials rwd  show-for-small-only ">
@@ -182,5 +182,5 @@
       </div>
     </li>
   </ul>
-  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
