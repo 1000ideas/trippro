@@ -23,6 +23,13 @@ div.signup{
 			padding-bottom:2rem;
 			padding-top:1rem;
 			font-size: 18px;
+			
+			@media #{$small-only} {
+				      // width: 93%;
+			float: left;
+    		margin-left: 1rem;
+			}
+
 		}
 		.sign{
 

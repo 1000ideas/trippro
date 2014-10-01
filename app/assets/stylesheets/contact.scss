@@ -3,7 +3,7 @@
 
 .container{
 	background-color: #f5f5f5;
-
+	overflow: auto;
 	a:hover{
 		color: #333;
 	}
@@ -49,6 +49,10 @@
 		&.signup{
 			text-align: center;
 			margin-top: 6rem;
+
+		@media #{$small-only} {
+		      margin-top: 0;
+		  }
 		}
 		div.checkboxes{
 			text-align: left;
@@ -180,7 +184,7 @@
       	.extradata{
       		strong{
       			font-weight: 200;
-      			padding-right: 208px;
+      			// padding-right: 208px;
        		}
       	}
 	}
