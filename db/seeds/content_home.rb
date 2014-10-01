@@ -114,3 +114,13 @@ Content.create id: 'get_started-content-5', content: "Take part in a webinar"
 Content.create id: 'get_started-content-6', content: "Join our free webinar to learn more about TripPro. "
 
 puts "get started done"
+
+
+#Sign up
+
+Content.create id: 'sign_up-content-1', content: "Sign Up"
+
+Content.create id: 'sign_up-content-2', content: "Please fill out the application form below.
+ You should hear back from us within 1-2 business days and you can start using TripPro right away."
+
+Content.create id: 'sign_up-content-3', content: ""
