@@ -15,21 +15,6 @@
 </div>
 </section>
 
-<!-- <div id="myModal" class="reveal-modal" data-reveal>
-	<div class="row">
-	  <h2>Sign up for a demo</h2>
-	  <div id="get_form">
-		  Name:<input type="text" name="fname"><br>
-		  Phone number:<input type="text" name="fname"><br>
-		  Email:<input type="text" name="fname"><br>
-		  Company (optional):<input type="text" name="fname"><br>
-	  </div>
-	  <a class="close-reveal-modal">&#215;</a>
-
-	  <%= link_to "Request a demo", '#', class: 'button red-one radius' %>
-	</div>
-</div> -->
-
 <section class="webinars">
 <div class="row">
 <h2 id="get_started-content-5" class="mercury-region" data-mercury="full"><%=content('get_started-content-5')%></h2>
@@ -75,5 +60,21 @@
 	</table> 
 	</div>
 </div>
+
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @webinars.each do |webinar| %>
+  <li>
+        <div><%= webinar.language %></div>
+        <div><%= webinar.when %></div>
+        <div><%= webinar.link %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), webinar %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @webinars %>
+
 
 </section> 
