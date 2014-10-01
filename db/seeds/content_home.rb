@@ -1,4 +1,6 @@
+puts "usuwamy..."
 Content.destroy_all
+puts "tworzymy"
 Content.create id: 'home-button-1', content: "Get Started"
 Content.create id: 'home-button-2', content: "Take the Tour"
 Content.create id: 'home-content-1', content: "Empower your agency with power of TripPro®"
@@ -124,10 +126,52 @@ Content.create id: 'sign_up-content-2', content: "Please fill out the applicatio
  You should hear back from us within 1-2 business days and you can start using TripPro right away."
 
 Content.create id: 'sign_up-content-3', content: ""
-
+puts "signup done"
 
 #Demo
 Content.create id: 'demo-content-1', content: "Request a Demo"
 
 Content.create id: 'demo-content-2', content: "Please fill out the application form below. 
 Our expert will be right back in touch to find the best time for you to show you the TripPro features."
+puts "demo done"
+#FAQ
+
+Content.create id: 'faq-content-1', content: "FAQ"
+Content.create id: 'faq-content-2', content: "TripPro® is a revolutionary next generation search, book
+and ticketing technology providing the best international fares."
+
+Content.create id: 'faq-content-4', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+Content.create id: 'faq-content-5', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+ Content.create id: 'faq-content-6', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+ 
+ Content.create id: 'faq-content-7', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+
+ Content.create id: 'faq-content-8', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+ 
+ Content.create id: 'faq-content-9', content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+ irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+ 
+ Content.create id: 'faq-content-10', content: "Start using TripPro today, boost sales within weeks"
+
+Content.create id: 'faq-question-1', content: "Lorem ipsum dolor sit amet"
+Content.create id: 'faq-question-2', content: "Lorem ipsum dolor sit amet"
+Content.create id: 'faq-question-3', content: "Lorem ipsum dolor sit amet"
+Content.create id: 'faq-question-4', content: "Lorem ipsum dolor sit amet"
+Content.create id: 'faq-question-5', content: "Lorem ipsum dolor sit amet"
+Content.create id: 'faq-question-6', content: "Lorem ipsum dolor sit amet"
+
+Content.create id: 'faq-button-1', content: "Get Started"
+puts "FAQ done"

@@ -2,33 +2,32 @@
 <div class="poster">
 	<%= image_tag('faq/header_people.jpg')%>
 </div>
-<h1>FAQ</h1>
-<h2>TripPro® is a revolutionary next generation search, book <br>
-and ticketing technology providing the best international fares.</h2>
+<h1 id="faq-content-1" class="mercury-region" data-mercury="full"><%=content('faq-content-1')%></h1>
+<h2 id="faq-content-2" class="mercury-region" data-mercury="full"><%=content('faq-content-2')%></h2>
 </section>
 
 <section class="faq_content">
 <!-- <div class="test">
  -->	<ul class="row">
-<li class="small-12 medium-6 medium-centered columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></li>
+<li class="small-12 medium-6 medium-centered columns"><h4 id="faq-question-1" class="mercury-region" data-mercury="full"><%= content('faq-question-1')%></h4>
+<p id="faq-content-4" class="mercury-region" data-mercury="full"><%= content('faq-content-4')%></p></li>
 
-<li class="small-12 medium-6 medium-centered columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><li>
+<li class="small-12 medium-6 medium-centered columns"><h4 id="faq-question-2"  class="mercury-region" data-mercury="full"><%= content('faq-question-2')%></h4>
+<p id="faq-content-5" class="mercury-region" data-mercury="full"><%= content('faq-content-5')%></p><li>
 
-<li class="small-12 medium-6 medium-centered columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p><li>
+<li class="small-12 medium-6 medium-centered columns"><h4 id="faq-question-3" class="mercury-region" data-mercury="full"><%= content('faq-question-3')%></h4>
+<p id="faq-content-6" class="mercury-region" data-mercury="full"><%= content('faq-content-6')%></p><li>
 
-<li class="small-12 medium-6 medium-centered  columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<li class="small-12 medium-6 medium-centered  columns"><h4 id="faq-question-4"  class="mercury-region" data-mercury="full"><%= content('faq-question-4')%></h4>
+<p id="faq-content-7" class="mercury-region" data-mercury="full"><%= content('faq-content-7')%></p>
 </li>
 
-<li class="small-12 medium-6 medium-centered  columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<li class="small-12 medium-6 medium-centered  columns"><h4 id="faq-question-5"  class="mercury-region" data-mercury="full"><%= content('faq-question-5')%></h4>
+<p id="faq-content-8" class="mercury-region" data-mercury="full"><%= content('faq-content-8')%></p>
 </li>
 
-<li class="small-12 medium-6 medium-centered  columns"><h4>Lorem ipsum dolor sit amet </h4>
-<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<li class="small-12 medium-6 medium-centered  columns"><h4 id="faq-question-6"  class="mercury-region" data-mercury="full"><%= content('faq-question-6')%></h4>
+<p id="faq-content-9" class="mercury-region" data-mercury="full"><%= content('faq-content-9')%></p>
 </li>
 <!-- </div>
  -->
@@ -37,7 +36,7 @@ and ticketing technology providing the best international fares.</h2>
 <section class="get_started">
 
 
-<h3>Start using TripPro today, boost sales within weeks</h3>
+<h3 id="faq-content-10" class="mercury-region" data-mercury="full"><%=content('faq-content-10')%></h3>
 
-<p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one radius' %></p>
+<p class='get-started'>   <%= link_to content('faq-button-1'), get_started_path, class: 'button red-one white radius mercury-region', id: "faq-button-1", data: {"mercury" => "full"} %></p>
 </section>
