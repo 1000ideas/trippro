@@ -9,7 +9,7 @@
 		    <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
 		  	<td class="lang"><h6><%= webinar.language%></h6></td>
 		    <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
-		    <td class="register"><%= link_to "Register", webinar.link, class: 'button red-one radius' %></td>
+		    <td class="register"><%= link_to "Register", "http://"+webinar.link, class: 'button red-one radius' %></td>
 		  </tr>
 		  <%end%>
 		  <!-- <tr>
