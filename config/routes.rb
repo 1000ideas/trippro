@@ -16,10 +16,18 @@ Trippro::Application.routes.draw do
     }
 
   resources :news, only: [:index, :show]
+  resources :webinars, only: [:index, :show]
 
 
   scope path: 'admin', as: :admin do
     scope module: :admin do
+      resources :webinars, except: [:show] do
+        collection do
+          constraints(lambda {|req| req.params.has_key?(:ids)}) do
+            delete :bulk_destroy, action: :selection, defaults: {bulk_action: :destroy}
+          end
+        end
+      end
       get :settings, controller: :content, action: :settings
       post :settings, controller: :content, action: :settings_update
       resource :content, controller: :content, only: :update

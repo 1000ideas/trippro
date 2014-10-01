@@ -1,0 +1,17 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @webinars.each do |webinar| %>
+  <li>
+        <div><%= webinar.language %></div>
+        <div><%= webinar.when %></div>
+        <div><%= webinar.link %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), webinar %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @webinars %>
+
+
+

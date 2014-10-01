@@ -1,0 +1,49 @@
+---
+en:
+  admin:
+    webinars:
+      submenu:
+        new: Add webinar
+        index: List webinars
+        destroy: Destroy selected webinars
+        destroy_confirm: Destroying selected webinars, sure?
+      new:
+        title: Add webinar
+      index:
+        no_items_html: |
+          Aktualnie nie ma żadnych obiektów.
+          Może chcesz <a href="%{link}" data-remote>utworzyć nowy</a>?
+        no_filtered_items_html: |
+          Nie znaleziono żadnych pasujących obiektów.
+          Spróbuj zmienić kryteria filtracji.
+      edit:
+        title: Edit webinar
+      create:
+        success: Pomyślnie utworzono
+      update:
+        success: Pomyślnie zaktualizowano
+      destroy:
+        success: Pomyślnie usunięto
+      tooltip:
+        title: Uwaga
+        content_html: Przykładowy tekst informacyjny
+      filter:
+        title: Filtruj wg
+        button: Filtruj
+        filter: Filtruj
+        clear: Wyczyść
+        open_filters: Otwórz filtry
+        edit_filters: Zmień filtry
+  webinars:
+    index:
+      title: Webinars
+    show:
+      title: Webinar
+  menu:
+    webinars: Webinars
+  activerecord:
+    attributes:
+      webinar:
+        language: Language
+        when: When
+        link: Link

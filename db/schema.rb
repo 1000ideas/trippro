@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140929110012) do
+ActiveRecord::Schema.define(:version => 20141001120922) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -110,5 +110,16 @@ ActiveRecord::Schema.define(:version => 20140929110012) do
 
   add_index "users", ["deleted_at"], :name => "index_users_on_deleted_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "webinars", :force => true do |t|
+    t.string   "language"
+    t.datetime "when"
+    t.string   "link"
+    t.datetime "deleted_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "webinars", ["deleted_at"], :name => "index_webinars_on_deleted_at"
 
 end

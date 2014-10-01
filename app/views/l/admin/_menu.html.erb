@@ -1,5 +1,8 @@
 <nav class="left-menu">
   <ul class="root">
+    <li><%= link_to( t('.webinars'), admin_webinars_path) %></li>
+    <li class="spacer"></li>
+
     <li>
       <%= link_to fa_icon('home fw',text: t('.dashboard') ), admin_path %>
     </li>
