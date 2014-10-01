@@ -52,6 +52,7 @@ Trippro::Application.routes.draw do
     get :faq
     get :get_started
     get :sign_up
+    get :demo
     root action: :index, via: :get
   end
 

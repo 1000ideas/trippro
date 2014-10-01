@@ -124,3 +124,10 @@ Content.create id: 'sign_up-content-2', content: "Please fill out the applicatio
  You should hear back from us within 1-2 business days and you can start using TripPro right away."
 
 Content.create id: 'sign_up-content-3', content: ""
+
+
+#Demo
+Content.create id: 'demo-content-1', content: "Request a Demo"
+
+Content.create id: 'demo-content-2', content: "Please fill out the application form below. 
+Our expert will be right back in touch to find the best time for you to show you the TripPro features."
