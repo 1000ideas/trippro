@@ -1,7 +1,21 @@
 @import 'overrides';
 
 div.signup{
+	.button {
+	       margin: 20px 0;
+		   font-weight: 800;
+		   font-size: 21px;
+		   width: 40%;
+		   display: inline-block;
+		   @media #{$small-only} {
+				      width: 93%;
+				    }
+      	}
 	label{
+		width: 15%;
+		@media #{$small-only} {
+				      width: 93%;
+				    }
 	}
 	p{
 		&.bold{
