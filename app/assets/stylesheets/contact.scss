@@ -3,7 +3,8 @@
 
 .container{
 	background-color: #f5f5f5;
-
+	overflow: auto;
+	
 	a:hover{
 		color: #333;
 	}
@@ -49,12 +50,21 @@
 		&.signup{
 			text-align: center;
 			margin-top: 6rem;
+
+		@media #{$small-only} {
+		      margin-top: 0;
+		  }
 		}
 		div.checkboxes{
-			border-top: 1px solid lightgray;
-			padding-top: 12px;
-			padding-bottom: 12px;
-			width: 65%;
+			text-align: left;
+			margin-left: 30%;
+			// border-top: 1px solid lightgray;
+			padding: 1rem 0;
+
+			@media #{$small-only}{
+				text-align: left;
+				margin-left: 5%;
+			}
 			p{
 				float: left
 			}
@@ -88,10 +98,10 @@
 			padding-right: 0.5rem;
 			text-align: right;
 			display: inline-block;
-			width: 20%; 
+			width: 10%; 
 			font-weight: 500;
 			font-size: 1.1rem;
-			margin-left: -20%;
+			margin-left: -10%;
 
 			@media #{$small-only} {
 			 font-weight: 500;
@@ -175,7 +185,7 @@
       	.extradata{
       		strong{
       			font-weight: 200;
-      			padding-right: 208px;
+      			// padding-right: 208px;
        		}
       	}
 	}

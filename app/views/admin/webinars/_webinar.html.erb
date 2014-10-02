@@ -1,0 +1,18 @@
+<li class="row" data-context>
+  <div class="columns small-6">
+    <%= f.select_box :id, webinar %>
+    <%= webinar.id %>
+  </div>
+  <div class="columns small-3">
+    <%= l webinar.updated_at, format: :long %>
+  </div>
+  <div class="columns small-3">
+    <%= l webinar.created_at, format: :long %>
+    <a href="#" data-context-button><%= fa_icon('ellipsis-h') %></a>
+  </div>
+  <ul data-context-target>
+    <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), webinar_path(webinar), target: '_blank' %></li>
+    <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_webinar_path(webinar, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_webinar_path(webinar), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+  </ul>
+</li>

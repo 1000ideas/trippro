@@ -5,8 +5,10 @@ class Ability
     user ||= User.new
 
     if user.has_role? :admin
+      can :manage, Webinar
       can :display, :dashboard
       can :manage, User
+      can :manage, Content
       can :manage, L::Page
       can :manage, L::News
       can :manage, L::Gallery
@@ -15,7 +17,7 @@ class Ability
     elsif user.has_role? :user
       can [:read, :update, :destroy], User, id: user.id
     end
-
+    can :read, Webinar
     can :read, L::Page
     can :read, L::News
     can :read, L::Gallery

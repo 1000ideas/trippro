@@ -1,0 +1,34 @@
+<!-- <h2><%= t('.title') %></h2>
+
+<ul>
+  <% @webinars.each do |webinar| %>
+  <li>
+        <div><%= webinar.language %></div>
+        <div><%= webinar.when.strftime("Printed on %m/%d/%Y") %></div>
+        <div><%= link_to webinar.link, webinar.link %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), webinar %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @webinars %>
+ -->
+<section class = "sign_demo">
+
+<div class="row buttons" data-equalizer>
+	<div class="small-12 medium-4 medium-offset-1 columns" data-equalizer-watch>
+		<h3 id="get_started-content-1" class="mercury-region" data-mercury="full"><%=content('get_started-content-1')%></h3>
+		<h5 id="get_started-content-2" class="hide-for-small-only mercury-region" data-mercury="full">Please fill out the application form. You will be given a unique name, password, and link to our member site, and you can start using TripPro right away.</h5>
+		<%= link_to "Sign up", sign_up_path, class: 'button red-one radius' %>
+	</div>
+	<div class="small-12 medium-2 columns or">or</div>
+	<div class="small-12 medium-4 end columns" data-equalizer-watch>
+		<h3 id="get_started-content-3" class="mercury-region" data-mercury="full"><%= content('get_started-content-3')%></h3>
+		<h5 id="get_started-content-4" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('get_started-content-4')%></h5>
+		<%= link_to "Request a Demo", demo_path, class: 'button red-one radius'%>
+	</div>
+</div>
+</section>
+
+<%=render('reg')%>
+

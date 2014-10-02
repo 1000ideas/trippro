@@ -1,21 +1,21 @@
 <section class="video">
   <div class="video-wrapper">
-    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/example-slide.png">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/prev_post.jpg">
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.mp4" type="video/mp4" />
       <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.webm" type="video/webm" />
-     <%= image_tag('example-slide.png', class: "poster_img" ) %>
+     <%= image_tag('prev_post.jpg', class: "poster_img" ) %>
     </video>
   </div>
-  <h2 class="hide-for-small-only">Empower your agency with power of TripPro<sup>&reg;</sup></h2>
-  <h3>Discover revolutionary next generation search, book<br>and ticketing technology providing the best international fares.</h3>
+  <h2 id="home-content-1" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('home-content-1')%></h2>
+  <h3 id="home-content-2" class="mercury-region" data-mercury="full"><%= content('home-content-2')%></h3>
   <div class="buttons">
-    <%= link_to 'Get Started', get_started_path, class: 'button red-one white radius' %>
-    <%= link_to 'Take the Tour', tour_path, class: 'button white-one radius' %>
+    <%= link_to content('home-button-1'), webinars_path, class: 'button red-one white radius mercury-region', id: "home-button-1", data: {"mercury" => "full"} %>
+    <%= link_to content('home-button-2'), tour_path, class: 'button white-one radius mercury-region', id: "home-button-2", data: {"mercury"=>"full"} %>
   </div>
   <div class="infobar hide-for-small-only">
     <a href="" class="with-arrow arrow-right">
       <%= image_tag('infobar-icon.png')  %>
-      Download TripPro From Sabre Red App Centre
+      <span id="home-content-34" class="mercury-region" data-mercury="full"><%= content('home-content-34')%></span>
     </a>
   </div>
    <div class="infobar show-for-small-only">
@@ -30,23 +30,23 @@
   <ul ><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
-      <span class="hoverit"><h3><%= link_to "Advanced Booking Tools", tour_path%></h3>
-      <p><%=link_to "More itineraries<br/>from multiple consolidators.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%= content('home-content-3')%></h3></div>
+      <p id="home-content-7" class="mercury-region" data-mercury="full"><%=link_to content('home-content-7'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/card.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Automated Ticketing", tour_path%></h3>
-      <p><%=link_to "Confirm and ticket instantly.<br />It’s that simple.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-4" class="mercury-region" data-mercury="full"><h3><%= content('home-content-4')%></h3></div>
+      <p id="home-content-8" class="mercury-region" data-mercury="full"><%=link_to content('home-content-8'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/laptop.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Profit Manager", tour_path%></h3>
-      <p><%= link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-5" class="mercury-region" data-mercury="full"><h3><%=content('home-content-5')%></h3></div>
+      <p id="home-content-9" class="mercury-region" data-mercury="full" ><%= link_to content('home-content-9'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/chart.png'), tour_path %></span>
-      <span class="hoverit"><h3><%=link_to "Reporting &amp; Analytics".html_safe, tour_path%></h3>
-      <p><%=link_to "Exclusive content from Mondee<br />consolidators all on one screen.".html_safe, tour_path%></p></span>
+      <span class="hoverit"><div id="home-content-6" class="mercury-region" data-mercury="full"><h3><%=content('home-content-6')%> </h3></div>
+      <p id="home-content-10" class="mercury-region" data-mercury="full"><%=link_to content('home-content-10'), tour_path%></p></span>
     </li><!--
    --></ul>
 </section>
@@ -59,15 +59,16 @@
   </ul>
 </section>
 <section class="benefits">
-  <h2>More savings for customers, more profit for you.</h2>
-  <p>TripPro gives you the best international fares, lets you save search time<br />
- <span class="hide-for-small-only">and automate ticketing, which result in new sales, increased profits and happy customers.</span></p>
+  <h2 id="home-content-11" class="mercury-region" data-mercury="full"><%= content('home-content-11')%></h2>
+  <p id="home-content-12" class="mercury-region" data-mercury="full"><%= content('home-content-12')%></p> 
+  <p id="home-content-13" class="mercury-region" data-mercury="full">
+ <span class="hide-for-small-only"><%=content('home-content-13')%></span></p>
 
   <ul class="">
-      <li><p><strong>30% more</strong>unique itineraries</p></li>
-      <li><p><strong>save 10h</strong>per agent on average</p></li>
-      <li><p><strong>10% increase</strong>in agency profits</p></li>
-      <li><p><strong>50% faster</strong>ticket reservations</p></li>
+      <li><p ><strong id="home-content-14" class="mercury-region" data-mercury="full"><%= content('home-content-14')%></strong><span id="home-content-18" class="mercury-region" data-mercury="full"><%= content('home-content-18')%></span ></p></li>
+      <li><p ><strong id="home-content-15" class="mercury-region" data-mercury="full"><%= content('home-content-15')%></strong><span id="home-content-19" class="mercury-region" data-mercury="full"><%= content('home-content-19')%></span></p></li>
+      <li><p ><strong id="home-content-16" class="mercury-region" data-mercury="full"><%= content('home-content-16')%></strong><span id="home-content-20" class="mercury-region" data-mercury="full"><%= content('home-content-20')%></span></p></li>
+      <li><p ><strong id="home-content-17" class="mercury-region" data-mercury="full"><%= content('home-content-17')%></strong><span id="home-content-21" class="mercury-region" data-mercury="full"><%= content('home-content-21')%></span></p></li>
   </ul>
 
   <div class="hide-for-small-only laptop-slider">
@@ -82,39 +83,39 @@
   </div>
     <p><%= link_to 'See All Features  >', '#', class: 'red-chevron' %></p>
 
-  <h3>Ready for a journey?</h3>
-  <p class="get-started"><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+  <h3 id="home-content-33" class="mercury-region" data-mercury="full"><%=content('home-content-33')%></h3>
+  <p class="get-started"><%= link_to content('home-button-1'), webinars_path, class: 'button red-one grey radius mercury-region', id: 'home-button-1', data:{"mercury"=>"full"} %></p>
 </section>
 <section class="benefits-at-your-service">
-  <h2>Benefits at your service</h2>
+  <h2 id="home-content-22" class="mercury-region" data-mercury="full"><%=content('home-content-22')%></h2>
   <ul><!--
      --><li>
       <%= image_tag 'benefits/profits.png' %>
-      <h3>Maximize Profits</h3>
-      <p>Complete control over commission<br />and profit with one click access to<br/>unparalleled consolidator inventory.</p>
+      <h3 id="home-content-23" class="mercury-region" data-mercury="full"> <%=content('home-content-23')%></h3>
+      <p id="home-content-28" class="mercury-region" data-mercury="full">Complete control over commission<br />and profit with one click access to<br/>unparalleled consolidator inventory.</p>
     </li><!--
      --><li>
       <%= image_tag 'benefits/use.png' %>
-      <h3>Easy to Use</h3>
-      <p>Fares displayed seamlessly via browser<br />or with anypreferred GDS partner on<br />the same screen, no training needed.</p>
+      <h3 id="home-content-24" class="mercury-region" data-mercury="full"><%=content('home-content-24')%></h3>
+      <p id="home-content-29" class="mercury-region" data-mercury="full"><%= content('home-content-29')%></p>
     </li><!--
      --><li>
       <%= image_tag 'benefits/time.png' %>
-      <h3>Saves Time</h3>
-      <p>One-click booking eliminates manual<br />processing time and reduces new<br />agent training time.</p>
+      <h3 id="home-content-25" class="mercury-region" data-mercury="full"><%=content('home-content-25')%></h3>
+      <p id="home-content-30" class="mercury-region" data-mercury="full"><%= content('home-content-30')%></p>
     </li><!--
      --><li>
       <%= image_tag 'benefits/price.png' %>
-      <h3>Price Assurance</h3>
-      <p>Fares from the world’s leading<br />consolidators, available instantly.</p>
+      <h3 id="home-content-26" class="mercury-region" data-mercury="full"><%=content('home-content-26')%></h3>
+      <p id="home-content-31" class="mercury-region" data-mercury="full"><%= content('home-content-31')%></p>
     </li><!--
      --><li>
       <%= image_tag 'benefits/experience.png' %>
-      <h3>Experience and Trust</h3>
-      <p>Built for travel professionals by travel experts<br />with over 120 years of experience<br />helping agencies grow.</p>
+      <h3 id="home-content-27" class="mercury-region" data-mercury="full"><%=content('home-content-27')%></h3>
+      <p id="home-content-32" class="mercury-region" data-mercury="full"><%= content('home-content-32')%></p>
     </li><!--
    --></ul>
-   <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
 <section class="testimonials hide-for-small-only ">
   <h2>Testimonials</h2>
@@ -147,7 +148,7 @@
       </div>
     </li>
   </ul>
-  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
 
 <section class="testimonials rwd  show-for-small-only ">
@@ -181,5 +182,5 @@
       </div>
     </li>
   </ul>
-  <p class='get-started'><%= link_to 'Get Started', get_started_path, class: 'button red-one grey radius' %></p>
+  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>

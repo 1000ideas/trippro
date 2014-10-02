@@ -1,0 +1,12 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Webinar.human_attribute_name :language %>:</dt>
+<dd><%= @webinar.language %></dd>
+<dt><%= Webinar.human_attribute_name :when %>:</dt>
+<dd><%= @webinar.when %></dd>
+<dt><%= Webinar.human_attribute_name :link %>:</dt>
+<dd><%= @webinar.link %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), webinars_path %>

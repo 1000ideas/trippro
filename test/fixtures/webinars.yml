@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  language: MyString
+  when: 2014-10-01 14:09:22
+  link: MyString
+  deleted_at: 2014-10-01 14:09:22
+
+two:
+  language: MyString
+  when: 2014-10-01 14:09:22
+  link: MyString
+  deleted_at: 2014-10-01 14:09:22

@@ -19,15 +19,16 @@
       <div class="wrapper hide-for-small-only">
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
         <nav class="main-menu">
-          <ul><!--
+          <ul>
+                 <li><%= link_to "Edit", "/editor" + request.path%></li>
+          <!--
               --><li><%= nav_link 'Tour', tour_path(format: :html) %></li><!--
               --><li><%= nav_link 'Contact Us', contact_path %></li><!--
               --><li><%= nav_link 'Login', '#' %></li><!--
-              --><li><%= link_to 'Get started', get_started_path, :class =>"highlight" %></li><!--
+              --><li><%= link_to 'Get started', webinars_path, :class =>"highlight" %></li><!--
             --></ul>
         </nav>
       </div>
-      <!-- test zajebistego menu -->
         <nav class="top-bar show-for-small-only" data-topbar role="navigation">
             <ul class="title-area">
               <li class="name">
@@ -40,7 +41,7 @@
                 <!-- Right Nav Section -->
                 <ul class="menu_list">
                   <li><%= link_to ' Take the Tour', tour_path %></li>
-                  <li><%= link_to 'Get Started', get_started_path %></li>
+                  <li><%= link_to 'Get Started', webinars_path %></li>
                   <li><%= link_to 'News', news_index_path %></li>
                   <li><%= link_to 'Terms of Service', "#" %></li>
                   <li><%= link_to 'Privacy Policy', "#" %></li>
@@ -50,7 +51,6 @@
                 </ul>
               </section>
         </nav>
-      <!-- koniec testu zajebistosci -->
     </header>
     <%= yield %>
     <footer>
@@ -62,7 +62,7 @@
           </div>
           <div class="columns small-12 medium-4">
             <%= link_to 'Take the Tour', tour_path %>
-            <%= link_to 'Get Started', get_started_path %>
+            <%= link_to 'Get Started', webinars_path %>
             <%= link_to 'News', news_index_path %>
           </div>
           <div class="columns small-12 medium-4">

@@ -1,0 +1,27 @@
+<%= form_for([:admin, @webinar], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2><%= t(".title.#{f.object.persisted? ? 'update' : 'create'}") %></h2>
+      <div class="field">
+      <%= f.label :language %>
+
+      <%= f.text_field :language  %>
+
+    </div>
+      <div class="field field_with_date">
+      <%= f.label :when %>
+
+      <%= f.datetime_select :when  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :link %>
+
+      <%= f.text_field :link  %>
+
+    </div>
+    </fieldset>
+  <fieldset class="columns small-3 panel">
+    <div class="notification hidden"></div>
+    <%= f.button nil, class: [:button, :secondary, :round, :expand], name: :commit %>
+  </fieldset>
+<% end %>

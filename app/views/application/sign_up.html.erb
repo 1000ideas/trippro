@@ -2,9 +2,9 @@
 <section class="container">
 <div class="row">
 	<div class="small-12 medium-10 medium-centered columns">
-		<h1>Sign up</h1>
+		<h1 id="sign_up-content-1" class="mercury-region" data-mercury="full"><%=content('sign_up-content-1')%></h1>
 
-		<p>Please fill out the application form below. You should hear back from us within 1-2 business days and you can start using TripPro right away.</p></p>
+		<p id="sign_up-content-2" class="hide-for-small-only mercury-region" data-mercury="full"><%=content('sign_up-content-2')%></p></p>
 	</div>
 </div>
 <div class="small-12 medium-10 medium-centered columns contact_form signup">
@@ -87,7 +87,7 @@
 		<label for="Name">Zip/Postal Code</label>
 		<div class="short"><input name="Name" type="text" class="short"></input></div>
 	  </div>
-	  <div >
+	  <div class="checkboxes" >
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above
 	  </div>	
 	<div class="diffaddress">
@@ -118,7 +118,7 @@
 		<div class="short"><input name="Name" type="text" class="short"></input></div>
 	  </div>
 	</div>
-	<div>
+	<div class="checkboxes">
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships) 
 	</div>
 	<div class="extradata">
@@ -146,7 +146,7 @@
 		<label for="Name">Business Type</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
-	  <strong>MEMBERSHIP</strong>
+	  <div><strong>MEMBERSHIP</strong></div>
 	    <div>
 		<label for="Name">HBA</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
@@ -185,12 +185,12 @@
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
 	</div>
-		<div>
-			<input type="checkbox" name="vehicle" value="Bike" class="">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %>
-		</div>
+	<div class="checkboxes">
+		<input type="checkbox" name="vehicle" value="Bike" class="">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %>
+	</div>
 
 	  <%= link_to "Submit", '#', class: 'button red-one radius' %>
-	</div>
+</div>
 <!--<%= link_to "Send Message", '#', class: 'button red-one radius' %>-->
 
 </div>
