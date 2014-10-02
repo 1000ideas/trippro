@@ -37,12 +37,13 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        @contact.create_activity :create, owner: current_user
+        # @contact.create_activity :create, owner: current_user
         flash.notice =  info(:success)
-        format.html { redirect_to(contacts_path ) }
+        format.html { redirect_to(contacts_path) }
 
       else
         format.html { render action: "new" }
+        flash.notice =  info(:error)
       end
       format.js
     end

@@ -8,4 +8,8 @@ class Contact < ActiveRecord::Base
   scope :filter_by_created_after, lambda {|date| where("`created_at` > ?", Date.parse(date)) }
   scope :filter_by_created_before, lambda {|date| where("`created_at` < ?", Date.parse(date)) }
   attr_accessible :deleted_at, :email, :message, :name, :phone
+
+  validates :name, :phone, :message, presence: true
+  validates :email, presence: true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i } 
+
 end

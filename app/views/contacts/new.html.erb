@@ -7,6 +7,9 @@
 </strong> or <strong>
 <a id="contact-phone-1" class="mercury-region" href="skype://<%=content('contact-phone-1')%>" data-mercury="full"><%=content('contact-phone-1')%></a></strong>.</p></p>
 	<%= form_for( @contact, html: {class: :row, data: {remote: true}}) do |f| %>
+	<% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+    <% end -%>
 	<div class="contact_form">
 		<div class="row">
 		<div class ="small-12">
