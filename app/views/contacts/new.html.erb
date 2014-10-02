@@ -1,0 +1,42 @@
+
+<section class="container">
+<h1 id="contact-content-1" class="mercury-region" data-mercury="full"><%= content('contact-content-1')%></h1>
+
+<p id="contact-content-2" class="mercury-region" data-mercury="full"><%=content('contact-content-2')%><br> <p><strong>
+	<a id="contact-mail-1" class="mercury-region" data-mercury='full' href="mailto:<%=content('contact-mail-1')%>"><%=content('contact-mail-1')%></a>
+</strong> or <strong>
+<a id="contact-phone-1" class="mercury-region" href="skype://<%=content('contact-phone-1')%>" data-mercury="full"><%=content('contact-phone-1')%></a></strong>.</p></p>
+	<%= form_for( @contact, html: {class: :row, data: {remote: true}}) do |f| %>
+	<div class="contact_form">
+		<div class="row">
+		<div class ="small-12">
+		  <div>
+		      <%= f.label :name %>
+
+		      <%= f.text_field :name  %>
+		  </div>
+		  <div>
+		      <%= f.label :email %>
+
+		      <%= f.text_field :email  %>
+		  </div>
+		  <div>
+		      <%= f.label :phone %>
+
+		      <%= f.text_field :phone  %>
+		  </div>
+		  <div>
+		      <%= f.label :message, class: 'text' %>
+
+		      <%= f.text_area :message , :cols=>70, :rows=>5 %>
+			</textarea> 
+		  </div>
+		  <%= f.submit nil, :class => 'button red-one radius' %>
+<!-- 		  <%= link_to "Send Message", '#', class: 'button red-one radius' %>
+ -->		</div>
+	</div>
+	<%end%>
+<!--<%= link_to "Send Message", '#', class: 'button red-one radius' %>-->
+
+</div>
+</section>

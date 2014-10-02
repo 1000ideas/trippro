@@ -30,7 +30,6 @@ class ApplicationController < ActionController::Base
   end
 
   def contact
-
   end
 
   def faq
