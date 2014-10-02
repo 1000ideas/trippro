@@ -1,0 +1,18 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @contacts.each do |contact| %>
+  <li>
+        <div><%= contact.name %></div>
+        <div><%= contact.email %></div>
+        <div><%= contact.phone %></div>
+        <div><%= contact.message %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), contact %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @contacts %>
+
+
+

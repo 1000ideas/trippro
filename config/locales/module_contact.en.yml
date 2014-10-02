@@ -1,0 +1,50 @@
+---
+en:
+  admin:
+    contacts:
+      submenu:
+        new: Add contact
+        index: List contacts
+        destroy: Destroy selected contacts
+        destroy_confirm: Destroying selected contacts, sure?
+      new:
+        title: Add contact
+      index:
+        no_items_html: |
+          Aktualnie nie ma żadnych obiektów.
+          Może chcesz <a href="%{link}" data-remote>utworzyć nowy</a>?
+        no_filtered_items_html: |
+          Nie znaleziono żadnych pasujących obiektów.
+          Spróbuj zmienić kryteria filtracji.
+      edit:
+        title: Edit contact
+      create:
+        success: Pomyślnie utworzono
+      update:
+        success: Pomyślnie zaktualizowano
+      destroy:
+        success: Pomyślnie usunięto
+      tooltip:
+        title: Uwaga
+        content_html: Przykładowy tekst informacyjny
+      filter:
+        title: Filtruj wg
+        button: Filtruj
+        filter: Filtruj
+        clear: Wyczyść
+        open_filters: Otwórz filtry
+        edit_filters: Zmień filtry
+  contacts:
+    index:
+      title: Contacts
+    show:
+      title: Contact
+  menu:
+    contacts: Contacts
+  activerecord:
+    attributes:
+      contact:
+        name: Name
+        email: Email
+        phone: Phone
+        message: Message

@@ -5,6 +5,7 @@ class Ability
     user ||= User.new
 
     if user.has_role? :admin
+      can :manage, Contact
       can :manage, Testimonial
       can :manage, Webinar
       can :display, :dashboard
