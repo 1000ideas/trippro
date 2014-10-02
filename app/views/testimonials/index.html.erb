@@ -3,7 +3,7 @@
 <ul>
   <% @testimonials.each do |testimonial| %>
   <li>
-        <div><%= testimonial.photo_file_name %></div>
+        <div><%= image_tag(testimonial.photo.url) %></div>
         <div><%= testimonial.content %></div>
         <div><%= testimonial.name %></div>
         <div><%= testimonial.position %></div>
