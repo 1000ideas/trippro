@@ -2,7 +2,7 @@
 
 <dl>
 <dt><%= Testimonial.human_attribute_name :photo %>:</dt>
-<dd><%= @testimonial.photo_file_name %></dd>
+<dd><%= image_tag(@testimonial.photo_file_name) %></dd>
 <dt><%= Testimonial.human_attribute_name :content %>:</dt>
 <dd><%= @testimonial.content %></dd>
 <dt><%= Testimonial.human_attribute_name :name %>:</dt>

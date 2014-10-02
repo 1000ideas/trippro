@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141001120922) do
+ActiveRecord::Schema.define(:version => 20141002080401) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -66,6 +66,21 @@ ActiveRecord::Schema.define(:version => 20141001120922) do
 
   add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
   add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
+
+  create_table "testimonials", :force => true do |t|
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "content"
+    t.string   "name"
+    t.string   "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "testimonials", ["deleted_at"], :name => "index_testimonials_on_deleted_at"
 
   create_table "tinymce_folders", :force => true do |t|
     t.string   "name"

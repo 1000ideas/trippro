@@ -15,7 +15,14 @@ class ApplicationController < ActionController::Base
   end
 
   def index
+    authorize! :read, Testimonial
+    @testimonials = Testimonial
+      .paginate page: params[:page]
 
+    respond_to do |format|
+      format.html
+      format.json { render json: @testimonials}
+    end
   end
 
   def tour
