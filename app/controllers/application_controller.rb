@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def index
-    authorize! :read, Testimonial
+    # authorize! :read, Testimonial
     @testimonials = Testimonial
       .paginate page: params[:page]
 
