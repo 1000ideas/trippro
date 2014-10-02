@@ -1,0 +1,18 @@
+<li class="row" data-context>
+  <div class="columns small-6">
+    <%= f.select_box :id, testimonial %>
+    <%= testimonial.id %>
+  </div>
+  <div class="columns small-3">
+    <%= l testimonial.updated_at, format: :long %>
+  </div>
+  <div class="columns small-3">
+    <%= l testimonial.created_at, format: :long %>
+    <a href="#" data-context-button><%= fa_icon('ellipsis-h') %></a>
+  </div>
+  <ul data-context-target>
+    <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), testimonial_path(testimonial), target: '_blank' %></li>
+    <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_testimonial_path(testimonial, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_testimonial_path(testimonial), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+  </ul>
+</li>

@@ -1,0 +1,14 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Testimonial.human_attribute_name :photo %>:</dt>
+<dd><%= @testimonial.photo_file_name %></dd>
+<dt><%= Testimonial.human_attribute_name :content %>:</dt>
+<dd><%= @testimonial.content %></dd>
+<dt><%= Testimonial.human_attribute_name :name %>:</dt>
+<dd><%= @testimonial.name %></dd>
+<dt><%= Testimonial.human_attribute_name :position %>:</dt>
+<dd><%= @testimonial.position %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), testimonials_path %>
