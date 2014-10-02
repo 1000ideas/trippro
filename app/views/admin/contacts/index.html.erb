@@ -6,9 +6,12 @@
 <%= render('filter')  %>
 
 <ul class="row items-list-header">
-  <li class="columns small-6">
+  <li class="columns small-3">
     <%= custom_check_box(:selection, :all_ids, {}, 1, nil) if @contacts.any? %>
     <%= sort_column :id, Contact.human_attribute_name(:id) %>
+  </li>
+  <li class="columns small-3">
+    <%= sort_column :email, Contact.human_attribute_name(:email) %>
   </li>
   <li class="columns small-3"><%= sort_column :updated_at, Contact.human_attribute_name(:updated_at) %></li>
   <li class="columns small-3"><%= sort_column :created_at, Contact.human_attribute_name(:created_at) %></li>

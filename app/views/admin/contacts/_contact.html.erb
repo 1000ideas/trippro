@@ -1,7 +1,10 @@
 <li class="row" data-context>
-  <div class="columns small-6">
-    <%= f.select_box :id, contact %>
-    <%= contact.id %>
+  <div class="columns small-3">
+    <%= f.select_box :name, contact %>
+    <%= contact.name %>
+  </div>
+    <div class="columns small-3">
+    <%= contact.email %>
   </div>
   <div class="columns small-3">
     <%= l contact.updated_at, format: :long %>
