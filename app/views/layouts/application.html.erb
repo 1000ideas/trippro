@@ -20,7 +20,9 @@
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
         <nav class="main-menu">
           <ul>
+            <% if current_user && current_user.admin? %>
                  <li><%= link_to "Edit", "/editor" + request.path%></li>
+                 <%end%>
           <!--
               --><li><%= nav_link 'Tour', tour_path(format: :html) %></li><!--
               --><li><%= nav_link 'Contact Us', new_contact_path %></li><!--
