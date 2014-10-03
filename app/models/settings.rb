@@ -7,7 +7,7 @@ class Settings
   cattr_accessor :fields
   @@fields = [:recipent_email]
 
-  validates :recipent_email, presence: true
+  validates :recipent_email, presence: true, :format => { :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i}
 
   def attributes=(attrs = {})
     attrs.each do |k, v|
