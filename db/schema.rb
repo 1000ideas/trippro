@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141002110856) do
+ActiveRecord::Schema.define(:version => 20141003064658) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -30,15 +30,6 @@ ActiveRecord::Schema.define(:version => 20141002110856) do
   add_index "activities", ["recipient_id", "recipient_type"], :name => "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], :name => "index_activities_on_trackable_id_and_trackable_type"
 
-  create_table "contact_messages", :force => true do |t|
-    t.string   "name"
-    t.string   "phone"
-    t.string   "email"
-    t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
@@ -52,13 +43,13 @@ ActiveRecord::Schema.define(:version => 20141002110856) do
   add_index "contacts", ["deleted_at"], :name => "index_contacts_on_deleted_at"
 
   create_table "contents", :id => false, :force => true do |t|
-    t.string   "id",         :null => false
-    t.text     "content"
+    t.string   "id"
+    t.text     "value"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "contents", ["id"], :name => "contents_id_index", :unique => true
+  add_index "contents", ["id"], :name => "index_contents_on_id", :unique => true
 
   create_table "news", :force => true do |t|
     t.text     "content"

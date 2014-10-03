@@ -7,12 +7,12 @@ module ApplicationHelper
   def content(id)
     # cache ['mcontent', id, Content.order('created_at').last] do
       if Content.where(id: id).exists?
-        Content.where(id: id).first.content.html_safe
+        Content.where(id: id).first.value.html_safe
       else
         Content
           .where("`id` LIKE ?", "#{id}-%")
           .order('id')
-          .map(&:content)
+          .map(&:value)
           .join
           .html_safe
       end

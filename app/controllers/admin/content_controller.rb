@@ -12,7 +12,7 @@ class Admin::ContentController < ApplicationController
    	    Rails.logger.debug name
  	    Rails.logger.debug c
         element = Content.where(id: name).first || Content.new(id: name)
-        element.content = c["value"]
+        element.value = c["value"]
         element.save!
       end
     end

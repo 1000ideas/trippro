@@ -824,9 +824,64 @@ div.learn_qc {
   }
 }
 
-.learn_profit,
+.learn_profit{
+
+}
 .learn_reporting {
-  display: none;
+  /*display: none;*/
+  background-color: #f7f7f7;
+  height: 700px;
+  .ability{
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+  }
+  h1{
+    text-align: center;
+    font-weight: 600;
+  }
+  h2{
+    text-align: center;
+        font-weight: 600;
+  }
+  h3{
+    text-align: center;
+    font-weight: 300 !important;
+  }
+  h4{
+    text-align: center;
+    font-size: 18px;
+  }
+  .platforms{
+    margin: 0px auto 1rem;
+    list-style: none outside none;
+    text-align: center;
+    position: absolute;
+    img{
+      padding-bottom: 1rem;
+    }
+
+    p{
+
+    }
+    h4{
+      font-weight: 600;
+    }
+
+    ul{
+      li.tit{
+        &.before{
+          content:"";
+        }
+      }
+      li{
+       ul.nested{
+          text-align: left;        }
+      }
+    }
+    h2{
+      text-align: center;
+    }
+  }
 }
 
 section.other-feature {
