@@ -44,16 +44,14 @@ Trippro::Application.routes.draw do
           end
         end
       end
-      get :settings, controller: :content, action: :settings
-      post :settings, controller: :content, action: :settings_update
       resource :content, controller: :content, only: :update
     end
 
     scope module: 'l/admin' do
-          scope controller: :admin do
-            get :settings
-            put :settings
-          end
+      scope controller: :admin do
+        get :settings
+        put :settings
+      end
       resources :news, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do

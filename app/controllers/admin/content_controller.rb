@@ -22,25 +22,4 @@ class Admin::ContentController < ApplicationController
   #   head :unprocessable_entity
   end
 
-  def settings
-    @settings = Settings.new
-
-    respond_to do |format| 
-      format.html
-    end
-  end
-
-  def settings_update
-    @settings = Settings.new(params[:settings])
-
-
-    respond_to do |format| 
-      if @settings.save
-        format.html { redirect_to settings_admin_path, notice: t('update.success')}
-      else
-        format.html { render action: :settings }
-      end
-    end
-  end
-
 end

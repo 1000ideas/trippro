@@ -5,18 +5,9 @@ class Settings
   extend ActiveModel::Translation
 
   cattr_accessor :fields
-  @@fields = [:action_status]
+  @@fields = [:recipent_email]
 
-  @@action_statuses = ['progress', 'finished', 'results']
-
-  def statuses_for_select
-    @@action_statuses.map do |s|
-      [I18n.t(s, scope: 'settings.statuses'), s]
-    end
-  end
-
-
-  validates :action_status, presence: true
+  validates :recipent_email, presence: true
 
   def attributes=(attrs = {})
     attrs.each do |k, v|
@@ -29,24 +20,16 @@ class Settings
     self.save
   end
 
-  def action_status
-    @action_status ||= Content.value('settings:action-status') || @@action_statuses.first
+  def recipent_email
+    @recipent_email ||= Content.value('settings:recipent_email')
   end
 
-  def action_status=(value)
-    @action_status = value
+  def recipent_email=(value)
+    @recipent_email = value
   end
 
   def to_key
     nil
-  end
-
-  def competition_end?
-    %w(finished results).include?(action_status)
-  end
-
-  def show_results?
-    'results' == action_status
   end
 
   def save

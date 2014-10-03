@@ -3,6 +3,7 @@ class Ability
 
   def initialize(user)
     user ||= User.new
+    _settings = Settings.instance
 
     if user.has_role? :admin
       can :manage, Contact
