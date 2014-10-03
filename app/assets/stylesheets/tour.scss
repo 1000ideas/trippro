@@ -830,10 +830,14 @@ div.learn_qc {
 .learn_reporting {
   /*display: none;*/
   background-color: #f7f7f7;
-  height: 700px;
+  height: 900px;
   .ability{
     padding-bottom: 6rem;
     padding-top: 3rem;
+  }
+
+  p{
+    padding: 1rem 0;
   }
   h1{
     text-align: center;
@@ -868,14 +872,13 @@ div.learn_qc {
     }
 
     ul{
-      li.tit{
-        &.before{
-          content:"";
-        }
+      li.tit:before{
+        content:"";
       }
       li{
        ul.nested{
-          text-align: left;        }
+          text-align: left;     
+        }
       }
     }
     h2{
