@@ -1,4 +1,5 @@
 class Content < ActiveRecord::Base
+  attr_accessible :id, :value
   self.primary_key = :id
 
   class << self
