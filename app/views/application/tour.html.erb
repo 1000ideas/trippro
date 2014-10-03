@@ -246,11 +246,10 @@
         <h2>Cross-platform Availability</h2>
         <h4>TripPro is available on all major platforms</h4>
     </div>
-    <div class="medium-12 platforms">
-      <ul>
+      <ul class="medium-12 platforms">
         <div class="medium-4 columns trip">
           <li class="tit">
-            <%= image_tag 'tour/api.png' %>
+            <%= image_tag 'tour/api.png', :class => "api" %>
             <h4>TripPro&reg; API</h4>
             <p>Api enables travel agencies to develop <br>their own travel products, rather than<br> using off-the-shelf solutions.</p>
               <ul class="nested">
@@ -262,10 +261,10 @@
           </li>
         </div>
         <div class="medium-4 columns trip">
-          <li class="tit">
-            <%= image_tag 'tour/desktop.png' %>
+          <li class="tit" data-equalizer-watch>
+            <%= image_tag 'tour/desktop.png', :class => "desktop" %>
             <h4>TripPro&reg; DESKTOP</h4>
-            <p>Api enables travel agencies to develop their own travel products, rather than using off-the-shelf solutions.</p>
+            <p>Automates the entire booking process of a <br>travel agency dekstop. Seamlessly interfaces <br>with GDS platforms including Amadeus,<br> Travelport, and Sabre Red</p>
               <ul class="nested">
                 <li>Easy to implement, no technical expertise required</li>
                 <li>3+/- Calendar Shopping</li>
@@ -277,10 +276,10 @@
         </div>
         <div class="medium-4 columns trip">
           <li class="tit">
-            <%= image_tag 'tour/web.png' %>
+            <%= image_tag 'tour/web.png', :class => "web" %>
             <h4>TripPro&reg; WEB</h4>
             <h5>(Internet Booking Engine) & White Label</h5>
-            <p>Api enables travel agencies to develop their own travel products, rather than using off-the-shelf solutions.</p>
+            <p>Web-based agency and user log-in online<br> booking tool that provides access to exclusive <br> air travel content, not available in the <br>traditional GDSs</p>
               <ul class="nested">
                 <li>20% complete bookings faster</li>
                 <li>30% less Key Strokes</li>
@@ -291,8 +290,6 @@
           </li>
         </div>
       </ul>
-    </div>  
-
   </div>
   </div>
 </section>
