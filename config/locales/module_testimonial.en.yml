@@ -1,0 +1,50 @@
+---
+en:
+  admin:
+    testimonials:
+      submenu:
+        new: Add testimonial
+        index: List testimonials
+        destroy: Destroy selected testimonials
+        destroy_confirm: Destroying selected testimonials, sure?
+      new:
+        title: Add testimonial
+      index:
+        no_items_html: |
+          Aktualnie nie ma żadnych obiektów.
+          Może chcesz <a href="%{link}" data-remote>utworzyć nowy</a>?
+        no_filtered_items_html: |
+          Nie znaleziono żadnych pasujących obiektów.
+          Spróbuj zmienić kryteria filtracji.
+      edit:
+        title: Edit testimonial
+      create:
+        success: Pomyślnie utworzono
+      update:
+        success: Pomyślnie zaktualizowano
+      destroy:
+        success: Pomyślnie usunięto
+      tooltip:
+        title: Uwaga
+        content_html: Przykładowy tekst informacyjny
+      filter:
+        title: Filtruj wg
+        button: Filtruj
+        filter: Filtruj
+        clear: Wyczyść
+        open_filters: Otwórz filtry
+        edit_filters: Zmień filtry
+  testimonials:
+    index:
+      title: Testimonials
+    show:
+      title: Testimonial
+  menu:
+    testimonials: Testimonials
+  activerecord:
+    attributes:
+      testimonial:
+        photo: Photo
+        content: Content
+        name: Name
+        position: Position

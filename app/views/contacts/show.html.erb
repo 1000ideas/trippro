@@ -1,0 +1,14 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Contact.human_attribute_name :name %>:</dt>
+<dd><%= @contact.name %></dd>
+<dt><%= Contact.human_attribute_name :email %>:</dt>
+<dd><%= @contact.email %></dd>
+<dt><%= Contact.human_attribute_name :phone %>:</dt>
+<dd><%= @contact.phone %></dd>
+<dt><%= Contact.human_attribute_name :message %>:</dt>
+<dd><%= @contact.message %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), contacts_path %>

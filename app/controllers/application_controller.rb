@@ -1,4 +1,9 @@
 class ApplicationController < ActionController::Base
+  def _settings
+    L::Settings.instance
+  end
+  private :_settings
+  helper_method :_settings
   protect_from_forgery
 
   layout 'application'
@@ -15,7 +20,14 @@ class ApplicationController < ActionController::Base
   end
 
   def index
+    # authorize! :read, Testimonial
+    @testimonials = Testimonial
+      .paginate page: params[:page]
 
+    respond_to do |format|
+      format.html
+      format.json { render json: @testimonials}
+    end
   end
 
   def tour
@@ -23,7 +35,6 @@ class ApplicationController < ActionController::Base
   end
 
   def contact
-
   end
 
   def faq
@@ -44,5 +55,10 @@ class ApplicationController < ActionController::Base
     requested_path, session[:requested_path] = session[:requested_path], nil
     requested_path || "/admin"
   end
+
+  def _settings
+    Settings.instance
+  end
+  helper_method :_settings
 end
 

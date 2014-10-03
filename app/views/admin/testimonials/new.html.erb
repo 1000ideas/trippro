@@ -1,0 +1,15 @@
+<% title t('.title') %>
+
+<%= content_tag(:p, flash[:alert], class: :alert) if flash.key? :alert %>
+<%= content_tag(:p, flash[:notice], class: :notice) if flash.key? :notice %>
+
+<div class="row">
+  <div class="columns small-12">
+    <%= render 'form' %>
+  </div>
+  <div class="columns small-12 text-right">
+    <%= link_to t('back', scope: [:helpers, :actions]), admin_testimonials_path, class: [:button, :tiny, :secondary] %>
+  </div>
+</div>
+
+

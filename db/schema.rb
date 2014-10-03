@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141001120922) do
+ActiveRecord::Schema.define(:version => 20141003064658) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -30,14 +30,26 @@ ActiveRecord::Schema.define(:version => 20141001120922) do
   add_index "activities", ["recipient_id", "recipient_type"], :name => "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], :name => "index_activities_on_trackable_id_and_trackable_type"
 
-  create_table "contents", :id => false, :force => true do |t|
-    t.string   "id",         :null => false
-    t.text     "content"
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.datetime "deleted_at"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "contents", ["id"], :name => "contents_id_index", :unique => true
+  add_index "contacts", ["deleted_at"], :name => "index_contacts_on_deleted_at"
+
+  create_table "contents", :id => false, :force => true do |t|
+    t.string   "id"
+    t.text     "value"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "contents", ["id"], :name => "index_contents_on_id", :unique => true
 
   create_table "news", :force => true do |t|
     t.text     "content"
@@ -66,6 +78,21 @@ ActiveRecord::Schema.define(:version => 20141001120922) do
 
   add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
   add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
+
+  create_table "testimonials", :force => true do |t|
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
+    t.datetime "photo_updated_at"
+    t.text     "content"
+    t.string   "name"
+    t.string   "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "testimonials", ["deleted_at"], :name => "index_testimonials_on_deleted_at"
 
   create_table "tinymce_folders", :force => true do |t|
     t.string   "name"

@@ -6,7 +6,12 @@
 
   <%= form_for(_settings, as: 'settings', url: admin_settings_path, html: {method: :put}) do |f| %>
     <%= render partial: 'l/partials/errors', object: _settings.errors %>
-    &lt;Place your settings here&gt;
+    <div class="field">
+      <%= f.label :recipent_email do %>
+        <%= t('settings.recipent_email') %>
+      <% end %>
+      <%= f.text_field :recipent_email, value: _settings.recipent_email %>
+    </div>
     <div class="actions">
       <%= f.button t('settings.save'), class: [:button, :white, :round] %>
     </div>

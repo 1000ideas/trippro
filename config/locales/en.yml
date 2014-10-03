@@ -6,3 +6,5 @@ en:
   helpers:
     actions:
       more: 'Read More'
+  settings:
+    title: Settings

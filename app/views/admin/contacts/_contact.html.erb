@@ -1,0 +1,21 @@
+<li class="row" data-context>
+  <div class="columns small-3">
+    <%= f.select_box :name, contact %>
+    <%= contact.name %>
+  </div>
+    <div class="columns small-3">
+    <%= contact.email %>
+  </div>
+  <div class="columns small-3">
+    <%= l contact.updated_at, format: :long %>
+  </div>
+  <div class="columns small-3">
+    <%= l contact.created_at, format: :long %>
+    <a href="#" data-context-button><%= fa_icon('ellipsis-h') %></a>
+  </div>
+  <ul data-context-target>
+    <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), contact_path(contact), target: '_blank' %></li>
+    <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_contact_path(contact, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_contact_path(contact), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+  </ul>
+</li>

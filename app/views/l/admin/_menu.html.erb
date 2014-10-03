@@ -1,6 +1,12 @@
 <nav class="left-menu">
   <ul class="root">
-    <li><%= link_to( t('.webinars'), admin_webinars_path) %></li>
+    <li><%= link_to( t('.contacts'), admin_contacts_path) %></li>
+    <li class="spacer"></li>
+
+    <li><%= link_to( t('.testimonials'), admin_testimonials_path) %></li>
+    <li class="spacer"></li>
+
+    <li><%= link_to fa_icon('camera-retro', text: t('.webinars')), admin_webinars_path %></li>
     <li class="spacer"></li>
 
     <li>
@@ -36,11 +42,11 @@
       </ul>
     </li>
     <li class="spacer"></li>
+    -->
     <li>
-      <%#= link_to fa_icon('wrench fw',text: t('.settings') ), admin_path %>
+      <%= link_to fa_icon('wrench fw',text: t('.settings') ), admin_settings_path %>
     </li>
     <li class="spacer"></li>
-    -->
   </ul>
   <p class="copyright">created by <%= link_to "1000ideas", 'http://1000i.pl', target: '_blank' %></p>
 </nav>

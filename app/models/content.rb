@@ -1,11 +1,20 @@
 class Content < ActiveRecord::Base
   self.primary_key = :id
-  
-  attr_accessible :id, :content
 
-  def self.set!(id, value)
-    c = self.where(id: id).first || self.new(id: id)
-    c.content = value
-    c.save!
+  class << self
+    def set(id, value)
+      (self.where(id: id).first || self.new).tap do |object|
+        object.id = id
+        object.value = value
+      end.save!
+    end
+
+    def get(id)
+      self.where(id: id).first || self.new
+    end
+
+    def value(id)
+      get(id).try(:value)
+    end
   end
 end

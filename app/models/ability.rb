@@ -3,8 +3,11 @@ class Ability
 
   def initialize(user)
     user ||= User.new
+    _settings = Settings.instance
 
     if user.has_role? :admin
+      can :manage, Contact
+      can :manage, Testimonial
       can :manage, Webinar
       can :display, :dashboard
       can :manage, User
@@ -17,6 +20,7 @@ class Ability
     elsif user.has_role? :user
       can [:read, :update, :destroy], User, id: user.id
     end
+    can :create, Contact
     can :read, Webinar
     can :read, L::Page
     can :read, L::News

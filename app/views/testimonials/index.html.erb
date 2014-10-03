@@ -1,0 +1,18 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @testimonials.each do |testimonial| %>
+  <li>
+        <div><%= image_tag(testimonial.photo.url) %></div>
+        <div><%= testimonial.content %></div>
+        <div><%= testimonial.name %></div>
+        <div><%= testimonial.position %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), testimonial %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @testimonials %>
+
+
+

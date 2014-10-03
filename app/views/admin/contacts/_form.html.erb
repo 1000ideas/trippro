@@ -1,0 +1,33 @@
+<%= form_for([:admin, @contact], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2><%= t(".title.#{f.object.persisted? ? 'update' : 'create'}") %></h2>
+      <div class="field">
+      <%= f.label :name %>
+
+      <%= f.text_field :name  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :email %>
+
+      <%= f.text_field :email  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :phone %>
+
+      <%= f.text_field :phone  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :message %>
+
+      <%= f.text_area :message , :cols=>70, :rows=>5 %>
+
+    </div>
+    </fieldset>
+  <fieldset class="columns small-3 panel">
+    <div class="notification hidden"></div>
+    <%= f.button nil, class: [:button, :secondary, :round, :expand], name: :commit %>
+  </fieldset>
+<% end %>

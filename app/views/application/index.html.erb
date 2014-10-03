@@ -120,33 +120,17 @@
 <section class="testimonials hide-for-small-only ">
   <h2>Testimonials</h2>
   <ul>
+     <% @testimonials.each do |testimonial| %>
     <li class="row collapse" data-equalizer>
-      <div class="image columns"  data-equalizer-watch>
-        <%= image_tag('faces/1.png') %>
+      <div class="image columns <%= cycle('','on-right')%>"  data-equalizer-watch>
+       <%= image_tag(testimonial.photo.url) %>
       </div>
       <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
+        <p><%=testimonial.content%></p>
+        <p><strong><%=testimonial.name%></strong>,<%=testimonial.position%></p>
       </div>
     </li>
-    <li class="row collapse" data-equalizer>
-      <div class="image columns on-right"  data-equalizer-watch>
-        <%= image_tag('faces/2.png') %>
-      </div>
-      <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
-      </div>
-    </li>
-    <li class="row collapse" data-equalizer>
-      <div class="image columns"  data-equalizer-watch>
-        <%= image_tag('faces/3.png') %>
-      </div>
-      <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
-      </div>
-    </li>
+      <% end %>
   </ul>
   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
@@ -154,33 +138,17 @@
 <section class="testimonials rwd  show-for-small-only ">
   <h2>Testimonials</h2>
   <ul>
+    <% @testimonials.each do |testimonial| %>
     <li class="row collapse" data-equalizer>
       <!-- <div class="image columns"  data-equalizer-watch> -->
-        <%= image_tag('faces/1.png') %>
+        <%= image_tag(testimonial.photo.url) %>
       <!-- </div> -->
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
+        <p><strong><%=testimonial.name%></strong>,<%=testimonial.position%></p>
       <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
+        <p><%=testimonial.content%></p>
       </div>
     </li>
-    <li class="row collapse" data-equalizer>
-      <!-- <div class="image columns on-right"  data-equalizer-watch> -->
-        <%= image_tag('faces/2.png') %>
-      <!-- </div> -->
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
-      <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
-      </div>
-    </li>
-    <li class="row collapse" data-equalizer>
-      <!-- <div class="image columns"  data-equalizer-watch> -->
-        <%= image_tag('faces/3.png') %>
-      <!-- </div> -->
-        <p><strong>Chris Dane</strong>, President of Hickory Global Partners </p>
-      <div class="text columns"  data-equalizer-watch>
-        <p>“We are partnering with TripPro® because their technologically advanced platform and agent-focused design enables us to provide our member agencies airfares to destinations worldwide presented as one-stop shopping, TripPro® enhances our already robust air program in an easy and smart way.”</p>
-      </div>
-    </li>
+    <% end %>
   </ul>
   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
