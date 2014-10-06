@@ -834,10 +834,22 @@ div.learn_qc {
   .ability{
     padding-bottom: 6rem;
     padding-top: 3rem;
+    h4{
+      text-align: center;
+      font-size: 18px;
+    }
   }
 
   p{
     padding: 1rem 0;
+    line-height: 125%;
+    &#api{
+      margin-bottom: 2.4rem;
+    }
+    
+    &#web{
+      margin-bottom: 0.7rem;
+    }
   }
   h1{
     text-align: center;
@@ -853,7 +865,6 @@ div.learn_qc {
   }
   h4{
     text-align: center;
-    font-size: 18px;
   }
   h5{
     font-size: 14px;
@@ -879,7 +890,7 @@ div.learn_qc {
 
     }
     h4{
-      font-weight: 600;
+      font-weight: 800;
     }
 
     li:before{
