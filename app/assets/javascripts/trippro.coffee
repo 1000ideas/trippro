@@ -29,6 +29,9 @@ class TripPro
       exp_target = $(this).data("target")
       $(".#{exp_target}").slideToggle("fast")
 
+    $(window).on 'mercury:ready', ->
+      $('.learn_book, .learn_qc, .learn_reporting').show()
+
   init: ->
     $(window).scroll (event) ->
       $('header').toggleClass('smaller', $(event.target).scrollTop() > 50)
