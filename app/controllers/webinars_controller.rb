@@ -4,6 +4,7 @@ class WebinarsController < ApplicationController
     authorize! :read, Webinar
     @webinars = Webinar
       .paginate page: params[:page]
+    @webinars_month = @webinars.group_by { |t| t.when.beginning_of_month }
 
     respond_to do |format|
       format.html

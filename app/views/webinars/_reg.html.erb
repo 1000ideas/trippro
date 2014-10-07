@@ -1,47 +1,38 @@
 <section class="webinars">
 <div class="row">
-<h2 id="get_started-content-5" class="mercury-region" data-mercury="full"><%=content('get_started-content-5')%></h2>
-<h3 id="get_started-content-6" class="mercury-region" data-mercury="full"><%= content('get_started-content-6')%></h3>
+	<h2 id="get_started-content-5" class="mercury-region" data-mercury="full"><%=content('get_started-content-5')%></h2>
+	<h3 id="get_started-content-6" class="mercury-region" data-mercury="full"><%= content('get_started-content-6')%></h3>
 	<div class="registerweb">
-	<table cellspacing="0" style="background-color: #f2f2f2">
-		<% @webinars.each do |webinar| %>
-		  <tr>
-		    <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
-		  	<td class="lang"><h6><%= webinar.language%></h6></td>
-		    <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
-		    <td class="register"><%= link_to "Register", "http://"+webinar.link, class: 'button red-one radius' %></td>
-		  </tr>
-		  <%end%>
-		  <!-- <tr>
-		    <td class="data"><h4>17</h4><h5>Jun</h5></td>
-		  	<td class="lang"><h6>In Spanish</h6></td>
-		    <td class="time"><p>2:00 PM EST</p></td>
-		    <td class="register"><%= link_to "Register",'#', class: 'button red-one radius' %></td>
-		  </tr>
-		    <tr>
-		    <td class="data"><h4>17</h4><h5>Jun</h5></td>
-		  	<td class="lang"><h6>In Italian</h6></td>
-		    <td class="time"><p>2:00 PM EST</p></td>
-		    <td class="register"><%= link_to "Register",'#', class: 'button red-one radius' %></td>
-		  </tr>
-		  <tr>
-		    <td class="data"><h4>17</h4><h5>Jun</h5></td>
-		  	<td class="lang"><h6>In English</h6></td>
-		    <td class="time"><p>2:00 PM EST</p></td>
-		    <td class="register"><%= link_to "Register",'#', class: 'button red-one radius' %></td>
-		  </tr>
-		    <tr>
-		    <td class="data"><h4>17</h4><h5>Jun</h5></td>
-		  	<td class="lang"><h6>In Spanish</h6></td>
-			<td class="time"><p>2:00 PM EST</p></td>
-		    <td class="register"><%= link_to "Register",'#', class: 'button red-one radius' %></td>
-		  </tr>
-		  <tr>
-		    <td class="data"><h4>17</h4><h5>Jun</h5></td>
-		  	<td class="lang"><h6>In English</h6></td>
-			<td class="time"><p>2:00 PM EST</p></td>
-		    <td class="register"><%= link_to "Register",'#', class: 'button red-one radius' %></td>
-		  </tr> -->
-	</table> 
+		<table cellspacing="0" style="background-color: #f2f2f2">
+			<% @webinars.each do |webinar| %>
+				<% if webinar.when.strftime("%B") == Date.today.strftime("%B")%>
+					 <tr>
+					 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
+				     <td class="lang"><h6><%= webinar.language%></h6></td>
+				     <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
+				     <td class="register"><%= link_to "Register", "http://"+webinar.link, class: 'button red-one radius' %></td>
+					 </tr>
+				<%end%>	 					 
+			<%end%>
+		</table> 
+		<div class="pag">
+				<% @webinars_month.each do |month, webinars|%>
+					<% if month.strftime("%B") != Date.today.strftime("%B")%>
+					<p><%= month.strftime("%B") %></p>
+					<%end%>
+			<table cellspacing="0" style="background-color: #f2f2f2">
+					<% for webinar in webinars %>
+					<% if webinar.when.strftime("%B") != Date.today.strftime("%B")%>
+						<tr>
+						 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
+					     <td class="lang"><h6><%= webinar.language%></h6></td>
+					     <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
+					     <td class="register"><%= link_to "Register", "http://"+ webinar.link, class: 'button red-one radius' %></td>
+						</tr>
+						<%end%>
+					<%end%>
+				<%end%>
+			</table>
+		</div>		
 	</div>
 </div>
