@@ -17,11 +17,11 @@
 		</table> 
 		<div class="pag">
 				<% @webinars_month.each do |month, webinars|%>
-					<% if month.strftime("%B") != Date.today.strftime("%B")%>
-					<p><%= month.strftime("%B") %></p>
+					<% if month.strftime("%B") != Date.today.strftime("%B")%> 
+					<p><%= month.strftime("%B") %> <%= webinars.count%></p>
 					<%end%>
-			<table cellspacing="0" style="background-color: #f2f2f2">
 					<% for webinar in webinars %>
+			<table cellspacing="0" style="background-color: #f2f2f2">
 					<% if webinar.when.strftime("%B") != Date.today.strftime("%B")%>
 						<tr>
 						 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
