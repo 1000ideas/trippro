@@ -144,7 +144,18 @@ section.webinars{
   div.registerweb{
     padding-bottom: 4rem;
     div.pag{
-      // display: none;
+      table{
+        display: none;
+      }
+    }
+    div.table{
+      display: none;
+    }
+    p.monthname{
+      text-align: center;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 22px;
     }
     table{
       border: none;

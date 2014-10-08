@@ -29,6 +29,11 @@ class TripPro
       exp_target = $(this).data("target")
       $(".#{exp_target}").slideToggle("fast")
 
+    $(".more_webinar").click (event) ->
+       event.preventDefault
+       exp_target = $(this).data("target")
+       $(".#{exp_target}").slideToggle("fast")
+
     $(window).on 'mercury:ready', ->
       $('.learn_book, .learn_qc, .learn_reporting').show()
 

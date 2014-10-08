@@ -3,7 +3,7 @@
 	<h2 id="get_started-content-5" class="mercury-region" data-mercury="full"><%=content('get_started-content-5')%></h2>
 	<h3 id="get_started-content-6" class="mercury-region" data-mercury="full"><%= content('get_started-content-6')%></h3>
 	<div class="registerweb">
-		<table cellspacing="0" style="background-color: #f2f2f2">
+		<table class="maintable" cellspacing="0" style="background-color: #f2f2f2">
 			<% @webinars.each do |webinar| %>
 				<% if webinar.when.strftime("%B") == Date.today.strftime("%B")%>
 					 <tr>
@@ -16,23 +16,24 @@
 			<%end%>
 		</table> 
 		<div class="pag">
-				<% @webinars_month.each do |month, webinars|%>
-					<% if month.strftime("%B") != Date.today.strftime("%B")%> 
-					<p><%= month.strftime("%B") %> <%= webinars.count%></p>
-					<%end%>
-					<% for webinar in webinars %>
-			<table cellspacing="0" style="background-color: #f2f2f2">
-					<% if webinar.when.strftime("%B") != Date.today.strftime("%B")%>
-						<tr>
-						 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
-					     <td class="lang"><h6><%= webinar.language%></h6></td>
-					     <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
-					     <td class="register"><%= link_to "Register", "http://"+ webinar.link, class: 'button red-one radius' %></td>
-						</tr>
-						<%end%>
-					<%end%>
+			<% @webinars_month.each do |month, webinars|%>
+				<% if month.strftime("%B") != Date.today.strftime("%B")%> 
+				<p class="monthname"><%= link_to month.strftime("%B"), "#_", class: "more_webinar", data:{ "target" => "#{month.strftime("%B").downcase}"}%> (<%= webinars.count%> webinars)</p>
 				<%end%>
-			</table>
+						<table cellspacing="0" style="background-color: #f2f2f2" class="<%=month.strftime("%B").downcase%>">
+				<% webinars.each do |webinar| %>
+							<% if webinar.when.strftime("%B") != Date.today.strftime("%B")%>
+								<tr>
+									 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
+								     <td class="lang"><h6><%= webinar.language%></h6></td>
+								     <td class="time"><p><%= webinar.when.strftime("%l %p %Z") %></p></td>
+								     <td class="register"><%= link_to "Register", "http://"+ webinar.link, class: 'button red-one radius' %></td>
+								</tr>
+							<%end%>
+				<%end%>
+						</table>
+			<%end%>
 		</div>		
 	</div>
 </div>
+</section>
