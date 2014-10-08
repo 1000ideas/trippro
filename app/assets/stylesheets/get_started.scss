@@ -144,6 +144,10 @@ section.webinars{
   div.registerweb{
     padding-bottom: 4rem;
     div.pag{
+
+      a.more_webinar{
+        color: black;
+      }
       table{
         display: none;
       }
@@ -152,10 +156,13 @@ section.webinars{
       display: none;
     }
     p.monthname{
-      text-align: center;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      text-align: left;
       margin-bottom: 0;
       font-weight: 600;
-      font-size: 22px;
+      font-size: 20px;
+      padding-left: 22rem;
     }
     table{
       border: none;
