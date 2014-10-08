@@ -1,5 +1,27 @@
 @import 'compass/css3/transform';
 
+i.custom-arrow{
+  &:before{
+  content:'';
+  background-image: image-url('tiny-arrow-gray.png');
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  }
+
+  &.gray-arrow:before{
+      width: 6px; 
+      height: 11px;
+    }
+  &:before {
+    transition: all 0.5s;
+  }
+
+  &.clicked:before {
+    transform: rotate(90deg);
+  }
+}
+
 i.custom-icon {
   &:before {
     content: '';

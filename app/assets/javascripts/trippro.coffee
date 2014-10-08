@@ -32,6 +32,7 @@ class TripPro
     $(".more_webinar").click (event) ->
        event.preventDefault
        exp_target = $(this).data("target")
+       $(this).find('i').toggleClass('clicked')
        $(".#{exp_target}").slideToggle("fast")
 
     $(window).on 'mercury:ready', ->
