@@ -494,6 +494,9 @@ section.testimonials {
     > img {
       display: inline-block;
       vertical-align: middle;
+        @media #{$small-only}{
+           margin: 0px 6rem 0rem;
+        }
     }
 
     > div {
