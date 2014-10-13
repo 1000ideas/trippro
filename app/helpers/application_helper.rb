@@ -18,4 +18,8 @@ module ApplicationHelper
       end
     # end
   end
+
+  def month_name(no)
+    Date::MONTHNAMES[no]
+  end
 end

@@ -176,8 +176,16 @@ Content.create id: 'report-content-3', value:"TripPro &reg; API"
 Content.create id: 'report-content-4', value:"Api enables travel agencies to develop their own travel
  products, rather than  using off-the-shelf solutions."
 Content.create id: 'report-content-5', value:"TripPro&reg; DESKTOP"
-Content.create id: 'report-content-6', value:"30% increase"
-
+Content.create id: 'report-content-6', value:"Automates the entire booking process of a travel agency dekstop. Seamlessly interfaces
+ with GDS platforms including Amadeus, Travelport, and Sabre Red"
+Content.create id: 'report-content-7', value:"TripPro&reg; WEB"
+Content.create id: 'report-content-8', value:"(Internet Booking Engine) & White Label"
+Content.create id: 'report-content-9', value:"Web-based agency and user log-in online booking tool that provides access to exclusive air travel content, not available in the traditional GDSs"
+Content.create id: 'report-content-10', value:"30% increase"
+Content.create id: 'report-content-11', value:"30% increase"
+Content.create id: 'report-content-12', value:"30% increase"
+Content.create id: 'report-content-13', value:"30% increase"
+Content.create id: 'report-content-14', value:"30% increase"
 
 #Contact
 Content.create id: 'contact-content-1', value: "Contact Us"

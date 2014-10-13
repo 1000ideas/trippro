@@ -3,9 +3,11 @@
 <!--   <div class="small-12 poster">
     <%= image_tag('news/header.jpg') %>
   </div> -->
+  <div class="news_cont small-12 small-centered columns">
   <h1>News</h1>
   <h2>TripPro® is a revolutionary next generation search, book<br> 
 and ticketing technology providing the best international fares.</h2>
+  </div>
 <!-- </div> -->
 </section>
 
@@ -23,7 +25,7 @@ and ticketing technology providing the best international fares.</h2>
             <% @news.each do |news| %>
             <li>
               <p class="date"><%= l news.created_at, format: '%B %d, %Y' %></p>
-              <h3>
+              <h3 class="title">
                 <%= link_to  news.title, news_path(news) %>
               </h3>
               <%= content_tag :div, class: 'image' do %>

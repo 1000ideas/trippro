@@ -143,6 +143,26 @@ section.webinars{
   }
   div.registerweb{
     padding-bottom: 4rem;
+    div.pag{
+
+      a.more_webinar{
+        color: black;
+      }
+      table{
+        display: none;
+      }
+    }
+    div.table{
+      display: none;
+    }
+    p.monthname{
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      text-align: left;
+      margin-bottom: 0;
+      font-weight: 600;
+      font-size: 20px;
+    }
     table{
       border: none;
       width: 597px;
