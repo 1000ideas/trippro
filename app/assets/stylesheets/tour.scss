@@ -109,6 +109,9 @@ section.videos {
     color: #333;
     font-weight: 600;
     text-align: center;
+    @media #{$small-only}{
+    text-align: left;
+   }
   }
 
   p {
@@ -117,6 +120,26 @@ section.videos {
     font-weight: 200;
     margin: 0;
     text-align: center;
+    &.numbers{
+      background: none repeat scroll 0% 0% #ED1B24;
+      height: 45px;
+      width: 45px;
+      line-height: 175%;
+      text-align: center;
+      border-radius: 37px;
+      margin-right: 20px;
+      font-size: 1.5rem;
+      color: #FFF;
+      padding-top: 0px;
+      vertical-align: top;
+      font-weight: 400;
+      @media #{$small-only}{
+        margin-right: 20rem;
+      }
+    }
+    @media #{$small-only}{
+    text-align: left;
+   }
   }
 
 }
@@ -329,6 +352,45 @@ section.quote{
         &:before{
           content: ""
         }
+      }
+    }
+    ul.round-items{
+      list-style: none outside none;
+      max-width: 1140px;
+      width: 100%;
+      margin: 3em auto;
+      text-align: center;
+      li{
+        display: inline-block;
+        vertical-align: middle;
+        width: 190px;
+        height: 190px;
+        border: 1px solid #CCC;
+        background: none repeat scroll 0% 0% #FFF;
+        margin: 0px 2.5em 2rem;
+        border-radius: 100%;
+        white-space: nowrap;
+        p{
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%;
+          text-align: center;
+          font-weight: 200;
+          margin: 0px;
+        }
+        strong{
+          display: block;
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: #E42222;
+          line-height: 1em;
+        }
+      }
+      li:after{
+        content: "";
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
       }
     }
     section.benefits-at-your-service.tour{
