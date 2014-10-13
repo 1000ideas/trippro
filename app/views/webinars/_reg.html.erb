@@ -2,7 +2,7 @@
 <div class="row">
 	<h2 id="get_started-content-5" class="mercury-region" data-mercury="full"><%=content('get_started-content-5')%></h2>
 	<h3 id="get_started-content-6" class="mercury-region" data-mercury="full"><%= content('get_started-content-6')%></h3>
-	<div class="registerweb large-6 large-centered columns">
+	<div class="registerweb medium-8 medium-centered large-6 large-centered columns">
 		<table class="maintable" cellspacing="0" style="background-color: #f2f2f2">
 			<% @webinars.each do |webinar| %>
 				<% if webinar.when.strftime("%B") == Date.today.strftime("%B")%>
@@ -15,7 +15,7 @@
 				<%end%>	 					 
 			<%end%>
 		</table> 
-		<div class="pag large-12 large-centered columns">
+		<div class="pag">
 			<% @webinars_month.each do |month, webinars|%>
 				<% if month != Date.today.month%> 
 				<p class="monthname"><%= link_to "#_",  class: "more_webinar", data:{ "target" => "#{month}"} do %> <i class="custom-arrow gray-arrow">  <%= month_name(month)%> <%= webinars.count%>  webinars</i> </p>

@@ -8,11 +8,11 @@ section.top_img {
   width: 100%;
   background: white url('/assets/news/header.jpg') no-repeat center center;
   background-size: cover;
-  h1{
-    font-size: 54px !important;
-  	font-weight: 500;
-  	padding-top: 15px;
-  	padding-bottom: 32px;
+  div.news_cont{
+      h1{
+      font-size: 54px ;
+      font-weight: 500;
+    }
   }
 
   .row{
@@ -56,15 +56,16 @@ section.news_content{
     padding-right: 3.5%;
   }
 
-  h3{
+  h3.title{
       word-wrap: break-word;
       font-weight: 700;
       width: 90%;
+      color: black;
     }
     a{
-      color: red;
+      color: black;
       &:hover{
-        color: red;
+        color: black;
       }
     }
 
@@ -125,9 +126,11 @@ section.news_content{
     }
     ul.categories{
       li{
+        a{  
         color: red;
         font-weight: 800;
         margin-bottom: -0.6rem;
+        }
       }
     }
   }
