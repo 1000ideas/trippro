@@ -21,8 +21,9 @@
 				<p class="monthname"><%= link_to "#_",  class: "more_webinar", data:{ "target" => "#{month}"} do %> <i class="custom-arrow gray-arrow">  <%= month_name(month)%> <%= webinars.count%>  webinars</i> </p>
 				<%end%>
 				<%end%>
-						<table cellspacing="0" style="background-color: #f2f2f2" class="<%=month%>">
-				<% webinars.each do |webinar| %>
+					<div class="hide <%= month %>">
+						<table cellspacing="0" style="background-color: #f2f2f2">
+						<% webinars.each do |webinar| %>
 							<% if webinar.when.month != Date.today.month%>
 								<tr>
 									 <td class="data"><h4><%= webinar.when.strftime("%d") %></h4><h5><%= webinar.when.strftime("%b") %></h5></td>
@@ -31,8 +32,9 @@
 								     <td class="register"><%= link_to "Register", "http://"+ webinar.link, class: 'button red-one radius' %></td>
 								</tr>
 							<%end%>
-				<%end%>
+						<%end%>
 						</table>
+					</div>
 			<%end%>
 		</div>		
 	</div>

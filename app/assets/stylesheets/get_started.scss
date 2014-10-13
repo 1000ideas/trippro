@@ -144,12 +144,13 @@ section.webinars{
   div.registerweb{
     padding-bottom: 4rem;
     div.pag{
-
+      .hide{
+        display: none;
+      }
       a.more_webinar{
         color: black;
       }
       table{
-        display: none;
       }
     }
     div.table{
