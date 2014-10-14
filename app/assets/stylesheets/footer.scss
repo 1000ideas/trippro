@@ -31,9 +31,10 @@ footer {
     }
 
     p {
+      font-family: "Helvetica Light",Arial,sans-serif;
       font-size: .85rem;
       margin-bottom: .3rem;
-      color: #555555;
+      color: #7D8384;
       &.call{
         font-size: 18px;
         font-weight: 500;
@@ -62,7 +63,7 @@ footer {
       }
 
       &:hover, &:focus {
-        top: -10px;
+        top: -5px;
       }
 
 
