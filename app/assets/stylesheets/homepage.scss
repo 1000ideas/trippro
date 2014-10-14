@@ -37,9 +37,10 @@ section.video {
     a {
       display: inline-block;
       margin: 0.3rem .6rem;
-      padding: 0.9rem 4.2rem 0.9625rem 4.2rem;
+      padding: 0.9rem 0rem 0.9625rem 0rem;
       font-weight: 600;
       width: 249px;
+      font-size: 1.1rem;
       &:active {
         position: relative;
         top: 1px;
@@ -149,7 +150,7 @@ section.video {
   background: #fff;
   color: $primary-color;
   &:hover, &:focus {
-    background: $primary-color;
+    background: #333;
     color: #fff;
     transition: background-color 100ms ease-out 0s;
   }
@@ -159,8 +160,8 @@ section.video {
   background: $primary-color;
   color: #fff;
   &:hover, &:focus {
-    background: #fff;
-    color: $primary-color;
+    background: #333;
+    color: #fff;
     transition: background-color 100ms ease-out 0s;
   }
 }
@@ -545,6 +546,8 @@ section.testimonials {
     font-weight: 800;
     padding-left: 5.5em;
     padding-right: 5.5em;
+    padding-top: 1.3rem;
+    padding-bottom: 1.2rem;
   }
 }
 
