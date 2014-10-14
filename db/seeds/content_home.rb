@@ -202,7 +202,7 @@ puts "Contact done"
 Content.create id: 'get_started-content-1', value: "Sign up for TripPro "
 Content.create id: 'get_started-content-2', value: "Please fill out the application form. You will be given a unique name, password,
  and link to our member site, and you can start using TripPro right away. "
-Content.create id: 'get_started-content-3', value: "Demo "
+Content.create id: 'get_started-content-3', value: "Request a Demo "
 Content.create id: 'get_started-content-4', value: "Our expert will be right back in touch to 
 find the best time for you to show you the TripPro features."
 
