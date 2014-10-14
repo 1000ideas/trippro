@@ -103,7 +103,7 @@ section.sign_demo{
 
     a.button{
       width: 288px;
-      border-radius: 5px;
+      // border-radius: 5px;
     }
     label{
       text-align: left;
@@ -167,7 +167,7 @@ section.webinars{
     }
     table{
       border: none;
-      width: 597px;
+      width: 100%;
       margin: 0 auto;
         tr{
           td{
@@ -197,16 +197,18 @@ section.webinars{
           }
           td.register{
             width: 150px;
+            text-align: center;
              @media #{$small-only} {
-             width: 43%;
+             width: 8%;
             }
 
             a{
               width: 118px;
               margin: 0 0;
               font-weight: 600;
+              font-size: 1.1rem;
               &.button{
-                border-radius: 8px;
+                // border-radius: 8px;
                 margin-left: 10px;
                 padding-left: 26px;
                 padding-top: 9px;
