@@ -18,7 +18,7 @@ i.custom-arrow{
   }
 
   &.clicked:before {
-    transform: rotate(90deg);
+    @include transform(rotate(90deg));
   }
 }
 
