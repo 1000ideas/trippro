@@ -18,7 +18,7 @@ i.custom-arrow{
   }
 
   &.clicked:before {
-    transform: rotate(90deg);
+    @include transform(rotate(90deg));
   }
 }
 
@@ -42,11 +42,21 @@ i.custom-icon {
   &.red-arrow:before {
     width: 38px;
     height: 38px;
-    background-position: -40px 0;
+    background-image: image-url('arrow.png');
+    background-color: red;
+    border: 1px solid red;
+      border-radius: 25px;
     margin-top: -6px;
     margin-right: 1rem;
 
   }
+  &.red-arrow:hover:before{
+
+      background-color:  #b20007;
+      border: 1px solid #b20007;
+      border-radius: 25px;
+  }
+
   &.red-arrow.down-side:before { @include transform( rotate(90deg) ); }
   &.red-arrow.up-side:before { @include transform( rotate(270deg) ); }
   &.red-arrow.left-side:before { @include transform( rotate(180deg) ); }

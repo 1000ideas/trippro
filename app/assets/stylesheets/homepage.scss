@@ -187,14 +187,18 @@ section.features {
     overflow: auto;
     padding-top: 11px;
 
-    li {
+    li:hover {
        // vertical-align: top;
        // display: inline-block;
        padding: 0 1.5rem;
        // width: 25%;
+
        h3{
-        :hover{
-        color: #555;
+        a{
+          color: black;
+          &:hover{
+          color: #555;
+          }
         }
        }
        a {
@@ -206,7 +210,9 @@ section.features {
        }
     }
   }
-
+  a{
+    color:#333;
+  }
   h3 {
     font-size: 1.3rem;
     font-weight: bold;

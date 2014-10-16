@@ -30,22 +30,22 @@
   <ul ><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/plane.png'), tour_path %></span>
-      <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%= content('home-content-3')%></h3></div>
+      <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%=link_to content('home-content-3'), tour_path%></h3></div>
       <p id="home-content-7" class="mercury-region" data-mercury="full"><%=link_to content('home-content-7'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/card.png'), tour_path %></span>
-      <span class="hoverit"><div id="home-content-4" class="mercury-region" data-mercury="full"><h3><%= content('home-content-4')%></h3></div>
+      <span class="hoverit"><div id="home-content-4" class="mercury-region" data-mercury="full"><h3><%= link_to content('home-content-4'), tour_path%></h3></div>
       <p id="home-content-8" class="mercury-region" data-mercury="full"><%=link_to content('home-content-8'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/laptop.png'), tour_path %></span>
-      <span class="hoverit"><div id="home-content-5" class="mercury-region" data-mercury="full"><h3><%=content('home-content-5')%></h3></div>
+      <span class="hoverit"><div id="home-content-5" class="mercury-region" data-mercury="full"><h3><%= link_to content('home-content-5'), tour_path%></h3></div>
       <p id="home-content-9" class="mercury-region" data-mercury="full" ><%= link_to content('home-content-9'), tour_path%></p></span>
     </li><!--
      --><li class="small-12 medium-3 columns">
       <span class="red-icon"><%=link_to image_tag('icons/chart.png'), tour_path %></span>
-      <span class="hoverit"><div id="home-content-6" class="mercury-region" data-mercury="full"><h3><%=content('home-content-6')%> </h3></div>
+      <span class="hoverit"><div id="home-content-6" class="mercury-region" data-mercury="full"><h3><%=link_to content('home-content-6'), tour_path%> </h3></div>
       <p id="home-content-10" class="mercury-region" data-mercury="full"><%=link_to content('home-content-10'), tour_path%></p></span>
     </li><!--
    --></ul>

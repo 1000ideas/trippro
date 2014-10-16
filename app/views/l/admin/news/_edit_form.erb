@@ -34,6 +34,10 @@
         <%= f.label :content %>
         <%= f.tinymce :content, type: :advance %>
       </div>
+    <div class="field">
+      <%= f.label :category_id, 'Category' %>
+      <%= f.select :category_id, Category.all.map { |c| [c.name, c.id] } %>
+    </div>
     <% end %>
 
 

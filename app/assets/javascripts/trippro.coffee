@@ -6,23 +6,17 @@ class TripPro
     $(".more_info_expander").click (event) ->
       event.preventDefault
       exp_target = $(this).data("target")
-      to_close = $(".expandable").not($(".#{exp_target}")).find(".close")
-      for close_it in to_close
-        close_it.click()
+      # to_close = $(".expandable").not($(".#{exp_target}")).find(".close")
+      # for close_it in to_close
+      #   close_it.click()
       $(this).find('i').toggleClass('clicked')
-      $(".#{exp_target}").slideToggle "fast", ->
-        $("body, html").animate
-          scrollTop: $($(".#{exp_target}")).offset().top - 100
-        , 500
+      $(".#{exp_target}").slideToggle "fast"
 
     $(".close").click (event) ->
       event.preventDefault
       exp_target = $(this).data("target")
       $(".#{exp_target}").prev().find("i.clicked").removeClass("clicked")
-      $("body, html").animate
-        scrollTop: $($(".#{exp_target}")).offset().top - 100
-      , 500, ->
-        $(".#{exp_target}").slideUp "fast"
+      $(".#{exp_target}").slideUp "fast"
 
     $(".box_expander").click (event) ->
       event.preventDefault

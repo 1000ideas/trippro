@@ -4,4 +4,6 @@ L::News.class_eval do
 	path: ":rails_root/public/system/news_photos/:id/:style/:filename",
 	url: "/system/news_photos/:id/:style/:filename",
 	preserve_files: true
+	attr_accessible  :content, :title, :category_id, :deleted_at, :photo
+	belongs_to :category
 end

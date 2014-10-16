@@ -11,6 +11,7 @@
     #
     def index
       authorize! :read, L::News
+      @categories = Category.all
       @news = L::News
         .ordered
         .paginate page: params[:page]

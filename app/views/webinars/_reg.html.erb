@@ -18,7 +18,7 @@
 		<div class="pag">
 			<% @webinars_month.each do |month, webinars|%>
 				<% if month != Date.today.month%> 
-				<p class="monthname"><%= link_to "#_",  class: "more_webinar", data:{ "target" => "#{month}"} do %> <i class="custom-arrow gray-arrow">  <%= month_name(month)%> <%= webinars.count%>  webinars</i> </p>
+				<p class="monthname"><%= link_to "#_",  class: "more_webinar", data:{ "target" => "#{month}"} do %> <i class="custom-arrow gray-arrow"></i>  <%= month_name(month)%> (<%= webinars.count%>  webinars) </p>
 				<%end%>
 				<%end%>
 					<div class="hide <%= month %>">

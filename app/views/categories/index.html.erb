@@ -1,0 +1,15 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @categories.each do |category| %>
+  <li>
+        <div><%= category.name %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), category %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @categories %>
+
+
+

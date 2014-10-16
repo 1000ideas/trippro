@@ -44,12 +44,11 @@ and ticketing technology providing the best international fares.</h2>
       <div class="medium-3 end hide-for-small-only columns">
         <div class="categories">
           <p>News Category</p>
-          <ul class="categories">
-            <li><%= link_to "News", '#' %></li>
-            <li><%= link_to "Press Releases", '#' %></li>
-            <li><%= link_to "Reports", '#' %></li>
-            <li><%= link_to "Multimedia", '#' %></li>
-          </ul>
+          <% @categories.each do |c|%>
+            <ul class="categories">
+              <li><%= link_to c.name, "#_" %></li>
+            </ul>
+          <%end%>
         </div>
         <div class="twitter">
         <a class="twitter-timeline"  href="https://twitter.com/AnterKamil" data-widget-id="509629523462070272">Tweets by @AnterKamil</a>
