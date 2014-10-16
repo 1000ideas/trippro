@@ -6,6 +6,7 @@ class Ability
     _settings = Settings.instance
 
     if user.has_role? :admin
+      can :manage, Category
       can :manage, Contact
       can :manage, Testimonial
       can :manage, Webinar

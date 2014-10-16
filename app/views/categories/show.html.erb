@@ -1,0 +1,8 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Category.human_attribute_name :name %>:</dt>
+<dd><%= @category.name %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), categories_path %>

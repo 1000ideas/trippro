@@ -1,0 +1,27 @@
+<% title t('.title') %>
+
+<%= content_tag(:p, flash[:alert], class: :alert) if flash.key? :alert %>
+<%= content_tag(:p, flash[:notice], class: :notice) if flash.key? :notice %>
+
+<%= render('filter')  %>
+
+<ul class="row items-list-header">
+  <li class="columns small-6">
+    <%= custom_check_box(:selection, :all_ids, {}, 1, nil) if @categories.any? %>
+    <%= sort_column :id, Category.human_attribute_name(:id) %>
+  </li>
+  <li class="columns small-3"><%= sort_column :updated_at, Category.human_attribute_name(:updated_at) %></li>
+  <li class="columns small-3"><%= sort_column :created_at, Category.human_attribute_name(:created_at) %></li>
+</ul>
+
+<% if @categories.any? %>
+  <%=  render 'list' %>
+<% elsif filtering? %>
+  <div class="no-items">
+    <%= t('defaults.index.no_filtered_items_html') %>
+  </div>
+<% else %>
+  <div class="no-items">
+    <%= t('defaults.index.no_items_html', link: new_admin_category_path(format: :js)) %>
+  </div>
+<% end %>

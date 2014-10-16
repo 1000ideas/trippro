@@ -1,5 +1,8 @@
 <nav class="left-menu">
   <ul class="root">
+    <li><%= link_to( t('.categories'), admin_categories_path) %></li>
+    <li class="spacer"></li>
+
      <li>
       <%= link_to fa_icon('comments-o fw',text: t('.news') ), admin_news_index_path %>
     </li>
