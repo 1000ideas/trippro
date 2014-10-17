@@ -6,6 +6,7 @@ section.video {
   height: 480px;
   overflow: hidden;
   position: relative;
+  z-index: 1;
 
   h2 {
     text-align: center;
