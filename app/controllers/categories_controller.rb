@@ -14,9 +14,12 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     authorize! :read, @category
+     @categories = Category
+      .paginate page: params[:page]
+    @news = L::News.where(category_id: params[:id]).paginate page: params[:page]
 
     respond_to do |format|
-      format.html
+      format.html { render "l/news/index" }
       format.json { render json: @category }
     end
   end

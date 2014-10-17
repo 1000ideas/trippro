@@ -21,6 +21,7 @@ class Ability
     elsif user.has_role? :user
       can [:read, :update, :destroy], User, id: user.id
     end
+    can :read, Category
     can :create, Contact
     can :read, Webinar
     can :read, L::Page

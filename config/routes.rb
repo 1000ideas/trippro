@@ -19,7 +19,11 @@ Trippro::Application.routes.draw do
   resources :webinars, only: [:index, :show]
   resources :testimonials, only: [:index, :show]
   resources :contacts, only: [:index, :new, :create]
-  resources :categories, only: [:index, :show]
+  resources :categories, only: [:index, :show] do
+    member do 
+      get "news"
+    end
+  end
 
 
   scope path: 'admin', as: :admin do
