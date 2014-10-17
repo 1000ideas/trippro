@@ -7,24 +7,27 @@
 <div class="demo_form">
 	<div class="row">
 	<div class ="small-12 large-8 large-centered columns">
+		<form name="input">
 	  <div>
 		<label for="Name">Name</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="text" required aria-required=”true”></input>
 	  </div>
 	  <div>
 		<label for="Name">Phone number</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="text" required aria-required=”true”></input>
 	  </div>
 	  <div>
 		<label for="Name">Email</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="text" required aria-required=”true”></input>
 	  </div>
 	  <div>
 		<label for="Name">Company</label>
-		<input name="Name" type="text"></input>
+		<input name="Name" type="text" required aria-required=”true”></input>
 	  </div>
 	  <%= link_to "Request a Demo", '#', class: 'button red-one  grey radius' %>
+	  <input type="submit" value="Submit">
 	</div>
+</form>
 </div>
 </div>
 <!--<%= link_to "Send Message", '#', class: 'button red-one radius' %>-->
