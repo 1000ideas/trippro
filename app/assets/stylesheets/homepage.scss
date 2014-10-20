@@ -1,9 +1,6 @@
 @import '_overrides';
 @import 'compass/css3/transform';
 @import 'compass/css3/transition';
-:required{
-  background-color: red;
-}
 section.video {
   height: 480px;
   overflow: hidden;
