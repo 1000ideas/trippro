@@ -9,31 +9,41 @@
 </div>
 <div class="small-12 medium-12 large-8 large-centered medium-centered columns contact_form signup">
 
-<form name="input">
+<form name="input" data-abide>
+<small class="error center"> Some errors </small>
+
 	  <p class="bold">1.Personal Data</p>
 	  <div class="small-12 medium-12 medium-centered small-centered">
 		<label for="Name">First Name</label>
-		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
+		<div class="std">
+			<input name="Name" type="text" class="std" required aria-required=”true”></input>
+		</div>
+				 <small class="error">First Name is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name"> Last Name</label>
 		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
+		 <small class="error">Last Name is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name">Phone Number</label>
 		<div class="phone"><input name="Name" type="text" class="phone" required aria-required=”true”></input></div>
+	  <small class="error">Phone Number is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name">Email</label>
 		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
+		<small class="error">Email is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name">Password</label>
 		<div class="std"><input name="Name" type="password"class="std" required aria-required=”true”></input></div>
+		<small class="error">Password is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name">Retype Password</label>
 		<div class="std"><input name="Name" type="password" class="std" required aria-required=”true”></input></div>
+		<small class="error">Retype Password is required</small>
 	  </div>
 	  	  <div>
 		<label for="Name">Job Title</label>
