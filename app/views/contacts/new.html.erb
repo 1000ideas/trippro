@@ -9,7 +9,7 @@
 <a id="contact-phone-1" class="mercury-region" href="skype://<%=content('contact-phone-1')%>" data-mercury="full"><%=content('contact-phone-1')%></a></strong>.</p></p>
 </div>
 	<div class="contact_form small-12 small-centered medium-12 medium-centered">
-	<%= form_for( @contact, html: {class: "row small-11 medium-12 small-centered medium-centered" , data: {remote: true}}) do |f| %>
+	<%= form_for( @contact, html: {class: "row small-11 medium-12 small-centered medium-centered", "data-abide" => '' , data: {remote: true}}) do |f| %>
 	<% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
@@ -19,22 +19,25 @@
 		      <%= f.label :name %>
 
 		      <%= f.text_field :name, :required => true  %>
+		      	 <small class="error">Name is required</small>
 		  </div>
 		  <div>
 		      <%= f.label :email %>
 
 		      <%= f.text_field :email, :required => true  %>
+		      	 <small class="error">Email is required</small>
 		  </div>
 		  <div>
 		      <%= f.label :phone %>
 
 		      <%= f.text_field :phone, :required => true  %>
+		      	 <small class="error">Phone number is required</small>
 		  </div>
 		  <div>
 		      <%= f.label :message, class: 'text' %>
 
 		      <%= f.text_area :message , :cols=>70, :rows=>5, :required => true %>
-			</textarea> 
+				 <small class="error">Message is required</small>
 		  </div>
 		  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
 	</div>
