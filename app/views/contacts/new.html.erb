@@ -18,22 +18,22 @@
 		  <div>
 		      <%= f.label :name %>
 
-		      <%= f.text_field :name  %>
+		      <%= f.text_field :name, :required => true  %>
 		  </div>
 		  <div>
 		      <%= f.label :email %>
 
-		      <%= f.text_field :email  %>
+		      <%= f.text_field :email, :required => true  %>
 		  </div>
 		  <div>
 		      <%= f.label :phone %>
 
-		      <%= f.text_field :phone  %>
+		      <%= f.text_field :phone, :required => true  %>
 		  </div>
 		  <div>
 		      <%= f.label :message, class: 'text' %>
 
-		      <%= f.text_area :message , :cols=>70, :rows=>5 %>
+		      <%= f.text_area :message , :cols=>70, :rows=>5, :required => true %>
 			</textarea> 
 		  </div>
 		  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
