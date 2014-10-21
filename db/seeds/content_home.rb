@@ -269,3 +269,6 @@ Content.create id: 'faq-question-6', value: "Lorem ipsum dolor sit amet"
 
 Content.create id: 'faq-button-1', value: "Get Started"
 puts "FAQ done"
+
+# linki
+Content.create id: 'link-1', value: "See all features >"
