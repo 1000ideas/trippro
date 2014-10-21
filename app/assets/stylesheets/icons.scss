@@ -51,10 +51,9 @@ i.custom-icon {
 
   }
   &.red-arrow:hover:before{
-
-      background-color:  #b20007;
-      border: 2px solid #b20007;
-      border-radius: 25px;
+    background-color:  #b20007;
+    border: 2px solid #b20007;
+    border-radius: 25px;
   }
 
   &.red-arrow.down-side:before { @include transform( rotate(90deg) ); }

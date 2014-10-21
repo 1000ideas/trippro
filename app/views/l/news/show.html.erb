@@ -1,5 +1,5 @@
 <section class="news_post">
-	<div class="small-12 show-for-small-only">
+	<div class="head small-12 show-for-small-only">
 		<div class="news">
 		<%= link_to "News", news_index_path%>
 		</div>
@@ -12,22 +12,16 @@
 	</div>
 	<%= image_tag @news.photo.url(:small), class:"show-for-small-only" if @news.photo? %>
 	<%= image_tag @news.photo.url(:large_cropped), class:"hide-for-small-only" if @news.photo? %>
-	<div class="small-12 medium-12 medium-centered">
 		<% title @news.title  %>
 		<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
-		<div class="row">
-			<div class="small-12 poster hide-for-small-only">
-				<h2><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
+			<div class="medium-11 large-7 large-centered medium-centered columns poster hide-for-small-only "id="radial-gradient">
+				<h2 ><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
 				<h1><%= @news.title %></h1>
 			</div>
-		</div>
-  	</div>
 </section>
-<section class="post_content small-12 small-centered large-9 large-centered columns">
-  <div class="row">
-	<div class="small-12 large-11 small-centered large-centered columns content"><%= raw @news.content %>
+<section class="post_content">
+	<div class="small-12 medium-10 large-7 small-centered large-centered columns content"><%= raw @news.content %>
 	</div>
-  </div> <!-- row -->
 </section>
 
 <section class="get_started">
