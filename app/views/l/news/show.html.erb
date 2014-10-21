@@ -14,8 +14,8 @@
 	<%= image_tag @news.photo.url(:large_cropped), class:"hide-for-small-only" if @news.photo? %>
 		<% title @news.title  %>
 		<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
-			<div class="medium-11 large-7 large-centered medium-centered columns poster hide-for-small-only">
-				<h2><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
+			<div class="medium-11 large-7 large-centered medium-centered columns poster hide-for-small-only "id="radial-gradient">
+				<h2 ><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
 				<h1><%= @news.title %></h1>
 			</div>
 </section>

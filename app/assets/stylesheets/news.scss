@@ -1,5 +1,5 @@
 @import 'overrides';
-
+@import 'compass';
 section.top_img {
   position: relative;
   overflow: hidden;
@@ -27,8 +27,6 @@ section.top_img {
       min-width: 1280px;
       width: 100%;
     }
-
-
   }
   h1 {
   	text-align: center;
@@ -144,8 +142,21 @@ section.news_content{
 
 section.news_post
 {
+position: relative;
+  &:after {
+    @media #{$medium-up}{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    bottom:0;
+    left: 0;
+    z-index: 1;
+    @include background-with-css2-fallback(linear-gradient(bottom, rgba(0,0,0,0.85), transparent));
+    }
+  }
   .head{
-    margin-left: 1.9rem;
+    margin-left: .9rem;
   }
 
   .title{
@@ -160,7 +171,10 @@ section.news_post
   img{
     width: 100%;
   }
-  padding-bottom: 80px;
+  margin-bottom: 80px;
+  .poster {
+    z-index: 2;
+  }
     h4{
         text-align: center;
         color: black;
@@ -175,7 +189,6 @@ section.news_post
       margin-top: -10rem;
       position: absolute;
       color: rgba(251, 251, 251, 1);
-      text-shadow: 1px 1px #C3C3C3;
     }
 
     h1{
@@ -183,7 +196,6 @@ section.news_post
       position: absolute;
       font-size: 2.3rem;
       color: rgba(251, 251, 251, 1);
-      text-shadow: 1px 1px #C3C3C3;
     }
     p{
       display: inline;
