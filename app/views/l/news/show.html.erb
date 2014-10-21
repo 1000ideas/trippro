@@ -1,31 +1,38 @@
 <section class="news_post">
-	<%= image_tag @news.photo.url(:large_cropped) if @news.photo? %>
-  <div class="row">
+	<div class="small-12 show-for-small-only">
+		<div class="news">
+		<%= link_to "News", news_index_path%>
+		</div>
+		<div class="date">
+		<%= l @news.created_at, format: '%d-%m-%Y' %>
+		</div>
+		<div class="title">
+		<%= @news.title %>
+		</div>
+	</div>
+	<%= image_tag @news.photo.url(:small), class:"show-for-small-only" if @news.photo? %>
+	<%= image_tag @news.photo.url(:large_cropped), class:"hide-for-small-only" if @news.photo? %>
 	<div class="small-12 medium-12 medium-centered">
-	<% title @news.title  %>
-	<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
-		<!-- <section="post_image"> -->
+		<% title @news.title  %>
+		<% breadcrumbs link_to( t('l.news.index.title'), news_index_path), @news.title  %>
 		<div class="row">
-			<div class="small-12 poster">
+			<div class="small-12 poster hide-for-small-only">
 				<h2><%= link_to "News", news_index_path%> > <%= l @news.created_at, format: '%d-%m-%Y' %></h2>
 				<h1><%= @news.title %></h1>
 			</div>
-		<!-- 	<h4>News (link)</h4> -->
 		</div>
-<!-- 		</section> -->
-	<!-- <div class="small-12 content"><p><%= raw @news.content %></p></div> -->
-  </div>
+  	</div>
 </section>
-<section class="post_content large-9 large-centered columns">
+<section class="post_content small-12 small-centered large-9 large-centered columns">
   <div class="row">
-	<div class="small-12 large-11 large-centered columns content"><%= raw @news.content %></div>
+	<div class="small-12 large-11 small-centered large-centered columns content"><%= raw @news.content %>
+	</div>
   </div> <!-- row -->
 </section>
 
 <section class="get_started">
-<div class="row">
-  <h3>Start using TripPro today, boost sales within weeks</h3>
-
-  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
-</div>
+	<div class="row">
+	  <h3>Start using TripPro today, boost sales within weeks</h3>
+	  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
+	</div>
 </section>
