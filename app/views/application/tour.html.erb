@@ -17,7 +17,7 @@
       <ul class="section_list mercury-region" id="tour-content-video-4" data-mercury="full">
           <%=content('tour-content-video-4')%>
       </ul>
-      <p><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_book"} do %>
+      <p class="exphov"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_book"} do %>
         <i class="custom-icon red-arrow"></i> Learn more about Booking Tool
       <% end %></p>
     </div>
@@ -118,8 +118,8 @@
       <section class="benefits-at-your-service benefits-tour">
         <div class="small-5  large-12 large-centered columns">
         <ul>
-          <li><i class="custom-icon webinar"></i><span>Request a Free Demo</span></li>
-          <li><i class="custom-icon down-side red-arrow"></i><span>Download Brochure (PDF)</span></li>
+          <li><%= link_to demo_path do %><i class="custom-icon webinar"></i><span>Request a Free Demo</span><%end%></li>
+          <li><%= link_to "#_" do %><i class="custom-icon down-side red-arrow"></i><span>Download Brochure (PDF)</span><%end%></li>
         </ul>
         </div>
       </section>
@@ -201,8 +201,8 @@
 
       <section class="benefits-at-your-service benefits-tour">
         <ul>
-          <li><i class="custom-icon webinar"></i><span>Request a Free Demo</span></li>
-          <li><i class="custom-icon down-side red-arrow"></i><span>Download Brochure (PDF)</span></li>
+          <li><%= link_to demo_path do %><i class="custom-icon webinar"></i><span>Request a Free Demo</span><%end%></li>
+          <li><%= link_to "#_" do %><i class="custom-icon down-side red-arrow"></i><span>Download Brochure (PDF)</span><%end%></li>
         </ul>
       </section>
     </div>
