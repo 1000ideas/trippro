@@ -140,6 +140,14 @@ section.news_content{
 
 section.news_post
 {
+  .title{
+    font-weight: 600;
+    padding-bottom: 0.7rem;
+  }
+   @media #{$small-only}{
+      padding-top: 5rem;
+      padding-bottom:1rem;
+     }
   img{
     width: 100%;
   }
@@ -176,6 +184,11 @@ section.news_post
     }
     a{
       color: rgba(251, 251, 251, 1);
+     @media #{$small-only}{
+        color: red;
+        font-size: 2rem;
+        font-weight: 500;
+       }
     }
     .date{
       display: inline;
