@@ -161,7 +161,7 @@
 		}
 		select{
 			@media #{$small-only} {
-				      width: 100%;
+				      width: 93%;
 				    }
 			display: inline-block;
 			width: 326px;
@@ -252,7 +252,7 @@
 	    }
 	    input[type="password"] {
 		    border-radius: 5px;
-		    width: 35%;
+		    width: 93%;
 		    display: inline-block;
 		    margin-bottom: 11px;
 		    &.std{
