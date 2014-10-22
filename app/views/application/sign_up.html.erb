@@ -39,7 +39,7 @@
 		<small class="error">Email is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
-		<label for="Name">Password</label>
+		<label for="Name">Password <br><small>at least 7 characters</small></label>
 		<div class="std"><input name="Name" minlength=5 type="password" class="std" required aria-required=”true”></input></div>
 		<small class="error">Password is required</small>
 	  </div>
@@ -49,15 +49,15 @@
 		<small class="error">Retype Password is required</small>
 	  </div>
 	  	  <div>
-		<label for="Name">Job Title</label>
+		<label for="Name">Job Title <br><small>optional</small></label>
 		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
 	  </div>
 	  <div>
-		<label for="Name">Fax Number</label>
+		<label for="Name">Fax Number <br><small>optional</small></label>
 		<div class="phone"><input name="Name" type="text" class="phone" required aria-required=”true”></input></div>
 	  </div>
 	  <div>
-		<label for="Name">Referrer</label>
+		<label for="Name">Referrer<br><small>optional</small></label>
 		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
 	  </div>
 	  <div class="form_info small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
@@ -112,8 +112,8 @@
 	    </div>
 		<small class="error">Zip/Postal Code is required</small>
 	  </div>
-	  <div class="checkboxes" >
-		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above
+	  <div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns" >
+		<input type="checkbox" name="difaddr" id="difaddr" value="Bike" class="box_expander" data-target="diffaddress"><label for="difaddr">Different from address specified above</label>
 	  </div>	
 	<div class="diffaddress">
 	  <div>
@@ -143,8 +143,8 @@
 		<div class="short"><input name="Name" type="text" class="short" required aria-required=”true”></input></div>
 	  </div>
 	</div>
-	<div class="checkboxes">
-		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="extradata">I want to add additional Agency data (IATA, GDS, Memberships) 
+	<div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
+		<input type="checkbox" name="data" id="data"value="Bike" class="box_expander" data-target="extradata"><label for="data">I want to add additional Agency data (IATA, GDS, Memberships) </label>
 	</div>
 	<div class="extradata">
 	  <div>
@@ -171,7 +171,7 @@
 		<label for="Name">Business Type</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
-	  <div><strong>MEMBERSHIP</strong></div>
+	  <div class="extra_labels small-12 medium-5 large-5 small-centered medium-centered large-centered columns"><strong>MEMBERSHIP</strong></div>
 	    <div>
 		<label for="Name">HBA</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
@@ -188,11 +188,13 @@
 		<label for="Name">ASTA</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
-		<strong>GDS</strong>
+	  	<div class="extra_labels small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
+			<strong>GDS</strong>
+		</div>
 	    <div>
-		<label for="Name">Sabre PCC</label>
-		<div class="long"><input name="Name" type="text" class="long"></input></div>
-	  </div>
+			<label for="Name">Sabre PCC</label>
+			<div class="long"><input name="Name" type="text" class="long"></input></div>
+	  	</div>
 	  <div>
 		<label for="Name">Galileo PCC</label>
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
@@ -210,9 +212,8 @@
 		<div class="long"><input name="Name" type="text" class="long"></input></div>
 	  </div>
 	</div>
-	<div class="checkboxes">
-		<input type="checkbox" name="vehicle" value="Bike" class="">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %>
-
+	<div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
+	<input type="checkbox" name="vehicle" id="terms" value="Bike" class=""><label for="terms">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
 	</div>
 	<input type="submit" value="Submit" class="button red-one grey radius">
 
