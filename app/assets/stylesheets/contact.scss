@@ -66,7 +66,7 @@
 				padding-top: 0px;
 				text-align: left;
 				width: 100%;
-				padding-left: 3.5%;
+				padding-left: 0;
 				position: relative;
 				left: auto;
 				top: auto;
@@ -177,7 +177,7 @@
 		}
 		padding-bottom: 20px;
 		resize: none;
-		width: 35%;
+		width: 40%;
 		height: 219px;
 		display: inline-block;
 		border-radius: 5px;
@@ -186,22 +186,21 @@
 				    }
 		}
 		label{
-			padding-right: 0.5rem;
+			padding-right: 1rem;
 			text-align: right;
 			@include inline-block();
-			width: 10%; 
+			width: 25%; 
 			font-weight: 500;
 			font-size: 1.1rem;
-			margin-left: -10%;
 
 			@media #{$small-only} {
 			 font-weight: 500;
 			 font-size: 1.1rem;
 			 padding-right: 0.5rem;
 			 width: 100%;
-			 margin-left: 2%;
+			 margin-left: 0;
 			 text-align: left;
-			 padding-left: 10px;
+			 padding-left: 0;
 			}
 
 			&.text{
@@ -222,7 +221,7 @@
     
 	    input[type="text"] {
 	    	border-radius: 5px;
-			width: 35%;
+			width: 40%;
 			display: inline-block;
 			margin-bottom: 11px;
 			@media #{$small-only} {
