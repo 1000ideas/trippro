@@ -14,13 +14,13 @@
 			  </div>
 			  <div>
 				<label for="phone">Phone number</label>
-				<input name="phone" type="text" required aria-required="true"></input>
-				 <small class="error">Phone number is required</small>
+				<input name="phone" type="text" required aria-required="true" pattern="number"></input>
+				 <small class="error">Phone number is not valid</small>
 			  </div>
 			  <div>
 				<label for="email">Email</label>
-				<input name="email" type="text" required aria-required="true"></input>
-			 	<small class="error">Email is required</small>
+				<input name="email" type="text" required aria-required="true" pattern="email"></input>
+			 	<small class="error">Email is not valid</small>
 			  </div>
 			  <div>
 				<label for="company">Company</label>

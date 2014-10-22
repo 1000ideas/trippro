@@ -3,14 +3,14 @@ class TripPro
     $( => @loaded())
     @init()
 
-    $(".more_info_expander").click (event) ->
-      event.preventDefault
-      exp_target = $(this).data("target")
-      # to_close = $(".expandable").not($(".#{exp_target}")).find(".close")
-      # for close_it in to_close
-      #   close_it.click()
-      $(this).find('i').toggleClass('clicked')
-      $(".#{exp_target}").slideToggle "fast"
+    # $(".more_info_expander").click (event) ->
+    #   event.preventDefault
+    #   exp_target = $(this).data("target")
+    #   # to_close = $(".expandable").not($(".#{exp_target}")).find(".close")
+    #   # for close_it in to_close
+    #   #   close_it.click()
+    #   $(this).find('i').toggleClass('clicked')
+    #   $(".#{exp_target}").slideToggle "fast"
 
     $(".close").click (event) ->
       event.preventDefault

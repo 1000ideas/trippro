@@ -38,42 +38,43 @@
 }
 
 	div.contact_form{
-		text-align: center;
 		background-color: #f5f5f5;
 		padding-bottom: 113px;
 		margin-top: 3.1rem;
-		form[data-abide] div.row div > div {
-
-			&.error small.error{
-			display: inline-block;
-			}
-
-			small.error{
+		form[data-abide] {
+			small.error {
 	      	padding: 0.375rem 0.5625rem 0.5625rem;
 			margin-top: -1px;
 			margin-bottom: 1rem;
+			margin-left: 20%;
 			font-size: 0.75rem;
 			font-weight: normal;
 			font-style: italic;
-			background: none repeat scroll 0% 0% #f5f5f5;
+			background: transparent;
 			color: #ed831c;
 			position: absolute;
-			display: none;
+			left: 50%;
+			top: 0;
 			@media #{$small-only}{
-			font-size: 0.66667rem;
-			font-weight: normal;
-			font-style: italic;
-			padding-bottom: 0px;
-			margin-bottom: 0px;
-			position: relative;
-			margin-top: -1px;
-			padding-top: 0px;
-			display: block;
-			text-align: left;
-			width: 100%;
-			padding-left: 3.5%;
+				font-size: 0.66667rem;
+				font-weight: normal;
+				font-style: italic;
+				padding-bottom: 0px;
+				margin-bottom: 0px;
+				margin-top: -1px;
+				margin-left: 0;
+				padding-top: 0px;
+				text-align: left;
+				width: 100%;
+				padding-left: 3.5%;
+				position: relative;
+				left: auto;
+				top: auto;
 			}
 	    	}
+		}
+		.field {
+			position: relative;
 		}
 		input:invalid:focus {
 		  border: 1px solid #ed831c;
