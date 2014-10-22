@@ -11,14 +11,14 @@
 
 <form name="input" data-abide>
 <small class="error center"> Some errors </small>
-
+	
 	  <p class="bold">1.Personal Data</p>
 	  <div class="small-12 medium-12 medium-centered small-centered">
 		<label for="Name">First Name</label>
 		<div class="std">
 			<input name="Name" type="text" class="std" required aria-required=”true”></input>
 		</div>
-				 <small class="error">First Name is required</small>
+		<small class="error">First Name is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name"> Last Name</label>
@@ -37,7 +37,7 @@
 	  </div>
 	  <div class="small-12 small-centered">
 		<label for="Name">Password</label>
-		<div class="std"><input name="Name" type="password"class="std" required aria-required=”true”></input></div>
+		<div class="std"><input name="Name" minlength=5 type="password" class="std" required aria-required=”true”></input></div>
 		<small class="error">Password is required</small>
 	  </div>
 	  <div class="small-12 small-centered">
@@ -62,40 +62,50 @@
 	  <div>
 		<label for="Name">Agency Name</label>
 		<div class="long"><input name="Name" type="text" class="long" required aria-required=”true”></input></div>
+	  		<small class="error">Agency name is required</small>
 	  </div>
 	  <div>
 		<label for="Name">Agency Phone</label>
 		<div class="phone"><input name="Name" type="text" class="phone" required aria-required=”true”></input></div>
+	  		<small class="error">Agency Phone is required</small>
 	  </div>
 	  <div>
 		<label for="Name">Owner or President</label>
 		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
+		<small class="error">Owner is required</small>
 	  </div>
 	  	  <div>
 		<label for="Name">Street Address</label>
 		<div class="long"><input name="Name" type="text" class="long" required aria-required=”true”></input></div>
+		<small class="error">Street Address is required</small>
+
 	  </div>
 	  <div>
 		<label for="Name">City</label>
-		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>	
+		<div class="std"><input name="Name" type="text" class="std" required aria-required=”true”></input></div>
+		<small class="error">City is required</small>	
 	  </div>
 	  <div>
 		<label for="Name">Country</label>
 		 <div class="std">
 		 <select>
-		  <option value="volvo">Select</option>
+		  <option value="country">Select</option>
 		</select></div> 
+		<small class="error">Country is required</small>
 	  </div>
 	  	  <div class="std">
 		<label for="Name">State/Province</label>
 		<div class="std">
 		<select>
-		  <option value="volvo">Select</option>
-		</select></div> 
+		  <option value="state">Select</option>
+		</select></div>
+		<small class="error">State is required</small> 
 	  </div>
 	  <div>
 		<label for="Name">Zip/Postal Code</label>
-		<div class="short"><input name="Name" type="text" class="short" required aria-required=”true”></input></div>
+		<div class="short"><input name="Name" type="text" class="short" required aria-required=”true”></input>
+	    </div>
+		<small class="error">Zip/Postal Code is required</small>
 	  </div>
 	  <div class="checkboxes" >
 		<input type="checkbox" name="vehicle" value="Bike" class="box_expander" data-target="diffaddress">Different from address specified above
@@ -197,6 +207,7 @@
 	</div>
 	<div class="checkboxes">
 		<input type="checkbox" name="vehicle" value="Bike" class="">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %>
+
 	</div>
 	<input type="submit" value="Submit" class="button red-one grey radius">
 
