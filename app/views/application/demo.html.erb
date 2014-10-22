@@ -8,24 +8,23 @@
 			<div class ="small-12 medium-12 medium-centered large-8 large-centered columns">
 			<form name="input" data-abide>
 			  <div>
-				<label for="Name">Name</label>
-				<input name="Name" type="text" required aria-required=”true”></input>
+				<label for="name">Name</label>
+				<input name="name" type="text" required aria-required="true"></input>
 				 <small class="error">Name is required</small>
 			  </div>
 			  <div>
-				<label for="Name">Phone number</label>
-				<input name="Name" type="text" required aria-required=”true”></input>
-				 <small class="error">Phone number is required</small>
+				<label for="phone">Phone number</label>
+				<input name="phone" type="text" required aria-required="true" pattern="number"></input>
+				 <small class="error">Phone number is not valid</small>
 			  </div>
 			  <div>
-				<label for="Name">Email</label>
-				<input name="Name" type="text" required aria-required=”true”></input>
-			 	<small class="error">Email is required</small>
-
+				<label for="email">Email</label>
+				<input name="email" type="text" required aria-required="true" pattern="email"></input>
+			 	<small class="error">Email is not valid</small>
 			  </div>
 			  <div>
-				<label for="Name">Company</label>
-				<input name="Name" type="text" required aria-required=”true”></input>
+				<label for="company">Company</label>
+				<input name="company" type="text" required aria-required="true"></input>
 			 <small class="error">Company is required</small>
 			  </div>
 			  <%#= link_to "Request a Demo", '#', class: 'button red-one  grey radius' %>
