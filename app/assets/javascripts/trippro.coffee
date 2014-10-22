@@ -34,7 +34,7 @@ class TripPro
 
   init: ->
     $(window).scroll (event) ->
-      $('header').toggleClass('smaller', $(event.target).scrollTop() > 50)
+      $('header').toggleClass('smaller', $(event.target).scrollTop() > 10)
 
       if $('.close:visible').length > 0
         if ($(document).scrollTop() > $('.close:visible').parent().parent().offset().top) and ($(document).scrollTop() < ($('.close:visible').parent().parent().offset().top + $('.close:visible').parent().parent().height()))
