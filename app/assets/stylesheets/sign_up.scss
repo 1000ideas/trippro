@@ -1,125 +1,146 @@
 @import 'overrides';
 @import 'compass/css3';
 
-div.signup{
-	.error .error {
-		@include inline-block();
-
+form.signup[data-abide] {
+	h2 {
+		font-weight: 600;
+		padding-bottom:2rem;
+		padding-top:1rem;
+		font-size: 18px;
+		text-align: center;
 	}
-	form[data-abide] small.error{
-      	padding: 0.375rem 0.5625rem 0.5625rem;
-		margin-top: -1px;
+	h3 {
+		font-weight: 500;
+		font-size: 13px;
+		color: #4d4d4d;
+	}
+
+	label {
+		padding-right: 0.5rem;
+		text-align: right;
+		font-weight: 500;
+		font-size: 1.1rem;
+		line-height: 2.3125rem;
+
+		&.two-lines {
+			line-height: 1.1rem;
+		}
+	}
+
+	input[type=text], 
+	input[type=password], 
+	select {
+		@include border-radius();
+		width: 60%;
 		margin-bottom: 1rem;
+		&.short {
+			width: 40%;
+			margin-right: 20%;
+		}
+		&.super-short {
+			width: 20%;
+			margin-right: 40%;
+		}
+		&:invalid {
+		}
+		&:invalid:focus {
+		  border: 1px solid #ed831c;
+		  background-color: #ffefe0;
+		}
+	}
+
+	small.error {
+		padding: 0;
+		width: 35%;
+		margin-left: 5%;
 		font-size: 0.75rem;
 		font-weight: normal;
 		font-style: italic;
-		background: none repeat scroll 0% 0% #f5f5f5;
+		line-height: 2.3125rem;
+		background-color: transparent;
 		color: #ed831c;
-		position: absolute;
-		@media #{$small-only}{
-			font-size: 0.66667rem;
-			font-weight: normal;
-			font-style: italic;
-			padding-bottom: 0px;
-			margin-bottom: 0px;
-			position: relative;
-			margin-top: -1px;
-			padding-top: 0px;
-			text-align: left;
-			width: 100%;
-			padding-left: 6.5%;
-			}
 	}
-	input:invalid:focus {
-	  border: 1px solid #ed831c;
-	  background-color: #ffefe0;
+	.row.space-after {
+		margin-bottom: 2rem;
+	}
+	.line {
+		height: 1px;
+		background: #e2e2e2;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 	.button {
-	       margin: 20px 0;
-		   font-weight: 800;
-		   font-size: 21px;
-		   width: 40%;
-		   display: inline-block;
-		   @media #{$small-only} {
-				      width: 93%;
-				    }
-      	}
-	label{
-		width: 15%;
-		line-height: 60%;
-		@media #{$small-only} {
-				      width: 100%;
-				    }
-	}
-	div.form_info{
-		text-align: left;
-	}
-	p{
-		&.bold{
-			font-weight: 600;
-			padding-bottom:2rem;
-			padding-top:1rem;
-			font-size: 18px;
-			
-			@media #{$small-only} {
-				      // width: 93%;
-			float: left;
-    		margin-left: 1rem;
-			}
+       margin: 20px 0;
+	   font-weight: 800;
+	   font-size: 21px;
+	   width: 80%;
+	   display: inline-block;
+  	}
+}
 
+
+@media only screen and (max-width: 64em) { /* max-width 1024px */
+	form.signup[data-abide] {
+		input, select {
+			width: 100% !important;
 		}
-		.sign{
-
+		small.error {
+			width: 100% !important;
+			margin-left: auto;
+			line-height: 1rem;
+			margin-bottom: 0.5rem;
+		}
+		.custom-checkbox .two-lines-for-small {
+			line-height: 1rem;
 		}
 	}
-	label~div{
-		width: 45%;
-		display: inline-block;
-		input[type="text"].std,
-		input[type="text"].long,
-		input[type="text"].phone,
-		input[type="text"].short,
-		input[type="password"].std, 
-		select{
-			width: 100%;
-			height: 38px;
-			padding-right: 50%;
-			@media #{$small-only} {
-				      width: 93%;
-				      padding-right:0%;
-				    }
-		}
-		&.std{
-			padding-right: 5%;
-			@media #{$small-only} {
-				      width: 93%;
-				      padding-right:0%;
-				    }
-		}
+}
 
-		&.long{
-			padding-right: 5%;
-			@media #{$small-only} {
-				      width: 93%;
-				      padding-right:0%;
-				    }
-		}
-		&.phone{
-			padding-right: 27%;
-			@media #{$small-only} {
-				      width: 93%;
-				      padding-right:0%;
-				    }
-		}
-		&.short{
-			padding-right:33%;
-			@media #{$small-only} {
-				      width: 93%;
-				      padding-right:0%;
-				    }
-		}
-		&.select{
-			padding-right: 19%;
-		}
+
+
+.custom-checkbox {
+
+	&.vat {
+	  margin-bottom: 1.5rem;
+	}
+
+	* {
+	  @include inline-block();
+	  margin: 0;
+	  font-weight: 500;
+	}
+
+	input[type=checkbox],
+	input[type=checkbox]:checked {
+	  display: none;
+	}
+
+	label {
+	  padding-left: 1.8rem;
+	  margin-left: 0 !important;
+	  position: relative;
+	  font-size: 0.9rem !important;
+	}
+
+	label:before {
+	  @include inline-block();
+	  content: "";
+	  border: 1px solid #cccccc;
+	  background: white;
+	  height: 1.3rem;
+	  width: 1.3rem;
+	  position: absolute;
+	  left: 0;
+	  top: 50%;
+	  margin-top: -0.65rem;
+	}
+
+	input[type=checkbox]:checked + label:before {
+	  content: "\2713";
+	  font-size: 1.5rem;
+	  color: green;
+	  text-align: center;
+	  line-height: 1.1rem;
+	  text-indent: 0.1rem;
 	}
 }

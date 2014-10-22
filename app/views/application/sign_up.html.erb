@@ -7,212 +7,457 @@
 		<p id="sign_up-content-2" class="hide-for-small-only mercury-region" data-mercury="full"><%=content('sign_up-content-2')%></p></p>
 	</div>
 </div>
-<div class="row contact_form signup">
-<form data-abide="ajax">
 
-	  <div class="form_info small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
-	  <p class="bold">1.Personal Data</p>
-	  </div>
-	  
-	  <div class="small-12 medium-12 medium-centered small-centered columns">
-		<label for="first-name">First Name</label>
-		<input name="first-name" type="text"  required >
-		<small class="error">First Name is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="last-name"> Last Name</label>
-		<input name="last-name" type="text"  required >
-		 <small class="error">Last Name is required</small>
-	  </div> 
-	  <div class="small-12 small-centered columns">
-		<label for="phone">Phone Number</label>
-		<input name="phone" type="text"  pattern="number" required >
-	  <small class="error">Phone Number is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="email">Email</label>
-		<input name="email" type="text"  pattern="email">
-		<small class="error">Email is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="password">Password <br><small>at least 7 characters</small></label>
-		<input name="password" id="password" type="password"  required>
-		<small class="error">Password is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="password_confirmation">Retype Password</label>
-		<input name="password_confirmation" type="password"   required data-equalto="password">
-		<small class="error">Password did not match</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="job_title">Job Title <br class="hide-for-small-only"><small>optional</small></label>
-		<input name="job_title" type="text" >
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="fax">Fax Number <br class="hide-for-small-only"><small>optional</small></label>
-		<input name="fax" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="referrer">Referrer<br><small>optional</small></label>
-		<input name="referrer" type="text">
-	  </div>
-	  <div class="form_info small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
-	  	<p class="bold">2.Agency Data</p>
-	  </div>
+<div class="row">
+<form data-abide action="javascript: void(0);" method="post" class="small-12 large-8 large-centered columns signup">
 
-	  <div class="small-12 small-centered columns">
-		<label for="agency_name">Agency Name</label>
-			<input name="agency_name" type="text" required aria-required="true">
-	  		<small class="error">Agency name is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="agency">Agency Phone</label>
-		<input name="agency" type="text" required ></input>
-	  		<small class="error">Agency Phone is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="owner">Owner or President</label>
-		<input name="owner" type="text"  required >
-		<small class="error">Owner is required</small>
-	  </div>
-	  	  <div class="small-12 small-centered columns">
-		<label for="street">Street Address</label>
-		<input name="street" type="text" required >
-		<small class="error">Street Address is required</small>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="city">City</label>
-			<input name="city" type="text"  required aria-required="true"></input>
-		<small class="error">City is required</small>	
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="country">Country</label>
-		<select>
-		  <option value="country">Select</option>
-		</select> 
-		<small class="error">Country is required</small>
-	  </div>
-	  	<div class="small-12 small-centered columns">
-		<label for="state">State/Province</label>
-		<select>
-		  <option value="state">Select</option>
-		</select>
-		<small class="error">State is required</small> 
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="zip">Zip/Postal Code</label>
-		<input name="zip" type="text" required aria-required="true">
-		<small class="error">Zip/Postal Code is required</small>
-	  </div>
-	  <div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns" >
-	  	<p>Agency mailing address</p>
-		<input type="checkbox" name="difaddr" id="difaddr" value="Bike" class="box_expander" data-target="diffaddress"><label for="difaddr">Different from address specified above</label>
-	  </div>	
-	<div class="diffaddress">
-	  <div class="small-12 small-centered columns">
-		<label for="street_diff">Street Address</label>
-		<input name="street_diff" type="text">
-	  </div>
-	  <div class="small-12 small-centered columns">
-			<label for="city_diff">City</label>
-			<input name="city_diff" type="text"  >
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="country_diff">Country</label>
-		<select>
-		  <option value="country_diff">Select</option>
-		</select>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="state_diff">State/Province</label>
-		<select>
-		  <option value="state_diff">Select</option>
-		</select>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="zip_diff">Zip/Postal Code</label>
-		<input name="zip_diff" type="text">
+	<div class="row">
+	  <div class="small-12 columns">
+	  	<h2 class="medium-text-center small-text-left">1. Personal Data</h2>
 	  </div>
 	</div>
-	<div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns">
-		<p>Additional Data <small style="color: lightgray">optional</small></p>
-		<input type="checkbox" name="data" id="data"value="Bike" class="box_expander" data-target="extradata"><label for="data">I want to add additional Agency data (IATA, GDS, Memberships) </label>
-	</div>
-	<div class="extradata">
-	  <div class="small-12 small-centered columns">
-		<label for="arc">ARC</label>
-		<input name="arc" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="iata">IATA</label>
-		<input name="iata" type="text" ></input>
-	  </div>
-	    <div class="small-12 small-centered columns">
-		<label for="ttt">TRUE/TICO/TIDS</label>
-		<input name="ttt" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="clia">CLIA</label>
-		<input name="clia" type="text" ></input>
-	  </div>
-	    <div class="small-12 small-centered columns">
-		<label for="agency">Agency website address (url)</label>
-		<input name="agency" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="business">Business Type</label>
-		<input name="business" type="text" ></input>
-	  </div>
-	  <div class="extra_labels small-11 medium-5 large-5 small-centered medium-centered large-centered columns"><strong>MEMBERSHIP</strong></div>
-	    <div class="small-12 small-centered columns">
-		<label for="hba">HBA</label>
-		<input name="hba" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="host">HOST</label>
-		<input name="host" type="text" ></input>
-	  </div>
-	    <div class="small-12 small-centered columns">
-		<label for="consortium">Consortium/Affiliate</label>
-		<input name="consortium" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="asta">ASTA</label>
-		<input name="asta" type="text" ></input>
-	  </div>
-	  	<div class="extra_labels small-11 medium-5 large-5 small-centered medium-centered large-centered columns">
-			<strong>GDS</strong>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="first_name" class="small-text-left large-text-right">First Name</label>
 		</div>
-	    <div class="small-12 small-centered columns">
-			<label for="sabre">Sabre PCC</label>
-			<input name="sabre" type="text" ></input>
-	  	</div>
-	  <div class="small-12 small-centered columns">
-		<label for="galileo">Galileo PCC</label>
-		<input name="galileo" type="text" ></input>
-	  </div>
-	    <div class="small-12 small-centered columns">
-		<label for="worldspan">Worldspan PCC</label>
-		<input name="worldspan" type="text" ></input>
-	  </div>
-	  <div class="small-12 small-centered columns">
-		<label for="amadeus">Amadeus PCC</label>
-		<input name="amadeus" type="text" ></input>
-	  </div> 
-	  <div class="small-12 small-centered columns">
-		<label for="apollo">Apollo PCC</label>
-		<input name="apollo" type="text" ></input>
+		<div class="large-8 columns">
+			<input name="first_name" id="first_name" type="text" required class="left">
+			<small class="error right">First Name is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="last_name" class="small-text-left large-text-right">Last Name</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="last_name" id="last_name" type="text" required class="left">
+			<small class="error right">Last Name is required</small>
+		</div>
+	</div>
+
+	<div class="row space-after">
+		<div class="large-4 columns">
+			<label for="phone_number" class="small-text-left large-text-right">Phone Number</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="phone_number" id="phone_number" type="text" required pattern="number" class="left short">
+			<small class="error right">Phone Number is not valid</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="email" class="small-text-left large-text-right">Email</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="email" id="email" type="text" required pattern="email" class="left">
+			<small class="error right">Email is not valid</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="password" class="small-text-left large-text-right two-lines">Password <br class="hide-for-small"><small>at least 7 characters</small></label>
+		</div>
+		<div class="large-8 columns">
+			<input name="password" id="password" type="password" required class="left">
+			<small class="error right">Password is not valid</small>
+		</div>
+	</div>
+
+	<div class="row space-after">
+		<div class="large-4 columns">
+			<label for="password_confirmation" class="small-text-left large-text-right">Retype password</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="password_confirmation" id="password_confirmation" type="password" required data-equalto="password" class="left">
+			<small class="error right">Please retype</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="job_title" class="small-text-left large-text-right two-lines">Job Title <br class="hide-for-small-only"><small>optional</small></label>
+		</div>
+		<div class="large-8 columns">
+			<input name="job_title" id="job_title" type="text" class="left">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="fax" class="small-text-left large-text-right two-lines">Fax Number <br class="hide-for-small-only"><small>optional</small></label>
+		</div>
+		<div class="large-8 columns">
+			<input name="fax" id="fax" type="text" class="left short">
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="referrer" class="small-text-left large-text-right two-lines">Referrer <br class="hide-for-small-only"><small>optional</small></label>
+		</div>
+		<div class="large-8 columns">
+			<input name="referrer" id="referrer" type="text" class="left">
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+	  <div class="small-12 columns">
+	  	<h2 class="medium-text-center small-text-left">2. Agency Data</h2>
 	  </div>
 	</div>
 
-	<div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns">
-	<input type="checkbox" name="vehicle" id="terms" value="Bike" class=""><label for="terms">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_name" class="small-text-left large-text-right">Agency Name</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="agency_name" id="agency_name" type="text" required class="left">
+			<small class="error right">Agency Name is required</small>
+		</div>
 	</div>
-	 
-	<input type="submit" value="Submit" class="button red-one grey radius">
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_phone" class="small-text-left large-text-right">Agency Phone</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="agency_phone" id="agency_phone" type="text" pattern="number" class="left short">
+			<small class="error right">Agency Phone is not valid</small>
+		</div>
+	</div>
+
+	<div class="row space-after">
+		<div class="large-4 columns">
+			<label for="owner_or_president" class="small-text-left large-text-right">Owner or President</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="owner_or_president" id="owner_or_president" type="text" required class="left">
+			<small class="error right">Owner or President is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_street" class="small-text-left large-text-right">Street Address</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="agency_street" id="agency_street" type="text" required class="left">
+			<small class="error right">Street Address is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_city" class="small-text-left large-text-right">City</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="agency_city" id="agency_city" type="text" required class="left">
+			<small class="error right">City is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_country" class="small-text-left large-text-right">Country</label>
+		</div>
+		<div class="large-8 columns">
+			<select name="agency_country" id="agency_country" required class="left">
+			  <option></option>
+			  <option value="1">Country 1</option>
+			  <option value="2">Country 2</option>
+			</select> 
+			<small class="error right">Country is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_state" class="small-text-left large-text-right">State/Province</label>
+		</div>
+		<div class="large-8 columns">
+			<select name="agency_state" id="agency_state" required class="left">
+			  <option></option>
+			  <option value="1">State/Province 1</option>
+			  <option value="2">State/Province 2</option>
+			</select> 
+			<small class="error right">This field is required</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label for="agency_zip" class="small-text-left large-text-right">Zip/Postal Code</label>
+		</div>
+		<div class="large-8 columns">
+			<input name="agency_zip" id="agency_zip" type="text" pattern="number" class="left super-short">
+			<small class="error right">This field Code is not valid</small>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label class="small-text-left large-text-right two-lines">Agency mailing address<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>
+		</div>
+		<div class="large-8 columns">
+			<div class="custom-checkbox">
+				<input name="mailing_address_differs" id="mailing_address_differs" type="checkbox" class="box_expander" data-target="mailing_address_section">
+				<label for="mailing_address_differs" class="small-text-left">Different from address specified above</label>
+			</div>
+		</div>
+	</div>
+	<div class="mailing_address_section hide">
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_mailing_street" class="small-text-left large-text-right">Street Address</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="agency_mailing_street" id="agency_mailing_street" type="text" class="left">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_mailing_city" class="small-text-left large-text-right">City</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="agency_mailing_city" id="agency_mailing_city" type="text" class="left">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_mailing_country" class="small-text-left large-text-right">Country</label>
+			</div>
+			<div class="large-8 columns">
+				<select name="agency_mailing_country" id="agency_mailing_country" class="left">
+				  <option></option>
+				  <option value="1">Country 1</option>
+				  <option value="2">Country 2</option>
+				</select> 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_mailing_state" class="small-text-left large-text-right">State/Province</label>
+			</div>
+			<div class="large-8 columns">
+				<select name="agency_mailing_state" id="agency_mailing_state"  class="left">
+				  <option></option>
+				  <option value="1">State/Province 1</option>
+				  <option value="2">State/Province 2</option>
+				</select> 
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_mailing_zip" class="small-text-left large-text-right">Zip/Postal Code</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="agency_mailing_zip" id="agency_mailing_zip" type="text" class="left super-short">
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-4 columns">
+			<label class="small-text-left large-text-right two-lines">Additional Data<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>
+		</div>
+		<div class="large-8 columns">
+			<div class="custom-checkbox">
+				<input name="additional_data_check" id="additional_data_check" type="checkbox" class="box_expander" data-target="additinal_data_section">
+				<label for="additional_data_check" class="text-left two-lines-for-small">I want to add additional Agency data (IATA, GDS, Memberships)</label>
+			</div>
+		</div>
+	</div>
+	<div class="additinal_data_section hide">
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="arc" class="small-text-left large-text-right">ARC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="arc" id="arc" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="iata" class="small-text-left large-text-right">IATA</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="iata" id="iata" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="ttt" class="small-text-left large-text-right">TRUE/TICO/TIDS</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="ttt" id="ttt" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="clia" class="small-text-left large-text-right">CLIA</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="clia" id="clia" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="agency_website" class="small-text-left large-text-right two-lines">Agency website address<br class="hide-for-small" /><small>(url)</small></label>
+			</div>
+			<div class="large-8 columns">
+				<input name="agency_website" id="agency_website" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="business_type" class="small-text-left large-text-right">Business Type</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="business_type" id="business_type" type="text" class="left">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-offset-4 large-8 columns">
+				<h3>MEMBERSHIP</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="hba" class="small-text-left large-text-right">HBA</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="hba" id="hba" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="host" class="small-text-left large-text-right">HOST</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="host" id="host" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="consortium" class="small-text-left large-text-right">Consortium/Affiliate</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="consortium" id="consortium" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="asta" class="small-text-left large-text-right">Asta</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="asta" id="asta" type="text" class="left">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-offset-4 large-8 columns">
+				<h3>GDS</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="sabre" class="small-text-left large-text-right">Sabre PCC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="sabre" id="sabre" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="galileo" class="small-text-left large-text-right">Galileo PCC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="galileo" id="galileo" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="worldspan" class="small-text-left large-text-right">Worldspan PCC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="worldspan" id="worldspan" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="amadeus" class="small-text-left large-text-right">Amadeus PCC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="amadeus" id="amadeus" type="text" class="left">
+			</div>
+		</div>
+		<div class="row">
+			<div class="large-4 columns">
+				<label for="apollo" class="small-text-left large-text-right">Apollo PCC</label>
+			</div>
+			<div class="large-8 columns">
+				<input name="apollo" id="apollo" type="text" class="left">
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
+		</div>
+	</div>
+
+
+	<div class="row space-after">
+		<div class="large-4 columns">
+			<label class="small-text-left large-text-right">Terms and Conditions</label>
+		</div>
+		<div class="large-8 columns">
+			<div class="custom-checkbox">
+				<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox">
+				<label for="terms_and_conditions">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<input type="submit" value="Submit" class="button red-one grey radius">
+		</div>
+	</div>
+	
 
 </form>
 </div>
-<!--<%= link_to "Send Message", '#', class: 'button red-one radius' %>-->
 
 </section>

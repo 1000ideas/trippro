@@ -18,10 +18,10 @@ class TripPro
       $(".#{exp_target}").prev().find("i.clicked").removeClass("clicked")
       $(".#{exp_target}").slideUp "fast"
 
-    $(".box_expander").click (event) ->
-      event.preventDefault
-      exp_target = $(this).data("target")
-      $(".#{exp_target}").slideToggle("fast")
+    # $(".box_expander").click (event) ->
+    #   event.preventDefault
+    #   exp_target = $(this).data("target")
+    #   $(".#{exp_target}").slideToggle("fast")
 
     $(".more_webinar").click (event) ->
        event.preventDefault
