@@ -104,7 +104,8 @@
 		<input name="zip" type="text" required aria-required="true">
 		<small class="error">Zip/Postal Code is required</small>
 	  </div>
-	  <div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns" >
+	  <div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns" >
+	  	<p>Agency mailing address</p>
 		<input type="checkbox" name="difaddr" id="difaddr" value="Bike" class="box_expander" data-target="diffaddress"><label for="difaddr">Different from address specified above</label>
 	  </div>	
 	<div class="diffaddress">
@@ -133,7 +134,8 @@
 		<input name="zip_diff" type="text">
 	  </div>
 	</div>
-	<div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
+	<div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns">
+		<p>Additional Data <small style="color: lightgray">optional</small></p>
 		<input type="checkbox" name="data" id="data"value="Bike" class="box_expander" data-target="extradata"><label for="data">I want to add additional Agency data (IATA, GDS, Memberships) </label>
 	</div>
 	<div class="extradata">
@@ -202,11 +204,11 @@
 		<input name="apollo" type="text" ></input>
 	  </div>
 	</div>
-	  <!--
-	<div class="checkboxes small-12 medium-5 large-5 small-centered medium-centered large-centered columns">
+
+	<div class="checkboxes small-10 medium-5 large-5 small-centered medium-centered large-centered columns">
 	<input type="checkbox" name="vehicle" id="terms" value="Bike" class=""><label for="terms">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
 	</div>
-	 -->
+	 
 	<input type="submit" value="Submit" class="button red-one grey radius">
 
 </form>

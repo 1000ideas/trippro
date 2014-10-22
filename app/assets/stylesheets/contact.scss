@@ -101,7 +101,9 @@
 			margin-left: 30%;
 			 border-top: 1px solid rgba(128, 128, 128, 0.23);;
 			padding: 1rem 0;
+			p{
 
+			}
 		* {
 		    @include inline-block();
 		    margin: 0;
@@ -146,7 +148,7 @@
 			}
 			@media #{$small-only}{
 				text-align: left;
-				margin-left: 5%;
+				margin-left: 8%;
 			}
 			p{
 				float: left
