@@ -58,6 +58,20 @@
 			color: #ed831c;
 			position: absolute;
 			display: none;
+			@media #{$small-only}{
+			font-size: 0.66667rem;
+			font-weight: normal;
+			font-style: italic;
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+			position: relative;
+			margin-top: -1px;
+			padding-top: 0px;
+			display: block;
+			text-align: left;
+			width: 100%;
+			padding-left: 3.5%;
+			}
 	    	}
 		}
 		input:invalid:focus {
@@ -136,7 +150,7 @@
 			 font-size: 1.1rem;
 			 padding-right: 0.5rem;
 			 width: 100%;
-			 margin-left: 0%;
+			 margin-left: 2%;
 			 text-align: left;
 			 padding-left: 10px;
 			}
