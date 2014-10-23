@@ -13,32 +13,25 @@
 				<% flash.each do |name, msg| -%>
 			      <%= content_tag :div, msg, class: name %>
 			    <% end -%>
-		  <div class="field">
-		      <%= f.label :name %>
+			  <div class="field"> 
+			  		      <%= f.label :name %><!--
+			  		   --><%= f.text_field :name, :required => true  %>
+			  		      <small class="error">Name is required</small>
+			  </div>
+		      <div class="field"><%= f.label :email %><!--
+		      		   --><%= f.text_field :email, :required => true, pattern: "email" %>
+		      		      <small class="error">Email is not valid</small>
+		      </div>
+		     <div class="field"> <%= f.label :phone %><!--
+		     		   --><%= f.text_field :phone, :required => true, pattern: "number"  %>
+		     		      <small class="error">Phone number is not valid</small></div>
 
-		      <%= f.text_field :name, :required => true  %>
-		      <small class="error">Name is required</small>
-
-		  </div>
-		  <div class="field">
-		      <%= f.label :email %>
-
-		      <%= f.text_field :email, :required => true, pattern: "email" %>
-		      	 <small class="error">Email is not valid</small>
-		  </div>
-		  <div class="field">
-		      <%= f.label :phone %>
-
-		      <%= f.text_field :phone, :required => true, pattern: "number"  %>
-		      	 <small class="error">Phone number is not valid</small>
-		  </div>
-		  <div class="field">
-		      <%= f.label :message, class: 'text' %>
-
-		      <%= f.text_area :message , :cols=>70, :rows=>5, :required => true %>
-				 <small class="error">Message is required</small>
-		  </div>
-		  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
+		   <div class="field">
+		   <%= f.label :message, class: 'text' %><!--
+		   		   --><%= f.text_area :message , :cols=>70, :rows=>5, :required => true %>
+		   			  <small class="error">Message is required</small></div>
+		  
+			  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
 		<%end%>
 		</div>
 	</div>
