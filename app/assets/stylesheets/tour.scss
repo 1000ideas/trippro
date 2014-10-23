@@ -61,11 +61,12 @@ section.feature {
     color: #F00;
     &:hover{ 
       color: #B20007;
-      .red-arrow:before{
+      .red-arrow:before, .webinar:before{
         background-color:  #b20007;
         border: 2px solid #b20007;
         border-radius: 25px;
       }
+
     }
   }
   h3{
