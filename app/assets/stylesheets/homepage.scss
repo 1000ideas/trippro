@@ -169,7 +169,7 @@ section.video {
 .button.red-one.grey {
   background: $primary-color;
   color: #fff;
-  &:hover, &:focus {
+  &:hover {
     background: #333;
     color: white;
     transition: background-color 100ms ease-out 0s;
