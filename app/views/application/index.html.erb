@@ -1,11 +1,16 @@
 <section class="video">
-  <div class="video-wrapper">
-    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/prev_post.jpg">
-      <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.mp4" type="video/mp4" />
-      <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.webm" type="video/webm" />
+  <div class="video-wrapper hide-for-small-only">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/prev_post.jpg" controls>
+      <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.mp4" class="hide-for-small-only" type="video/mp4" />
+      <source src="https://www.paypalobjects.com/webstatic/mktg/wright/videos/home-signup.webm" class="hide-for-small-only" type="video/webm" />
      <%= image_tag('prev_post.jpg', class: "poster_img" ) %>
     </video>
   </div>
+  <div class="video-wrapper show-for-small-only">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="assets/prev_post.jpg">
+     <%= image_tag('prev_post.jpg', class: "poster_img" ) %>
+    </video>
+  </div>  
   <h2 id="home-content-1" class="hide-for-small-only mercury-region" data-mercury="full"><%= content('home-content-1')%></h2>
   <h3 id="home-content-2" class="mercury-region" data-mercury="full"><%= content('home-content-2')%></h3>
   <div class="buttons">

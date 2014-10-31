@@ -1,6 +1,8 @@
 @import 'overrides';
 @import 'compass/css3';
-
+form.signup{
+	padding-bottom: 3.625rem;
+}
 form.signup[data-abide] {
 	h2 {
 		font-weight: 600;
