@@ -55,8 +55,7 @@ section.benefits-at-your-service.tour{
 }
 section.feature {
   border-top: 1px solid #f5f5f5;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
+  padding-top: 2.5rem;
   a{
     color: #F00;
     &:hover{ 
@@ -393,6 +392,13 @@ section.quote{
         margin: 0 auto;
         @media #{$small-only}{
         text-align: left;
+        li{
+          p{
+            @media #{$small-only}{
+              float: left;
+            }
+          }
+        }
       }
       }
     }

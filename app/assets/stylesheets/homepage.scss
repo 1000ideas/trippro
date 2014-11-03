@@ -457,6 +457,7 @@ section.benefits-at-your-service {
     margin: 0;
     text-align: center;
     line-height: 1.4rem;
+
   }
 
 }
@@ -467,6 +468,9 @@ section.testimonials {
   padding-bottom: 5.625rem;
 
   &.rwd{
+    strong{
+      display: block;
+    }
     p{
       padding-left:15px;
       padding-right:15px;

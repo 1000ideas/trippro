@@ -1,4 +1,5 @@
 @import 'compass/css3/transform';
+@import '_overrides';
 
 i.custom-arrow{
   &:before{
@@ -57,7 +58,9 @@ i.custom-icon {
     border-radius: 25px;
     margin-top: -6px;
     margin-right: 1rem;
-
+    @media #{$small-only}{
+      float: left;
+    }
   }
   &.red-arrow:hover:before{
     background-color:  #b20007;
