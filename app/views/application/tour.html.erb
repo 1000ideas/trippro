@@ -77,7 +77,13 @@
             <p id="quote-content-1"class="quote mercury-region" data-mercury="full"><%=content('quote-content-1')%></p>
           <div id="triangle"></div>
           </div>
+            <div class="hide-for-small">
             <p class="chris"><span class="chris"><strong >Chris Dane,</strong>president of Hickory Global Partners</span> <%= image_tag('faces/3.png', size: "115x115") %></p>
+            </div>
+            <div class="show-for-small">
+            <%= image_tag('faces/3.png', size: "115x115") %><p class="chris">
+<strong >Chris Dane,</strong><br />president of Hickory Global Partners </p>
+            </div>            
           <div class="clearer"></div>
         </div>
       </section>
