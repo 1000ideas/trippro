@@ -56,12 +56,27 @@
     </header>
     <%= yield %>
     <footer>
-      <div class="wrapper">
-        <div class="small-12 medium-6 links collapse">
+        <div class="small-12 medium-6 links collapse show-for-small-only">
           <div class=" columns small-12 show-for-small-only ">
             <%= link_to 'back to top ^', '#', :class => "right" %>
-            <i class="custom-icon up_arrow"></i>
           </div>
+          <div class=" small-12 medium-4">
+            <%= link_to 'Take the Tour', tour_path %>
+            <%= link_to 'Get Started', webinars_path %>
+            <%= link_to 'News', news_index_path %>
+          </div>
+          <div class=" small-12 medium-4">
+            <%= link_to 'Terms of Service', '#' %>
+            <%= link_to 'Privacy Policy', '#' %>
+            <%= link_to 'FAQ', faq_path %>
+          </div>
+          <div class=" small-12 medium-4">
+            <%= link_to 'Support', '#' %>
+            <%= link_to 'Contact us', new_contact_path %>
+          </div>
+        </div>      
+      <div class="wrapper">
+        <div class="small-12 medium-6 links collapse hide-for-small-only">
           <div class="columns small-12 medium-4">
             <%= link_to 'Take the Tour', tour_path %>
             <%= link_to 'Get Started', webinars_path %>

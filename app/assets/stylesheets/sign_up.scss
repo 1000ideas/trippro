@@ -24,7 +24,7 @@ form.signup[data-abide] {
 		font-weight: 500;
 		font-size: 1.1rem;
 		line-height: 2.3125rem;
-
+		color: #4D4D4D;
 		&.two-lines {
 			line-height: 1.1rem;
 		}
@@ -86,6 +86,9 @@ form.signup[data-abide] {
 	form.signup[data-abide] {
 		input, select {
 			width: 100% !important;
+		}
+		label {
+			color: #4D4D4D;
 		}
 		small.error {
 			width: 100% !important;
