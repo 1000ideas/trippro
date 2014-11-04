@@ -260,6 +260,9 @@ section.benefits {
   padding-top: 4.5rem;
   padding-bottom: 5.625rem;
 
+  .benefits_cont{
+    margin-bottom: 1.5rem;
+  }
   h2 {
     color: #333;
     font-size: 2.25rem;
@@ -294,7 +297,6 @@ section.benefits {
     width: 100%;
     margin: 3em auto;
     text-align: center;
-
     li {
       display: inline-block;
       vertical-align: middle;
@@ -455,6 +457,7 @@ section.benefits-at-your-service {
     margin: 0;
     text-align: center;
     line-height: 1.4rem;
+
   }
 
 }
@@ -465,6 +468,9 @@ section.testimonials {
   padding-bottom: 5.625rem;
 
   &.rwd{
+    strong{
+      display: block;
+    }
     p{
       padding-left:15px;
       padding-right:15px;

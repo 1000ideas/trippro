@@ -7,24 +7,25 @@
 		</strong> or <strong>
 		<a id="contact-phone-1" class="mercury-region" href="skype://<%=content('contact-phone-1')%>" data-mercury="full"><%=content('contact-phone-1')%></a></strong>.</p></p>
 	</div>
-	<div class="contact_form">
-		<div class="small-12 large-8 large-centered columns">
-		<%= form_for( @contact, html: {class: "row", "data-abide" => '' , data: {remote: true}}) do |f| %>
+	<div class="small-12 large-8 large-centered columns">
+		<div class="contact_form">
+			<%= form_for( @contact, html: {class: "row", "data-abide" => '' , data: {remote: true}}) do |f| %>
 				<% flash.each do |name, msg| -%>
 			      <%= content_tag :div, msg, class: name %>
 			    <% end -%>
 			  <div class="field"> 
 			  		      <%= f.label :name %><!--
-			  		   --><%= f.text_field :name, :required => true  %>
+			  		   --><%= f.text_field :name, :required => true, 'aria-required' => 'true'  %>
 			  		      <small class="error">Name is required</small>
 			  </div>
 		      <div class="field"><%= f.label :email %><!--
 		      		   --><%= f.text_field :email, :required => true, pattern: "email" %>
-		      		      <small class="error">Email is not valid</small>
+		      		      <small class="error">Email is incorrect</small>
 		      </div>
-		     <div class="field"> <%= f.label :phone %><!--
+		      <div class="field"> <%= f.label :phone %><!--
 		     		   --><%= f.text_field :phone, :required => true, pattern: "number"  %>
-		     		      <small class="error">Phone number is not valid</small></div>
+		     		      <small class="error">Phone number is incorrect</small>
+		      </div>
 
 		   <div class="field">
 		   <%= f.label :message, class: 'text' %><!--
@@ -32,7 +33,7 @@
 		   			  <small class="error">Message is required</small></div>
 		  
 			  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
-		<%end%>
-		</div>
+			</div>
+			<%end%>
 	</div>
 </section>

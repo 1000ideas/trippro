@@ -18,5 +18,12 @@
 $(function(){ $(document).foundation({
 equalizer : {
     equalize_on_stack: false
-  }
+  },
+abide : {
+    live_validate : false,
+    focus_on_invalid : false,
+    error_labels: false, // labels with a for="inputId" will recieve an `error` class
+    timeout : 10000000    
+}
 }); });
+

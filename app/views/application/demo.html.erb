@@ -4,34 +4,33 @@
 		<p id="demo-content-2" class="mercury-region hide-for-small-only" data-mercury="full"><%= content('demo-content-2')%></p>
 	</div>
 <div class="small-12 medium-12 medium-centered large-12 columns demo">
-<div class="demo_form">
 			<div class ="small-12 medium-12 medium-centered large-8 large-centered columns">
-			<form name="input" data-abide>
-			  <div>
-				<label for="name">Name</label>
-				<input name="name" type="text" required aria-required="true"></input>
-				 <small class="error">Name is required</small>
-			  </div>
-			  <div>
-				<label for="phone">Phone number</label>
-				<input name="phone" type="text" required aria-required="true" pattern="number"></input>
-				 <small class="error">Phone number is not valid</small>
-			  </div>
-			  <div>
-				<label for="email">Email</label>
-				<input name="email" type="text" required aria-required="true" pattern="email"></input>
-			 	<small class="error">Email is not valid</small>
-			  </div>
-			  <div>
-				<label for="company">Company</label>
-				<input name="company" type="text" required aria-required="true"></input>
+	<div class="demo_form">
+		<form action="javascript: void(0);" method="post" data-abide>
+		  <div>
+			<label for="name">Name</label>
+			<input name="name" id="name" type="text"required aria-required="true"></input>
+			 <small class="error">Name is required</small>
+		  </div>
+		  <div>
+			<label for="phone">Phone number</label>
+			<input name="phone" type="text" required aria-required="true" pattern="number"></input>
+			 <small class="error">Phone number is incorrect</small>
+		  </div>
+		  <div>
+			<label for="email">Email</label>
+			<input name="email" type="text" required aria-required="true" pattern="email"></input>
+		 	<small class="error">Email is incorrect</small>
+		  </div>
+		  <div>
+			<label for="company">Company</label>
+			<input name="company" type="text" required aria-required="true"></input>
 			 <small class="error">Company is required</small>
-			  </div>
-			  <%#= link_to "Request a Demo", '#', class: 'button red-one  grey radius' %>
-			  <input type="submit" value="Submit" class="button red-one grey radius">
-			</div>
-			</form>
-			</div>
+		  </div>
+		  <%#= link_to "Request a Demo", '#', class: 'button red-one  grey radius' %>
+		  <input type="submit" value="Submit" class="button red-one grey radius">
+		</form>
+	</div>
 		</div>
 </div>
 <!--<%= link_to "Send Message", '#', class: 'button red-one radius' %>-->

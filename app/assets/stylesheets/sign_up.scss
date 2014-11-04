@@ -1,8 +1,14 @@
 @import 'overrides';
 @import 'compass/css3';
-
+form.signup{
+	padding-bottom: 3.625rem;
+}
 form.signup[data-abide] {
+		label{
+			color: #4D4D4D;
+		}
 	h2 {
+		padding-left: 1rem;
 		font-weight: 600;
 		padding-bottom:2rem;
 		padding-top:1rem;
@@ -21,7 +27,7 @@ form.signup[data-abide] {
 		font-weight: 500;
 		font-size: 1.1rem;
 		line-height: 2.3125rem;
-
+		color: #4D4D4D;
 		&.two-lines {
 			line-height: 1.1rem;
 		}
@@ -55,7 +61,7 @@ form.signup[data-abide] {
 		margin-left: 5%;
 		font-size: 0.75rem;
 		font-weight: normal;
-		font-style: italic;
+		font-style: normal;
 		line-height: 2.3125rem;
 		background-color: transparent;
 		color: #ed831c;
@@ -83,6 +89,9 @@ form.signup[data-abide] {
 	form.signup[data-abide] {
 		input, select {
 			width: 100% !important;
+		}
+		label {
+			color: #4D4D4D;
 		}
 		small.error {
 			width: 100% !important;
@@ -137,10 +146,10 @@ form.signup[data-abide] {
 
 	input[type=checkbox]:checked + label:before {
 	  content: "\2713";
-	  font-size: 1.5rem;
+	  font-size: 2rem;
 	  color: green;
 	  text-align: center;
 	  line-height: 1.1rem;
-	  text-indent: 0.1rem;
+	  text-indent: 0rem;
 	}
 }
