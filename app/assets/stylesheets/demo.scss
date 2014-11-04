@@ -30,7 +30,6 @@
 				font-size: 0.66667rem;
 				font-weight: normal;
 				font-style: normal;
-				display: none;
 				padding-bottom: 0px;
 				margin-bottom: 0px;
 				position: relative;
@@ -42,6 +41,12 @@
 				padding-left: 3.5%;
 				}
 	    	}
+		}
+		label{
+			color: #4D4D4D;
+		}
+		small.error{
+			display: none;
 		}
 		input:invalid:focus {
 		  border: 1px solid #ed831c;
