@@ -4,6 +4,9 @@ form.signup{
 	padding-bottom: 3.625rem;
 }
 form.signup[data-abide] {
+		label{
+			color: #4D4D4D;
+		}
 	h2 {
 		padding-left: 1rem;
 		font-weight: 600;
@@ -58,7 +61,7 @@ form.signup[data-abide] {
 		margin-left: 5%;
 		font-size: 0.75rem;
 		font-weight: normal;
-		font-style: italic;
+		font-style: normal;
 		line-height: 2.3125rem;
 		background-color: transparent;
 		color: #ed831c;
