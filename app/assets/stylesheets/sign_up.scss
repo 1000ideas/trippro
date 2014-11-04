@@ -143,10 +143,10 @@ form.signup[data-abide] {
 
 	input[type=checkbox]:checked + label:before {
 	  content: "\2713";
-	  font-size: 1.5rem;
+	  font-size: 2rem;
 	  color: green;
 	  text-align: center;
 	  line-height: 1.1rem;
-	  text-indent: 0.1rem;
+	  text-indent: 0rem;
 	}
 }
