@@ -1,0 +1,30 @@
+<%= form_for([:admin, @contact], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2>Show</h2>
+      <div class="field">
+      <%= f.label :name %>
+
+      <%= f.text_field :name, :disabled => true  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :email %>
+
+      <%= f.text_field :email , :disabled => true   %>
+
+    </div>
+      <div class="field">
+      <%= f.label :phone %>
+
+      <%= f.text_field :phone, :disabled => true    %>
+
+    </div>
+      <div class="field">
+      <%= f.label :message %>
+
+      <%= f.text_area :message , :cols=>70, :rows=>5, :disabled => true   %>
+
+    </div>
+    </fieldset>
+    
+<% end %>

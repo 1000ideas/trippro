@@ -26,6 +26,16 @@ class Admin::ContactsController < ApplicationController
     end
   end
 
+  def show
+    @contact = Contact.find(params[:id])
+    authorize! :manage, @contact
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def edit
     @contact = Contact.find(params[:id])
     authorize! :update, @contact

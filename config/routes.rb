@@ -35,7 +35,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
-      resources :contacts, except: [:show] do
+      resources :contacts  do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
             delete :bulk_destroy, action: :selection, defaults: {bulk_action: :destroy}
