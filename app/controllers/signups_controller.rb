@@ -21,4 +21,30 @@ class SignupsController < ApplicationController
     end
   end
 
+  def new
+    @signup = Signup.new
+    authorize! :create, @signup
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def create
+    @signup = Signup.new(params[:signup])
+    authorize! :create, @signup
+
+    respond_to do |format|
+      if @signup.save
+
+        flash.notice = info(:success)
+        format.html {redirect_to(signups_path)}
+      else
+        format.html {render action: "new"}
+        flash.notice = info(:error)
+      end
+      format.js
+    end
+  end
 end

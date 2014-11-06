@@ -19,6 +19,7 @@ Trippro::Application.routes.draw do
   resources :webinars, only: [:index, :show]
   resources :testimonials, only: [:index, :show]
   resources :contacts, only: [:index, :new, :create]
+  resources :signups, only:[:index,:new,:create]
   resources :categories, only: [:index, :show] do
     member do 
       get "news"
