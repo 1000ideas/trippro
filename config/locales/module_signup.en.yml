@@ -1,0 +1,83 @@
+---
+en:
+  admin:
+    signups:
+      submenu:
+        new: Add signup
+        index: List signups
+        destroy: Destroy selected signups
+        destroy_confirm: Destroying selected signups, sure?
+      new:
+        title: Add signup
+      index:
+        no_items_html: |
+          Aktualnie nie ma żadnych obiektów.
+          Może chcesz <a href="%{link}" data-remote>utworzyć nowy</a>?
+        no_filtered_items_html: |
+          Nie znaleziono żadnych pasujących obiektów.
+          Spróbuj zmienić kryteria filtracji.
+      edit:
+        title: Edit signup
+      create:
+        success: Pomyślnie utworzono
+      update:
+        success: Pomyślnie zaktualizowano
+      destroy:
+        success: Pomyślnie usunięto
+      tooltip:
+        title: Uwaga
+        content_html: Przykładowy tekst informacyjny
+      filter:
+        title: Filtruj wg
+        button: Filtruj
+        filter: Filtruj
+        clear: Wyczyść
+        open_filters: Otwórz filtry
+        edit_filters: Zmień filtry
+  signups:
+    index:
+      title: Signups
+    show:
+      title: Signup
+  menu:
+    signups: Signups
+  activerecord:
+    attributes:
+      signup:
+        first_name: First name
+        last_name: Last name
+        phone_number: Phone number
+        email: Email
+        password: Password
+        retype_password: Retype password
+        job_title: Job title
+        fax_number: Fax number
+        referrer: Referrer
+        agency_name: Agency name
+        agency_phone: Agency phone
+        president: President
+        adress: Adress
+        city: City
+        country: Country
+        state: State
+        zip: Zip
+        diff_adress: Diff adress
+        diff_city: Diff city
+        diff_country: Diff country
+        diff_state: Diff state
+        diff_zip: Diff zip
+        arc: Arc
+        iata: Iata
+        ttt: Ttt
+        clia: Clia
+        webiste: Webiste
+        business_type: Business type
+        hba: Hba
+        host: Host
+        affiliate: Affiliate
+        asta: Asta
+        sabre_pcc: Sabre pcc
+        galileo_pcc: Galileo pcc
+        worldspan_pcc: Worldspan pcc
+        amadeus_pcc: Amadeus pcc
+        apollo_pcc: Apollo pcc

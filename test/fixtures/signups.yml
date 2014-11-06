@@ -1,0 +1,81 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  phone_number: 1
+  email: MyString
+  password: MyString
+  retype_password: MyString
+  job_title: MyString
+  fax_number: 1
+  referrer: MyString
+  agency_name: MyString
+  agency_phone: MyString
+  president: MyString
+  adress: MyString
+  city: MyString
+  country: MyString
+  state: MyString
+  zip: MyString
+  diff_adress: MyString
+  diff_city: MyString
+  diff_country: 
+  diff_state: MyString
+  diff_zip: MyString
+  arc: MyString
+  iata: MyString
+  ttt: MyString
+  clia: MyString
+  webiste: MyString
+  business_type: MyString
+  hba: MyString
+  host: MyString
+  affiliate: MyString
+  asta: MyString
+  sabre_pcc: MyString
+  galileo_pcc: MyString
+  worldspan_pcc: MyString
+  amadeus_pcc: MyString
+  apollo_pcc: MyString
+  deleted_at: 2014-11-06 14:53:55
+
+two:
+  first_name: MyString
+  last_name: MyString
+  phone_number: 1
+  email: MyString
+  password: MyString
+  retype_password: MyString
+  job_title: MyString
+  fax_number: 1
+  referrer: MyString
+  agency_name: MyString
+  agency_phone: MyString
+  president: MyString
+  adress: MyString
+  city: MyString
+  country: MyString
+  state: MyString
+  zip: MyString
+  diff_adress: MyString
+  diff_city: MyString
+  diff_country: 
+  diff_state: MyString
+  diff_zip: MyString
+  arc: MyString
+  iata: MyString
+  ttt: MyString
+  clia: MyString
+  webiste: MyString
+  business_type: MyString
+  hba: MyString
+  host: MyString
+  affiliate: MyString
+  asta: MyString
+  sabre_pcc: MyString
+  galileo_pcc: MyString
+  worldspan_pcc: MyString
+  amadeus_pcc: MyString
+  apollo_pcc: MyString
+  deleted_at: 2014-11-06 14:53:55

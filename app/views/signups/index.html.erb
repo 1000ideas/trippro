@@ -1,0 +1,51 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @signups.each do |signup| %>
+  <li>
+        <div><%= signup.first_name %></div>
+        <div><%= signup.last_name %></div>
+        <div><%= signup.phone_number %></div>
+        <div><%= signup.email %></div>
+        <div><%= signup.password %></div>
+        <div><%= signup.retype_password %></div>
+        <div><%= signup.job_title %></div>
+        <div><%= signup.fax_number %></div>
+        <div><%= signup.referrer %></div>
+        <div><%= signup.agency_name %></div>
+        <div><%= signup.agency_phone %></div>
+        <div><%= signup.president %></div>
+        <div><%= signup.adress %></div>
+        <div><%= signup.city %></div>
+        <div><%= signup.country %></div>
+        <div><%= signup.state %></div>
+        <div><%= signup.zip %></div>
+        <div><%= signup.diff_adress %></div>
+        <div><%= signup.diff_city %></div>
+        <div><%= signup.diff_country %></div>
+        <div><%= signup.diff_state %></div>
+        <div><%= signup.diff_zip %></div>
+        <div><%= signup.arc %></div>
+        <div><%= signup.iata %></div>
+        <div><%= signup.ttt %></div>
+        <div><%= signup.clia %></div>
+        <div><%= signup.webiste %></div>
+        <div><%= signup.business_type %></div>
+        <div><%= signup.hba %></div>
+        <div><%= signup.host %></div>
+        <div><%= signup.affiliate %></div>
+        <div><%= signup.asta %></div>
+        <div><%= signup.sabre_pcc %></div>
+        <div><%= signup.galileo_pcc %></div>
+        <div><%= signup.worldspan_pcc %></div>
+        <div><%= signup.amadeus_pcc %></div>
+        <div><%= signup.apollo_pcc %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), signup %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @signups %>
+
+
+

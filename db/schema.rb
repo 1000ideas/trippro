@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141016122819) do
+ActiveRecord::Schema.define(:version => 20141106135355) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(:version => 20141016122819) do
 
   add_index "contents", ["id"], :name => "index_contents_on_id", :unique => true
 
+  create_table "mercury_images", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.text     "content"
     t.string   "title"
@@ -88,6 +97,51 @@ ActiveRecord::Schema.define(:version => 20141016122819) do
 
   add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
   add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
+
+  create_table "signups", :force => true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "phone_number"
+    t.string   "email"
+    t.string   "password"
+    t.string   "retype_password"
+    t.string   "job_title"
+    t.integer  "fax_number"
+    t.string   "referrer"
+    t.string   "agency_name"
+    t.string   "agency_phone"
+    t.string   "president"
+    t.string   "adress"
+    t.string   "city"
+    t.string   "country"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "diff_adress"
+    t.string   "diff_city"
+    t.string   "diff_country"
+    t.string   "diff_state"
+    t.string   "diff_zip"
+    t.string   "arc"
+    t.string   "iata"
+    t.string   "ttt"
+    t.string   "clia"
+    t.string   "webiste"
+    t.string   "business_type"
+    t.string   "hba"
+    t.string   "host"
+    t.string   "affiliate"
+    t.string   "asta"
+    t.string   "sabre_pcc"
+    t.string   "galileo_pcc"
+    t.string   "worldspan_pcc"
+    t.string   "amadeus_pcc"
+    t.string   "apollo_pcc"
+    t.datetime "deleted_at"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "signups", ["deleted_at"], :name => "index_signups_on_deleted_at"
 
   create_table "testimonials", :force => true do |t|
     t.string   "photo_file_name"

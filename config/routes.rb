@@ -24,10 +24,18 @@ Trippro::Application.routes.draw do
       get "news"
     end
   end
+  resources :signups, only: [:index, :show]
 
 
   scope path: 'admin', as: :admin do
     scope module: :admin do
+      resources :signups, except: [:show] do
+        collection do
+          constraints(lambda {|req| req.params.has_key?(:ids)}) do
+            delete :bulk_destroy, action: :selection, defaults: {bulk_action: :destroy}
+          end
+        end
+      end
       resources :categories, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do

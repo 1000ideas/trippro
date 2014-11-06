@@ -1,0 +1,231 @@
+<%= form_for([:admin, @signup], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2><%= t(".title.#{f.object.persisted? ? 'update' : 'create'}") %></h2>
+      <div class="field">
+      <%= f.label :first_name %>
+
+      <%= f.text_field :first_name  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :last_name %>
+
+      <%= f.text_field :last_name  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :phone_number %>
+
+      <%= f.number_field :phone_number  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :email %>
+
+      <%= f.text_field :email  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :password %>
+
+      <%= f.text_field :password  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :retype_password %>
+
+      <%= f.text_field :retype_password  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :job_title %>
+
+      <%= f.text_field :job_title  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :fax_number %>
+
+      <%= f.number_field :fax_number  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :referrer %>
+
+      <%= f.text_field :referrer  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :agency_name %>
+
+      <%= f.text_field :agency_name  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :agency_phone %>
+
+      <%= f.text_field :agency_phone  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :president %>
+
+      <%= f.text_field :president  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :adress %>
+
+      <%= f.text_field :adress  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :city %>
+
+      <%= f.text_field :city  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :country %>
+
+      <%= f.text_field :country  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :state %>
+
+      <%= f.text_field :state  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :zip %>
+
+      <%= f.text_field :zip  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :diff_adress %>
+
+      <%= f.text_field :diff_adress  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :diff_city %>
+
+      <%= f.text_field :diff_city  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :diff_country %>
+
+      <%= f.text_field :diff_country  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :diff_state %>
+
+      <%= f.text_field :diff_state  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :diff_zip %>
+
+      <%= f.text_field :diff_zip  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :arc %>
+
+      <%= f.text_field :arc  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :iata %>
+
+      <%= f.text_field :iata  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :ttt %>
+
+      <%= f.text_field :ttt  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :clia %>
+
+      <%= f.text_field :clia  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :webiste %>
+
+      <%= f.text_field :webiste  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :business_type %>
+
+      <%= f.text_field :business_type  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :hba %>
+
+      <%= f.text_field :hba  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :host %>
+
+      <%= f.text_field :host  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :affiliate %>
+
+      <%= f.text_field :affiliate  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :asta %>
+
+      <%= f.text_field :asta  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :sabre_pcc %>
+
+      <%= f.text_field :sabre_pcc  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :galileo_pcc %>
+
+      <%= f.text_field :galileo_pcc  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :worldspan_pcc %>
+
+      <%= f.text_field :worldspan_pcc  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :amadeus_pcc %>
+
+      <%= f.text_field :amadeus_pcc  %>
+
+    </div>
+      <div class="field">
+      <%= f.label :apollo_pcc %>
+
+      <%= f.text_field :apollo_pcc  %>
+
+    </div>
+    </fieldset>
+  <fieldset class="columns small-3 panel">
+    <div class="notification hidden"></div>
+    <%= f.button nil, class: [:button, :secondary, :round, :expand], name: :commit %>
+  </fieldset>
+<% end %>

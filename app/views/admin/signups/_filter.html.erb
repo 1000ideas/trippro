@@ -1,0 +1,104 @@
+<%= form_for :filter, url: admin_signups_path, html: {method: :get, class: 'filter-form'} do |f| %>
+  <%= link_to '#', data: {dropdown: 'filter-dropdown'} do %>
+    <% if filtering? %>
+      <%= fa_icon('check-circle fw')  %>
+      <%= t('.edit_filters', default: :'defaults.filter.edit_filters') %>
+    <% else %>
+      <%= t('.open_filters', default: :'defaults.filter.open_filters') %>
+    <% end %>
+    <%= fa_icon 'caret-down', class: 'arrow' %>
+  <% end %>
+  <fieldset class="f-dropdown content medium axis-right" id="filter-dropdown" data-dropdown-content>
+    <%= f.label :first_name, Signup.human_attribute_name(:first_name)  %>
+    <%= f.text_field :first_name, value:  filter(:first_name) %>
+    <%= f.label :last_name, Signup.human_attribute_name(:last_name)  %>
+    <%= f.text_field :last_name, value:  filter(:last_name) %>
+    <%= f.label :phone_number, Signup.human_attribute_name(:phone_number)  %>
+    <%= f.text_field :phone_number, value:  filter(:phone_number) %>
+    <%= f.label :email, Signup.human_attribute_name(:email)  %>
+    <%= f.text_field :email, value:  filter(:email) %>
+    <%= f.label :password, Signup.human_attribute_name(:password)  %>
+    <%= f.text_field :password, value:  filter(:password) %>
+    <%= f.label :retype_password, Signup.human_attribute_name(:retype_password)  %>
+    <%= f.text_field :retype_password, value:  filter(:retype_password) %>
+    <%= f.label :job_title, Signup.human_attribute_name(:job_title)  %>
+    <%= f.text_field :job_title, value:  filter(:job_title) %>
+    <%= f.label :fax_number, Signup.human_attribute_name(:fax_number)  %>
+    <%= f.text_field :fax_number, value:  filter(:fax_number) %>
+    <%= f.label :referrer, Signup.human_attribute_name(:referrer)  %>
+    <%= f.text_field :referrer, value:  filter(:referrer) %>
+    <%= f.label :agency_name, Signup.human_attribute_name(:agency_name)  %>
+    <%= f.text_field :agency_name, value:  filter(:agency_name) %>
+    <%= f.label :agency_phone, Signup.human_attribute_name(:agency_phone)  %>
+    <%= f.text_field :agency_phone, value:  filter(:agency_phone) %>
+    <%= f.label :president, Signup.human_attribute_name(:president)  %>
+    <%= f.text_field :president, value:  filter(:president) %>
+    <%= f.label :adress, Signup.human_attribute_name(:adress)  %>
+    <%= f.text_field :adress, value:  filter(:adress) %>
+    <%= f.label :city, Signup.human_attribute_name(:city)  %>
+    <%= f.text_field :city, value:  filter(:city) %>
+    <%= f.label :country, Signup.human_attribute_name(:country)  %>
+    <%= f.text_field :country, value:  filter(:country) %>
+    <%= f.label :state, Signup.human_attribute_name(:state)  %>
+    <%= f.text_field :state, value:  filter(:state) %>
+    <%= f.label :zip, Signup.human_attribute_name(:zip)  %>
+    <%= f.text_field :zip, value:  filter(:zip) %>
+    <%= f.label :diff_adress, Signup.human_attribute_name(:diff_adress)  %>
+    <%= f.text_field :diff_adress, value:  filter(:diff_adress) %>
+    <%= f.label :diff_city, Signup.human_attribute_name(:diff_city)  %>
+    <%= f.text_field :diff_city, value:  filter(:diff_city) %>
+    <%= f.label :diff_country, Signup.human_attribute_name(:diff_country)  %>
+    <%= f.text_field :diff_country, value:  filter(:diff_country) %>
+    <%= f.label :diff_state, Signup.human_attribute_name(:diff_state)  %>
+    <%= f.text_field :diff_state, value:  filter(:diff_state) %>
+    <%= f.label :diff_zip, Signup.human_attribute_name(:diff_zip)  %>
+    <%= f.text_field :diff_zip, value:  filter(:diff_zip) %>
+    <%= f.label :arc, Signup.human_attribute_name(:arc)  %>
+    <%= f.text_field :arc, value:  filter(:arc) %>
+    <%= f.label :iata, Signup.human_attribute_name(:iata)  %>
+    <%= f.text_field :iata, value:  filter(:iata) %>
+    <%= f.label :ttt, Signup.human_attribute_name(:ttt)  %>
+    <%= f.text_field :ttt, value:  filter(:ttt) %>
+    <%= f.label :clia, Signup.human_attribute_name(:clia)  %>
+    <%= f.text_field :clia, value:  filter(:clia) %>
+    <%= f.label :webiste, Signup.human_attribute_name(:webiste)  %>
+    <%= f.text_field :webiste, value:  filter(:webiste) %>
+    <%= f.label :business_type, Signup.human_attribute_name(:business_type)  %>
+    <%= f.text_field :business_type, value:  filter(:business_type) %>
+    <%= f.label :hba, Signup.human_attribute_name(:hba)  %>
+    <%= f.text_field :hba, value:  filter(:hba) %>
+    <%= f.label :host, Signup.human_attribute_name(:host)  %>
+    <%= f.text_field :host, value:  filter(:host) %>
+    <%= f.label :affiliate, Signup.human_attribute_name(:affiliate)  %>
+    <%= f.text_field :affiliate, value:  filter(:affiliate) %>
+    <%= f.label :asta, Signup.human_attribute_name(:asta)  %>
+    <%= f.text_field :asta, value:  filter(:asta) %>
+    <%= f.label :sabre_pcc, Signup.human_attribute_name(:sabre_pcc)  %>
+    <%= f.text_field :sabre_pcc, value:  filter(:sabre_pcc) %>
+    <%= f.label :galileo_pcc, Signup.human_attribute_name(:galileo_pcc)  %>
+    <%= f.text_field :galileo_pcc, value:  filter(:galileo_pcc) %>
+    <%= f.label :worldspan_pcc, Signup.human_attribute_name(:worldspan_pcc)  %>
+    <%= f.text_field :worldspan_pcc, value:  filter(:worldspan_pcc) %>
+    <%= f.label :amadeus_pcc, Signup.human_attribute_name(:amadeus_pcc)  %>
+    <%= f.text_field :amadeus_pcc, value:  filter(:amadeus_pcc) %>
+    <%= f.label :apollo_pcc, Signup.human_attribute_name(:apollo_pcc)  %>
+    <%= f.text_field :apollo_pcc, value:  filter(:apollo_pcc) %>
+
+    <%= f.label :created_before, t('.created_before')  %>
+    <div class="row collapse input-calendar">
+      <div class="columns small-11"><%= f.text_field :created_before, value: filter(:created_before) %></div>
+      <%= link_to fa_icon('calendar'), '#', class: 'button tiny columns small-1' %>
+    </div>
+
+    <%= f.label :created_after, t('.created_after')  %>
+    <div class="row collapse input-calendar">
+      <div class="columns small-11"><%= f.text_field :created_after, value: filter(:created_after) %></div>
+      <%= link_to fa_icon('calendar'), '#', class: 'button tiny columns small-1' %>
+    </div>
+
+    <div class="buttons text-right">
+      <%= f.button t('.filter', default: :'defaults.filter.filter'), class: 'button tiny secondary round' %>
+      <%= link_to t('.clear', default: :'defaults.filter.clear'), admin_signups_path, class: 'button tiny secondary round' %>
+    </div>
+  </fieldset>
+<% end %>
