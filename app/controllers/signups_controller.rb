@@ -39,7 +39,7 @@ class SignupsController < ApplicationController
       if @signup.save
 
         flash.notice = info(:success)
-        format.html {render action: "new"}
+        format.html {redirect_to(signups_path)}
       else
         format.html {render action: "new"}
         flash.notice = info(:error)
