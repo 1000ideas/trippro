@@ -37,7 +37,7 @@ class SignupsController < ApplicationController
 
     respond_to do |format|
       if @signup.save
-
+        SignupMailer.signup_message(@signup).deliver
         flash.notice = info(:success)
         format.html {redirect_to(signups_path)}
       else
