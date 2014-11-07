@@ -7,281 +7,234 @@
 		<p id="sign_up-content-2" class="hide-for-small-only mercury-region" data-mercury="full"><%=content('sign_up-content-2')%></p></p>
 	</div>
 </div>
-
-<div class="row">
-<form data-abide action="javascript: void(0);" method="post" class="small-12 large-8 large-centered columns signup">
-
-	<div class="row">
-	  <div class="small-10  small-centered ">
-	  	<h2 class="medium-text-center small-text-left">1. Personal Data</h2>
-	  </div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="first_name" class="small-text-left large-text-right">First Name</label>
+    <div class="row">
+<%= form_for( @signup, html: {class: "small-12 large-8 large-centered columns signup", "data-abide" => '' , data: {remote: true}, id: "signup"}) do |f| %>
+		<div class="row">
+		  <div class="small-10  small-centered ">
+		  	<h2 class="medium-text-center small-text-left">1. Personal Data</h2>
+		  </div>
 		</div>
-		<div class="large-8 columns">
-			<input name="first_name" id="first_name" type="text" required class="left">
+		<div class="row">      
+			<div class="large-4 columns">
+		      	<%= f.label :first_name, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :first_name, :required => true, 'aria-required' => 'true', class:'left' %>
 			<small class="error right">First Name is required</small>
+			</div>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="last_name" class="small-text-left large-text-right">Last Name</label>
+		<div class="row">      
+			<div class="large-4 columns">
+		      	<%= f.label :last_name, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :last_name, :required => true, 'aria-required' => 'true', class:'left' %>
+					<small class="error right">Last Name is required</small>
+			</div>
 		</div>
-		<div class="large-8 columns">
-			<input name="last_name" id="last_name" type="text" required class="left">
-			<small class="error right">Last Name is required</small>
-		</div>
-	</div>
-
-	<div class="row space-after">
-		<div class="large-4 columns">
-			<label for="phone_number" class="small-text-left large-text-right">Phone Number</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="phone_number" id="phone_number" type="text" required pattern="number" class="left short">
+		<div class="row space-after">      
+			<div class="large-4 columns">
+		      	<%= f.label :phone_number, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :phone_number, :required => true, 'aria-required' => 'true', class:'left short' %>
 			<small class="error right">Phone Number is incorrect</small>
+			</div>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="email" class="small-text-left large-text-right">Email</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="email" id="email" type="text" required pattern="email" class="left">
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :email, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :email, :required => true, 'aria-required' => 'true', class:'left' %>
 			<small class="error right">Email is incorrect</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="password" class="small-text-left large-text-right two-lines">Password <br class="hide-for-small"><small>at least 7 characters</small></label>
-		</div>
-		<div class="large-8 columns">
-			<input name="password" id="password" type="password" required class="left">
+			</div>
+		</div>		
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :password, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :password, :required => true, 'aria-required' => 'true', class:'left' %>
 			<small class="error right">Password is incorrect</small>
+			</div>
 		</div>
-	</div>
-
-	<div class="row space-after">
-		<div class="large-4 columns">
-			<label for="password_confirmation" class="small-text-left large-text-right">Retype password</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="password_confirmation" id="password_confirmation" type="password" required data-equalto="password" class="left">
+		<div class="row space-after">      
+			<div class="large-4 columns">
+		      	<%= f.label :retype_password, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :retype_password, :required => true, 'aria-required' => 'true', class:'left' %>
 			<small class="error right">Please retype</small>
+			</div>
 		</div>
-	</div>
 
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :job_title, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :job_title,  class:'left' %>
+			</div>
+		</div>
+
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :fax_number, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :fax_number, class:'left short' %>
+			</div>
+		</div>
+		<div class="row space-after ">      
+			<div class="large-4 columns">
+		      	<%= f.label :referrer, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :referrer, class:'left' %>
+			</div>
+		</div>				
+		<div class="row">
+		  <div class="small-10 small-centered">
+		  	<h2 class="medium-text-center small-text-left">2. Agency Data</h2>
+		  </div>
+		</div>
+		
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :agency_name, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :agency_name, class:'left' %>
+   			      <small class="error right">Agency name is required</small>
+			</div>
+		</div>				
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :agency_phone, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :agency_phone, class:'left' %>
+   			      <small class="error right">Agency name is required</small>		   
+			</div>
+		</div>				
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :president, 'Owner or President', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :president, class:'left' %>
+   			      <small class="error right">Owner or President is required</small>		   				   
+			</div>
+		</div>				
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :adress, "Address", class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :adress, class:'left' %>
+   			      <small class="error right">Address is required</small>		   				   
+			</div>
+		</div>				
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :city, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :city, :required => true, 'aria-required' => 'true', class:'left' %>
+			      <small class="error right">City is required</small>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :country, class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :country, :required => true, 'aria-required' => 'true', class:'left' %>
+			      <small class="error right">Country is required</small>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :state, ' State/Province', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :state, :required => true, 'aria-required' => 'true', class:'left' %>
+			      <small class="error right"> State/Province is required</small>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :zip, ' Zip/Postal Code', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :zip, :required => true, 'aria-required' => 'true', class:'left super-short' %>
+			      <small class="error right"> Zip/Postal Code is required</small>
+			</div>
+		</div>
 	<div class="row">
-		<div class="large-4 columns">
-			<label for="job_title" class="small-text-left large-text-right two-lines">Job Title <br class="hide-for-small-only"><small>optional</small></label>
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
 		</div>
-		<div class="large-8 columns">
-			<input name="job_title" id="job_title" type="text" class="left">
+	</div>		
+		<div class="row">
+			<div class="large-4 columns">
+				<label class="small-text-left large-text-right two-lines">Agency mailing address<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>
+			</div>
+			<div class="large-8 columns">
+				<div class="custom-checkbox">
+					<input name="mailing_address_differs" id="mailing_address_differs" type="checkbox" class="box_expander" data-target="mailing_address_section">
+					<label for="mailing_address_differs" class="text-left two-lines-for-small ">Different from address specified above</label>
+				</div>
+			</div>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="fax" class="small-text-left large-text-right two-lines">Fax Number <br class="hide-for-small-only"><small>optional</small></label>
+	<div class="mailing_address_section hide">																	
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :diff_adress, 'Street Address', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :diff_adress,  class:'left' %>
+			</div>
 		</div>
-		<div class="large-8 columns">
-			<input name="fax" id="fax" type="text" class="left short">
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :diff_city, 'City', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :diff_city,  class:'left' %>
+			</div>
 		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="referrer" class="small-text-left large-text-right two-lines">Referrer <br class="hide-for-small-only"><small>optional</small></label>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :diff_country, 'Country', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :diff_country, class:'left' %>
+			</div>
 		</div>
-		<div class="large-8 columns">
-			<input name="referrer" id="referrer" type="text" class="left">
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :diff_state,'State/Province', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :diff_state, class:'left' %>
+			</div>
 		</div>
-	</div>
-
-
-
-
-	<div class="row">
-	  <div class="small-10 small-centered">
-	  	<h2 class="medium-text-center small-text-left">2. Agency Data</h2>
-	  </div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_name" class="small-text-left large-text-right">Agency Name</label>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :diff_zip, 'Zip/Postal Code', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :diff_zip,  class:'left super-short' %>
+			</div>
 		</div>
-		<div class="large-8 columns">
-			<input name="agency_name" id="agency_name" type="text" required class="left">
-			<small class="error right">Agency Name is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_phone" class="small-text-left large-text-right">Agency Phone</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="agency_phone" id="agency_phone" type="text" pattern="number" class="left short">
-			<small class="error right">Agency Phone is incorrect</small>
-		</div>
-	</div>
-
-	<div class="row space-after">
-		<div class="large-4 columns">
-			<label for="owner_or_president" class="small-text-left large-text-right">Owner or President</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="owner_or_president" id="owner_or_president" type="text" required class="left">
-			<small class="error right">Owner or President is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_street" class="small-text-left large-text-right">Street Address</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="agency_street" id="agency_street" type="text" required class="left">
-			<small class="error right">Street Address is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_city" class="small-text-left large-text-right">City</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="agency_city" id="agency_city" type="text" required class="left">
-			<small class="error right">City is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_country" class="small-text-left large-text-right">Country</label>
-		</div>
-		<div class="large-8 columns">
-			<select name="agency_country" id="agency_country" required class="left">
-			  <option></option>
-			  <option value="1">Country 1</option>
-			  <option value="2">Country 2</option>
-			</select> 
-			<small class="error right">Country is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_state" class="small-text-left large-text-right">State/Province</label>
-		</div>
-		<div class="large-8 columns">
-			<select name="agency_state" id="agency_state" required class="left">
-			  <option></option>
-			  <option value="1">State/Province 1</option>
-			  <option value="2">State/Province 2</option>
-			</select> 
-			<small class="error right">This field is required</small>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label for="agency_zip" class="small-text-left large-text-right">Zip/Postal Code</label>
-		</div>
-		<div class="large-8 columns">
-			<input name="agency_zip" id="agency_zip" type="text" pattern="number" class="left super-short">
-			<small class="error right">This field Code is incorrect</small>
-		</div>
-	</div>
-
+	</div> <!-- end mailing section -->
 	<div class="row">
 		<div class="large-offset-4 large-8 columns">
 			<div class="line"></div>
 		</div>
 	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<label class="small-text-left large-text-right two-lines">Agency mailing address<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>
-		</div>
-		<div class="large-8 columns">
-			<div class="custom-checkbox">
-				<input name="mailing_address_differs" id="mailing_address_differs" type="checkbox" class="box_expander" data-target="mailing_address_section">
-				<label for="mailing_address_differs" class="text-left two-lines-for-small ">Different from address specified above</label>
-			</div>
-		</div>
-	</div>
-	<div class="mailing_address_section hide">
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="agency_mailing_street" class="small-text-left large-text-right">Street Address</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="agency_mailing_street" id="agency_mailing_street" type="text" class="left">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="agency_mailing_city" class="small-text-left large-text-right">City</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="agency_mailing_city" id="agency_mailing_city" type="text" class="left">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="agency_mailing_country" class="small-text-left large-text-right">Country</label>
-			</div>
-			<div class="large-8 columns">
-				<select name="agency_mailing_country" id="agency_mailing_country" class="left">
-				  <option></option>
-				  <option value="1">Country 1</option>
-				  <option value="2">Country 2</option>
-				</select> 
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="agency_mailing_state" class="small-text-left large-text-right">State/Province</label>
-			</div>
-			<div class="large-8 columns">
-				<select name="agency_mailing_state" id="agency_mailing_state"  class="left">
-				  <option></option>
-				  <option value="1">State/Province 1</option>
-				  <option value="2">State/Province 2</option>
-				</select> 
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="agency_mailing_zip" class="small-text-left large-text-right">Zip/Postal Code</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="agency_mailing_zip" id="agency_mailing_zip" type="text" class="left super-short">
-			</div>
-		</div>
-	</div>
-
-
-
-
-	<div class="row">
-		<div class="large-offset-4 large-8 columns">
-			<div class="line"></div>
-		</div>
-	</div>
-
 	<div class="row">
 		<div class="large-4 columns">
 			<label class="small-text-left large-text-right two-lines">Additional Data<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>
@@ -293,53 +246,58 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
+		</div>
+	</div>
 	<div class="additinal_data_section hide">
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="arc" class="small-text-left large-text-right">ARC</label>
-			</div>
+		      	<%= f.label :arc, 'ARC', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="arc" id="arc" type="text" class="left">
+				   <%= f.text_field :arc,  class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="iata" class="small-text-left large-text-right">IATA</label>
-			</div>
+		      	<%= f.label :iata,'IATA', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="iata" id="iata" type="text" class="left">
+				   <%= f.text_field :iata, class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="ttt" class="small-text-left large-text-right">TRUE/TICO/TIDS</label>
-			</div>
+		      	<%= f.label :ttt, ' TRUE/TICO/TIDS', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="ttt" id="ttt" type="text" class="left">
+				   <%= f.text_field :ttt, class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="clia" class="small-text-left large-text-right">CLIA</label>
-			</div>
+		      	<%= f.label :clia, 'CLIA', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="clia" id="clia" type="text" class="left">
+				   <%= f.text_field :clia, :required => true, 'aria-required' => 'true', class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="agency_website" class="small-text-left large-text-right two-lines">Agency website address<br class="hide-for-small" /><small>(url)</small></label>
-			</div>
+		      	<%= f.label :webiste, 'Agency website address', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="agency_website" id="agency_website" type="text" class="left">
+				   <%= f.text_field :webiste, :required => true, 'aria-required' => 'true', class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="business_type" class="small-text-left large-text-right">Business Type</label>
-			</div>
+		      	<%= f.label :business_type,'Business Type', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="business_type" id="business_type" type="text" class="left">
+				<%= f.text_field :business_type, :required => true, 'aria-required' => 'true', class:'left' %>
 			</div>
 		</div>
 
@@ -347,117 +305,100 @@
 			<div class="large-offset-4 large-8 columns">
 				<h3>MEMBERSHIP</h3>
 			</div>
-		</div>
-		<div class="row">
+		</div>		
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="hba" class="small-text-left large-text-right">HBA</label>
-			</div>
+		      	<%= f.label :hba, 'HBA', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="hba" id="hba" type="text" class="left">
+				   <%= f.text_field :hba,  class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="host" class="small-text-left large-text-right">HOST</label>
-			</div>
+		      	<%= f.label :host, 'HOST', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="host" id="host" type="text" class="left">
+				   <%= f.text_field :host, class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="consortium" class="small-text-left large-text-right">Consortium/Affiliate</label>
-			</div>
+		      	<%= f.label :affiliate, 'Consortium/Affiliate', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="consortium" id="consortium" type="text" class="left">
+				   <%= f.text_field :affiliate, class:'left' %>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="asta" class="small-text-left large-text-right">Asta</label>
-			</div>
+		      	<%= f.label :asta, 'ASTA', class:'small-text-left large-text-right' %>
+		    </div>
 			<div class="large-8 columns">
-				<input name="asta" id="asta" type="text" class="left">
+				   <%= f.text_field :asta, class:'left' %>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="large-offset-4 large-8 columns">
 				<h3>GDS</h3>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row ">      
 			<div class="large-4 columns">
-				<label for="sabre" class="small-text-left large-text-right">Sabre PCC</label>
+		      	<%= f.label :sabre_pcc, 'Sabre PCC', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :sabre_pcc, class:'left' %>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :galileo_pcc,'Galileo PCC', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :galileo_pcc, class:'left' %>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :worldspan_pcc, 'Worldspan PCC', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :worldspan_pcc, class:'left' %>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :amadeus_pcc,'Amadeus PCC', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :amadeus_pcc, class:'left' %>
+			</div>
+		</div>
+		<div class="row ">      
+			<div class="large-4 columns">
+		      	<%= f.label :apollo_pcc, 'Apollo PCC', class:'small-text-left large-text-right' %>
+		    </div>
+			<div class="large-8 columns">
+				   <%= f.text_field :apollo_pcc,  class:'left' %>
+			</div>
+		</div>
+    </div>
+    	<div class="row space-after">
+			<div class="large-4 columns">
+				<label class="small-text-left large-text-right">Terms and Conditions</label>
 			</div>
 			<div class="large-8 columns">
-				<input name="sabre" id="sabre" type="text" class="left">
+				<div class="custom-checkbox">
+					<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox">
+					<label for="terms_and_conditions" class="text-left two-lines-for-small">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
+				</div>
 			</div>
 		</div>
 		<div class="row">
-			<div class="large-4 columns">
-				<label for="galileo" class="small-text-left large-text-right">Galileo PCC</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="galileo" id="galileo" type="text" class="left">
-			</div>
+			<div class="large-offset-4 large-8 columns"><%= f.submit 'Submit', class: "button red-one grey radius"%></div>
 		</div>
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="worldspan" class="small-text-left large-text-right">Worldspan PCC</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="worldspan" id="worldspan" type="text" class="left">
-			</div>
-		</div>
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="amadeus" class="small-text-left large-text-right">Amadeus PCC</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="amadeus" id="amadeus" type="text" class="left">
-			</div>
-		</div>
-		<div class="row">
-			<div class="large-4 columns">
-				<label for="apollo" class="small-text-left large-text-right">Apollo PCC</label>
-			</div>
-			<div class="large-8 columns">
-				<input name="apollo" id="apollo" type="text" class="left">
-			</div>
-		</div>
-	</div>
+<%end%>
 
-
-
-
-	<div class="row">
-		<div class="large-offset-4 large-8 columns">
-			<div class="line"></div>
-		</div>
-	</div>
-
-
-	<div class="row space-after">
-		<div class="large-4 columns">
-			<label class="small-text-left large-text-right">Terms and Conditions</label>
-		</div>
-		<div class="large-8 columns">
-			<div class="custom-checkbox">
-				<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox">
-				<label for="terms_and_conditions" class="text-left two-lines-for-small">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="large-offset-4 large-8 columns">
-			<input type="submit" value="Submit" class="button red-one grey radius">
-		</div>
-	</div>
-	
-
-</form>
-</div>
 
 </section>
