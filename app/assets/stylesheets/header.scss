@@ -99,8 +99,6 @@ header {
         padding: 0 2px;
         }
         a:hover{
-        border: 1px solid #EA4F4F;
-        border-radius: 4px;
         color: #EA4F4F;
         padding: 0 2px;
         }
@@ -112,13 +110,16 @@ header {
     float: left;
     margin: -1.5rem 0 1rem 0.1rem;
     @include transition(500ms);
-
+    width: 19.667%;
+    @media #{$small-only}{
+      width: 220px;
+    }
     img {
       @include transition(500ms);
-      height: 40px;
+      // height: 40px;
       width: 190px;
       @media #{$small-only}{
-        height: 30px;
+        height: 26px;
       }
     }
   }
@@ -133,12 +134,12 @@ header {
     h1 {
       margin-top: -0.5rem;
       margin-bottom: 0;
-
+      width: 19.667%;
       img {
-        height: 40px;
+        height: auto;
         width: 190px;
       @media #{$small-only}{
-        height: 30px;
+        height: 26px;
         width: 170px;
        }
       }
