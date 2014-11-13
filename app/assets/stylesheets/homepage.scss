@@ -176,7 +176,6 @@ section.video {
   }
 }
 
-
 section.features {
   ul {
     max-width: 1240px;
@@ -191,18 +190,19 @@ section.features {
        // vertical-align: top;
        // display: inline-block;
        padding: 0 1.5rem;
+       cursor: grab;
        // width: 25%;
-
        h3{
-        a{
-          color: black;
-          // &:hover{
-          // color: #555;
-          // }
-        }
+          a{
+            color: #E42222;
+            // &:hover{
+            // color: #555;
+            // }
+          }
        }
+
        a {
-        color: black;
+        color: #E42222;
        }
        &:hover .red-icon {
         border-width: 0px;
@@ -210,6 +210,11 @@ section.features {
        }
     }
   }
+    p{
+      a{
+         color: #333;
+       }
+    }
   a{
     color:#333;
   }
@@ -225,7 +230,6 @@ section.features {
       color: #555;
     }
   }
-
 }
 
 section.partners {
