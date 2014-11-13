@@ -5,8 +5,8 @@ en:
       submenu:
         new: Add category
         index: List categories
-        destroy: Destroy selected categories
-        destroy_confirm: Destroying selected categories, sure?
+        destroy: Delete selected categories
+        destroy_confirm:  Deleting selected categories, sure?
       new:
         title: Add category
       index:
@@ -19,21 +19,21 @@ en:
       edit:
         title: Edit category
       create:
-        success: Pomyślnie utworzono
+        success: Successful created
       update:
-        success: Pomyślnie zaktualizowano
+        success: Successful updated
       destroy:
-        success: Pomyślnie usunięto
+        success: Successful deleted
       tooltip:
         title: Uwaga
         content_html: Przykładowy tekst informacyjny
       filter:
-        title: Filtruj wg
+        title: Filter by
         button: Filtruj
         filter: Filtruj
         clear: Wyczyść
-        open_filters: Otwórz filtry
-        edit_filters: Zmień filtry
+        open_filters: Open filters
+        edit_filters: Edit filters
   categories:
     index:
       title: Categories

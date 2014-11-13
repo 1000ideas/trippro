@@ -1,8 +1,14 @@
 <li class="row" data-context>
-  <div class="columns small-6">
+  <div class="columns small-1">
     <%= f.select_box :id, webinar %>
     <%= webinar.id %>
   </div>
+  <div class="columns small-2">
+    <%= l webinar.when, format: :short %>
+  </div>  
+  <div class="columns small-3">
+    <%= webinar.language %>
+  </div>  
   <div class="columns small-3">
     <%= l webinar.updated_at, format: :long %>
   </div>

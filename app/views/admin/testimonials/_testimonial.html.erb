@@ -1,8 +1,11 @@
 <li class="row" data-context>
-  <div class="columns small-6">
+  <div class="columns small-2">
     <%= f.select_box :id, testimonial %>
     <%= testimonial.id %>
   </div>
+  <div class="columns small-4">
+    <%= testimonial.name %>
+  </div>  
   <div class="columns small-3">
     <%= l testimonial.updated_at, format: :long %>
   </div>

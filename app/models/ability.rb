@@ -6,6 +6,7 @@ class Ability
     _settings = Settings.instance
 
     if user.has_role? :admin
+      can :manage, Signup
       can :manage, Category
       can :manage, Contact
       can :manage, Testimonial
@@ -23,6 +24,7 @@ class Ability
     end
     can :read, Category
     can :create, Contact
+    can :create, Signup
     can :read, Webinar
     can :read, L::Page
     can :read, L::News

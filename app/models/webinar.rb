@@ -7,4 +7,5 @@ class Webinar < ActiveRecord::Base
   scope :filter_by_created_after, lambda {|date| where("`created_at` > ?", Date.parse(date)) }
   scope :filter_by_created_before, lambda {|date| where("`created_at` < ?", Date.parse(date)) }
   attr_accessible :deleted_at, :language, :link, :when
+  validates :language, :link, :when, presence: true 
 end
