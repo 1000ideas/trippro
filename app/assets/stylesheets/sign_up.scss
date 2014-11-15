@@ -47,11 +47,13 @@ form.signup[data-abide] {
 			width: 20%;
 			margin-right: 40%;
 		}
-		&:invalid {
-		}
-		&:invalid:focus {
-		  border: 1px solid #ed831c;
-		  background-color: #ffefe0;
+	}
+	.error {
+		input[type=text], 
+		input[type=password], 
+		select {
+			border: 1px solid #ed831c;
+			background-color: #ffefe0;
 		}
 	}
 

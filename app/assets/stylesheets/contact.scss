@@ -75,6 +75,12 @@
 				top: auto;
 			}
 	    	}
+	    	.error {
+				input, textarea, select {
+				  border: 1px solid #ed831c;
+				  background-color: #ffefe0;
+				}
+	    	}
 		}
 		label{
 			color: #4D4D4D;
@@ -84,10 +90,6 @@
 		}		
 		.field {
 			position: relative;
-		}
-		input:invalid:focus {
-		  border: 1px solid #ed831c;
-		  background-color: #ffefe0;
 		}
 		div.diffaddress{
 			display: none;
