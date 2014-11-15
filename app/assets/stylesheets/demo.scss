@@ -12,6 +12,11 @@
 			label{
 				color: #4D4D4D;
 			}
+
+			input {
+			  border: 1px solid #ed831c;
+			  background-color: #ffefe0;
+			}
 			small.error{
 	      	padding: 0.375rem 0.5625rem 0.5625rem;
 			margin-top: -1px;
@@ -46,10 +51,6 @@
 		}
 		small.error{
 			display: none;
-		}
-		input:invalid:focus {
-		  border: 1px solid #ed831c;
-		  background-color: #ffefe0;
 		}
 		.submitButton{
 			width: 50%;
