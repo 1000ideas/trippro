@@ -15,8 +15,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'sass'#, '3.2.15'
-gem 'sass-rails'#, '~> 3.2.3'
+gem 'sass'
+gem 'sass-rails'
 gem "foundation-rails", "~> 5.4.0"
 gem 'compass-rails'
 gem 'coffee-rails', '~> 3.2.1'
