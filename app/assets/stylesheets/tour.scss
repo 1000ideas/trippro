@@ -1,19 +1,33 @@
 
 @import 'overrides';
 @import "compass/css3/transition";
+
 section.featured-video {
   position: relative;
   overflow: hidden;
   height: 480px;
+  z-index: 1;
 
-  .poster {
+  .video-wrapper {
     position: absolute;
+    top: 0;
     width: 100%;
+    left: 0;
     z-index: -1;
 
-    img {
-      min-width: 1280px;
+    @media only screen and (max-width: 1200px) {
+      width: 1200px;
+      left: 50%;
+      margin-left: -600px;
+    }
+
+    video {
+      display: block;
       width: 100%;
+    }
+    img.poster_img{
+      width: 100%;
+      height: auto;
     }
   }
 
@@ -22,17 +36,12 @@ section.featured-video {
     color: #fff;
     font-size: 3.375rem;
     font-weight: 200;
-    margin: 2.7em 0 0.5em 0;
+    margin: 3.7em 0 0.5em 0;
+    z-index: 1;
    @media #{$small-only}{
     font-size: 34px;
+    margin-top: 6em;
    }
-  }
-
-  a.play-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    width:30%;
   }
 }
 

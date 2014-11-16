@@ -24,6 +24,13 @@ class ApplicationController < ActionController::Base
     @testimonials = Testimonial
       .paginate page: params[:page]
 
+    @videos = Video.where(page_name: "homepage").order("`order` ASC")
+    if @videos.empty?
+      @cover_photo = "/assets/prev_post.jpg"
+    else
+      @cover_photo = @videos.first.cover_photo.url(:original, timestamp: false)
+    end
+
     respond_to do |format|
       format.html
       format.json { render json: @testimonials}
@@ -31,7 +38,12 @@ class ApplicationController < ActionController::Base
   end
 
   def tour
-
+    @videos = Video.where(page_name: "tour").order("`order` ASC")
+    if @videos.empty?
+      @cover_photo = "/assets/featured_video.jpg"
+    else
+      @cover_photo = @videos.first.cover_photo.url(:original, timestamp: false)
+    end
   end
 
   def contact

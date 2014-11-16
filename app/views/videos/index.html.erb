@@ -1,0 +1,15 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @videos.each do |video| %>
+  <li>
+        <div><%= video.page_name %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), video %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @videos %>
+
+
+

@@ -1,0 +1,8 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Video.human_attribute_name :page_name %>:</dt>
+<dd><%= @video.page_name %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), videos_path %>
