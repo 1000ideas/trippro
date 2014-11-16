@@ -11,11 +11,10 @@ en:
         title: Add webinar
       index:
         no_items_html: |
-          Aktualnie nie ma żadnych obiektów.
-          Może chcesz <a href="%{link}" data-remote>utworzyć nowy</a>?
+          There are currently no objects here.
+          Maybe You would like to <a href="%{link}" data-remote>create a new</a>?
         no_filtered_items_html: |
-          Nie znaleziono żadnych pasujących obiektów.
-          Spróbuj zmienić kryteria filtracji.
+          No items meets filter criteria.
       edit:
         title: Edit webinar
       create:

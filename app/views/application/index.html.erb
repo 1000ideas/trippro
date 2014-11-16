@@ -81,13 +81,13 @@
 
   <div class="hide-for-small-only laptop-slider">
     <ul><!--
-       --><li><%= image_tag('example-slide.png', data: {title: 'Desktop tool integrated seamlessly into the GDS'} ) %></li><!--
-       --><li><%= image_tag('example-slide.png', data: {title: 'Slide 2'} ) %></li><!--
-       --><li><%= image_tag('example-slide.png', data: {title: 'Slide 3'} ) %></li><!--
+       --><%- @screenshots.each do |screen| %><!--
+       --><li><%= image_tag(screen.file.url(:display), data: {title: screen.description} ) %></li><!--
+     --><% end %><!--
      --></ul>
     <a href="#" class='prev inactive'></a>
     <a href="#" class='next'></a>
-    <p class="slide-title">Desktop tool integrated seamlessly into the GDS</p>
+    <p class="slide-title"><%= @screenshots.first.description %></p>
   </div>
     <p><%= link_to content('link-1'), tour_path, class: 'red-chevron mercury-region', data: {"mercury"=>"full"}, id: "link-1" %></p>
 

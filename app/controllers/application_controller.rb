@@ -31,6 +31,8 @@ class ApplicationController < ActionController::Base
       @cover_photo = @videos.first.cover_photo.url(:original, timestamp: false)
     end
 
+    @screenshots = Screenshot.order("`order` ASC")
+
     respond_to do |format|
       format.html
       format.json { render json: @testimonials}

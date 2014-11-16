@@ -1,0 +1,21 @@
+<%= form_for([:admin, @screenshot], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2><%= t(".title.#{f.object.persisted? ? 'update' : 'create'}") %></h2>
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description , :cols=>70, :rows=>5 %>
+      </div>
+      <div class="field">
+        <%= f.label :order %>
+        <%= f.number_field :order  %>
+      </div>
+      <div class="field">
+        <%= f.label :file, raw(Screenshot.human_attribute_name(:file) + " <i>#{@screenshot.file_file_name}</i>") %>
+        <%= f.file_field :file %>
+      </div>
+    </fieldset>
+  <fieldset class="columns small-3 panel">
+    <div class="notification hidden"></div>
+    <%= f.button nil, class: [:button, :secondary, :round, :expand], name: :commit %>
+  </fieldset>
+<% end %>

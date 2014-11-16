@@ -1,0 +1,21 @@
+<li class="row" data-context>
+  <div class="columns small-2">
+    <%= f.select_box :id, screenshot %>
+    <%= screenshot.id %>
+  </div>
+  <div class="columns small-4">
+    <%= screenshot.description %>
+  </div>
+  <div class="columns small-3">
+    <%= screenshot.file_file_name %>
+  </div>
+  <div class="columns small-3">
+    <%= l screenshot.created_at, format: :long %>
+    <a href="#" data-context-button><%= fa_icon('ellipsis-h') %></a>
+  </div>
+  <ul data-context-target>
+    <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), screenshot_path(screenshot), target: '_blank' %></li>
+    <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_screenshot_path(screenshot, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_screenshot_path(screenshot), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+  </ul>
+</li>
