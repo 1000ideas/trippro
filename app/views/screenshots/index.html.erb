@@ -1,0 +1,16 @@
+<h2><%= t('.title') %></h2>
+
+<ul>
+  <% @screenshots.each do |screenshot| %>
+  <li>
+        <div><%= screenshot.description %></div>
+        <div><%= screenshot.order %></div>
+    <%= link_to t('show', scope: [:helpers, :actions]), screenshot %>
+  </li>
+  <% end %>
+</ul>
+
+<%= will_paginate @screenshots %>
+
+
+

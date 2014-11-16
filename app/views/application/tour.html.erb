@@ -1,9 +1,19 @@
 <section class="featured-video">
-  <div class="poster">
-    <%= image_tag('featured_video.jpg') %>
+
+  <div class="video-wrapper hide-for-small-only">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="<%= @cover_photo %>">
+      <% @videos.each do |video| %>
+        <source src="<%= video.file.url(:original, timestamp: false) %>" class="hide-for-small-only" type="<%= video.file_content_type %>" />
+      <% end %>
+      <%= image_tag(@cover_photo, class: "poster_img" ) %>
+    </video>
+  </div>
+  <div class="video-wrapper show-for-small-only">
+    <video id="video-1" autoplay="autoplay" muted="muted" loop="loop" poster="<%= @cover_photo %>">
+     <%= image_tag(@cover_photo, class: "poster_img" ) %>
+    </video>
   </div>
   <h2 id="tour-content-video-1" class="mercury-region" data-mercury="full"><%=content('tour-content-video-1')%></h2>
-  <a href="#" class="play-button"><i class="custom-icon play"></i></a>
 </section>
 
 <section class="feature">
