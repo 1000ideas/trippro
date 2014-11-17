@@ -1,0 +1,28 @@
+<% title t('.title') %>
+
+<%= content_tag(:p, flash[:alert], class: :alert) if flash.key? :alert %>
+<%= content_tag(:p, flash[:notice], class: :notice) if flash.key? :notice %>
+
+<%= render('filter')  %>
+
+<ul class="row items-list-header">
+  <li class="columns small-2">
+    <%= custom_check_box(:selection, :all_ids, {}, 1, nil) if @screenshots.any? %>
+    <%= sort_column :id, Screenshot.human_attribute_name(:id) %>
+  </li>
+  <li class="columns small-4"><%= sort_column :description, Screenshot.human_attribute_name(:description) %></li>
+  <li class="columns small-3"><%= sort_column :file_file_name, Screenshot.human_attribute_name(:file_file_name) %></li>
+  <li class="columns small-3"><%= sort_column :created_at, Screenshot.human_attribute_name(:created_at) %></li>
+</ul>
+
+<% if @screenshots.any? %>
+  <%=  render 'list' %>
+<% elsif filtering? %>
+  <div class="no-items">
+    <%= t('.no_filtered_items_html') %>
+  </div>
+<% else %>
+  <div class="no-items">
+    <%= t('.no_items_html', link: new_admin_screenshot_path(format: :js)) %>
+  </div>
+<% end %>

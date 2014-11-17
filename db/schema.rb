@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20141106135355) do
+ActiveRecord::Schema.define(:version => 20141116174750) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -60,15 +60,6 @@ ActiveRecord::Schema.define(:version => 20141106135355) do
 
   add_index "contents", ["id"], :name => "index_contents_on_id", :unique => true
 
-  create_table "mercury_images", :force => true do |t|
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
   create_table "news", :force => true do |t|
     t.text     "content"
     t.string   "title"
@@ -97,6 +88,20 @@ ActiveRecord::Schema.define(:version => 20141106135355) do
 
   add_index "news_translations", ["locale"], :name => "index_news_translations_on_locale"
   add_index "news_translations", ["news_id"], :name => "index_news_translations_on_news_id"
+
+  create_table "screenshots", :force => true do |t|
+    t.text     "description"
+    t.integer  "order"
+    t.datetime "deleted_at"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+  end
+
+  add_index "screenshots", ["deleted_at"], :name => "index_screenshots_on_deleted_at"
 
   create_table "signups", :force => true do |t|
     t.string   "first_name"
@@ -201,6 +206,24 @@ ActiveRecord::Schema.define(:version => 20141106135355) do
 
   add_index "users", ["deleted_at"], :name => "index_users_on_deleted_at"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
+
+  create_table "videos", :force => true do |t|
+    t.string   "page_name"
+    t.datetime "deleted_at"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "order"
+    t.string   "cover_photo_file_name"
+    t.string   "cover_photo_content_type"
+    t.integer  "cover_photo_file_size"
+    t.datetime "cover_photo_updated_at"
+  end
+
+  add_index "videos", ["deleted_at"], :name => "index_videos_on_deleted_at"
 
   create_table "webinars", :force => true do |t|
     t.string   "language"

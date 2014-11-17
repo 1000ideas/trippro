@@ -1,0 +1,10 @@
+<h2><%= t('.title') %></h2>
+
+<dl>
+<dt><%= Screenshot.human_attribute_name :description %>:</dt>
+<dd><%= @screenshot.description %></dd>
+<dt><%= Screenshot.human_attribute_name :order %>:</dt>
+<dd><%= @screenshot.order %></dd>
+</dl>
+
+<%= link_to t('back', scope: [:helpers, :actions]), screenshots_path %>

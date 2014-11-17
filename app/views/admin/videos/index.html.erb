@@ -1,0 +1,29 @@
+<% title t('.title') %>
+
+<%= content_tag(:p, flash[:alert], class: :alert) if flash.key? :alert %>
+<%= content_tag(:p, flash[:notice], class: :notice) if flash.key? :notice %>
+
+<%= render('filter')  %>
+
+<ul class="row items-list-header">
+  <li class="columns small-1">
+    <%= custom_check_box(:selection, :all_ids, {}, 1, nil) if @videos.any? %>
+    <%= sort_column :id, Video.human_attribute_name(:id) %>
+  </li>
+  <li class="columns small-4"><%= sort_column :file, Video.human_attribute_name(:file) %></li>
+  <li class="columns small-2"><%= sort_column :page_name, Video.human_attribute_name(:page_name) %></li>
+  <li class="columns small-2"><%= sort_column :order, Video.human_attribute_name(:order) %></li>
+  <li class="columns small-3"><%= sort_column :created_at, Video.human_attribute_name(:created_at) %></li>
+</ul>
+
+<% if @videos.any? %>
+  <%=  render 'list' %>
+<% elsif filtering? %>
+  <div class="no-items">
+    <%= t('.no_filtered_items_html') %>
+  </div>
+<% else %>
+  <div class="no-items">
+    <%= t('.no_items_html', link: new_admin_video_path(format: :js)) %>
+  </div>
+<% end %>

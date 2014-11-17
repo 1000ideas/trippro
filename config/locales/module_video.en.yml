@@ -1,14 +1,14 @@
 ---
 en:
   admin:
-    webinars:
+    videos:
       submenu:
-        new: Add webinar
-        index: List webinars
-        destroy: Delete selected webinars
-        destroy_confirm: Destroying selected webinars, sure?
+        new: Add video
+        index: List videos
+        destroy: Destroy selected videos
+        destroy_confirm: Destroying selected videos, sure?
       new:
-        title: Add webinar
+        title: Add video
       index:
         no_items_html: |
           There are currently no objects here.
@@ -16,13 +16,13 @@ en:
         no_filtered_items_html: |
           No items meets filter criteria.
       edit:
-        title: Edit webinar
+        title: Edit video
       create:
-        success: Successful created
+        success: Successfully created
       update:
-        success: Successful updated
+        success: Successfully updated
       destroy:
-        success: Successful deleted
+        success: Successfully destroyed
       tooltip:
         title: Uwaga
         content_html: Przykładowy tekst informacyjny
@@ -32,17 +32,17 @@ en:
         filter: Filter
         clear: Clear
         open_filters: Open filters
-        edit_filters: Edit filters
-  webinars:
+        edit_filters: Change filters
+  videos:
     index:
-      title: Webinars
+      title: Videos
     show:
-      title: Webinar
+      title: Video
   menu:
-    webinars: Webinars
+    videos: Videos
   activerecord:
     attributes:
-      webinar:
-        language: Language
-        when: When
-        link: Link
+      video:
+        page_name: Page name
+        file: Video File
+        cover_photo: Cover Image
