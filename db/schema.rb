@@ -60,6 +60,15 @@ ActiveRecord::Schema.define(:version => 20141116174750) do
 
   add_index "contents", ["id"], :name => "index_contents_on_id", :unique => true
 
+  create_table "mercury_images", :force => true do |t|
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.text     "content"
     t.string   "title"
