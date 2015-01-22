@@ -6,7 +6,8 @@
     <title><%= content_for?(:title) ? yield(:title) : default_title %></title>
     <link rel="shortcut icon" href="/favico.png">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,200,500,600,700' rel='stylesheet' type='text/css'>
-
+    <script src="//use.typekit.net/raa1pct.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -22,7 +23,7 @@
           <ul>
             <% if current_user && current_user.admin? %>
                  <li><%= link_to "Edit", "/editor" + request.path, class: "edit_merc" %></li>
-                 <%end%>
+            <%end%>
           <!--
               --><li><%= nav_link 'Tour', tour_path(format: :html) %></li><!--
               --><li><%= nav_link 'Contact Us', new_contact_path %></li><!--

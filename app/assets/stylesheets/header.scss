@@ -85,7 +85,7 @@ header {
     color: #323232;
     p {
       @include transition(500ms);
-      font-family: 'Helvetica Light', Arial, sans-serif;
+      font-family: "aktiv-grotesk-std", sans-serif;
       font-weight: 300;
       font-size: .875rem;
       line-height: 2.8em;
@@ -181,7 +181,7 @@ nav.main-menu {
       }
 
     &.navbold{
-      color: #e42222;
+      color: #e54e26;
       font-weight: 500;
       border: none;
     }
