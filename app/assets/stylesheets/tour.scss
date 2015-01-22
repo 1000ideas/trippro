@@ -142,7 +142,7 @@ section.videos {
     margin: 0;
     text-align: center;
     &.numbers{
-      background: none repeat scroll 0% 0% #ED1B24;
+      background: none repeat scroll 0% 0% #e54e26;
       height: 45px;
       width: 45px;
       line-height: 175%;
@@ -385,7 +385,7 @@ section.quote{
           display: block;
           font-weight: bold;
           font-size: 1.5rem;
-          color: #E42222;
+          color: #e54e26;
           line-height: 1em;
         }
       }
@@ -805,12 +805,12 @@ div.learn_qc {
     }
     li{
       span.red-icon{
-        @include transition(none);
+        // @include transition(none);
 
-        &:hover {
-          border-width: 0px;
-          box-shadow: 0 0 0 0 rgba($primary-color, .8);
-        }
+        // &:hover {
+        //   border-width: 0px;
+        //   box-shadow: 0 0 0 0 rgba($primary-color, .8);
+        // }
         display: inline-block;
         h1{
           color: #FFF;
@@ -822,7 +822,7 @@ div.learn_qc {
         margin-bottom: 74px;
       }
     }
-
+    
     ul.demodown{
       li:before {
       content: "";
@@ -831,7 +831,7 @@ div.learn_qc {
     }
     }
   }
-
+  
   div.profits{
       padding-left: 50px;
     ul{

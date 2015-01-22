@@ -208,7 +208,7 @@ section.features {
        }
        &:hover .red-icon {
         border-width: 0px;
-        box-shadow: 0 0 0 10px rgba($primary-color, .8);
+        // box-shadow: 0 0 0 10px rgba($primary-color, .8);
        }
     }
   }
@@ -580,8 +580,6 @@ span.red-icon {
   margin: 0 auto 1rem auto;
   position: relative;
   box-shadow: 0 0 0 0 rgba($primary-color, .8);
-  border: 10px solid $primary-color;
-  @include transition(300ms);
 
   img {
     display: block;
@@ -590,7 +588,6 @@ span.red-icon {
 
   &:hover {
     border-width: 0px;
-    box-shadow: 0 0 0 10px rgba($primary-color, .8);
   }
 }
 
