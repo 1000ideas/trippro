@@ -66,12 +66,12 @@ section.feature {
   border-top: 1px solid #f5f5f5;
   padding-top: 2.5rem;
   a{
-    color: #F00;
+    color: #e54e26;
     &:hover{ 
-      color: #B20007;
+      color: #A0371B;
       .red-arrow:before, .webinar:before{
-        background-color:  #b20007;
-        border: 2px solid #b20007;
+        background-color:#A0371B;
+        border: 2px solid #A0371B;
         border-radius: 25px;
       }
 
@@ -251,6 +251,11 @@ section.quote{
     .red-icon {
       position: absolute;
       margin: 0 0 0 -100px;
+      position: absolute;
+      margin: 0px 0px 0px -100px;
+      background: none;
+      border: none;
+      box-shadow: none;
          @media #{$small-only}{
           position: static;
           margin: 0px auto 1rem;
@@ -774,7 +779,7 @@ div.learn_qc {
     }
 
     p.numbers{
-      background: none repeat scroll 0% 0% #ed1b24;
+      background: none repeat scroll 0% 0% #e54e26;
       height: 45px;
       width: 45px;
       line-height: 175%;
