@@ -196,7 +196,7 @@ section.features {
        // width: 25%;
        h3{
           a{
-            color: #E42222;
+            color: #e54e26;
             // &:hover{
             // color: #555;
             // }
@@ -208,7 +208,7 @@ section.features {
        }
        &:hover .red-icon {
         border-width: 0px;
-        box-shadow: 0 0 0 10px rgba($primary-color, .8);
+        // box-shadow: 0 0 0 10px rgba($primary-color, .8);
        }
     }
   }
@@ -318,7 +318,7 @@ section.benefits {
           display: block;
           font-weight: bold;
           font-size: 1.5rem;
-          color: $primary-color;
+          color: #333;
           line-height: 1em;
           margin-top: 8px;
         }
@@ -580,8 +580,6 @@ span.red-icon {
   margin: 0 auto 1rem auto;
   position: relative;
   box-shadow: 0 0 0 0 rgba($primary-color, .8);
-  border: 10px solid $primary-color;
-  @include transition(300ms);
 
   img {
     display: block;
@@ -590,7 +588,6 @@ span.red-icon {
 
   &:hover {
     border-width: 0px;
-    box-shadow: 0 0 0 10px rgba($primary-color, .8);
   }
 }
 
