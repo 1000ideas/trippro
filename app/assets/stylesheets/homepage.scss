@@ -188,12 +188,21 @@ section.features {
     list-style: none;
     overflow: auto;
     padding-top: 11px;
-
+    li{
+      img:hover{
+        transform: scale(1.10,1.10);
+        @include transition(300ms);
+      }
+    }
     li:hover {
        // vertical-align: top;
        // display: inline-block;
        cursor: grab;
        // width: 25%;
+       img{
+        transform: scale(1.10,1.10);
+        @include transition(300ms);
+       }
        h3{
           a{
             color: #e54e26;
