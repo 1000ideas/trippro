@@ -509,7 +509,9 @@ div.learn_qc {
   .row {
     position: relative;
   }
-
+  .numbers_sec{
+    display: inline-block;
+  }
   &:after{
     border-color: transparent transparent #F7F7F7;
     border-style: solid;
@@ -822,7 +824,7 @@ div.learn_qc {
           }
       }
       img{
-        padding-left: 200px;
+        padding-left: 185px;
         margin-bottom: 74px;
       }
     }
