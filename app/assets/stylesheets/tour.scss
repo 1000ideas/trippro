@@ -426,9 +426,6 @@ section.quote{
 .embedded_video {
  /* background-color: blue;*/
  /* background: image-url('emb_video.png') no-repeat top;*/
-  margin: 0 auto;
-  width: 800px;
-  position: relative;
   padding-bottom: 20px;
   > ul {
     position: absolute;
@@ -512,7 +509,9 @@ div.learn_qc {
   .row {
     position: relative;
   }
-
+  .numbers_sec{
+    display: inline-block;
+  }
   &:after{
     border-color: transparent transparent #F7F7F7;
     border-style: solid;
@@ -543,6 +542,8 @@ div.learn_qc {
     img.emb_vid{
       z-index: 9;
       text-align: center;
+      display: block;
+      margin: 0 auto;
     }
 
     #play{
@@ -560,6 +561,9 @@ div.learn_qc {
     font-weight: 5;
     text-align: center;
     margin: 0 0 .3em 0;
+    @media #{$small-only}{
+      white-space: inherit;
+    }
   }
 
   h3 {
@@ -746,7 +750,6 @@ div.learn_qc {
   div.liimg{
     text-align: left;
     margin-top: 88px;
-    padding-top: 88px;
     strong{
       display: inline-block;
     }
@@ -756,6 +759,9 @@ div.learn_qc {
       display: inline-block;
       width: 50%;
       vertical-align: top;
+       @media #{$small-only}{
+          width: 100%;
+       }
     }
 
     .liimg-img{
@@ -818,7 +824,7 @@ div.learn_qc {
           }
       }
       img{
-        padding-left: 70px;
+        padding-left: 185px;
         margin-bottom: 74px;
       }
     }
@@ -833,10 +839,8 @@ div.learn_qc {
   }
   
   div.profits{
-      padding-left: 50px;
     ul{
         margin: 0px auto 5rem;
-        margin-left: 130px;
         list-style: none outside none;
       h2{
         text-align: left;
@@ -853,7 +857,6 @@ div.learn_qc {
       }
       li{
         width: 100%;
-        padding-left: 104px;
         content: "";
         margin-bottom: 3rem;
         h2{
@@ -881,6 +884,9 @@ div.learn_qc {
       margin: 0px auto 0rem;
       li{
       content: "";
+      p{
+        text-align: left;
+      }
       span{
         color: #ed1b24;
         font-weight: 600;
