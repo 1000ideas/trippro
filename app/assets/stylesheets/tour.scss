@@ -1,4 +1,3 @@
-
 @import 'overrides';
 @import "compass/css3/transition";
 
@@ -168,7 +167,6 @@ section.videos {
 section.quote{
 
   div.quote_cont{
-    max-width: 1040px;
     width: 100%;
     margin: 0 auto;
     clear: both;
@@ -600,7 +598,7 @@ div.learn_qc {
       height: 190px;
       border: 1px solid #ccc;
       background: #fff;
-      margin: 0 2.5em;
+      margin: 0 2.5em 2rem;
       border-radius: 100%;
       white-space: nowrap;
 
@@ -916,7 +914,6 @@ div.learn_qc {
 .learn_reporting {
   display: none;
   background-color: #f7f7f7;
-  height: 900px;
   .ability{
     padding-bottom: 6rem;
     padding-top: 3rem;
@@ -956,13 +953,14 @@ div.learn_qc {
     font-size: 14px;
     line-height: 0%;
     font-weight: 600;
+    text-align: center;
   }
   ul.platforms{
     margin: 0px auto 1rem;
     list-style: none outside none;
-    text-align: center;
-    position: absolute;
     img{
+      display: block;
+      margin: 0 auto;
       padding-bottom: 1rem;
       &.web{
         padding-bottom: 35px;
@@ -982,11 +980,13 @@ div.learn_qc {
     li:before{
       content: "";
     }
-
+    li:last-child{
+      padding-bottom: 10px;
+    }
     ul.nested{
       li{
         text-align: left;
-        padding-left: 8rem;
+        // padding-left: 8rem;
       }
       li:before{
         content: "•";
