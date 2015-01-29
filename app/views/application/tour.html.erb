@@ -46,7 +46,7 @@
           <li><p><strong >24/7</strong><span></span>Support</p></li>
           <li><p><strong >30% More</strong><span></span>Unique itineraries</p></li>
       </ul>
-      <section class="videos">
+      <section class="videos columns">
         <ul>
           <li>
             <p class="numbers show-for-small-only">1</p>
@@ -82,7 +82,7 @@
       </section> <!-- videos -->
 
       <section class="quote">
-        <div class="quote_cont">
+        <div class="quote_cont columns">
           <div class="ptext columns">
             <p id="quote-content-1"class="quote mercury-region" data-mercury="full"><%=content('quote-content-1')%></p>
           <div id="triangle"></div>
@@ -309,54 +309,56 @@
           <h4 id="report-content-2" class="mercury-region" data-mercury="full"><%=content('report-content-2')%></h4> 
           <!-- gora sekcji reporting -->
        </div>
-
-          <ul class="medium-12 platforms">
-            <div class="medium-4 columns trip">
-              <li class="tit">
-                <%= image_tag 'tour/api.png', :class => "api" %>
-                <h4 id="report-content-3" class="mercury-region" data-mercury="full"><%=content('report-content-3')%></h4><p id="api report-content-4" class="mercury-region" data-mercury="full"> <%=content('report-content-4')%></p>
+          <div class="small-12 columns">
+            <div class="row"></div>
+              <ul class="platforms">
+                <div class="medium-4 columns trip">
+                  <li class="tit">
+                    <%= image_tag 'tour/api.png', :class => "api" %>
+                    <h4 id="report-content-3" class="mercury-region" data-mercury="full"><%=content('report-content-3')%></h4><p id="api report-content-4" class="mercury-region" data-mercury="full"> <%=content('report-content-4')%></p>
+                        <ul class="nested">
+                        <li>Simple integration based on industry standards</li>
+                        <li>Extremely reliable and fully scalable</li>
+                        <li>Provides access to worldwide net fares <br>saving valuable time and money</li>
+                        <li>Maximizes customer satisfaction<br> as well as revenue opportunities</li>
+                      </ul>
+                      <!-- pierwsza kolumna -->
+                  </li>
+                </div>
+                <div class="medium-4 columns trip">
+                <li class="tit" data-equalizer-watch>
+                  <%= image_tag 'tour/desktop.png', :class => "desktop" %>
+                  <h4 id="report-content-5" class="mercury-region" data-mercury="full"><%= content('report-content-5')%></h4>
+                  <p id="desktop report-content-6" class="mercury-region" data-mercury="full">
+                    <%=content('report-content-6')%></p>
                     <ul class="nested">
-                    <li>Simple integration based on industry standards</li>
-                    <li>Extremely reliable and fully scalable</li>
-                    <li>Provides access to worldwide net fares <br>saving valuable time and money</li>
-                    <li>Maximizes customer satisfaction<br> as well as revenue opportunities</li>
-                  </ul>
-                  <!-- pierwsza kolumna -->
-              </li>
-            </div>
-            <div class="medium-4 columns trip">
-            <li class="tit" data-equalizer-watch>
-              <%= image_tag 'tour/desktop.png', :class => "desktop" %>
-              <h4 id="report-content-5" class="mercury-region" data-mercury="full"><%= content('report-content-5')%></h4>
-              <p id="desktop report-content-6" class="mercury-region" data-mercury="full">
-                <%=content('report-content-6')%></p>
-                <ul class="nested">
-                  <li>Easy to implement, no technical expertise required</li>
-                  <li>3+/- Calendar Shopping</li>
-                  <li>No training required</li>
-                  <li>Competitive fares increase agency profits</li>
-                  <li>Compare net fares with those of the scheduled <br>airlines that are provided by the GDS</li>
-                </ul>
-                <!-- druga kolumna -->
-            </li>
-          </div>
-          <div class="medium-4 columns trip">
-            <li class="tit">
-              <%= image_tag 'tour/web.png', :class => "web" %>
-              <h4 id="report-content-7" class="mercury-region" data-mercury="full"><%=content('report-content-7')%></h4>
-              <h5 id="report-content-8" class="mercury-region" data-mercury="full"> <%=content('report-content-8')%></h5>
-              <p id="web" id="report-content-9" class="mercury-region" data-mercury="full"><%=content('report-content-9')%></p>
-                <ul class="nested">
-                  <li>20% complete bookings faster</li>
-                  <li>30% less Key Strokes</li>
-                  <li>20% Increased productivity</li>
-                  <li>Requires no additional software installation</li>
-                  <li>Offers complete platform independence</li>
-                </ul>
-                <!-- trzecia kolumna -->
-            </li>
-          </div>
-        </ul>
+                      <li>Easy to implement, no technical expertise required</li>
+                      <li>3+/- Calendar Shopping</li>
+                      <li>No training required</li>
+                      <li>Competitive fares increase agency profits</li>
+                      <li>Compare net fares with those of the scheduled <br>airlines that are provided by the GDS</li>
+                    </ul>
+                    <!-- druga kolumna -->
+                </li>
+              </div>
+              <div class="medium-4 columns trip">
+                <li class="tit">
+                  <%= image_tag 'tour/web.png', :class => "web" %>
+                  <h4 id="report-content-7" class="mercury-region" data-mercury="full"><%=content('report-content-7')%></h4>
+                  <h5 id="report-content-8" class="mercury-region hide-for-small" data-mercury="full"> <%=content('report-content-8')%></h5>
+                  <p id="web" id="report-content-9" class="mercury-region" data-mercury="full"><%=content('report-content-9')%></p>
+                    <ul class="nested">
+                      <li>20% complete bookings faster</li>
+                      <li>30% less Key Strokes</li>
+                      <li>20% Increased productivity</li>
+                      <li>Requires no additional software installation</li>
+                      <li>Offers complete platform independence</li>
+                    </ul>
+                    <!-- trzecia kolumna -->
+                </li>
+              </div>
+            </ul>
+        </div>
     </div>
   </div>
   </div>
