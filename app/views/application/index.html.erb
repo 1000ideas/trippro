@@ -34,22 +34,24 @@
 </section>
 <section class="features">
   <ul ><!--
-     --><li class="small-12 medium-3 columns">
+     --><li class="small-12 medium-4 columns">
       <%=link_to image_tag('icons/booking_ico.png'), tour_path %>
       <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%=link_to content('home-content-3'), tour_path%></h3></div>
       <p id="home-content-7" class="mercury-region" data-mercury="full"><%=link_to content('home-content-7'), tour_path%></p></span>
-    </li><!--
-     --><li class="small-12 medium-3 columns">
+    </li>
+    <% if false %>
+     <li class="small-12 medium-3 columns">
       <%=link_to image_tag('icons/ticketing_ico.png'), tour_path %>
       <span class="hoverit"><div id="home-content-4" class="mercury-region" data-mercury="full"><h3><%= link_to content('home-content-4'), tour_path%></h3></div>
       <p id="home-content-8" class="mercury-region" data-mercury="full"><%=link_to content('home-content-8'), tour_path%></p></span>
+    <% end %>
     </li><!--
-     --><li class="small-12 medium-3 columns">
+     --><li class="small-12 medium-4 columns">
       <%=link_to image_tag('icons/manager_ico.png'), tour_path %>
       <span class="hoverit"><div id="home-content-5" class="mercury-region" data-mercury="full"><h3><%= link_to content('home-content-5'), tour_path%></h3></div>
       <p id="home-content-9" class="mercury-region" data-mercury="full" ><%= link_to content('home-content-9'), tour_path%></p></span>
     </li><!--
-     --><li class="small-12 medium-3 columns">
+     --><li class="small-12 medium-4 columns">
       <%=link_to image_tag('icons/analitics_ico.png'), tour_path %>
       <span class="hoverit"><div id="home-content-6" class="mercury-region" data-mercury="full"><h3><%=link_to content('home-content-6'), tour_path%> </h3></div>
       <p id="home-content-10" class="mercury-region" data-mercury="full"><%=link_to content('home-content-10'), tour_path%></p></span>
@@ -62,14 +64,15 @@
     <li><%= image_tag 'partners/sabre.png' %></li>
     <li><%= image_tag 'partners/amadeus.png' %></li>
     <li><%= image_tag 'partners/travelport.png' %></li>
+    <li><%= image_tag 'partners/galileo.jpg' %></li>
+    <li><%= image_tag 'partners/apollo.jpg' %></li>
   </ul>
 </section>
 <section class="benefits">
   <div class="large-9 large-centered columns benefits_cont">
   <h2 id="home-content-11" class="mercury-region" data-mercury="full"><%= content('home-content-11')%></h2>
-  <p id="home-content-12" class="mercury-region" data-mercury="full"><%= content('home-content-12')%></p> 
-  <p id="home-content-13" class="mercury-region" data-mercury="full">
- <span class="hide-for-small-only"><%=content('home-content-13')%></span></p>
+  <p id="home-content-12" class="mercury-region" data-mercury="full"><%= content('home-content-12')%></p>
+  <p id="home-content-13" class="mercury-region" data-mercury="full"><%=content('home-content-13')%></p>
   </div>
 
   <ul class="">
@@ -100,7 +103,7 @@
      --><li>
       <%= image_tag 'benefits/profits.png' %>
       <h3 id="home-content-23" class="mercury-region" data-mercury="full"> <%=content('home-content-23')%></h3>
-      <p id="home-content-28" class="mercury-region" data-mercury="full">Complete control over commission<br />and profit with one click access to<br/>unparalleled consolidator inventory.</p>
+      <p id="home-content-28" class="mercury-region" data-mercury="full">Complete control over commission<br />and profit with one click access to<br/>the lowest fares.</p>
     </li><!--
      --><li>
       <%= image_tag 'benefits/use.png' %>
@@ -127,36 +130,12 @@
 </section>
 <section class="testimonials hide-for-small-only ">
   <h2>Testimonials</h2>
-  <ul>
-     <% @testimonials.each do |testimonial| %>
-    <li class="row collapse" data-equalizer>
-      <div class="image columns <%= cycle('','on-right')%>"  data-equalizer-watch>
-       <%= image_tag(testimonial.photo.url) %>
-      </div>
-      <div class="text columns"  data-equalizer-watch>
-        <p><%=testimonial.content%></p>
-        <p><strong><%=testimonial.name%></strong>,<%=testimonial.position%></p>
-      </div>
-    </li>
-      <% end %>
-  </ul>
+  <%#= render "application/hidden_content/testimonials" %>
   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
 
 <section class="testimonials rwd  show-for-small-only ">
   <h2>Testimonials</h2>
-  <ul>
-    <% @testimonials.each do |testimonial| %>
-    <li class="row collapse" data-equalizer>
-      <!-- <div class="image columns"  data-equalizer-watch> -->
-        <%= image_tag(testimonial.photo.url) %>
-      <!-- </div> -->
-        <p><strong><%=testimonial.name%>,</strong><%=testimonial.position%></p>
-      <div class="text columns"  data-equalizer-watch>
-        <p><%=testimonial.content%></p>
-      </div>
-    </li>
-    <% end %>
-  </ul>
+  <%#= render "application/hidden_content/testimonials_small" %>
   <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>

@@ -19,7 +19,7 @@
 <section class="feature">
 
   <div class="row">
-    <div class="hide-for-small-only image"></div>
+    <div class="hide-for-small-only image"><%= image_tag("tour/laptop_animation1.gif") %></div>
     <div class="small-12 columns text">
       <span class="red-icon"><%= image_tag('icons/booking_ico.png') %></span>
       <h3 id="tour-content-video-2" class="mercury-region" data-mercury="full"><%= content('tour-content-video-2')%></h3>
@@ -27,9 +27,11 @@
       <ul class="section_list mercury-region" id="tour-content-video-4" data-mercury="full">
           <%=content('tour-content-video-4')%>
       </ul>
+      <% if false %>
       <p class="exphov"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_book"} do %>
         <i class="custom-icon red-arrow"></i> Learn more about Booking Tool
       <% end %></p>
+      <% end %>
     </div>
   </div>
 
@@ -46,40 +48,7 @@
           <li><p><strong >24/7</strong><span></span>Support</p></li>
           <li><p><strong >30% More</strong><span></span>Unique itineraries</p></li>
       </ul>
-      <section class="videos columns">
-        <ul>
-          <li>
-            <p class="numbers show-for-small-only">1</p>
-            <%= image_tag ('tour/emb_video1.jpg'), class: "hide-for-small-only" %>
-            <h3 id="learn_book-content-1" class="mercury-region" data-mercury="full"><%=content('learn_book-content-1')%></h3>
-            <p id="learn_book-content-2" class="mercury-region" data-mercury="full" ><%= content('learn_book-content-2')%></p>
-          </li>
-           <li>
-            <p class="numbers show-for-small-only">2</p>
-              <%= image_tag ('tour/emb_video1.jpg'), class: "hide-for-small-only" %>
-            <h3 id="learn_book-content-3" class="mercury-region" data-mercury="full"><%= content('learn_book-content-3')%></h3>
-            <p id="learn_book-content-4" class="mercury-region" data-mercury="full"><%= content('learn_book-content-4')%></p>
-          </li>
-          <li>
-            <p class="numbers show-for-small-only">3</p>
-              <%= image_tag ('tour/emb_video1.jpg'), class: "hide-for-small-only" %>
-            <h3 id="learn_book-content-5" class="mercury-region" data-mercury="full"><%= content('learn_book-content-5')%></h3>
-            <p id="learn_book-content-6" class="mercury-region" data-mercury="full"><%= content('learn_book-content-6')%></p>
-          </li>
-         <li>
-          <p class="numbers show-for-small-only">4</p>
-              <%= image_tag ('tour/emb_video1.jpg'), class: "hide-for-small-only" %>
-            <h3 id="learn_book-content-7" class="mercury-region" data-mercury="full"><%=content('learn_book-content-7')%></h3>
-            <p id="learn_book-content-8" class="mercury-region" data-mercury="full"><%= content('learn_book-content-8')%></p>
-          </li>
-         <li>
-          <p class="numbers show-for-small-only">5</p>
-              <%= image_tag ('tour/emb_video1.jpg'), class: "hide-for-small-only" %>
-            <h3 id="learn_book-content-9" class="mercury-region" data-mercury="full"><%= content('learn_book-content-9')%></h3>
-            <p id="learn_book-content-10" class="mercury-region" data-mercury="full"><%= content('learn_book-content-10')%></p>
-          </li>
-        </ul>
-      </section> <!-- videos -->
+      <%#= render "application/hidden_content/video_section" %>
 
       <section class="quote">
         <div class="quote_cont columns">
@@ -98,179 +67,38 @@
         </div>
       </section>
 
-      <section class="benefits-at-your-service tour columns">
-        <h2 id="benefits-content-1"class= "hide-for-small-only mercury-region" data-mercury="full">Our product, your benefits</h2>
-        <ul><!--
-           --><li>
-            <%= image_tag 'benefits/profits.png', :class => "hide-for-small-only"%>
-            <h3 id="benefits-content-2" class="mercury-region" data-mercury="full"><%= content('benefits-content-2')%></h3>
-            <p id="benefits-content-3" class="mercury-region" data-mercury="full"><%= content('benefits-content-3')%></p>
-          </li><!--
-           --><li>
-            <%= image_tag 'benefits/use.png' , :class => "hide-for-small-only"%>
-            <h3 id="benefits-content-4" class="mercury-region" data-mercury="full"><%= content('benefits-content-4')%></h3>
-            <p id="benefits-content-5" class="mercury-region" data-mercury="full"><%= content('benefits-content-5')%></p>
-          </li><!--
-           --><li>
-            <%= image_tag 'benefits/time.png' , :class => "hide-for-small-only"%>
-            <h3 id="benefits-content-6" class="mercury-region" data-mercury="full"><%= content('benefits-content-6')%></h3>
-            <p id="benefits-content-7" class="mercury-region" data-mercury="full"><%= content('benefits-content-7')%></p>
-          </li>
-         <li>
-            <%= image_tag 'benefits/price.png', :class => "hide-for-small-only" %>
-            <h3 id="benefits-content-8" class="mercury-region" data-mercury="full"><%= content('benefits-content-8')%></h3>
-            <p id="benefits-content-9" class="mercury-region" data-mercury="full"><%= content('benefits-content-9')%></p>
-          </li><!--
-           --><li>
-            <%= image_tag 'benefits/experience.png', :class => "hide-for-small-only" %>
-            <h3 id="benefits-content-10" class="mercury-region" data-mercury="full"><%= content('benefits-content-10')%></h3>
-            <p id="benefits-content-11" class="mercury-region" data-mercury="full"><%= content('benefits-content-11')%></p>
-          </li>
-        </ul>
-      </section>
-
+      <%#= render "application/hidden_content/benefits_at_your_service" %>
       <section class="benefits-at-your-service benefits-tour">
         <div class="small-5  large-12 large-centered columns">
         <ul>
-         <li><p><%= link_to demo_path do%><i class="custom-icon webinar"></i>Request a Free Demo<%end%></p></li>
-          <li><p><%= link_to "#_" do%><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)<%end%></p></li>
+          <li><p><%= link_to demo_path do%><i class="custom-icon webinar"></i>Request a Free Demo<%end%></p></li>
         </ul>
         </div>
       </section>
-
     </div><!-- row -->
   </div><!-- learn_book -->
 
 </section>
 
-<section class="feature switch-order">
-  <div class="row">
-    <div class="hide-for-small-only image"></div>
-
-    <div class="small-12 columns text">
-      <span class="red-icon"><%= image_tag('icons/ticketing_ico.png') %></span>
-      <h3 id="tour-content-video-5" class="mercury-region" data-mercury="full"><%= content('tour-content-video-5')%></h3>
-      <p id="tour-content-video-6" class="mercury-region" data-mercury="full"><%= content('tour-content-video-6')%></p>
-      <ul class="section_list">
-        <li>Instant ticketing</li>
-        <li>Robo-ticketing</li>
-        <li>24/7 ticketing support</li>
-        <li>Pre/Post ticket QC</li>
-        <li>Price validation</li>
-      </ul>
-      <p class="expander"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_qc" } do %>
-        <i class="custom-icon red-arrow"></i> Learn more about Ticketing and QC
-        <% end %></p>
-    </div>
-  </div>
-
-  <div class="learn_qc expandable">
-    <div class="row">
-
-      <a href="#_" class="close" data-target="learn_qc"></a>
-        <ul class="round-items">
-            <li><p><strong id="qc-content-1" class="mercury-region" data-mercury="full"><%=content('qc-content-1')%></strong><span id="qc-content-2" class="mercury-region" data-mercury="full"></span><%=content('qc-content-2')%></p></li>
-            <li><p><strong id="qc-content-3" class="mercury-region" data-mercury="full"><%= content('qc-content-3')%></strong><span id="qc-content-4" class="mercury-region" data-mercury="full"><%=content('qc-content-4')%></span></p></li>
-            <li><p><strong id="qc-content-5" class="mercury-region" data-mercury="full"><%= content('qc-content-5')%></strong><span id="qc-content-6" class="mercury-region" data-mercury="full"><%=content('qc-content-6')%></span></p></li>
-            <li><p><strong id="qc-content-7" class="mercury-region" data-mercury="full"><%=content('qc-content-7')%></strong><span id="qc-content-8" class="mercury-region" data-mercury="full"><%=content('qc-content-8')%></span></p></li>
-        </ul>
-      <div class="embedded_video small-12 hide-for-small columns">
-        <%= image_tag('tour/emb_video3.png', class: "emb_vid") %>
-<!--         <div id="play">
-          <i class="custom-icon play-gray"></i>
-        </div> -->
-      </div>
-      <div class="clearer"></div>
-      <div class="liimg small-12 small-centered large-8 large-centered columns">
-        <ul>
-          <li>
-            <div class="numbers_sec">
-              <p class="numbers hide-for-small">1</p>
-            </div>
-            <div class="liimg-text">
-              <h2 id="qc-content-9" class="mercury-region" data-mercury="full"><%=content('qc-content-9')%></h2> <br>
-              <p id="qc-content-10" class="mercury-region" data-mercury="full" ><%=content('qc-content-10')%></p>
-            </div>
-            <div class="liimg-img ticket"><%= image_tag('tour/a.png', class: "hide-for-small-only") %></div>
-          </li>
-          <li>
-            <div class="numbers_sec">
-              <p class="numbers hide-for-small">2</p>
-            </div>
-            <div class="liimg-text">
-              <h2 id="qc-content-11" class="mercury-region" data-mercury="full"><%=content('qc-content-11')%></h2>
-              <p id="qc-content-12" class="mercury-region" data-mercury="full"><%= content('qc-content-12')%></p>
-            </div>
-            <div class="liimg-img"><%= image_tag('tour/b.png', class: "hide-for-small-only") %></div>
-          </li>
-
-          <li>
-            <div class="numbers_sec">
-              <p class="numbers hide-for-small">3</p>
-            </div>
-            <div class="liimg-text">
-              <h2 id="qc-content-13" class="mercury-region" data-mercury="full"><%=content('qc-content-13')%></h2>
-              <p id="qc-content-14" class="mercury-region" data-mercury="full"><%=content('qc-content-14')%></p></div>
-              <div class="liimg-img"><%= image_tag('tour/c.png', class: "hide-for-small-only") %>
-            </div></li>
-
-          <li>
-            <div class="numbers_sec">
-              <p class="numbers hide-for-small">4</p>
-            </div>
-            <div class="liimg-text">
-            <h2 id="qc-content-15" class="mercury-region" data-mercury="full"><%=content('qc-content-15')%></h2>
-            <p id="qc-content-16" class="mercury-region" data-mercury="full"><%=content('qc-content-16')%></p></div>
-            <div class="liimg-img"><%= image_tag('tour/d.png', class: "hide-for-small-only") %>
-          </div></li>
-        </ul>
-      </div>
-
-      <div class="profits columns">
-        <div class="row">
-          <div class="small-10 large-8 large-centered small-centered columns">
-          <ul>
-            <li><h2 id="qc-content-17" class="mercury-region" data-mercury="full"><%=content('qc-content-17')%></h2>
-              <p id="qc-content-18" class="mercury-region" data-mercury="full"><%=content('qc-content-18')%></p></li>
-            <li><h2 id="qc-content-19" class="mercury-region" data-mercury="full"><%=content('qc-content-19')%></h2>
-              <p id="qc-content-20" class="mercury-region" data-mercury="full"><%=content('qc-content-20')%></p></li>
-            <li><h2 id="qc-content-21" class="mercury-region" data-mercury="full"><%=content('qc-content-21')%></h2>
-              <p id="qc-content-22" class="mercury-region" data-mercury="full"><%=content('qc-content-22')%></p></li>
-            <li><h2 id="qc-content-23" class="mercury-region" data-mercury="full"><%=content('qc-content-23')%></h2><p id="qc-content-24" class="mercury-region" data-mercury="full"><%=content('qc-content-24')%></p></li>
-          </ul>
-          </div>
-        </div>
-      </div>
-      <div class="clearer"></div>
-      <section class="benefits-at-your-service benefits-tour">
-        <div class="small-12 small-centered  large-12 large-centered columns">
-          <ul>
-           <li><p><%= link_to demo_path do%><i class="custom-icon webinar"></i>Request a Free Demo<%end%></p></li>
-            <li><p><%= link_to "#_" do%><i class="custom-icon down-side red-arrow"></i>Download Brochure (PDF)<%end%></p></li>
-          </ul>
-        </div>
-      </section>
-    </div>
-  </div>
-
-</section>
+<%#= render "application/hidden_content/self_servicing_tool_section" %>
 
 <section class="feature">
   <div class="row">
-    <div class="hide-for-small-only image"></div>
+    <div class="hide-for-small-only image"><%= image_tag("tour/laptop_animation1.gif") %></div>
     <div class="small-12 columns text">
       <span class="red-icon"><%= image_tag('icons/manager_ico.png') %></span>
       <h3 id="tour-content-video-8" class="mercury-region" data-mercury="full"><%= content('tour-content-video-8')%></h3>
       <p id="tour-content-video-9" class="mercury-region" data-mercury="full"><%= content('tour-content-video-9')%></p>
-      <ul class="section_list">
-        <li>Debit Memo Management</li>
-        <li>Markup Management</li>
-        <li>Advanced Markup Management</li>
-        <li>Agent Management</li>
+      <ul class="section_list mercury-region" id="tour-content-video-19" data-mercury="full">
+        <%= content("tour-content-video-19") %>
       </ul>
+      <% if false %>
       <p class="expander"><%= link_to '#', class: "more_info_expander", data: { "target" => "learn_profit" } do %>
         <i class="custom-icon red-arrow"></i> Learn more about Profit Manager
-      <% end %></p>
+      <% end %>
+      </p>
+      <% else %><p style="height: 40px;" class="expander"></p>
+      <% end %>
     </div>
   </div>
 
@@ -284,27 +112,27 @@
       <span class="red-icon"><%= image_tag('icons/analitics_ico.png') %></span>
       <h3 id="tour-content-video-11" class="mercury-region" data-mercury="full"><%= content('tour-content-video-11') %></h3>
       <p id="tour-content-video-12" class="mercury-region" data-mercury="full"><%= content('tour-content-video-12')%></p>
-      <ul class="section_list">
-        <li>Booking</li>
-        <li>Invoices</li>
-        <li>+/- 3 day fares</li>
-        <li>Statement of accounts</li>
-        <li>Agent Performance</li>
-        <li>Consolidator Sales</li>
-        <li>Sales Summarry</li>
+      <ul class="section_list mercury-region" id="tour-content-video-20" data-mercury="full">
+        <%= content("tour-content-video-20") %>
       </ul>
+      <% if false %>
       <p class="expander"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_reporting" } do %>
         <i class="custom-icon red-arrow"></i> Learn more about Reporting and Analytics
       <% end %></p>
+      <% else %>
+      <p style="height: 40px;" class="expander"></p>
+      <% end %>
     </div>
   </div>
 
   <div class="learn_reporting expandable">
     <div class="row">
       <div class="small-12 medium-12 ability">
+        <span id="tour-content-video-19"><%=link_to "Move to home page", root_url%></span>
         <span class="red-icon">
           <%= image_tag('icons/platform.png') %>
         </span>
+
           <h2 id="report-content-1" class="mercury-region" data-mercury="full"><%=content('report-content-1')%></h2>
           <h4 id="report-content-2" class="mercury-region" data-mercury="full"><%=content('report-content-2')%></h4> 
           <!-- gora sekcji reporting -->

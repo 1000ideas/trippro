@@ -228,6 +228,13 @@ section.quote{
     width: 609px;
     height: 383px;
     background: image-url('laptop-plain.png') no-repeat 0 0;
+    &>img{
+      height: 316px;
+      top: 23px;
+      position: relative;
+      left: 53px;
+      width: 504px;
+    }
     &.slider{
     position: absolute;
     left: 0;
@@ -288,12 +295,13 @@ section.quote{
   }
 
   &.switch-order {
+    #tour-content-video-19{
+      float: right;
+    }
     .image {
       left: auto;
       right: 0;
     }
-
-
 
     .text {
       padding-right: 640px;

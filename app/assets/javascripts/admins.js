@@ -5,7 +5,7 @@
 //= require jquery-ui/datepicker
 //= require jquery-ui/datepicker-pl
 //= require vendor/jquery-ui-timepicker-addon
-//= require vendor/i18n/jquery-ui-timepicker-pl
+
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require jquery.mousewheel

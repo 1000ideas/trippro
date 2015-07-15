@@ -30,7 +30,7 @@ Content.create id: 'home-content-24', value: "Easy to Use"
 Content.create id: 'home-content-25', value: "Saves Time"
 Content.create id: 'home-content-26', value: "Price Assurance"
 Content.create id: 'home-content-27', value: "Experience and Trust"
-Content.create id: 'home-content-28', value: "Complete control over commission and profit with one click access to unparalleled consolidator inventory."
+Content.create id: 'home-content-28', value: "Complete control over commission and profit with one click access to the lowest fares."
 Content.create id: 'home-content-29', value: "Fares displayed seamlessly via browser
 												or with anypreferred GDS partner on
 												the same screen, no training needed."
@@ -115,8 +115,7 @@ our already robust air program in an easy and smart way.”"
 
 Content.create id: 'benefits-content-1', value:"Our product, your benefits"
 Content.create id: 'benefits-content-2', value:"Maximize Profits"
-Content.create id: 'benefits-content-3', value:"Complete control over commission and 
-profit with one click access to unparalleled consolidator inventory."
+Content.create id: 'benefits-content-3', value:"Complete control over commission and profit with one click access to the lowest fares."
 Content.create id: 'benefits-content-4', value:"Easy to Use"
 Content.create id: 'benefits-content-5', value:"Fares displayed seamlessly via browser
  or with anypreferred GDS partner on the same screen, no training needed."
