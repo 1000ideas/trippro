@@ -18,12 +18,14 @@
     <%= link_to content('home-button-1'), webinars_path, class: 'button red-one white radius mercury-region', id: "home-button-1", data: {"mercury" => "full"} %>
     <%= link_to content('home-button-2'), tour_path, class: 'button white-one radius mercury-region', id: "home-button-2", data: {"mercury"=>"full"} %>
   </div>
+  <% if false %>
   <div class="infobar hide-for-small-only">
     <a href="" class="with-arrow arrow-right">
       <%= image_tag('icons/fix.png')  %>
       <span id="home-content-34" class="mercury-region" data-mercury="full"><%= content('home-content-34')%></span>
     </a>
   </div>
+  <% end %>
    <div class="infobar show-for-small-only">
     <a href="" class="with-arrow arrow-right">
       <%= image_tag('infobar-icon.png', :class => "hide-for-small-only") %>
@@ -35,7 +37,7 @@
 <section class="features">
   <ul ><!--
      --><li class="small-12 medium-4 columns">
-      <%=link_to image_tag('icons/booking_ico.png'), tour_path %>
+      <%=link_to image_tag('icons/lowest_prices_ico.png'), tour_path %>
       <span class="hoverit"><div id="home-content-3" class="mercury-region" data-mercury="full"> <h3><%=link_to content('home-content-3'), tour_path%></h3></div>
       <p id="home-content-7" class="mercury-region" data-mercury="full"><%=link_to content('home-content-7'), tour_path%></p></span>
     </li>
@@ -64,7 +66,7 @@
     <li><%= image_tag 'partners/sabre.png' %></li>
     <li><%= image_tag 'partners/amadeus.png' %></li>
     <li><%= image_tag 'partners/travelport.png' %></li>
-    <li><%= image_tag 'partners/galileo.jpg' %></li>
+    <li><%= image_tag 'partners/worldspan.jpg' %></li>
     <li><%= image_tag 'partners/apollo.jpg' %></li>
   </ul>
 </section>
@@ -128,14 +130,9 @@
    --></ul>
    <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
 </section>
-<section class="testimonials hide-for-small-only ">
-  <h2>Testimonials</h2>
+<section class="feature switch-order homepage-copy-tour">
+<%= render 'application/hidden_content/learn_reporting' %>
+</section>
   <%#= render "application/hidden_content/testimonials" %>
-  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
-</section>
-
-<section class="testimonials rwd  show-for-small-only ">
-  <h2>Testimonials</h2>
   <%#= render "application/hidden_content/testimonials_small" %>
-  <p class='get-started'><%= link_to 'Get Started', webinars_path, class: 'button red-one grey radius' %></p>
-</section>
+  
