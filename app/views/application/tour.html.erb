@@ -81,6 +81,32 @@
 </section>
 
 <%#= render "application/hidden_content/self_servicing_tool_section" %>
+<section class="feature switch-order">
+  <div class="row">
+    <div class="hide-for-small-only image slider">
+      <%= image_tag("tour/laptop_animation1.gif") %>
+    </div>
+    <div class="columns text">
+      <span class="red-icon"><%= image_tag('icons/analitics_ico.png') %></span>
+      <h3 id="tour-content-video-11" class="mercury-region" data-mercury="full"><%= content('tour-content-video-11') %></h3>
+      <p id="tour-content-video-12" class="mercury-region" data-mercury="full"><%= content('tour-content-video-12')%></p>
+      <ul class="section_list mercury-region" id="tour-content-video-20" data-mercury="full">
+        <%= content("tour-content-video-20") %>
+      </ul>
+      <% if false %>
+      <p class="expander"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_reporting" } do %>
+        <i class="custom-icon red-arrow"></i> Learn more about Reporting and Analytics
+      <% end %></p>
+      <% else %>
+      <p style="height: 82px;" class="expander"></p>
+      <% end %>
+    </div>
+  </div>
+<%= render 'application/hidden_content/learn_reporting' %>
+  
+  </div>
+</section>
+
 
 <section class="feature">
   <div class="row">
@@ -97,7 +123,7 @@
         <i class="custom-icon red-arrow"></i> Learn more about Profit Manager
       <% end %>
       </p>
-      <% else %><p style="height: 40px;" class="expander"></p>
+      <% else %><p style="height: 52px;" class="expander"></p>
       <% end %>
     </div>
   </div>
@@ -105,92 +131,7 @@
   <div class="learn_profit expandable"></div>
 </section>
 
-<section class="feature switch-order">
-  <div class="row">
-    <div class="hide-for-small-only image slider"></div>
-    <div class="columns text">
-      <span class="red-icon"><%= image_tag('icons/analitics_ico.png') %></span>
-      <h3 id="tour-content-video-11" class="mercury-region" data-mercury="full"><%= content('tour-content-video-11') %></h3>
-      <p id="tour-content-video-12" class="mercury-region" data-mercury="full"><%= content('tour-content-video-12')%></p>
-      <ul class="section_list mercury-region" id="tour-content-video-20" data-mercury="full">
-        <%= content("tour-content-video-20") %>
-      </ul>
-      <% if false %>
-      <p class="expander"><%= link_to '#_', class: "more_info_expander", data: { "target" => "learn_reporting" } do %>
-        <i class="custom-icon red-arrow"></i> Learn more about Reporting and Analytics
-      <% end %></p>
-      <% else %>
-      <p style="height: 40px;" class="expander"></p>
-      <% end %>
-    </div>
-  </div>
 
-  <div class="learn_reporting expandable">
-    <div class="row">
-      <div class="small-12 medium-12 ability">
-        <span id="tour-content-video-19"><%=link_to "Move to home page", root_url%></span>
-        <span class="red-icon">
-          <%= image_tag('icons/platform.png') %>
-        </span>
-
-          <h2 id="report-content-1" class="mercury-region" data-mercury="full"><%=content('report-content-1')%></h2>
-          <h4 id="report-content-2" class="mercury-region" data-mercury="full"><%=content('report-content-2')%></h4> 
-          <!-- gora sekcji reporting -->
-       </div>
-          <div class="small-12 columns">
-            <div class="row"></div>
-              <ul class="platforms">
-                <div class="medium-4 columns trip">
-                  <li class="tit">
-                    <%= image_tag 'tour/api.png', :class => "api" %>
-                    <h4 id="report-content-3" class="mercury-region" data-mercury="full"><%=content('report-content-3')%></h4><p id="api report-content-4" class="mercury-region" data-mercury="full"> <%=content('report-content-4')%></p>
-                        <ul class="nested">
-                        <li>Simple integration based on industry standards</li>
-                        <li>Extremely reliable and fully scalable</li>
-                        <li>Provides access to worldwide net fares <br>saving valuable time and money</li>
-                        <li>Maximizes customer satisfaction<br> as well as revenue opportunities</li>
-                      </ul>
-                      <!-- pierwsza kolumna -->
-                  </li>
-                </div>
-                <div class="medium-4 columns trip">
-                <li class="tit" data-equalizer-watch>
-                  <%= image_tag 'tour/desktop.png', :class => "desktop" %>
-                  <h4 id="report-content-5" class="mercury-region" data-mercury="full"><%= content('report-content-5')%></h4>
-                  <p id="desktop report-content-6" class="mercury-region" data-mercury="full">
-                    <%=content('report-content-6')%></p>
-                    <ul class="nested">
-                      <li>Easy to implement, no technical expertise required</li>
-                      <li>3+/- Calendar Shopping</li>
-                      <li>No training required</li>
-                      <li>Competitive fares increase agency profits</li>
-                      <li>Compare net fares with those of the scheduled <br>airlines that are provided by the GDS</li>
-                    </ul>
-                    <!-- druga kolumna -->
-                </li>
-              </div>
-              <div class="medium-4 columns trip">
-                <li class="tit">
-                  <%= image_tag 'tour/web.png', :class => "web" %>
-                  <h4 id="report-content-7" class="mercury-region" data-mercury="full"><%=content('report-content-7')%></h4>
-                  <h5 id="report-content-8" class="mercury-region hide-for-small" data-mercury="full"> <%=content('report-content-8')%></h5>
-                  <p id="web" id="report-content-9" class="mercury-region" data-mercury="full"><%=content('report-content-9')%></p>
-                    <ul class="nested">
-                      <li>20% complete bookings faster</li>
-                      <li>30% less Key Strokes</li>
-                      <li>20% Increased productivity</li>
-                      <li>Requires no additional software installation</li>
-                      <li>Offers complete platform independence</li>
-                    </ul>
-                    <!-- trzecia kolumna -->
-                </li>
-              </div>
-            </ul>
-        </div>
-    </div>
-  </div>
-  </div>
-</section>
 
 <!-- <section class="other-feature">
   <div class="row">

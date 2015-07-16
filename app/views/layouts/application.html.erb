@@ -15,7 +15,11 @@
   <body>
     <header>
       <div class="small-links wrapper">
-        <p class="mercury-region" id="layout-content-phone" data-mercury="full"><%= content("layout-content-phone") %> | <span class="hov"><a href="#">Live Chat</a></span></p>
+        <p>
+        <span>Call Us </span>
+        <span class="mercury-region" id="layout-content-phone" data-mercury="full"><%= content("layout-content-phone") %></span>
+        <span class="hov live-chat-link"><a href="#">Live Chat</a> <%= image_tag('icons/live_chat_ico.png', size: '18x21') %></span>
+        </p>
       </div>
       <div class="wrapper hide-for-small-only">
         <h1 class="logo"><%= link_to image_tag('logo.png', size: '163x80'), root_path %></h1>
@@ -102,11 +106,11 @@
             <%= link_to fa_icon('linkedin'), '#', class: :linkedin %>
           </p>
           <p class="copy">
-            <%= content("layout-content-phone") %> &copy; 2014 Mondee Inc.
+            Call Us <%= content("layout-content-phone") %> &copy; 2014 Mondee Inc.
           </p>
         </div>
          <div class="social small-12 medium-6 show-for-small-only">
-          <p class="call"><%= content("layout-content-phone") %></p>
+          <p class="call">Call Us <%= content("layout-content-phone") %></p>
           <p>
             <p><strong>Follow us</strong></p>
             <%= link_to fa_icon('twitter'), '#', class: :twitter %>

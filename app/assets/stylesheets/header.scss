@@ -83,6 +83,23 @@ header {
     padding: 0 1.3rem;
     text-align: right;
     color: #323232;
+    .live-chat-link{
+        :before{
+          content: "|";
+          margin: 0px 6px 0px 3px;
+          display: block;
+          float: left;
+        }
+        a{
+          color: #7d8384;
+          font-family: "aktiv-grotesk-std", sans-serif;
+          font-weight: 300;
+          font-size: .875rem;
+        }
+        a:hover{
+        color: #EA4F4F;
+        } 
+      }
     p {
       @include transition(500ms);
       font-family: "aktiv-grotesk-std", sans-serif;
@@ -91,6 +108,13 @@ header {
       line-height: 2.8em;
       color: #7d8384;
       margin: 0;
+      .live-chat-link{
+          width: 110px;
+          display: inline-block;
+          img{
+            margin-left: 5px;
+          }
+      }
       .hov{
         a{
           
