@@ -113,6 +113,7 @@ Trippro::Application.routes.draw do
     get :contact
     get :tour
     get :faq
+    get :terms_of_service
     # get :get_started 
     get :sign_up
     get :demo
