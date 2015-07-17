@@ -54,6 +54,9 @@ class ApplicationController < ActionController::Base
   def faq
 
   end
+  
+  def terms_of_service
+  end
 
   def get_started
 

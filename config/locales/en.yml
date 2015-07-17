@@ -2,6 +2,10 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  l:
+    admin:
+      header:
+        logined: "%{name}"
   title: 'TripPro by Mondee'
   helpers:
     actions:

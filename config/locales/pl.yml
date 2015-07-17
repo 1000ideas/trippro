@@ -1,4 +1,8 @@
 pl:
+  l:
+    admin:
+      header:
+        logined: "%{name}"
   application:
     '404':
       title: Błąd 404
