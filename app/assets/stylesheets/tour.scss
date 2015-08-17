@@ -6,7 +6,9 @@ section.featured-video {
   overflow: hidden;
   height: 480px;
   z-index: 1;
-
+ @media #{$small-only}{
+  height: 422px;
+ }
   .video-wrapper {
     position: absolute;
     top: 0;

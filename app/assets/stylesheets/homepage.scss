@@ -287,6 +287,9 @@ section.partners {
       display: inline-block;
       vertical-align: middle;
       margin: 0 25px;
+      @media #{$small-only}{
+        height: 68px;
+      }
     }
 
   }
@@ -406,6 +409,9 @@ section.benefits {
     font-weight: 600;
     text-align: center;
     margin: 4rem 0 .8em 0;
+    @media #{$small-only}{
+      margin: 0 0 .8em 0;  
+    }
   }
 
   p {
@@ -560,7 +566,7 @@ section.benefits-at-your-service {
     display: inline-block;;
     vertical-align: top;
     margin-bottom: 2em;
-    width: 340px;
+    width: 320px;
     &:before{
       content: "" !important;
     }
@@ -709,7 +715,12 @@ span.red-icon {
     border-width: 0px;
   }
 }
-
+.plane-ico img{
+  @media #{$small-only}{
+    left: 12px;
+    position: relative;
+  }
+}
 .clearer{
   clear: both;
 }
