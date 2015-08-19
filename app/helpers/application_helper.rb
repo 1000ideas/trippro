@@ -1,7 +1,8 @@
 module ApplicationHelper
-  def nav_link(link_text, link_path)
+  def nav_link(link_text, link_path, options={})
     class_name = current_page?(link_path) ? "navbold" : ""
-    link_to link_text, link_path, class: class_name
+    options[:class]= class_name
+    link_to link_text, link_path, options
   end
 
   def content(id)
