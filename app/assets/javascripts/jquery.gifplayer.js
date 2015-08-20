@@ -338,7 +338,7 @@
 	};
 
 	$.fn.gifplayer.defaults = {
-		label: 'GIF',
+		label: '',
 		playOn: 'click',
 		mode: 'gif',
 		gif: '',
