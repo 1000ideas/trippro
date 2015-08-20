@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 17 Sie 2015, 18:52
+-- Czas wygenerowania: 19 Sie 2015, 22:13
 -- Wersja serwera: 5.5.9
 -- Wersja PHP: 5.3.28
 
@@ -323,14 +323,14 @@ INSERT INTO `contents` (`id`, `value`, `created_at`, `updated_at`) VALUES
 ('home-button-2', 'Take the Tour', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('home-content-1', 'Empower your agency with power of TripPro®', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('home-content-2', 'Discover revolutionary next generation search, book<br>and ticketing technology providing the lowest&nbsp;international fares.', '2014-10-14 15:08:02', '2015-07-09 11:58:45'),
-('home-content-3', '<h3><a href="/tour#lowest-prices"></a></h3><h3><a href="/tour#lowest-prices"></a><a href="/tour#lowest-prices"></a></h3><h3><a href="/tour#lowest-prices"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour">Lowest Prices</a></h3>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
+('home-content-3', '<h3><a href="/tour#lowest-prices"></a></h3><h3><a href="/tour#lowest-prices"></a><a href="/tour#lowest-prices">Global Content &amp; Low&nbsp;Price Guarantee</a></h3>', '2014-10-14 15:08:02', '2015-08-19 19:21:51'),
 ('home-content-4', '<h3><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour">Automated Ticketing</a></h3>', '2014-10-14 15:08:02', '2015-07-09 11:58:45'),
-('home-content-5', '<h3><a href="/tour#profit-manager"></a></h3><h3><a href="/tour#profit-manager"></a><a href="/tour#profit-manager"></a></h3><h3><a href="/tour#profit-manager"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour">Profit Manager</a></h3>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
-('home-content-6', '<h3><a href="/tour#reporting-and-analytics"></a></h3><h3><a href="/tour#reporting-and-analytics"></a><a href="/tour#reporting-and-analytics"></a></h3><h3><a href="/tour#reporting-and-analytics"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour"></a></h3><h3><a href="/tour"></a><a href="/tour">Reporting &amp; Analytics</a> </h3>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
-('home-content-7', '<a href="/tour#lowest-prices"></a><a href="/tour#lowest-prices"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour">Largest breadth of global content and lowest fares, guaranteed.</a><a href="/tour"></a>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
+('home-content-5', '<h3><a href="/tour#profit-manager">Instant&nbsp;Ticketing &amp; Self-Servicing</a></h3>', '2014-10-14 15:08:02', '2015-08-19 19:21:51'),
+('home-content-6', '<h3></h3><h3><a href="/tour#reporting-and-analytics">Customer Analytics &amp; Dashboards</a></h3> ', '2014-10-14 15:08:02', '2015-08-19 19:23:09'),
+('home-content-7', '<a href="/tour#lowest-prices"></a><a href="/tour#lowest-prices">Access global content from multiple consolidators with the lowest price guaranteed.</a>', '2014-10-14 15:08:02', '2015-08-19 19:21:51'),
 ('home-content-8', '<a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour">Confirm and ticket instantly. It’s that simple.</a>', '2014-10-14 15:08:02', '2015-07-09 11:58:45'),
-('home-content-9', '<a href="/tour#profit-manager"></a><a href="/tour#profit-manager"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour">Powerful tools to maximize agent and agency profit.</a>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
-('home-content-10', '<a href="/tour#reporting-and-analytics"></a><a href="/tour#reporting-and-analytics"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a href="/tour"></a><a style="" href="/tour">Gain insight into your business and make smart decisions. <br></a>', '2014-10-14 15:08:02', '2015-08-13 10:46:08'),
+('home-content-9', '<a href="/tour#profit-manager">One click instant ticketing, seamless refunds, voids, and reissues.</a>', '2014-10-14 15:08:02', '2015-08-19 19:21:51'),
+('home-content-10', '<a style="" href="/tour#reporting-and-analytics">Gain insight into your business, make smart decisions, &nbsp;maximize profit.<br></a>', '2014-10-14 15:08:02', '2015-08-19 19:23:09'),
 ('home-content-11', 'More savings for customers, more profit for you.', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('home-content-12', 'TripPro delivers the lowest priced international airfare, while reducing search and ticketing time,&nbsp;', '2014-10-14 15:08:02', '2015-07-15 08:19:34'),
 ('home-content-13', '<span class="hide-for-small-only">helping drive new sales, increased profits and happy customers.</span>', '2014-10-14 15:08:02', '2015-07-15 08:19:34'),
@@ -356,17 +356,17 @@ INSERT INTO `contents` (`id`, `value`, `created_at`, `updated_at`) VALUES
 ('home-content-33', 'Sign up for TripPro:', '2014-10-14 15:08:02', '2014-10-21 09:40:42'),
 ('home-content-34', 'Download TripPro From Sabre Red App Centre', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('tour-content-video-1', 'Discover the power behind TripPro', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
-('tour-content-video-2', 'Lowest Fares Instantly', '2014-10-14 15:08:02', '2015-07-09 12:10:29'),
-('tour-content-video-3', 'Search global content from multiple consolidators through a single source. TripPro’s innovative algorithms&nbsp;find the lowest&nbsp;prices, uncover hidden routings, and recommend the best unique itineraries.&nbsp;', '2014-10-14 15:08:02', '2015-07-09 12:05:31'),
-('tour-content-video-4', '<li>Works alongside any GDS</li>\n        <li>One click instant&nbsp;ticketing</li>\n        <li>+/- 30 fare calendar</li>\n        <li><span style="font-family: inherit; font-size: 1rem; line-height: 1.6;">Lowest fare price assurance</span></li><li>Seamless reissue/refund/voids</li><li>Automated settlement</li><li>24/7 ticketing live chat support</li>', '2014-10-14 15:08:02', '2015-07-20 07:48:12'),
+('tour-content-video-2', 'Global Content &amp; Low Price Guarantee', '2014-10-14 15:08:02', '2015-08-18 08:57:38'),
+('tour-content-video-3', 'Search global content from multiple consolidators through a single source. TripPro’s innovative algorithms&nbsp;find the lowest&nbsp;prices, uncover hidden routings, and recommend the best unique itineraries to find the lowest price guaranteed.', '2014-10-14 15:08:02', '2015-08-18 08:57:38'),
+('tour-content-video-4', '<li>Lowest price guaranteed</li>\n        <li>Works alongside any GDS</li>\n        <li>No new commands to learn</li>\n        <li><span style="font-family: inherit; font-size: 1rem; line-height: 1.6;">+/- 3 fare calendar</span></li><li>Global content from world''s leading consolidators</li><li>Unique itineraries and hidden routing</li><li>Published, net, and commissionable fares</li>', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
 ('tour-content-video-5', 'Self Servicing Tool', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('tour-content-video-6', 'Connect to TripPro in real-time and take advantage of instant \n													ticketing technology. Confirm seats and \n													ticket instantly with one click. It’s that simple!', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('tour-content-video-7', 'Discover the power behind TripPro', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
-('tour-content-video-8', 'Profit Manager', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
-('tour-content-video-9', 'Directly control commissions to stay competitive and increase profits. Advanced markup features are \n													completely configurable to manage the right \n													balance of profitability and customer value.', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
+('tour-content-video-8', 'Customer Dashboards &amp; Analytics', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
+('tour-content-video-9', 'Gain insight into your business, make smart decisions, &nbsp;and maximize profit with powerful tools to manage your agency. Intuitive business dashboards and reporting tools deliver actionable data to help drive profitability. Advanced markup features are completely configurable to manage the right balance of profitability and customer value.', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
 ('tour-content-video-10', 'Discover the power behind TripPro', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
-('tour-content-video-11', 'Analytics &amp; Dashboards', '2014-10-14 15:08:02', '2015-07-09 12:07:19'),
-('tour-content-video-12', 'Gain a competitive advantage with powerful tools to manage your business.  Intuitive business dashboards and  reporting tools deliver actionable data to  help  drive agent and agency profitability.', '2014-10-14 15:08:02', '2015-07-09 12:07:19'),
+('tour-content-video-11', 'Instant Ticketing &amp; Self-Servicing', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
+('tour-content-video-12', 'The industry’s first one click instant ticketing, eliminates waiting, phones calls, and churn, allowing agents to focus on customer service and maximizing agency profit.', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
 ('tour-content-video-13', 'Discover the power behind TripPro', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('tour-content-video-14', 'Cross-platform Availability', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('tour-content-video-15', 'TripPro is available on all major platforms', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
@@ -472,8 +472,8 @@ INSERT INTO `contents` (`id`, `value`, `created_at`, `updated_at`) VALUES
 ('web', 'All the power, global content, and low fares  available in Trippro Desktop, in an easy to use web-based  interface.', '2014-10-21 09:50:37', '2015-07-15 17:27:49'),
 ('link-1', '&nbsp;', '2014-10-31 21:27:32', '2014-10-31 21:27:32'),
 ('settings:recipent-email', 'maciej.mlynek@gmail.com', '2014-11-04 12:05:33', '2014-11-04 12:05:33'),
-('tour-content-video-19', '<li>Advanced promotion manager</li>\n        <li>Markup management</li>\n        <li>Increase per ticket earnings</li>\n        <li>Profit maximization via recommendations and guided selling platform</li>', '2014-10-14 15:08:02', '2015-07-15 17:27:49'),
-('tour-content-video-20', '<li>Real-time insight into business drivers</li>\n        <li>Dashboards to  manage the business</li>\n        <li>Seamless Invoicing</li>\n        <li>Weekly statements and settlements</li>', '2015-07-14 00:00:00', '2015-07-15 17:27:49'),
+('tour-content-video-19', '<li>Real-time insight into business drivers<br></li>\n        <li>Dashboards to manage the business<br></li>\n        <li>Seamless Invoicing<br></li>\n        <li>Advanced promotion manager<br></li><li>Markup management<br></li><li>Increase per ticket earnings<br></li><li>Profit maximization via recommendations and guided selling platform<br></li>', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
+('tour-content-video-20', '<li>One click instant ticketing<br></li>\n        <li>Self-servicing<br></li>\n        <li>Seamless reissue/refund/voids<br></li>\n        <li>Automated settlement<br></li><li>24/7 ticketing live chat support<br></li><li>Eliminate waiting and churn<br></li><li>Drastically reduce ticketing errors and chargebacks<br></li>', '2015-07-14 00:00:00', '2015-08-18 09:02:50'),
 ('layout-content-phone', '+1 844-483-8884&nbsp;', '2015-07-14 00:00:00', '2015-07-15 17:27:49'),
 ('report-content-15', '', '2015-07-20 07:48:12', '2015-07-20 07:48:12'),
 ('report-content-16', '', '2015-07-20 07:48:12', '2015-07-20 07:48:12'),
@@ -764,8 +764,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `encrypted_password`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `roles_mask`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(2, 'ameron@mondee.com', '$2a$10$f9.yM2.REDy0Z2ogSAZTee6MZhl9NjOWd73O2NZ9vZS2QCZZ.UVpG', NULL, 6, '2015-07-10 21:21:29', '2015-07-09 19:04:22', '209.58.193.250', '209.58.193.250', 1, NULL, '2014-10-24 18:21:52', '2015-07-10 21:21:29'),
-(3, 'admin@admin.pl', '$2a$10$yJifME9SZc42becFKxrRiuH90UzqjkU9IjFlJdV0LLSbZmS.6Mzza', NULL, 14, '2015-08-17 12:31:33', '2015-08-17 11:09:39', '194.33.73.13', '194.33.73.13', 1, NULL, '2015-07-14 09:01:24', '2015-08-17 12:31:33');
+(2, 'ameron@mondee.com', '$2a$10$f9.yM2.REDy0Z2ogSAZTee6MZhl9NjOWd73O2NZ9vZS2QCZZ.UVpG', NULL, 7, '2015-08-17 21:02:58', '2015-07-10 21:21:29', '209.58.193.250', '209.58.193.250', 1, NULL, '2014-10-24 18:21:52', '2015-08-17 21:02:58'),
+(3, 'admin@admin.pl', '$2a$10$yJifME9SZc42becFKxrRiuH90UzqjkU9IjFlJdV0LLSbZmS.6Mzza', NULL, 19, '2015-08-19 19:20:23', '2015-08-19 16:24:48', '194.33.73.13', '89.67.179.170', 1, NULL, '2015-07-14 09:01:24', '2015-08-19 19:20:23');
 
 -- --------------------------------------------------------
 
