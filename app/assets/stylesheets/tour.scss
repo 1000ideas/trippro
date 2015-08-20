@@ -230,12 +230,12 @@ section.quote{
     width: 609px;
     height: 383px;
     background: image-url('laptop-plain.png') no-repeat 0 0;
-    &>img{
-      height: 316px;
+    &>img, &>.gifplayer-wrapper{
+      height: 316px !important;
       top: 23px;
       position: relative;
       left: 53px;
-      width: 504px;
+      width: 504px !important;
     }
     &.slider{
     position: absolute;
