@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require foundation
 //= require trippro
+//= require jquery.inview
+//= require jquery.gifplayer
+//= require tour_gif_control
 
 $(function(){ $(document).foundation({
 equalizer : {
