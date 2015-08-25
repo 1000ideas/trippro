@@ -39,12 +39,15 @@ class SignupsController < ApplicationController
       if @signup.save
         SignupMailer.signup_message(@signup).deliver
         flash.notice = info(:success)
-        format.html {redirect_to(signups_path)}
-      else
         format.html {render action: "new"}
+        format.js
+      else
+        @errors = @signup.errors.full_messages
+        format.html {render action: "new"}
+        format.js
         flash.notice = info(:error)
       end
-      format.js
+      
     end
   end
 end
