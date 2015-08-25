@@ -1,4 +1,4 @@
-
+<div class="notification hidden"></div>
 <section class="container">
 <div class="row">
 	<div class="small-12 medium-10 medium-centered columns">
@@ -55,7 +55,7 @@
 		      	<%= f.label :password, class:'small-text-left large-text-right' %>
 		    </div>
 			<div class="large-8 columns">
-				   <%= f.text_field :password, :required => true, 'aria-required' => 'true', class:'left' %>
+				   <%= f.password_field :password, :required => true, 'aria-required' => 'true', class:'left' %>
 			<small class="error right">Password is incorrect</small>
 			</div>
 		</div>
@@ -64,7 +64,7 @@
 		      	<%= f.label :retype_password, class:'small-text-left large-text-right' %>
 		    </div>
 			<div class="large-8 columns">
-				   <%= f.text_field :retype_password, :required => true, 'aria-required' => 'true', class:'left' %>
+				   <%= f.password_field :retype_password, :required => true, 'aria-required' => 'true', "data-equalto" => "signup_password", class:'left' %>
 			<small class="error right">Please retype</small>
 			</div>
 		</div>
@@ -390,8 +390,8 @@
 			</div>
 			<div class="large-8 columns">
 				<div class="custom-checkbox">
-					<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox">
-					<label for="terms_and_conditions" class="text-left two-lines-for-small">I agree to TripPro™ <%= link_to "Terms and Conditions", '#', class: "red" %></label>
+					<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox" required>
+					<label for="terms_and_conditions" class="text-left two-lines-for-small">I agree to TripPro™ <%= link_to "Terms and Conditions", '/terms_of_service', class: "red" %></label>
 				</div>
 			</div>
 		</div>
@@ -402,3 +402,4 @@
 
 
 </section>
+<div class="alert_error radius" style="display:none;"> </div>

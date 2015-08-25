@@ -1,0 +1,10 @@
+<% if @errors %>
+$(".alert_error.radius").html("")
+$(".alert_error.radius").html("<%= escape_javascript(render partial:"signup_errors", locals: {errors: @errors}) %>");
+$(".alert_error.radius").fadeIn()
+setTimeout(function() {
+    $('.alert_error.radius').fadeOut('fast');
+}, 3000);
+<% else %>
+$(".container").html("<%= escape_javascript(render partial: "thank_you") %>");
+<% end %>
