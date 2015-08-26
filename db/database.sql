@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Czas wygenerowania: 19 Sie 2015, 22:13
+-- Czas wygenerowania: 26 Sie 2015, 16:48
 -- Wersja serwera: 5.5.9
 -- Wersja PHP: 5.3.28
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `activities` (
   KEY `index_activities_on_trackable_id_and_trackable_type` (`trackable_id`,`trackable_type`),
   KEY `index_activities_on_owner_id_and_owner_type` (`owner_id`,`owner_type`),
   KEY `index_activities_on_recipient_id_and_recipient_type` (`recipient_id`,`recipient_type`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=37 ;
 
 --
 -- Zrzut danych tabeli `activities`
@@ -76,7 +76,15 @@ INSERT INTO `activities` (`id`, `trackable_id`, `trackable_type`, `owner_id`, `o
 (25, 7, 'Webinar', 2, 'User', 'webinar.destroy', '--- {}\n', NULL, NULL, '2015-07-10 21:21:51', '2015-07-10 21:21:51'),
 (26, 8, 'Webinar', 2, 'User', 'webinar.destroy', '--- {}\n', NULL, NULL, '2015-07-10 21:21:51', '2015-07-10 21:21:51'),
 (27, 9, 'Webinar', 2, 'User', 'webinar.destroy', '--- {}\n', NULL, NULL, '2015-07-10 21:21:51', '2015-07-10 21:21:51'),
-(28, 1, 'Video', 3, 'User', 'video.update', '--- {}\n', NULL, NULL, '2015-08-17 12:40:32', '2015-08-17 12:40:32');
+(28, 1, 'Video', 3, 'User', 'video.update', '--- {}\n', NULL, NULL, '2015-08-17 12:40:32', '2015-08-17 12:40:32'),
+(29, 1, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(30, 2, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(31, 3, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(32, 4, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(33, 5, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(34, 6, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(35, 7, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25'),
+(36, 8, 'Signup', 2, 'User', 'signup.destroy', '--- {}\n', NULL, NULL, '2015-08-25 22:40:25', '2015-08-25 22:40:25');
 
 -- --------------------------------------------------------
 
@@ -111,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `contacts` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_contacts_on_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=9 ;
 
 --
 -- Zrzut danych tabeli `contacts`
@@ -121,7 +129,11 @@ INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `message`, `deleted_at`,
 (1, 'Tomek', 'tomasz.rupik@gmail.com', '123', 'Hello', NULL, '2014-10-13 08:08:26', '2014-10-13 08:08:26'),
 (2, 'Tomek', 'tomasz.rupik@gmail.com', '123', 'Hello', NULL, '2014-10-13 08:08:31', '2014-10-13 08:08:31'),
 (3, 'Tomek', 'tomasz.rupik@gmail.com', '123', 'Hello', NULL, '2014-10-13 08:08:34', '2014-10-13 08:08:34'),
-(4, 'Tomek', 'tomasz.rupik@gmail.com', '234245345', 'ASf', NULL, '2014-10-30 10:08:06', '2014-10-30 10:08:06');
+(4, 'Tomek', 'tomasz.rupik@gmail.com', '234245345', 'ASf', NULL, '2014-10-30 10:08:06', '2014-10-30 10:08:06'),
+(5, 'name', 'email@trippro.com', '6506463325', 'test', NULL, '2015-08-21 17:23:44', '2015-08-21 17:23:44'),
+(6, 'contact us test', 'ameron@trippro.com', '4157027727', 'test', NULL, '2015-08-25 22:11:59', '2015-08-25 22:11:59'),
+(7, 'contact us test', 'ameron@trippro.com', '4157027727', 'test', NULL, '2015-08-25 22:12:10', '2015-08-25 22:12:10'),
+(8, 'contact us test', 'ameron@trippro.com', '4157027727', 'test', NULL, '2015-08-25 22:12:10', '2015-08-25 22:12:10');
 
 -- --------------------------------------------------------
 
@@ -434,7 +446,7 @@ INSERT INTO `contents` (`id`, `value`, `created_at`, `updated_at`) VALUES
 ('report-content-13', '30% increase', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('report-content-14', '30% increase', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('contact-content-1', 'Contact Us', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
-('contact-content-2', 'We’d love to hear from you. We have a team who are ready to help you.<br>\nIf you need immediate help, you can simply contact one of our product experts at', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
+('contact-content-2', 'We’d love to hear from you. We have a team who are ready to help you.<br> If you need immediate help, you can simply contact one of our product experts', '2014-10-14 15:08:02', '2015-08-21 14:00:09'),
 ('contact-mail-1', 'reservations@trippro.com', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('contact-phone-1', '+1 866-855-9630', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
 ('contact-content-5', 'Contact Us', '2014-10-14 15:08:02', '2014-10-14 15:08:02'),
@@ -471,7 +483,7 @@ INSERT INTO `contents` (`id`, `value`, `created_at`, `updated_at`) VALUES
 ('desktop report-content-6', 'Automates the entire booking process, works along side any GDS screen with no change in workflow and no new commands to learn.', '2014-10-21 09:50:37', '2015-07-14 10:31:32'),
 ('web', 'All the power, global content, and low fares  available in Trippro Desktop, in an easy to use web-based  interface.', '2014-10-21 09:50:37', '2015-07-15 17:27:49'),
 ('link-1', '&nbsp;', '2014-10-31 21:27:32', '2014-10-31 21:27:32'),
-('settings:recipent-email', 'maciej.mlynek@gmail.com', '2014-11-04 12:05:33', '2014-11-04 12:05:33'),
+('settings:recipent-email', 'krzysztof@1000i.pl', '2014-11-04 12:05:33', '2015-08-25 16:16:18'),
 ('tour-content-video-19', '<li>Real-time insight into business drivers<br></li>\n        <li>Dashboards to manage the business<br></li>\n        <li>Seamless Invoicing<br></li>\n        <li>Advanced promotion manager<br></li><li>Markup management<br></li><li>Increase per ticket earnings<br></li><li>Profit maximization via recommendations and guided selling platform<br></li>', '2014-10-14 15:08:02', '2015-08-18 09:02:50'),
 ('tour-content-video-20', '<li>One click instant ticketing<br></li>\n        <li>Self-servicing<br></li>\n        <li>Seamless reissue/refund/voids<br></li>\n        <li>Automated settlement<br></li><li>24/7 ticketing live chat support<br></li><li>Eliminate waiting and churn<br></li><li>Drastically reduce ticketing errors and chargebacks<br></li>', '2015-07-14 00:00:00', '2015-08-18 09:02:50'),
 ('layout-content-phone', '+1 844-483-8884&nbsp;', '2015-07-14 00:00:00', '2015-07-15 17:27:49'),
@@ -652,7 +664,24 @@ CREATE TABLE IF NOT EXISTS `signups` (
   `updated_at` datetime NOT NULL,
   PRIMARY KEY (`id`),
   KEY `index_signups_on_deleted_at` (`deleted_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci AUTO_INCREMENT=12 ;
+
+--
+-- Zrzut danych tabeli `signups`
+--
+
+INSERT INTO `signups` (`id`, `first_name`, `last_name`, `phone_number`, `email`, `password`, `retype_password`, `job_title`, `fax_number`, `referrer`, `agency_name`, `agency_phone`, `president`, `adress`, `city`, `country`, `state`, `zip`, `diff_adress`, `diff_city`, `diff_country`, `diff_state`, `diff_zip`, `arc`, `iata`, `ttt`, `clia`, `webiste`, `business_type`, `hba`, `host`, `affiliate`, `asta`, `sabre_pcc`, `galileo_pcc`, `worldspan_pcc`, `amadeus_pcc`, `apollo_pcc`, `deleted_at`, `created_at`, `updated_at`) VALUES
+(1, 'adam', 'meron', 415777777, 'emmail', 'password', 'pass', 'job title', 0, '', '', '', '', '', 'city', 'country', 'state', 'zip code', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-21 17:19:26', '2015-08-25 22:40:25'),
+(2, 'adam', 'meron', 415777777, 'emmail', 'password', 'pass', 'job title', 0, '', '', '', '', '', 'city', 'country', 'state', 'zip code', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-21 17:19:30', '2015-08-25 22:40:25'),
+(3, 'adam', 'meron', 415777777, 'emmail', 'password', 'pass', 'job title', 0, '', '', '', '', '', 'city', 'country', 'state', 'zip code', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-21 17:19:40', '2015-08-25 22:40:25'),
+(4, 'adam', 'meron', 415777777, 'emmail', 'password', 'pass', 'job title', 0, '', '', '', '', '', 'city', 'country', 'state', 'zip code', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-21 17:19:47', '2015-08-25 22:40:25'),
+(5, 'adam', 'meron', 415777777, 'emmail', 'password', 'pass', 'job title', 0, '', '', '', '', '', 'city', 'country', 'state', 'zip code', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-21 17:21:29', '2015-08-25 22:40:25'),
+(6, 'sdfge', 'ger', 123123123, 'sdfe', '123', '123', '', NULL, '', '', '', '', '', 'sdf', 'werg', 'weg', 'weg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-25 16:14:12', '2015-08-25 22:40:25'),
+(7, 'sdfge', 'ger', 123123123, 'sdfe@sdf.pl', '123', '123', '', NULL, '', '', '', '', '', 'sdf', 'werg', 'weg', 'weg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-25 16:16:51', '2015-08-25 22:40:25'),
+(8, 'sdfge', 'ger', 123123123, 'sdf3e@sdf.pl', '123', '123', '', NULL, '', '', '', '', '', 'sdf', 'werg', 'weg', 'weg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '2015-08-25 22:40:25', '2015-08-25 16:20:18', '2015-08-25 22:40:25'),
+(9, 'sdfge', 'ger', 123123123, 'sdf33e@sdf.pl', '123', '123', '', NULL, '', '', '', '', '', 'sdf', 'werg', 'weg', 'weg', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '2015-08-25 16:21:11', '2015-08-25 16:21:11'),
+(10, 'Krzysztof', 'Kosman', 515187325, 'krzysztof.kosman@gmail.com', 'test', 'test', '', NULL, '', '', '515187325', '', 'Milczańska 30/7', 'Szczecin', 'Poland', 'Poland', '70-107', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '2015-08-25 16:24:33', '2015-08-25 16:24:33'),
+(11, 'singup ', 'meron', 415777777, 'ameron@mondee.com', 'mondee2013', 'mondee2013', '', NULL, '', '', '', '', '', 'san francisco', 'ca', '94110', 'ca', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '2015-08-25 22:13:03', '2015-08-25 22:13:03');
 
 -- --------------------------------------------------------
 
@@ -764,8 +793,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `email`, `encrypted_password`, `remember_created_at`, `sign_in_count`, `current_sign_in_at`, `last_sign_in_at`, `current_sign_in_ip`, `last_sign_in_ip`, `roles_mask`, `deleted_at`, `created_at`, `updated_at`) VALUES
-(2, 'ameron@mondee.com', '$2a$10$f9.yM2.REDy0Z2ogSAZTee6MZhl9NjOWd73O2NZ9vZS2QCZZ.UVpG', NULL, 7, '2015-08-17 21:02:58', '2015-07-10 21:21:29', '209.58.193.250', '209.58.193.250', 1, NULL, '2014-10-24 18:21:52', '2015-08-17 21:02:58'),
-(3, 'admin@admin.pl', '$2a$10$yJifME9SZc42becFKxrRiuH90UzqjkU9IjFlJdV0LLSbZmS.6Mzza', NULL, 19, '2015-08-19 19:20:23', '2015-08-19 16:24:48', '194.33.73.13', '89.67.179.170', 1, NULL, '2015-07-14 09:01:24', '2015-08-19 19:20:23');
+(2, 'ameron@mondee.com', '$2a$10$f9.yM2.REDy0Z2ogSAZTee6MZhl9NjOWd73O2NZ9vZS2QCZZ.UVpG', NULL, 8, '2015-08-25 22:19:37', '2015-08-17 21:02:58', '209.58.193.250', '209.58.193.250', 1, NULL, '2014-10-24 18:21:52', '2015-08-25 22:19:37'),
+(3, 'admin@admin.pl', '$2a$10$yJifME9SZc42becFKxrRiuH90UzqjkU9IjFlJdV0LLSbZmS.6Mzza', NULL, 27, '2015-08-26 10:33:27', '2015-08-25 16:16:04', '192.162.146.76', '192.162.146.76', 1, NULL, '2015-07-14 09:01:24', '2015-08-26 10:33:27');
 
 -- --------------------------------------------------------
 
