@@ -7,9 +7,7 @@
 	<div class="small-12 large-8 large-centered columns">
 		<div class="contact_form">
 			<%= form_for( @contact, html: {class: "row", "data-abide" => '' , data: {remote: true}}) do |f| %>
-				<% flash.each do |name, msg| -%>
-			      <%= content_tag :div, msg, class: name %>
-			    <% end -%>
+				
 			  <div class="field"> 
 			  		      <%= f.label :name %><!--
 			  		   --><%= f.text_field :name, :required => true, 'aria-required' => 'true'  %>
@@ -30,6 +28,7 @@
 		   			  <small class="error">Message is required</small></div>
 		  
 			  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
+			  <small class="error after_commit" style="display:none;"> </small>
 			</div>
 			<%end%>
 	</div>

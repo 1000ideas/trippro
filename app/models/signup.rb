@@ -42,5 +42,6 @@ class Signup < ActiveRecord::Base
   scope :filter_by_created_before, lambda {|date| where("`created_at` < ?", Date.parse(date)) }
   attr_accessible :adress, :affiliate, :agency_name, :agency_phone, :amadeus_pcc, :apollo_pcc, :arc, :asta, :business_type, :city, :clia, :country, :deleted_at, :diff_adress, :diff_city, :diff_country, :diff_state, :diff_zip, :email, :fax_number, :first_name, :galileo_pcc, :hba, :host, :iata, :job_title, :last_name, :password, :phone_number, :president, :referrer, :retype_password, :sabre_pcc, :state, :ttt, :webiste, :worldspan_pcc, :zip
 
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true
+  validates :email, uniqueness: true, on: :create
 end

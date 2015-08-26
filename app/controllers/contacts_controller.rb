@@ -38,14 +38,15 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         ContactMailer.contact_message(@contact).deliver
-        # @contact.create_activity :create, owner: current_user
         flash.notice =  info(:success)
-        format.html { redirect_to(contacts_path) }
+        format.html {render action: "new"}
+        format.js
       else
-        format.html { render action: "new" }
-        flash.notice =  info(:error)
+        @errors = @contact.errors.full_messages
+        format.html {render action: "new"}
+        format.js
+        flash.notice = info(:error)
       end
-      format.js
     end
   end
 

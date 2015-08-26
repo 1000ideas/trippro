@@ -19,21 +19,21 @@ en:
       edit:
         title: Edit signup
       create:
-        success: Pomyślnie utworzono
+        success: Successfuly created
       update:
-        success: Pomyślnie zaktualizowano
+        success: Successfuly updated
       destroy:
-        success: Pomyślnie usunięto
+        success: Successfuly deleted
       tooltip:
-        title: Uwaga
-        content_html: Przykładowy tekst informacyjny
+        title: Attention
+        content_html: 
       filter:
-        title: Filtruj wg
-        button: Filtruj
-        filter: Filtruj
-        clear: Wyczyść
-        open_filters: Otwórz filtry
-        edit_filters: Zmień filtry
+        title: Filter by
+        button: "Filter"
+        filter: "Filter"
+        clear: "Clear"
+        open_filters: Open filters
+        edit_filters: Change filters
   signups:
     index:
       title: Signups
@@ -56,7 +56,7 @@ en:
         agency_name: Agency name
         agency_phone: Agency phone
         president: President
-        adress: Adress
+        adress: Address
         city: City
         country: Country
         state: State

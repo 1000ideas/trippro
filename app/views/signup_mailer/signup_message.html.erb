@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h2>
+      New register!
+    </h2>
+    <p>
+    </p>
+    <p>
+    <h3>Personal data:</h3>
+    <ul>
+      <li><b>Name and surname</b>: <%= @signup.first_name %> <%= @signup.last_name %></li>  
+      <li><b>Phone number</b>: <%= @signup.phone_number %></li>  
+      <li><b>Email</b>: <%= @signup.email %></li>  
+      <li><b>Job title</b>: <%= @signup.job_title %></li>  
+      <li><b>Fax number</b>: <%= @signup.fax_number %></li>  
+      <li><b>Referrer</b>: <%= @signup.referrer %></li>  
+    </ul>
+    </p>
+    <h3>Agency data:</h3>
+    <ul>
+      <li><b>Agency name</b>: <%= @signup.agency_name %></li>  
+      <li><b>Agency phone</b>: <%= @signup.agency_phone %></li>  
+      <li><b>Owner or President</b>: <%= @signup.president %></li>  
+      <li>
+      <b>Address</b>: <br/>
+      <%= @signup.adress %><br/>
+      <%= @signup.zip %>, <%= @signup.city %><br/>
+      <%= @signup.state %>, <%= @signup.country %><br/>
+      </li>  
+    </ul>
+    
+    <%= link_to "See more info", admin_signup_url(@signup) %>
+    </p>
+  </body>
+</html>
