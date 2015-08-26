@@ -56,7 +56,6 @@ form.signup[data-abide] {
 			background-color: #ffefe0;
 		}
 	}
-
 	small.error {
 		padding: 0;
 		width: 35%;
@@ -144,6 +143,9 @@ form.signup[data-abide] {
 	  left: 0;
 	  top: 50%;
 	  margin-top: -0.65rem;
+	  &.error{
+	  	border: 1px solid #ed831c;	
+	  }
 	}
 
 	input[type=checkbox]:checked + label:before {
@@ -154,4 +156,18 @@ form.signup[data-abide] {
 	  line-height: 1.1rem;
 	  text-indent: 0rem;
 	}
+	&.error{
+		label:before{
+			border: 1px solid #ed831c;
+			background-color: #ffefe0;
+		}
+	}
+
 }
+small.error.after_commit{
+		h3{
+    		color: #ed831c;
+    		padding: 0px;
+    		font-weight: bold;
+    	}
+	}

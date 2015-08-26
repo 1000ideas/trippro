@@ -6,11 +6,14 @@
 <%= render('filter')  %>
 
 <ul class="row items-list-header">
-  <li class="columns small-6">
+  <li class="columns small-1">
     <%= custom_check_box(:selection, :all_ids, {}, 1, nil) if @signups.any? %>
     <%= sort_column :id, Signup.human_attribute_name(:id) %>
   </li>
-  <li class="columns small-3"><%= sort_column :updated_at, Signup.human_attribute_name(:updated_at) %></li>
+  <li class="columns small-2"><%= sort_column :first_name, Signup.human_attribute_name(:first_name) %></li>
+  <li class="columns small-2"><%= sort_column :last_name, Signup.human_attribute_name(:last_name) %></li>
+  <li class="columns small-2"><%= sort_column :email, Signup.human_attribute_name(:email) %></li>
+  <li class="columns small-2"><%= sort_column :agency_name, Signup.human_attribute_name(:agency_name) %></li>
   <li class="columns small-3"><%= sort_column :created_at, Signup.human_attribute_name(:created_at) %></li>
 </ul>
 
