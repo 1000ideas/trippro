@@ -396,10 +396,13 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="large-offset-4 large-8 columns"><%= f.submit "Submit", :class => "button red-one grey radius"%></div>
+			<div class="large-offset-4 large-8 columns">
+			<%= f.submit "Submit", :class => "button red-one grey radius"%>
+			<small class="error after_commit" style="display:none;"> </small>
+			</div>
 		</div>
 <%end%>
 
 
 </section>
-<div class="alert_error radius" style="display:none;"> </div>
+

@@ -25,13 +25,13 @@ en:
       destroy:
         success: Successful deleted
       tooltip:
-        title: Uwaga
+        title: Attention
         content_html: Przykładowy tekst informacyjny
       filter:
         title: Filter by
-        button: Filtruj
-        filter: Filtruj
-        clear: Wyczyść
+        button: Filter
+        filter: Filter
+        clear: Clear
         open_filters: Open filters
         edit_filters: Edit filters
   categories:

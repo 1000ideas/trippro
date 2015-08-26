@@ -1,0 +1,99 @@
+<%= form_for([:admin, @signup], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2>Show</h2>
+<div class="columns small-12">
+  <section>
+  <div class="row headers">
+    <div class="columns small-3"><%= Signup.human_attribute_name :first_name %></div>
+    <div class="columns small-3"><%= Signup.human_attribute_name :last_name %></div>
+    <div class="columns small-3"><%= Signup.human_attribute_name :email %></div>
+    <div class="columns small-3"><%= Signup.human_attribute_name :phone_number %></div>
+  </div>
+  <div class="row">
+    <div class="columns small-3"><%= @signup.first_name %></div>
+    <div class="columns small-3"><%= @signup.last_name %></div>
+    <div class="columns small-3"><%= @signup.phone_number %></div>
+    <div class="columns small-3"><%= @signup.email %></div>
+  </div>
+  </section>
+  <section>
+  <div class="row headers">
+    <div class="columns small-2"><%= Signup.human_attribute_name :job_title %></div>
+    <div class="columns small-2"><%= Signup.human_attribute_name :fax_number %></div>
+    <div class="columns small-2"><%= Signup.human_attribute_name :referrer %></div>
+    <div class="columns small-2"><%= Signup.human_attribute_name :agency_name %></div>
+    <div class="columns small-2"><%= Signup.human_attribute_name :agency_phone %></div>
+    <div class="columns small-2"><%= Signup.human_attribute_name :president %></div>
+
+  </div>
+  <div class="row">
+    <div class="columns small-2"><%= @signup.job_title %></div>
+    <div class="columns small-2"><%= @signup.fax_number %></div>
+    <div class="columns small-2"><%= @signup.referrer %></div>
+    <div class="columns small-2"><%= @signup.agency_name %></div>
+    <div class="columns small-2"><%= @signup.agency_phone %></div>
+    <div class="columns small-2"><%= @signup.president %></div>
+  </div>
+  </section>
+  <section>
+  <div class="row">
+    <div class="columns small-6">
+    ADDRESS
+      <ul>
+        <li><%= Signup.human_attribute_name :adress %>: <%= @signup.adress %></li>
+        <li><%= Signup.human_attribute_name :city %>: <%= @signup.city %></li>
+        <li><%= Signup.human_attribute_name :country %>: <%= @signup.country %></li>
+        <li><%= Signup.human_attribute_name :state %>: <%= @signup.state %></li>
+        <li><%= Signup.human_attribute_name :zip %>: <%= @signup.zip %></li>
+      </ul>
+    </div>
+    <div class="columns small-6">
+    DIFF ADDRESS
+      <ul>
+        <li><%= Signup.human_attribute_name :diff_adress %>: <%= @signup.diff_adress %></li>
+        <li><%= Signup.human_attribute_name :diff_city %>: <%= @signup.diff_city %></li>
+        <li><%= Signup.human_attribute_name :diff_country %>: <%= @signup.diff_country %></li>
+        <li><%= Signup.human_attribute_name :diff_state %>: <%= @signup.diff_state %></li>
+        <li><%= Signup.human_attribute_name :diff_zip %>: <%= @signup.diff_zip %></li>
+      </ul>
+    </div>
+  </div>
+  </section>
+  <section>
+  <div class="row">
+    <div class="columns small-4">
+    IATA
+      <ul>
+        <li><%= Signup.human_attribute_name :arc %>: <%= @signup.arc %></li>
+        <li><%= Signup.human_attribute_name :iata %>: <%= @signup.iata %></li>
+        <li><%= Signup.human_attribute_name :ttt %>: <%= @signup.ttt %></li>
+        <li><%= Signup.human_attribute_name :clia %>: <%= @signup.clia %></li>
+        <li><%= Signup.human_attribute_name :webiste %>: <%= @signup.webiste %></li>
+        <li><%= Signup.human_attribute_name :business_type %>: <%= @signup.business_type %></li>
+      </ul>
+    </div>
+    <div class="columns small-4">
+    MEMBERSHIP
+      <ul>
+        <li><%= Signup.human_attribute_name :hba %>: <%= @signup.hba %></li>
+        <li><%= Signup.human_attribute_name :host %>: <%= @signup.host %></li>
+        <li><%= Signup.human_attribute_name :affiliate %>: <%= @signup.affiliate %></li>
+        <li><%= Signup.human_attribute_name :asta %>: <%= @signup.asta %></li>
+      </ul>
+    </div>
+    <div class="columns small-4">
+    GDS
+      <ul>
+        <li><%= Signup.human_attribute_name :sabre_pcc %>: <%= @signup.sabre_pcc %></li>
+        <li><%= Signup.human_attribute_name :galileo_pcc %>: <%= @signup.galileo_pcc %></li>
+        <li><%= Signup.human_attribute_name :worldspan_pcc %>: <%= @signup.worldspan_pcc %></li>
+        <li><%= Signup.human_attribute_name :amadeus_pcc %>: <%= @signup.amadeus_pcc %></li>
+        <li><%= Signup.human_attribute_name :apollo_pcc %>: <%= @signup.apollo_pcc %></li>
+      </ul>
+    </div>
+  </div>
+
+  </section>
+</div>
+</fieldset>
+<% end %>

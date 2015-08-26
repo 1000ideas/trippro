@@ -35,7 +35,15 @@ class Admin::SignupsController < ApplicationController
       format.js
     end
   end
+  def show
+    @signup = Signup.find(params[:id])
+    authorize! :manage, @signup
 
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
   def create
     @signup = Signup.new(params[:signup])
     authorize! :create, @signup

@@ -16,7 +16,7 @@ class SignupsController < ApplicationController
     authorize! :read, @signup
 
     respond_to do |format|
-      format.html
+      format.html {render layout: "l/admin"}
       format.json { render json: @signup }
     end
   end
