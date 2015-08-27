@@ -13,7 +13,7 @@
     <%= signup.email %>
   </div>
   <div class="columns small-2">
-    <%= signup.agency_name %>
+    <%= signup.phone_number %>
   </div>
   <div class="columns small-3">
     <%= l signup.created_at, format: :long %>
@@ -22,6 +22,6 @@
   <ul data-context-target>
     <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), admin_signup_path(signup, format: :js), data: {remote: true} %></li>
     <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_signup_path(signup, format: :js), data: {remote: true} %></li>
-    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_signup_path(signup), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.delete')), admin_signup_path(signup), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
   </ul>
 </li>

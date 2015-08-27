@@ -19,6 +19,6 @@
   <ul data-context-target>
     <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), video_path(video), target: '_blank' %></li>
     <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_video_path(video, format: :js), data: {remote: true} %></li>
-    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_video_path(video), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.delete')), admin_video_path(video), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
   </ul>
 </li>

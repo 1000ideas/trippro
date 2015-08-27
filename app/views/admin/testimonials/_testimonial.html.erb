@@ -16,6 +16,6 @@
   <ul data-context-target>
     <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), testimonial_path(testimonial), target: '_blank' %></li>
     <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_testimonial_path(testimonial, format: :js), data: {remote: true} %></li>
-    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.destroy')), admin_testimonial_path(testimonial), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.delete')), admin_testimonial_path(testimonial), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
   </ul>
 </li>
