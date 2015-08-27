@@ -4,11 +4,16 @@
 en:
   l:
     admin:
+      users:
+        user:
+          delete: Delete
+          edit: Edit
       header:
         logined: "%{name}"
   title: 'TripPro by Mondee'
   helpers:
     actions:
       more: 'Read More'
+      delete: Delete
   settings:
     title: Settings

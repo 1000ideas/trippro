@@ -390,7 +390,8 @@
 			</div>
 			<div class="large-8 columns">
 				<div class="custom-checkbox">
-					<input name="terms_and_conditions" id="terms_and_conditions" type="checkbox" required>
+					<%= f.check_box :terms_and_conditions,  id:'terms_and_conditions', :required => true, 'aria-required' => 'true' %>
+					
 					<label for="terms_and_conditions" class="text-left two-lines-for-small">I agree to TripPro™ <%= link_to "Terms and Conditions", '/terms_of_service', class: "red" %></label>
 				</div>
 			</div>
