@@ -21,7 +21,11 @@ class Settings
   end
 
   def recipent_email
-    @recipent_email ||= Content.value('settings:recipent_email')
+    @recipent_email ||= Content.value('settings:recipent-email')
+  end
+
+  def recipent_email_for_save
+    recipent_email
   end
 
   def recipent_email=(value)
@@ -42,6 +46,7 @@ class Settings
             else
               send f
             end
+
             Content.set("settings:#{f.to_s.dasherize}", value )
           end
         end
