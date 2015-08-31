@@ -1,5 +1,7 @@
 Trippro::Application.routes.draw do
 
+  get "requests/new"
+
   get "content/update"
 
   mount Mercury::Engine => '/'
@@ -21,7 +23,7 @@ Trippro::Application.routes.draw do
   resources :contacts, only: [:index, :new, :create]
   resources :signups, only:[:index,:new,:create]
   resources :categories, only: [:index, :show] do
-    member do 
+    member do
       get "news"
     end
   end
@@ -114,11 +116,14 @@ Trippro::Application.routes.draw do
     get :tour
     get :faq
     get :terms_of_service
-    # get :get_started 
+    # get :get_started
     get :sign_up
-    get :demo
+    # get :demo
     root action: :index, via: :get
   end
+
+  get "/demo", to: "requests#new", as: "demo"
+  post "/demo", to: "requests#create", as: "request_demo"
 
 
   mount TinyMCE::Rails::Engine => '/tinymce'
