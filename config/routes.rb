@@ -128,7 +128,7 @@ Trippro::Application.routes.draw do
   end
 
   get "/demo", to: "requests#new", as: "demo"
-  post "/demo", to: "requests#create", as: "request_demo"
+  post "/demo", to: "requests#create", as: "requests"
 
 
   mount TinyMCE::Rails::Engine => '/tinymce'

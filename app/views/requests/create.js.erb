@@ -1,6 +1,6 @@
 <% if @errors %>
 $("small.error.after_commit").html("")
-$("small.error.after_commit").html("<%= escape_javascript(render partial:"signup_errors", locals: {errors: @errors}) %>");
+$("small.error.after_commit").html("<%= escape_javascript(render partial:"request_errors", locals: {errors: @errors}) %>");
 $("small.error.after_commit").fadeIn()
 setTimeout(function() {
     $('small.error.after_commit').fadeOut('fast');
