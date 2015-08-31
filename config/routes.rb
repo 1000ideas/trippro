@@ -81,6 +81,13 @@ Trippro::Application.routes.draw do
           end
         end
       end
+      resources :requests do
+        collection do
+          constraints(lambda {|req| req.params.has_key?(:ids)}) do
+            delete :bulk_destroy, action: :selection, defaults: {bulk_action: :destroy}
+          end
+        end
+      end
       resource :content, controller: :content, only: :update
     end
 
