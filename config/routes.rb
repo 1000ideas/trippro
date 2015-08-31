@@ -1,7 +1,5 @@
 Trippro::Application.routes.draw do
 
-  get "requests/new"
-
   get "content/update"
 
   mount Mercury::Engine => '/'

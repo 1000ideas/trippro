@@ -85,7 +85,7 @@
      --></ul>
     <a href="#" class='prev inactive'></a>
     <a href="#" class='next'></a>
-    <p class="slide-title"><%= @screenshots.first.description %></p>
+    <p class="slide-title"><%= @screenshots.first.description unless @screenshots.blank? %></p>
   </div>
     <p><%= link_to content('link-1'), tour_path, class: 'red-chevron mercury-region', data: {"mercury"=>"full"}, id: "link-1" %></p>
 
