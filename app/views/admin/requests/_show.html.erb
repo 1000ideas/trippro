@@ -1,0 +1,21 @@
+<%= form_for([:admin, @request], html: {class: :row, data: {remote: true}}) do |f| %>
+  <fieldset class="columns small-9 scroll-panel">
+    <h2>Show</h2>
+<div class="columns small-12">
+  <section>
+  <div class="row headers">
+    <div class="columns small-3"><%= Request.human_attribute_name :name %></div>
+    <div class="columns small-3"><%= Request.human_attribute_name :phone_number %></div>
+    <div class="columns small-3"><%= Request.human_attribute_name :email %></div>
+    <div class="columns small-3"><%= Request.human_attribute_name :company %></div>
+  </div>
+  <div class="row">
+    <div class="columns small-3"><%= @request.name %></div>
+    <div class="columns small-3"><%= @request.phone_number %></div>
+    <div class="columns small-3"><%= @request.email %></div>
+    <div class="columns small-3"><%= @request.company %></div>
+  </div>
+  </section>
+</div>
+</fieldset>
+<% end %>
