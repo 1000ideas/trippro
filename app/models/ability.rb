@@ -16,6 +16,7 @@ class Ability
       can :display, :dashboard
       can :manage, User
       can :manage, Content
+      can :manage, Request
       can :manage, L::Page
       can :manage, L::News
       can :manage, L::Gallery
