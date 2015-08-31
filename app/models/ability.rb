@@ -27,6 +27,7 @@ class Ability
     can :read, Category
     can :create, Contact
     can :create, Signup
+    can :create, Request
     can :read, Webinar
     can :read, L::Page
     can :read, L::News
