@@ -16,6 +16,7 @@ class Ability
       can :display, :dashboard
       can :manage, User
       can :manage, Content
+      can :manage, Request
       can :manage, L::Page
       can :manage, L::News
       can :manage, L::Gallery
@@ -27,6 +28,7 @@ class Ability
     can :read, Category
     can :create, Contact
     can :create, Signup
+    can :create, Request
     can :read, Webinar
     can :read, L::Page
     can :read, L::News

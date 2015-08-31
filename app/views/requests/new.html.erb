@@ -1,0 +1,37 @@
+<div class="notification hidden"></div>
+<section class="container">
+  <div class="demo_content medium-6 medium-centered large-6 large-centered columns">
+    <h1 id="demo-content-1" class="mercury-region" data-mercury="full"><%= content('demo-content-1')%></h1>
+    <p id="demo-content-2" class="mercury-region hide-for-small-only" data-mercury="full"><%= content('demo-content-2')%></p>
+  </div>
+<div class="small-12 medium-12 medium-centered large-12 columns demo">
+      <div class ="small-12 medium-12 medium-centered large-8 large-centered columns">
+  <div class="demo_form">
+<%= form_for(@request, html: { class: "small-12 large-8 large-centered columns request", "data-abide" => '' , data: { remote: true }, id: "request" }) do |f| %>
+      <div>
+        <%= f.label :name %>
+        <%= f.text_field :name, :required => true, 'aria-required' => 'true' %>
+        <small class="error">Name is required</small>
+      </div>
+      <div>
+        <%= f.label :phone_number %>
+        <%= f.text_field :phone_number, :required => true, 'aria-required' => 'true' %>
+        <small class="error">Phone number is incorrect</small>
+      </div>
+      <div>
+        <%= f.label :email %>
+        <%= f.text_field :email, :required => true, 'aria-required' => 'true' %>
+        <small class="error">Email is incorrect</small>
+      </div>
+      <div>
+        <%= f.label :company %>
+        <%= f.text_field :company, :required => true, 'aria-required' => 'true' %>
+         <small class="error">Company is required</small>
+      </div>
+      <%= f.submit "Submit", :class => "button red-one grey radius"%>
+<% end %>
+  </div>
+    </div>
+</div>
+</div>
+</section>

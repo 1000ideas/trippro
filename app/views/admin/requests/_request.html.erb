@@ -1,0 +1,27 @@
+<li class="row" data-context>
+  <div class="columns small-1">
+    <%= f.select_box :id, request %>
+    <%= request.id %>
+  </div>
+  <div class="columns small-2">
+    <%= request.name%>
+  </div>
+  <div class="columns small-2">
+    <%= request.phone_number %>
+  </div>
+  <div class="columns small-2">
+    <%= request.email %>
+  </div>
+  <div class="columns small-2">
+    <%= request.company %>
+  </div>
+  <div class="columns small-3">
+    <%= l request.created_at, format: :long %>
+    <a href="#" data-context-button><%= fa_icon('ellipsis-h') %></a>
+  </div>
+  <ul data-context-target>
+    <li><%= link_to fa_icon('search fw', text: t('helpers.actions.show')), admin_request_path(request, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('edit fw', text: t('helpers.actions.edit')), edit_admin_request_path(request, format: :js), data: {remote: true} %></li>
+    <li><%= link_to fa_icon('trash-o fw', text: t('helpers.actions.delete')), admin_request_path(request), data: {confirm: t('helpers.actions.confirm'), method: :delete } %></li>
+  </ul>
+</li>
