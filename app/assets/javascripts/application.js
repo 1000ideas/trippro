@@ -50,7 +50,8 @@ function initLiveChat() {
 
 
 $(document).ready(function(){
-	
+
+  initLiveChat();
 	$(window).scroll(function(){
 		if ($(this).scrollTop() > 300) {
 			$('.scroll-top').fadeIn();
@@ -63,9 +64,5 @@ $(document).ready(function(){
 		$('html, body').animate({scrollTop : 0},800);
 		return false;
 	});
-
-  $('#live-chat-button').click(function() {
-    initLiveChat();
-  })
 
 });
