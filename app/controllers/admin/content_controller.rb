@@ -18,8 +18,6 @@ class Admin::ContentController < ApplicationController
     end
 
     render text: ""
-  # rescue
-  #   head :unprocessable_entity
   end
 
 end

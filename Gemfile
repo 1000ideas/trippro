@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.19'
 gem 'l', github: "1000ideas/l"
+gem 'pry'
+gem 'pry-rails'
 
 group :development do
   gem "better_errors"
