@@ -5,7 +5,6 @@
         <span class="red-icon">
           <%= image_tag('icons/platform.png') %>
         </span>
-
           <h2 id="report-content-1" class="mercury-region" data-mercury="full"><%=content('report-content-1')%></h2>
           <h4 id="report-content-2" class="mercury-region" data-mercury="full"><%=content('report-content-2')%></h4> 
           <!-- gora sekcji reporting -->
@@ -13,7 +12,7 @@
           <div class="small-12 columns">
             <div class="row"></div>
               <ul class="platforms">
-              <div class="medium-4 columns trip">
+              <div class="medium-3 columns trip">
                 <li class="tit" data-equalizer-watch>
                   <%= image_tag 'tour/desktop.png', :class => "desktop" %>
                   <h4 id="report-content-5" class="mercury-region" data-mercury="full"><%= content('report-content-5')%></h4>
@@ -24,12 +23,21 @@
                     </ul>
                     <!-- druga kolumna -->
                 </li>
-              </div>                
-              <div class="medium-4 columns trip">
+              </div>
+                <div class="medium-3 columns trip">
+                  <li class="tit">
+                    <%= image_tag 'tour/SabreRed.png', :class => "api" %>
+                    <h4 id="report-content-3" class="mercury-region" data-mercury="full"><%=content('report-content-3')%></h4><p id="api report-content-4" class="mercury-region" data-mercury="full"> <%=content('report-content-4')%></p>
+                    <ul class="nested" id="report-content-17" class="mercury-region" data-mercury="full" style="display:none">
+                      <%=content('report-content-17')%>
+                    </ul>
+                    <!-- pierwsza kolumna -->
+                  </li>
+                </div>
+              <div class="medium-3 columns trip">
                 <li class="tit">
-                  <%= image_tag 'tour/web.png', :class => "web" %>
+                  <%= image_tag 'tour/cloud.png', :class => "web" %>
                   <h4 id="report-content-7" class="mercury-region" data-mercury="full"><%=content('report-content-7')%></h4>
-                  <h5 id="report-content-8" class="mercury-region hide-for-small" data-mercury="full"> <%=content('report-content-8')%></h5>
                   <p id="web" id="report-content-9" class="mercury-region" data-mercury="full"><%=content('report-content-9')%></p>
                     <ul class="nested" id="report-content-16" class="mercury-region" data-mercury="full" style="display:none">
                       <%=content('report-content-16')%>
@@ -37,14 +45,14 @@
                     <!-- trzecia kolumna -->
                 </li>
               </div>
-              <div class="medium-4 columns trip">
+                <div class="medium-3 columns trip">
                   <li class="tit">
                     <%= image_tag 'tour/api.png', :class => "api" %>
                     <h4 id="report-content-3" class="mercury-region" data-mercury="full"><%=content('report-content-3')%></h4><p id="api report-content-4" class="mercury-region" data-mercury="full"> <%=content('report-content-4')%></p>
-                        <ul class="nested" id="report-content-17" class="mercury-region" data-mercury="full" style="display:none">
-                        <%=content('report-content-17')%>
-                      </ul>
-                      <!-- pierwsza kolumna -->
+                    <ul class="nested" id="report-content-17" class="mercury-region" data-mercury="full" style="display:none">
+                      <%=content('report-content-17')%>
+                    </ul>
+                    <!-- pierwsza kolumna -->
                   </li>
                 </div>
             </ul>
