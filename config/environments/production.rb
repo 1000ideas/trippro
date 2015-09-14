@@ -7,10 +7,10 @@ config.action_mailer.delivery_method = :smtp
 
 config.action_mailer.smtp_settings = {
   :address              => "mail.1000i.pl",
-  :port                 => 587,
+  :port                 => 25,
   :domain               => "1000i.pl",
   :user_name            => "test@1000i.pl",
-  :password             => "test",
+  :password             => "7IDmzEPn",
   :authentication       => "plain",
   :enable_starttls_auto => false
 }

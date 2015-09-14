@@ -35,7 +35,7 @@ gem "rails-i18n"
 gem 'sqlite3'
 gem "mysql2"
 
-gem "paperclip"
+gem "paperclip", "~> 3.0.0"
 gem "remotipart"
 gem "paranoia"
 gem "public_activity"
