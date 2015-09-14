@@ -39,9 +39,6 @@ function initLiveChat() {
   se.onload = se.onreadystatechange = function() {
     if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
       done = true;
-      /* Place your SnapEngage JS API code below */
-      /* SnapEngage.allowChatSound(true); Example JS API: Enable sounds for Visitors. */
-     /* SnapABug.setUserEmail(emailId);*/
     }
   };
   var s = document.getElementsByTagName('script')[0];
@@ -51,18 +48,24 @@ function initLiveChat() {
 
 $(document).ready(function(){
 
-  initLiveChat();
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 300) {
-			$('.scroll-top').fadeIn();
-		} else {
-			$('.scroll-top').fadeOut();
-		}
-	});
-	
-	$('.scroll-top').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
+    initLiveChat();
+    var msg =  "Thanks for visiting. How can I help you?";
+
+    $('#live-chat-button').click(function(){
+        SnapEngage.openProactiveChat(true, true, msg);
+    });
+
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 300) {
+            $('.scroll-top').fadeIn();
+        } else {
+            $('.scroll-top').fadeOut();
+        }
+    });
+
+    $('.scroll-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
 
 });
