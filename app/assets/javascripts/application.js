@@ -39,20 +39,29 @@ function initLiveChat() {
   se.onload = se.onreadystatechange = function() {
     if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
       done = true;
+        setButtonPosition();
     }
   };
   var s = document.getElementsByTagName('script')[0];
   s.parentNode.insertBefore(se, s);
-};
+}
+
+function setButtonPosition() {
+    $('#SnapABug_Button').css('top', '40%');
+    $('#SnapABug_Button').css('left', '-20px');
+    $('#SnapABug_Button').css('-ms-transform', 'rotate(270deg)');
+    $('#SnapABug_Button').css('-webkit-transform', 'rotate(270deg)');
+    $('#SnapABug_Button').css('transform', 'rotate(270deg)');
+}
 
 
 $(document).ready(function(){
 
     initLiveChat();
-    var msg =  "Thanks for visiting. How can I help you?";
 
     $('#live-chat-button').click(function(){
-        SnapEngage.openProactiveChat(true, true, msg);
+        SnapEngage.openProactiveChat(true, true);
+        SnapABug.setChatFormPosition('br');
     });
 
     $(window).scroll(function(){

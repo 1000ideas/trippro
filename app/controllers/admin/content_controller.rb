@@ -10,8 +10,11 @@ class Admin::ContentController < ApplicationController
     Content.transaction do 
       content.each do |name, c|
    	    Rails.logger.debug name
- 	    Rails.logger.debug c
-        element = Content.where(id: name).first || Content.new(id: name)
+ 	      Rails.logger.debug c
+        element = Content.where(id: name).first
+        if element.blank?
+          element = Content.new(id: name)
+        end
         element.value = c["value"]
         element.save!
       end
