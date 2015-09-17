@@ -14,11 +14,9 @@ class RequestsController < ApplicationController
     authorize! :create, @request
 
     respond_to do |format|
-      if @request.save
-        RequestMailer.request_message(@request).deliver
-        flash.notice = info(:success)
-        format.html { render action: "new" }
-        format.js
+      if @request.valid?
+        request_request = render partial: 'requests/create', formats: [:json]
+        @response = RequestHandler.send_request(request_request.first, 'demo')
       else
         @errors = @request.errors.full_messages
         format.html { render action: "new" }

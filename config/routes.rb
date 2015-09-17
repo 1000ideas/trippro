@@ -29,6 +29,8 @@ Trippro::Application.routes.draw do
   resources :videos, only: [:index, :show]
   resources :screenshots, only: [:index, :show]
 
+  get "/webinars/:id/register", to: "webinars#registration", as: "webinar_register"
+  post "/webinars/:id/register", to: "webinars#register", as: "webinar_registration", format: :json
 
   scope path: 'admin', as: :admin do
     scope module: :admin do

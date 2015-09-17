@@ -1,3 +1,5 @@
+$request_ip = "198.101.173.102:9080"
+
 Trippro::Application.configure do
   config.action_mailer.raise_delivery_errors = true
 

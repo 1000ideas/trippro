@@ -31,16 +31,14 @@ class ContactsController < ApplicationController
     end
   end
 
-    def create
+  def create
     @contact = Contact.new(params[:contact])
     authorize! :create, @contact
 
     respond_to do |format|
-      if @contact.save
-        ContactMailer.contact_message(@contact).deliver
-        flash.notice =  info(:success)
-        format.html {render action: "new"}
-        format.js
+      if @contact.valid?
+        contact_request = render partial: 'contacts/create', formats: [:json]
+        @response = RequestHandler.send_request(contact_request.first, 'contactUs')
       else
         @errors = @contact.errors.full_messages
         format.html {render action: "new"}

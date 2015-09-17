@@ -36,18 +36,15 @@ class SignupsController < ApplicationController
     authorize! :create, @signup
 
     respond_to do |format|
-      if @signup.save
-        SignupMailer.signup_message(@signup).deliver
-        flash.notice = info(:success)
-        format.html {render action: "new"}
-        format.js
+      if @signup.valid?
+        signup_request = render partial: 'signups/create', formats: [:json]
+        @response = RequestHandler.send_request(signup_request.first, 'signUp')
       else
         @errors = @signup.errors.full_messages
         format.html {render action: "new"}
         format.js
         flash.notice = info(:error)
       end
-      
     end
   end
 end
