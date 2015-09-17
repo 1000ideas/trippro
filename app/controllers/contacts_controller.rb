@@ -37,15 +37,25 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.valid?
-        contact_request = render partial: 'contacts/create', formats: [:json]
-        @response = RequestHandler.send_request(contact_request.first, 'contactUs')
+        @response = RequestHandler.send_request(hash_for_request(@contact), 'contactUs')
+        format.js
       else
         @errors = @contact.errors.full_messages
         format.html {render action: "new"}
         format.js
-        flash.notice = info(:error)
       end
     end
+  end
+
+  private
+
+  def hash_for_request(obj)
+    {
+      "FirstName" => "object.name",
+      "ContactEmail" => "object.email",
+      "WorkPhone" => "object.phone",
+      "Message" => "object.message"
+    }
   end
 
 end

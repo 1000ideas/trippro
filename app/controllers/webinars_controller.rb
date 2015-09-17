@@ -1,5 +1,4 @@
 class WebinarsController < ApplicationController
-  require 'request_handler'
   require_relative '../models/registration.rb'
 
   def index
@@ -39,11 +38,23 @@ class WebinarsController < ApplicationController
 
     respond_to do |format|
       if @registration.valid?
-        register_request = render partial: 'webinars/register', formats: [:json]
-        @response = RequestHandler.send_request(register_request.first, 'webinar')
+        @response = RequestHandler.send_request(hash_for_request(@registration), 'webinar')
+        binding.pry
+        format.js
       else
         format.html { render action: "registration" }
       end
     end
+  end
+
+  private
+
+  def hash_for_request(obj)
+    {
+      "FirstName" => obj.name,
+      "ContactEmail" => obj.email,
+      "WorkPhone" => obj.phone,
+      "Message" => obj.company
+    }
   end
 end
