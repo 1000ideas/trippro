@@ -30,22 +30,6 @@ abide : {
 }
 }); });
 
-function initLiveChat() {
-  var se = document.createElement('script');
-  se.type = 'text/javascript';
-  se.async = true;
-  se.src = '//storage.googleapis.com/code.snapengage.com/js/8bfe0661-fc94-45f8-934e-b51a11627bbe.js';
-  var done = false;
-  se.onload = se.onreadystatechange = function() {
-    if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
-      done = true;
-        setButtonPosition();
-    }
-  };
-  var s = document.getElementsByTagName('script')[0];
-  s.parentNode.insertBefore(se, s);
-}
-
 function setButtonPosition() {
     $('#SnapABug_Button').css('top', '40%');
     $('#SnapABug_Button').css('left', '-20px');
@@ -54,14 +38,9 @@ function setButtonPosition() {
     $('#SnapABug_Button').css('transform', 'rotate(270deg)');
 }
 
-
 $(document).ready(function(){
-
-    initLiveChat();
-
     $('#live-chat-button').click(function(){
-        SnapEngage.openProactiveChat(true, true);
-        SnapABug.setChatFormPosition('br');
+      return SnapEngage.startLink();
     });
 
     $(window).scroll(function(){
