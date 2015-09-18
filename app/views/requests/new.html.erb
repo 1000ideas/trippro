@@ -7,29 +7,30 @@
 <div class="small-12 medium-12 medium-centered large-12 columns demo">
       <div class ="small-12 medium-12 medium-centered large-8 large-centered columns">
   <div class="demo_form">
-<%= form_for(@request, html: { class: "small-12 large-8 large-centered columns request", "data-abide" => '' , data: { remote: true }, id: "request" }) do |f| %>
-      <div>
+<%= form_for(@request, html: { class: "small-12 large-12 large-centered columns request", "data-abide" => '' , data: { remote: true }, id: "request" }) do |f| %>
+      <div class="field">
         <%= f.label :name %>
         <%= f.text_field :name, :required => true, 'aria-required' => 'true' %>
         <small class="error">Name is required</small>
       </div>
-      <div>
+      <div class="field">
         <%= f.label :phone_number %>
-        <%= f.text_field :phone_number, :required => true, 'aria-required' => 'true' %>
+        <%= f.text_field :phone_number, :required => true, 'aria-required' => 'true', pattern: "number" %>
         <small class="error">Phone number is incorrect</small>
       </div>
-      <div>
+      <div class="field">
         <%= f.label :email %>
-        <%= f.text_field :email, :required => true, 'aria-required' => 'true' %>
+        <%= f.text_field :email, :required => true, 'aria-required' => 'true', pattern: "email" %>
         <small class="error">Email is incorrect</small>
       </div>
-      <div>
+      <div class="field">
         <%= f.label :company %>
         <%= f.text_field :company, :required => true, 'aria-required' => 'true' %>
          <small class="error">Company is required</small>
       </div>
       <%= f.submit "Submit", :class => "button red-one grey radius"%>
-<% end %>
+        <small class="error after_commit" style="display:none;background-color:transparent;color:red;"> </small>
+  <% end %>
   </div>
     </div>
 </div>
