@@ -39,10 +39,11 @@ class WebinarsController < ApplicationController
     respond_to do |format|
       if @registration.valid?
         @response = RequestHandler.send_request(hash_for_request(@registration), 'webinar')
-        binding.pry
         format.js
       else
+        @errors = @registration.errors.full_messages
         format.html { render action: "registration" }
+        format.js
       end
     end
   end

@@ -9,6 +9,10 @@ class RequestHandler
     req = Net::HTTP.new(uri.host, uri.port)
     json_headers = {"Content-Type" => "application/json", "Accept" => "application/json"}
 
-    req.post(uri.path, body.to_json, json_headers)
+    response = req.post(uri.path, body.to_json, json_headers)
+    if response.code.to_i == 200
+      response.body = JSON.parse(response.body)
+    end
+    response
   end
 end

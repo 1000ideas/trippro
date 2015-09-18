@@ -43,7 +43,6 @@ class SignupsController < ApplicationController
         @errors = @signup.errors.full_messages
         format.html {render action: "new"}
         format.js
-        flash.notice = info(:error)
       end
     end
   end
@@ -64,16 +63,16 @@ class SignupsController < ApplicationController
       "AgencyName" => obj.agency_name,
       "AgencyPresident" => obj.president,
       "AgencyPhone" => obj.agency_phone,
-      "AgencyAddress" => obj.adress,
+      "AgencyStreetAddress" => obj.adress,
       "AgencyCity" => obj.city,
       "AgencyPostalCode" => obj.zip,
       "AgencyStateCode" => obj.state,
       "AgencyCountryCode" => obj.country,
-      "Address" => obj.diff_adress,
-      "City" => obj.diff_city,
-      "ZipCode" => obj.diff_zip,
-      "StateCode" => obj.diff_state,
-      "CountryCode" => obj.diff_country,
+      "MailingStreetAddress" => obj.diff_adress,
+      "MailingCity" => obj.diff_city,
+      "MailingZip" => obj.diff_zip,
+      "MailingStateCode" => obj.diff_state,
+      "MailingCountryCode" => obj.diff_country,
       "Arc" => obj.arc,
       "Iata" => obj.iata,
       "Clia" => obj.clia,

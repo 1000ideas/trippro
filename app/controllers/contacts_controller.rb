@@ -51,10 +51,10 @@ class ContactsController < ApplicationController
 
   def hash_for_request(obj)
     {
-      "FirstName" => "object.name",
-      "ContactEmail" => "object.email",
-      "WorkPhone" => "object.phone",
-      "Message" => "object.message"
+      "FirstName" => obj.name,
+      "ContactEmail" => obj.email,
+      "WorkPhone" => obj.phone,
+      "Message" => obj.message
     }
   end
 

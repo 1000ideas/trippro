@@ -5,6 +5,10 @@ $("small.error.after_commit").fadeIn()
 setTimeout(function() {
     $('small.error.after_commit').fadeOut('fast');
 }, 3000);
+<% elsif @response.code.to_i != 200 %>
+$(".container").html("<%= escape_javascript(render partial: "partials/errors", locals: { errors: "#{@response.code} code returned. Please try again later."}) %>");
+<% elsif @response.body['HasError'] or not @response.body['IsSaved'] %>
+$(".container").html("<%= escape_javascript(render partial: "partials/errors", locals: { errors: @response.body['Remark'] }) %>");
 <% else %>
 $(".container").html("<%= escape_javascript(render partial: "thank_you") %>");
 <% end %>
