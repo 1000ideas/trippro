@@ -15,6 +15,8 @@ Trippro::Application.routes.draw do
       :registration => 'account'
     }
 
+
+  get '/signups/region_options', to: 'signups#region_options'
   resources :news, only: [:index, :show]
   resources :webinars, only: [:index, :show]
   resources :testimonials, only: [:index, :show]

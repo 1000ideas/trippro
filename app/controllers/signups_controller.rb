@@ -47,6 +47,10 @@ class SignupsController < ApplicationController
     end
   end
 
+  def region_options
+    render partial: 'region_select', locals: { parent_region: params[:parent_region] }
+  end
+
   private
 
   def hash_for_request(obj)
