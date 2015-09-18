@@ -7,7 +7,7 @@
 <div class="small-12 medium-12 medium-centered large-12 columns demo">
       <div class ="small-12 medium-12 medium-centered large-8 large-centered columns">
   <div class="demo_form">
-<%= form_tag(webinar_register_path, class: "small-12 large-8 large-centered columns registration", "data-abide" => '' , data: { remote: true }, id: "registration") do%>
+<%= form_tag(webinar_register_path, class: "small-12 large-12 large-centered columns registration", "data-abide" => '' , data: { remote: true }, id: "registration") do%>
       <div>
         <%= label :registration, :name %>
         <%= text_field :registration, :name, :required => true, 'aria-required' => 'true' %>
@@ -15,12 +15,12 @@
       </div>
       <div>
         <%= label :registration, :phone %>
-        <%= text_field :registration, :phone, :required => true, 'aria-required' => 'true' %>
+        <%= text_field :registration, :phone, :required => true, 'aria-required' => 'true', pattern: "number" %>
         <small class="error">Phone number is incorrect</small>
       </div>
       <div>
         <%= label :registration, :email %>
-        <%= text_field :registration, :email, :required => true, 'aria-required' => 'true' %>
+        <%= text_field :registration, :email, :required => true, 'aria-required' => 'true', pattern: "email" %>
         <small class="error">Email is incorrect</small>
       </div>
       <div>
@@ -29,7 +29,8 @@
          <small class="error">Company is required</small>
       </div>
       <%= submit_tag "Submit", :class => "button red-one grey radius"%>
-<% end %>
+        <small class="error after_commit" style="display:none;background-color:none;color:red;"> </small>
+  <% end %>
   </div>
     </div>
 </div>
