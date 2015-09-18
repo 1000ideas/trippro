@@ -15,6 +15,8 @@ Trippro::Application.routes.draw do
       :registration => 'account'
     }
 
+
+  get '/signups/region_options', to: 'signups#region_options'
   resources :news, only: [:index, :show]
   resources :webinars, only: [:index, :show]
   resources :testimonials, only: [:index, :show]
@@ -29,6 +31,8 @@ Trippro::Application.routes.draw do
   resources :videos, only: [:index, :show]
   resources :screenshots, only: [:index, :show]
 
+  get "/webinars/:id/register", to: "webinars#registration", as: "webinar_register"
+  post "/webinars/:id/register", to: "webinars#register", as: "webinar_registration", formats: [:json, :js]
 
   scope path: 'admin', as: :admin do
     scope module: :admin do
@@ -46,6 +50,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :signups do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -53,6 +58,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resources :categories, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -60,6 +66,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :contacts  do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -67,6 +74,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resources :testimonials, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -81,6 +89,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :requests do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -88,6 +97,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resource :content, controller: :content, only: :update
     end
 

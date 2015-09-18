@@ -31,23 +31,31 @@ class ContactsController < ApplicationController
     end
   end
 
-    def create
+  def create
     @contact = Contact.new(params[:contact])
     authorize! :create, @contact
 
     respond_to do |format|
-      if @contact.save
-        ContactMailer.contact_message(@contact).deliver
-        flash.notice =  info(:success)
-        format.html {render action: "new"}
+      if @contact.valid?
+        @response = RequestHandler.send_request(hash_for_request(@contact), 'contactUs')
         format.js
       else
         @errors = @contact.errors.full_messages
         format.html {render action: "new"}
         format.js
-        flash.notice = info(:error)
       end
     end
+  end
+
+  private
+
+  def hash_for_request(obj)
+    {
+      "FirstName" => obj.name,
+      "ContactEmail" => obj.email,
+      "WorkPhone" => obj.phone,
+      "Message" => obj.message
+    }
   end
 
 end

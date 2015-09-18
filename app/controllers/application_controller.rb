@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  require 'request_handler'
   def _settings
     L::Settings.instance
   end

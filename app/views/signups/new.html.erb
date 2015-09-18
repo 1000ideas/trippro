@@ -150,7 +150,7 @@
 		      	<%= f.label :country, class:'small-text-left large-text-right' %>
 		    </div>
 			<div class="large-8 columns">
-				   <%= f.text_field :country, :required => true, 'aria-required' => 'true', class:'left' %>
+				   <%= f.country_select :country, required: true, 'aria-required' => 'true', class:'left' %>
 			      <small class="error right">Country is required</small>
 			</div>
 		</div>
@@ -159,8 +159,7 @@
 		      	<%= f.label :state, ' State/Province', class:'small-text-left large-text-right' %>
 		    </div>
 			<div class="large-8 columns">
-				   <%= f.text_field :state, :required => true, 'aria-required' => 'true', class:'left' %>
-			      <small class="error right"> State/Province is required</small>
+			  <%= render partial: 'region_select', locals: {parent_region: f.object.country, f: f} %>
 			</div>
 		</div>
 		<div class="row ">

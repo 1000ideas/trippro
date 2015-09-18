@@ -14,18 +14,25 @@ class RequestsController < ApplicationController
     authorize! :create, @request
 
     respond_to do |format|
-      if @request.save
-        RequestMailer.request_message(@request).deliver
-        flash.notice = info(:success)
-        format.html { render action: "new" }
+      if @request.valid?
+        @response = RequestHandler.send_request(hash_for_request(@request), 'demo')
         format.js
       else
         @errors = @request.errors.full_messages
         format.html { render action: "new" }
         format.js
-        flash.notice = info(:error)
       end
-
     end
+  end
+
+  private
+
+  def hash_for_request(obj)
+    {
+      "FirstName" => obj.name,
+      "ContactEmail" => obj.email,
+      "WorkPhone" => obj.phone_number,
+      "Company" => obj.company
+    }
   end
 end

@@ -36,18 +36,62 @@ class SignupsController < ApplicationController
     authorize! :create, @signup
 
     respond_to do |format|
-      if @signup.save
-        SignupMailer.signup_message(@signup).deliver
-        flash.notice = info(:success)
-        format.html {render action: "new"}
+      if @signup.valid?
+        @response = RequestHandler.send_request(hash_for_request(@signup), 'signUp')
         format.js
       else
         @errors = @signup.errors.full_messages
         format.html {render action: "new"}
         format.js
-        flash.notice = info(:error)
       end
-      
     end
+  end
+
+  def region_options
+    render partial: 'region_select', locals: { parent_region: params[:parent_region] }
+  end
+
+  private
+
+  def hash_for_request(obj)
+    {
+      "FirstName" => obj.first_name,
+      "LastName" => obj.last_name,
+      "JobTitle" => obj.job_title,
+      "PhoneNumber" => obj.phone_number,
+      "FaxNumber" => obj.fax_number,
+      "Email" => obj.email,
+      "Password" => obj.password,
+      "RetypePassword" => obj.retype_password,
+      "Referrer" => obj.referrer,
+      "AgencyName" => obj.agency_name,
+      "AgencyPresident" => obj.president,
+      "AgencyPhone" => obj.agency_phone,
+      "AgencyStreetAddress" => obj.adress,
+      "AgencyCity" => obj.city,
+      "AgencyPostalCode" => obj.zip,
+      "AgencyStateCode" => obj.state,
+      "AgencyCountryCode" => obj.country,
+      "MailingStreetAddress" => obj.diff_adress,
+      "MailingCity" => obj.diff_city,
+      "MailingZip" => obj.diff_zip,
+      "MailingStateCode" => obj.diff_state,
+      "MailingCountryCode" => obj.diff_country,
+      "Arc" => obj.arc,
+      "Iata" => obj.iata,
+      "Clia" => obj.clia,
+      "AgencyUrl" => obj.webiste,
+      "BusinessType" => obj.business_type,
+      "Other" => obj.ttt,
+      "Hba" => obj.hba,
+      "Host" => obj.host,
+      "Consortium" => obj.affiliate,
+      "Asta" => obj.asta,
+      "SabreIpcc" => obj.sabre_pcc,
+      "GalileoIpcc" => obj.galileo_pcc,
+      "WorldspanIpcc" => obj.worldspan_pcc,
+      "AmadeusIpcc" => obj.amadeus_pcc,
+      "ApolloIpcc" => obj.apollo_pcc
+    }
   end
 end
