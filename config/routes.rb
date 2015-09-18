@@ -48,6 +48,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :signups do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -55,6 +56,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resources :categories, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -62,6 +64,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :contacts  do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -69,6 +72,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resources :testimonials, except: [:show] do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -83,6 +87,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=begin
       resources :requests do
         collection do
           constraints(lambda {|req| req.params.has_key?(:ids)}) do
@@ -90,6 +95,7 @@ Trippro::Application.routes.draw do
           end
         end
       end
+=end
       resource :content, controller: :content, only: :update
     end
 
