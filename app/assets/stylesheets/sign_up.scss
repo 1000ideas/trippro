@@ -66,6 +66,9 @@ form.signup[data-abide] {
 		line-height: 2.3125rem;
 		background-color: transparent;
 		color: #ed831c;
+		&.after_commit {
+			font-size: 1rem;
+		}
 	}
 	.row.space-after {
 		margin-bottom: 2rem;
