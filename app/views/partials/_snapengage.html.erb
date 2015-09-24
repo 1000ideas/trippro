@@ -14,6 +14,9 @@
                 
                 SnapABug.hideButton();
                 setButtonPosition();
+                SnapEngage.setCallback('Close', function (type, status) {
+                    $('#floating-chat-button').show();
+                });
             }
         };
         var s = document.getElementsByTagName('script')[0];
