@@ -1,10 +1,7 @@
 <% if @errors %>
-$("small.error.after_commit").html("")
+$("small.error.after_commit").html("");
 $("small.error.after_commit").html("<%= escape_javascript(render partial: "contact_errors", locals: {errors: @errors}) %>");
-$("small.error.after_commit").fadeIn()
-setTimeout(function() {
-    $('small.error.after_commit').fadeOut('fast');
-}, 3000);
+$("small.error.after_commit").fadeIn();
 <% elsif @response.code.to_i != 200 %>
 $(".container").html("<%= escape_javascript(render partial: "partials/errors", locals: { errors: "#{@response.code} code returned. Please try again later."}) %>");
 <% elsif @response.body['HasError'] or not @response.body['IsSaved'] %>

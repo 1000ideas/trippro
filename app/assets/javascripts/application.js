@@ -39,8 +39,9 @@ function setButtonPosition() {
 }
 
 $(document).ready(function(){
-    $('#live-chat-button').click(function(){
-      return SnapEngage.startLink();
+    $('#live-chat-button, #floating-chat-button').click(function(){
+        $('#floating-chat-button').hide();
+        return SnapEngage.startLink();
     });
 
     $(window).scroll(function(){
