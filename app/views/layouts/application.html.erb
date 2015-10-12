@@ -6,8 +6,13 @@
     <title><%= content_for?(:title) ? yield(:title) : default_title %></title>
     <link rel="shortcut icon" href="/favico.png">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,200,500,600,700' rel='stylesheet' type='text/css'>
-    <script src="//use.typekit.net/raa1pct.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
+     <% if Rails.env.development? %>
+      <script src="//use.typekit.net/raa1pct.js"></script>
+      <script>try{Typekit.load();}catch(e){}</script>
+    <% elsif Rails.env.production? %>
+      <script src="https://use.typekit.net/kzn6kjq.js"></script>
+      <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <% end %>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
@@ -81,7 +86,7 @@
             <%#= link_to 'Support', '#' %>
             <%= link_to 'Contact us', new_contact_path %>
           </div>
-        </div>      
+        </div>
       <div class="wrapper">
         <div class="small-12 medium-6 links collapse hide-for-small-only">
           <div class="columns small-12 medium-4">
@@ -97,7 +102,7 @@
             <%= link_to 'Contact us', new_contact_path %>
           </div>
           <div class="columns small-12 medium-4">
-            
+
           </div>
         </div>
         <div class="social small-12 medium-6 hide-for-small-only">
