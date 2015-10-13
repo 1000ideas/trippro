@@ -35,23 +35,20 @@ div {
   &#floating-chat-button {
     transition: all 0.3s;
     position: fixed;
-    bottom: 100px;
-    right: -37px;
-    width: 3em;
-    height: 3em;
-    margin: 3.5em;
-    border-radius: 100%;
-    background-color: #e54e26;
-    background-image: url('/assets/icons/chat_icon.png');
+    bottom: 150px;
+    right: 20px;
+    width: 95px;
+    height: 64px;
+    z-index: 10;
+    background-image: url('/assets/icons/TripPro_livechat_icon_x2.png');
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    text-align: center;
     overflow: hidden;
     &:hover {
-      width: 3.5em;
-      height: 3.5em;
-      margin: 3.25em;
       cursor: pointer;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
     }
   }
 }
