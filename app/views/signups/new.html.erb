@@ -176,6 +176,27 @@
 			<div class="line"></div>
 		</div>
 	</div>
+	<div class="row">
+			<div class="large-4 columns">
+		      	<%= f.label :consolidator, ' Preferred Consolidator', class:'small-text-left large-text-right' %>
+		    </div>
+		    <% if params.has_key?(:selected) %>
+					<div class="large-8 columns">
+						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS, params[:selected]), {}, { class:'left', 'aria-required' => true, disabled: true } %>
+					      <small class="error right"> Preferred Consolidator is required</small>
+					</div>
+		    <% else %>
+					<div class="large-8 columns">
+						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS), {}, { 'aria-required' => 'true', class:'left', index: nil } %>
+					      <small class="error right"> Preferred Consolidator is required</small>
+					</div>
+			<% end %>
+	</div>
+	<div class="row">
+		<div class="large-offset-4 large-8 columns">
+			<div class="line"></div>
+		</div>
+	</div>
 		<div class="row">
 			<div class="large-4 columns">
 				<label class="small-text-left large-text-right two-lines">Agency mailing address<br class="hide-for-small" /><small style="color: lightgray"> optional</small></label>

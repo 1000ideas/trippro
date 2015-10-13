@@ -14,7 +14,7 @@ end
 
 module Trippro
   class Application < Rails::Application
-    config.time_zone = 'Warsaw'
+    config.time_zone = 'Eastern Time (US & Canada)'
     config.i18n.enforce_available_locales = false
     config.i18n.default_locale = :en
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
