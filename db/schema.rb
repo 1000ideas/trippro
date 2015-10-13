@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150831125535) do
+ActiveRecord::Schema.define(:version => 20151013110903) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -163,6 +163,7 @@ ActiveRecord::Schema.define(:version => 20150831125535) do
     t.datetime "deleted_at"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "consolidator"
   end
 
   add_index "signups", ["deleted_at"], :name => "index_signups_on_deleted_at"

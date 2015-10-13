@@ -40,10 +40,19 @@ class Signup < ActiveRecord::Base
   scope :filter_by_first_name, lambda {|value| where(first_name: value) }
   scope :filter_by_created_after, lambda {|date| where("`created_at` > ?", Date.parse(date)) }
   scope :filter_by_created_before, lambda {|date| where("`created_at` < ?", Date.parse(date)) }
-  attr_accessible :adress, :affiliate, :agency_name, :agency_phone, :amadeus_pcc, :apollo_pcc, :arc, :asta, :business_type, :city, :clia, :country, :deleted_at, :diff_adress, :diff_city, :diff_country, :diff_state, :diff_zip, :email, :fax_number, :first_name, :galileo_pcc, :hba, :host, :iata, :job_title, :last_name, :password, :phone_number, :president, :referrer, :retype_password, :sabre_pcc, :state, :ttt, :webiste, :worldspan_pcc, :zip, :terms_and_conditions
+  attr_accessible :adress, :affiliate, :agency_name, :agency_phone, :amadeus_pcc, :apollo_pcc, :arc, :asta, :business_type, :city, :clia, :country, :deleted_at, :diff_adress, :diff_city, :diff_country, :diff_state, :diff_zip, :email, :fax_number, :first_name, :galileo_pcc, :hba, :host, :iata, :job_title, :last_name, :password, :phone_number, :president, :referrer, :retype_password, :sabre_pcc, :state, :ttt, :webiste, :worldspan_pcc, :zip, :terms_and_conditions, :consolidator
   attr_accessor :terms_and_conditions
 
   validates :email, presence: true
   validates :email, uniqueness: true, on: :create
   validates :terms_and_conditions, presence: true, acceptance: true
+  validates :consolidator, presence: true
+
+  CONSOLIDATORS = [
+    'No preference',
+    'C&H International',
+    'Skylink',
+    'Transam Travel',
+    'Hariworld'
+  ]
 end
