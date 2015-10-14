@@ -32,8 +32,8 @@ Trippro::Application.routes.draw do
   resources :screenshots, only: [:index, :show]
 
   get "/transam", to: 'signups#new', selected: 'TA'
-  get "/skylinkus", to: "signups#new", selected: 'SU'
-  get "/skylinkcanada", to: "signups#new", selected: 'SC'
+  get "/skylink", to: "signups#new", selected: 'SU'
+  get "/skylinkca", to: "signups#new", selected: 'SC'
   get "/hariworld", to: "signups#new", selected: 'HW'
   get "/cnh", to: "signups#new", selected: 'CH'
 
