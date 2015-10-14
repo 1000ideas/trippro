@@ -48,11 +48,12 @@ class Signup < ActiveRecord::Base
   validates :terms_and_conditions, presence: true, acceptance: true
   validates :consolidator, presence: true
 
-  CONSOLIDATORS = [
-    'No preference',
-    'C&H International',
-    'Skylink',
-    'Transam Travel',
-    'Hariworld'
-  ]
+  CONSOLIDATORS = {
+    'No preference' => '',
+    'C&H International' => 'CH',
+    'SkyLink US' => 'SU',
+    'SkyLink Canada' => 'SC',
+    'Transam Travel' => 'TA',
+    'Hari World' => 'HW'
+  }
 end

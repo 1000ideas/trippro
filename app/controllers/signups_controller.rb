@@ -72,7 +72,7 @@ class SignupsController < ApplicationController
       "AgencyPostalCode" => obj.zip,
       "AgencyStateCode" => obj.state,
       "AgencyCountryCode" => obj.country,
-      "PreferredConsolidator" => obj.consolidator,
+      "ConsolidatorCode" => obj.consolidator,
       "MailingStreetAddress" => obj.diff_adress,
       "MailingCity" => obj.diff_city,
       "MailingZip" => obj.diff_zip,
