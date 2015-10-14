@@ -182,12 +182,12 @@
 		    </div>
 		    <% if params.has_key?(:selected) %>
 					<div class="large-8 columns">
-						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS, params[:selected]), {}, { class:'left', 'aria-required' => true, disabled: true } %>
-					      <small class="error right"> Preferred Consolidator is required</small>
+						   <%= select_tag 'consolidator', options_for_select(Signup::CONSOLIDATORS, params[:selected]), { class:'left', disabled: true} %>
+                            <%= f.hidden_field :consolidator, value: params[:selected], name: 'signup[consolidator]' %>
 					</div>
 		    <% else %>
 					<div class="large-8 columns">
-						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS), {}, { 'aria-required' => 'true', class:'left', index: nil } %>
+						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS), {}, { 'aria-required' => 'true', class:'left', index: nil, name: 'signup[consolidator]' } %>
 					      <small class="error right"> Preferred Consolidator is required</small>
 					</div>
 			<% end %>

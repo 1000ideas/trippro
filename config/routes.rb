@@ -31,10 +31,11 @@ Trippro::Application.routes.draw do
   resources :videos, only: [:index, :show]
   resources :screenshots, only: [:index, :show]
 
-  get "/transam", to: 'signups#new', selected: 'Transam Travel'
-  get "/skylink", to: "signups#new", selected: 'Skylink'
-  get "/hariworld", to: "signups#new", selected: 'Hariworld'
-  get "/cnh", to: "signups#new", selected: 'C&H International'
+  get "/transam", to: 'signups#new', selected: 'TA'
+  get "/skylink", to: "signups#new", selected: 'SU'
+  get "/skylinkca", to: "signups#new", selected: 'SC'
+  get "/hariworld", to: "signups#new", selected: 'HW'
+  get "/cnh", to: "signups#new", selected: 'CH'
 
   get "/webinars/:id/register", to: "webinars#registration", as: "webinar_register"
   post "/webinars/:id/register", to: "webinars#register", as: "webinar_registration", formats: [:json, :js]
