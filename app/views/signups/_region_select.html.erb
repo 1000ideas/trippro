@@ -1,13 +1,11 @@
-<div id="state_code_wrapper">
-  <% parent_region ||= params[:parent_region] %>
-  <% country = Carmen::Country.coded(parent_region) %>
+<% parent_region ||= params[:parent_region] %>
+<% country = Carmen::Country.coded(parent_region) %>
 
-  <% if country.nil? %>
-      <%= text_field(:signup, :state, :required => true, 'aria-required' => 'true', class:'left') %>
-  <% elsif country.subregions? %>
-      <%= subregion_select(:signup, :state, parent_region, :required => true, 'aria-required' => 'true', class:'left') %>
-  <% else %>
-      <%= text_field(:signup, :state, :required => true, 'aria-required' => 'true', class:'left') %>
-  <% end %>
-  <small class="error right"> State/Province is required</small>
-</div>
+<% if country.nil? %>
+    <%= text_field(:signup, :state, :required => true, 'aria-required' => 'true', class:'left') %>
+<% elsif country.subregions? %>
+    <%= subregion_select(:signup, :state, parent_region, :required => true, 'aria-required' => 'true', class:'left') %>
+<% else %>
+    <%= text_field(:signup, :state, :required => true, 'aria-required' => 'true', class:'left') %>
+<% end %>
+<small class="error right"> State/Province is required</small>
