@@ -143,6 +143,19 @@ section.news_content{
 section.news_post
 {
 position: relative;
+  &.without-photo {
+    margin-top: 25px;
+    h2 {
+      font-size: 19px;
+      color: rgb(0, 0, 0);
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin-top: 0;
+      color: rgb(0, 0, 0);
+    }
+  }
+&.with-photo{
   &:after {
     @media #{$medium-up}{
     content: "";
@@ -211,7 +224,7 @@ position: relative;
     }
     .date{
       display: inline;
-    }
+    }}
 }
 section.post_image
   {
