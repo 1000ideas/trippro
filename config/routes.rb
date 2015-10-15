@@ -14,28 +14,26 @@ Trippro::Application.routes.draw do
       :confirmation => 'confirm_user',
       :registration => 'account'
     }
-
+  
+  match "signups/transam", controller: 'signups', action: :new, selected: 'TA', via: :get
+  match "signups/skylink", controller: 'signups', action: :new, selected: 'SU', via: :get
+  match "signups/skylinkca", controller: 'signups', action: :new, selected: 'SC', via: :get
+  match "signups/hariworld", controller: 'signups', action: :new, selected: 'HW', via: :get
+  match "signups/cnh", controller: 'signups', action: :new, selected: 'CH', via: :get
 
   get '/signups/region_options', to: 'signups#region_options'
   resources :news, only: [:index, :show]
   resources :webinars, only: [:index, :show]
   resources :testimonials, only: [:index, :show]
   resources :contacts, only: [:index, :new, :create]
-  resources :signups, only:[:index,:new,:create]
   resources :categories, only: [:index, :show] do
     member do
       get "news"
     end
   end
-  resources :signups, only: [:index, :show]
+  resources :signups, only: [:index, :new, :create, :show]
   resources :videos, only: [:index, :show]
   resources :screenshots, only: [:index, :show]
-
-  get "/transam", to: 'signups#new', selected: 'TA'
-  get "/skylink", to: "signups#new", selected: 'SU'
-  get "/skylinkca", to: "signups#new", selected: 'SC'
-  get "/hariworld", to: "signups#new", selected: 'HW'
-  get "/cnh", to: "signups#new", selected: 'CH'
 
   get "/webinars/:id/register", to: "webinars#registration", as: "webinar_register"
   post "/webinars/:id/register", to: "webinars#register", as: "webinar_registration", formats: [:json, :js]
