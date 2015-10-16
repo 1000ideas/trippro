@@ -17,3 +17,5 @@ en:
       delete: Delete
   settings:
     title: Settings
+  disable:
+    please_wait: Please wait...

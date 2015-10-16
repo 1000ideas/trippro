@@ -54,6 +54,6 @@ class Signup < ActiveRecord::Base
     'SkyLink US' => 'SU',
     'SkyLink Canada' => 'SC',
     'Transam Travel' => 'TA',
-    'Hari World' => 'HW'
+    'Hariworld' => 'HW'
   }
 end

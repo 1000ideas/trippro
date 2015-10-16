@@ -28,7 +28,7 @@
         <%= text_field :registration, :company, :required => true, 'aria-required' => 'true' %>
          <small class="error">Company is required</small>
       </div>
-      <%= submit_tag "Submit", :class => "button red-one grey radius"%>
+      <%= submit_tag "Submit", :class => "button red-one grey radius", data: { 'disable-with' => t('disable.please_wait') } %>
         <small class="error after_commit" style="display:none;background-color:none;color:red;"> </small>
   <% end %>
   </div>
