@@ -3,13 +3,15 @@ pl:
     admin:
       header:
         logined: "%{name}"
+  disable:
+    please_wait: Proszę czekać...
   application:
     '404':
       title: Błąd 404
       message: Nie znaleziono szukanej strony
   newsletter:
     info: "Wpisz swój adres e-mail, aby otrzymywać nasz biuletyn elektroniczny."
-    wait: "Proszę czekać..."    
+    wait: "Proszę czekać..."
     added: "Adres został dodany."
     confirmation:
       subject: "Newsletter - Potwierdź swój adres email"
@@ -29,7 +31,7 @@ pl:
   meta:
     description: "Opis strony"
     keywords: "Słowa kluczowe"
-    title: "Trippro" 
+    title: "Trippro"
   create:
     success: "Pomyślnie utworzono."
     fail: "Nie udało się zapisać."

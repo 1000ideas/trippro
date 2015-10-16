@@ -26,8 +26,8 @@
 		   <%= f.label :message, class: 'text' %><!--
 		   		   --><%= f.text_area :message , :cols=>70, :rows=>5, :required => true %>
 		   			  <small class="error">Message is required</small></div>
-		  
-			  <%= f.submit "Send Message", :class => 'button red-one grey radius' %>
+
+			  <%= f.submit "Send Message", :class => 'button red-one grey radius', data: { 'disable-with' => t('disable.please_wait') } %>
 			  <small class="error after_commit" style="display:none;"> </small>
 			</div>
 			<%end%>
