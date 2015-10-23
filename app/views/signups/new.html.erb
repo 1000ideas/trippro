@@ -187,8 +187,7 @@
 					</div>
 		    <% else %>
 					<div class="large-8 columns">
-						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS), {}, { 'aria-required' => 'true', class:'left', index: nil, name: 'signup[consolidator]' } %>
-					      <small class="error right"> Preferred Consolidator is required</small>
+						   <%= f.select :consolidator, options_for_select(Signup::CONSOLIDATORS), {}, { class:'left', index: nil, name: 'signup[consolidator]' } %>
 					</div>
 			<% end %>
 	</div>
