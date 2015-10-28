@@ -46,7 +46,6 @@ class Signup < ActiveRecord::Base
   validates :email, presence: true
   validates :email, uniqueness: true, on: :create
   validates :terms_and_conditions, presence: true, acceptance: true
-  validates :consolidator, presence: true
 
   CONSOLIDATORS = {
     'No preference' => '',
