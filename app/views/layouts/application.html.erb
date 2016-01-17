@@ -17,13 +17,13 @@
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+  <body onload="loadChatLinks();">
     <header>
       <div class="small-links wrapper">
         <p>
         <span>Call Us </span>
         <span class="mercury-region" id="layout-content-phone" data-mercury="full"><%= content("layout-content-phone") %></span>
-        <a href="javascript:void(0);"><span class="hov live-chat-link" id="live-chat-button">Live Chat <%= image_tag('icons/TripPro_livechat_icon.png', size: '20x17') %></span></a>
+        <a href="javascript:void(0);" onclick="liveChatOpen();"><span class="hov live-chat-link" id="live-chat-button">Live Chat <%= image_tag('icons/TripPro_livechat_icon.png', size: '20x17') %></span></a>
         </p>
       </div>
       <div class="wrapper hide-for-small-only">
@@ -64,7 +64,7 @@
               </section>
         </nav>
     </header>
-    <div id="floating-chat-button"></div>
+    <div id="floating-chat-button"  onclick="liveChatOpen();"></div>
     <%= yield %>
     <a href="#" class="scroll-top"></a>
     <footer>

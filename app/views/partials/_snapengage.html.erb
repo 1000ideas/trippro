@@ -1,26 +1,131 @@
-<!-- begin SnapEngage code -->
 <script type="text/javascript">
-(function() {
-        var se = document.createElement('script');
-        se.type = 'text/javascript';
-        se.async = true;
-        se.src = '//storage.googleapis.com/code.snapengage.com/js/8bfe0661-fc94-45f8-934e-b51a11627bbe.js';
-        var done = false;
-        se.onload = se.onreadystatechange = function() {
-            if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
-                done = true;
-                /* Place your SnapEngage JS API code below */
-                /* SnapEngage.allowChatSound(true); Example JS API: Enable sounds for Visitors. */
-                
-                SnapABug.hideButton();
-                setButtonPosition();
-                SnapEngage.setCallback('Close', function (type, status) {
-                    $('#floating-chat-button').show();
-                });
-            }
-        };
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(se, s);
-    })();
+var linksData = {
+		chatLinks:[
+			{
+				'mainStream' :' Sales / TripPro sign up',
+				'streamDivId' : 'salesTrippro',
+				'streamClassName' : 'cLink',
+				'widgetId' : '13d3b993-9bed-4a54-b39a-016aaa21589f'
+			},
+			{
+				'mainStream' : 'New reservation / Fare Inquiry',
+				'streamDivId' : 'reservationFare',
+				'streamClassName' : 'cLink',
+				'widgetId' : 'ac35e941-88ed-4552-b28d-d324d7a46bbe'
+			},
+			{
+				'mainStream' : 'Accounting / Statement Inquiry',
+				'streamDivId' : 'accountStmt',
+				'streamClassName' : 'cLink',
+				'widgetId' : 'ac35e941-88ed-4552-b28d-d324d7a46bbe'
+			}
+		]
+};
+function loadChatLinks(){
+var chatLinkDiv = document.getElementById("chatLinksId")
+var chatLinks = linksData.chatLinks;
+var chatLinkDivs ="";
+for(var i = 0; i < chatLinks.length; i++) {
+
+chatLinkDivs += '<div  onclick = "return loginChatBoxClicks(\''+chatLinks[i].widgetId+'\')" id ='+chatLinks[i].streamDivId + ' class = '+chatLinks[i].streamClassName +'>'+chatLinks[i].mainStream+'</div>';
+
+}
+chatLinkDiv.innerHTML = chatLinkDivs;
+}
+function liveChatOpen(){
+document.getElementById("chatBoxMainId").style.display = "block";
+clearChatFields();
+clearErrorMessages();
+$('#floating-chat-button').hide();
+}
+function  loginChatBoxClicks(id){
+   try{
+   clearErrorMessages();
+    var widgetId = id;
+
+            customerName = document.getElementById("customerNameId").value ;
+            company = document.getElementById("companyId").value ;
+            emailId =  document.getElementById("emailId").value ;
+            phoneNumber = document.getElementById("phoneNumberId").value ;
+            if(customerName == ""){
+            document.getElementById("customerNameErrorId").innerHTML ="Please enter Customer Name";
+            return false;
+            }
+            if(company == ""){
+              document.getElementById("companyErrorId").innerHTML ="Please enter Company Name";
+            return false;
+            }
+            if(emailId != ""){
+            var emailRegExp = /^[A-Z0-9\._-]+@[A-Z0-9\.-]+\.[A-Z]{2,}(?:[,;][A-Z0-9\._-]+@[A-Z0-9\.-]+\.[A-Z]{2,})*$/i;
+             if(!emailId.match(emailRegExp)){
+              document.getElementById("emailErrorId").innerHTML ="Please enter valid  Email Id";
+              return false;
+              }
+            }
+            else {
+             document.getElementById("emailErrorId").innerHTML ="Please enter Email Id";
+            return false;
+            }
+            SnapEngage.setWidgetId(widgetId);
+            document.getElementById("chatBoxMainId").style.display = "none";
+
+        return SnapEngage.startLink();
+   }
+   catch(e){
+   }
+}
+function onClickChatClose(){
+document.getElementById("chatBoxMainId").style.display = "none";
+ clearChatFields();
+ clearErrorMessages();
+
+ $('#floating-chat-button').show();
+}
+function clearChatFields(){
+    document.getElementById("customerNameId").value="";
+    document.getElementById("companyId").value="";
+    document.getElementById("emailId").value="";
+    document.getElementById("phoneNumberId").value="";
+}
+function clearErrorMessages(){
+document.getElementById("customerNameErrorId").innerHTML = "";
+document.getElementById("emailErrorId").innerHTML ="";
+document.getElementById("companyErrorId").innerHTML ="";
+}
 </script>
-<!-- end SnapEngage code -->
+<div id ="chatBoxMainId" class="chatBoxMain" style="display: none;" ><!--chatBoxMain START-->
+
+     <div class="chatHeader">
+         <div class="cHeading">Contact Us</div>
+         <div id ="loginChatClose" onclick="onClickChatClose();" class="cClose"></div>
+     </div>
+
+
+     <div class="chattextBoxMain">
+         <div class="cText" >Customer Name <i style="color:red;">*</i><span id ="customerNameErrorId" style="float:right;color:red;"></span></div>
+         <div class="cInput"><input id="customerNameId" type="text" /></div>
+     </div>
+     <div class="chattextBoxMain">
+         <div class="cText">Company Name <i style="color:red;">*</i><span id ="companyErrorId" style="float:right;color:red;"></span></div>
+         <div class="cInput"><input id ="companyId" type="text" /></div>
+     </div>
+     <div class="chattextBoxMain">
+         <div class="cText">Email id <i style="color:red;">*</i><span id ="emailErrorId"  style="float:right;color:red;"></span></div>
+         <div class="cInput"><input id ="emailId" type="text" /></div>
+     </div>
+
+     <div class="chattextBoxMain">
+         <div class="cText">Phone number</div>
+         <div class="cInput"><input id ="phoneNumberId" type="text" /></div>
+     </div>
+
+
+   <div class="chatLinks" id="chatLinksId">
+
+     </div>
+
+
+
+
+
+ </div><!--chatBoxMain END-->
