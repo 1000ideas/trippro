@@ -1,4 +1,27 @@
 <script type="text/javascript">
+var chatStream = "";
+var chatSubStream = "";
+var customerName = "";
+var company = "";
+var emailId = "";
+var phoneNumber = "";
+(function() {
+        var se = document.createElement('script');
+        se.type = 'text/javascript';
+        se.async = true;
+        se.src = "http://storage.googleapis.com/code.snapengage.com/js/8bfe0661-fc94-45f8-934e-b51a11627bbe.js";
+
+        var done = false;
+        se.onload = se.onreadystatechange = function() {
+            if (!done && (!this.readyState || this.readyState === 'loaded' || this.readyState === 'complete')) {
+                done = true;
+                SnapEngage.hideButton();
+            }
+        };
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(se, s);
+})();
+
 var linksData = {
 		chatLinks:[
 			{
@@ -21,28 +44,28 @@ var linksData = {
 			}
 		]
 };
+
 function loadChatLinks(){
-var chatLinkDiv = document.getElementById("chatLinksId")
-var chatLinks = linksData.chatLinks;
-var chatLinkDivs ="";
-for(var i = 0; i < chatLinks.length; i++) {
-
-chatLinkDivs += '<div  onclick = "return loginChatBoxClicks(\''+chatLinks[i].widgetId+'\')" id ='+chatLinks[i].streamDivId + ' class = '+chatLinks[i].streamClassName +'>'+chatLinks[i].mainStream+'</div>';
-
+	var chatLinkDiv = document.getElementById("chatLinksId")
+	var chatLinks = linksData.chatLinks;
+	var chatLinkDivs ="";
+	for(var i = 0; i < chatLinks.length; i++) {
+		chatLinkDivs += '<div  onclick = "return loginChatBoxClicks(\''+chatLinks[i].streamDivId+'\',\''+chatLinks[i].widgetId+'\')" id ='+chatLinks[i].streamDivId + ' class = '+chatLinks[i].streamClassName +'>'+chatLinks[i].mainStream+'</div>';
+	}
+	chatLinkDiv.innerHTML = chatLinkDivs;
 }
-chatLinkDiv.innerHTML = chatLinkDivs;
-}
+
 function liveChatOpen(){
-document.getElementById("chatBoxMainId").style.display = "block";
-clearChatFields();
-clearErrorMessages();
-$('#floating-chat-button').hide();
+	document.getElementById("chatBoxMainId").style.display = "block";
+	clearChatFields();
+	clearErrorMessages();
+	$('#floating-chat-button').hide();
 }
-function  loginChatBoxClicks(id){
-   try{
-   clearErrorMessages();
-    var widgetId = id;
 
+function  loginChatBoxClicks(id,widgetId){
+   try{
+           clearErrorMessages();
+            chatStream = document.getElementById(id).innerHTML;
             customerName = document.getElementById("customerNameId").value ;
             company = document.getElementById("companyId").value ;
             emailId =  document.getElementById("emailId").value ;
@@ -74,13 +97,15 @@ function  loginChatBoxClicks(id){
    catch(e){
    }
 }
+
 function onClickChatClose(){
-document.getElementById("chatBoxMainId").style.display = "none";
- clearChatFields();
- clearErrorMessages();
+	document.getElementById("chatBoxMainId").style.display = "none";
+	clearChatFields();
+	clearErrorMessages();
 
  $('#floating-chat-button').show();
 }
+
 function clearChatFields(){
     document.getElementById("customerNameId").value="";
     document.getElementById("companyId").value="";
@@ -88,9 +113,9 @@ function clearChatFields(){
     document.getElementById("phoneNumberId").value="";
 }
 function clearErrorMessages(){
-document.getElementById("customerNameErrorId").innerHTML = "";
-document.getElementById("emailErrorId").innerHTML ="";
-document.getElementById("companyErrorId").innerHTML ="";
+	document.getElementById("customerNameErrorId").innerHTML = "";
+	document.getElementById("emailErrorId").innerHTML ="";
+	document.getElementById("companyErrorId").innerHTML ="";
 }
 </script>
 <div id ="chatBoxMainId" class="chatBoxMain" style="display: none;" ><!--chatBoxMain START-->
