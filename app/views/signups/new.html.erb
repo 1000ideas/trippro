@@ -145,13 +145,13 @@
 			      <small class="error right">City is required</small>
 			</div>
 		</div>
-		<div class="row ">
+		<div class="row">
 			<div class="large-4 columns">
-		      	<%= f.label :country, class:'small-text-left large-text-right' %>
-		    </div>
+		    <%= f.label :country, class:'small-text-left large-text-right' %>
+		  </div>
 			<div class="large-8 columns">
-				   <%= f.country_select :country, required: true, 'aria-required' => 'true', class:'left' %>
-			      <small class="error right">Country is required</small>
+				<%= f.select :country, options_for_select(Signup::COUNTRIES), { include_blank: true, required: true }, 'aria-required' => 'true', class: 'left' %>
+			  <small class="error right">Country is required</small>
 			</div>
 		</div>
 		<div class="row ">
@@ -164,11 +164,11 @@
 		</div>
 		<div class="row ">
 			<div class="large-4 columns">
-		      	<%= f.label :zip, ' Zip/Postal Code', class:'small-text-left large-text-right' %>
-		    </div>
+		      <%= f.label :zip, ' Zip/Postal Code', class:'small-text-left large-text-right' %>
+		  </div>
 			<div class="large-8 columns">
-				   <%= f.text_field :zip, :required => true, 'aria-required' => 'true', class:'left super-short' %>
-			      <small class="error right"> Zip/Postal Code is required</small>
+				<%= f.text_field :zip, :required => true, 'aria-required' => 'true', class:'left super-short' %>
+			  <small class="error right"> Zip/Postal Code is required</small>
 			</div>
 		</div>
 	<div class="row">
@@ -425,4 +425,3 @@
 
 
 </section>
-

@@ -25,7 +25,7 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'jquery-rails'
 gem "jquery-ui-rails"
 gem "jquery-fileupload-rails"
-gem "font-awesome-rails", "~> 4.1.0"
+gem "font-awesome-rails", "~> 4.3.0"
 
 gem "devise", "~> 2.0"
 gem "cancan"
@@ -33,7 +33,7 @@ gem "globalize3", "~> 0.3.0"
 gem "rails-i18n"
 
 gem 'sqlite3'
-gem "mysql2"
+gem "mysql2", "~> 0.3.10"
 
 gem "paperclip", "~> 3.0.0"
 gem "remotipart"

@@ -26,35 +26,6 @@ abide : {
     live_validate : false,
     focus_on_invalid : false,
     error_labels: false, // labels with a for="inputId" will recieve an `error` class
-    timeout : 10000000    
+    timeout : 10000000
 }
 }); });
-
-function setButtonPosition() {
-    $('#SnapABug_Button').css('top', '40%');
-    $('#SnapABug_Button').css('left', '-20px');
-    $('#SnapABug_Button').css('-ms-transform', 'rotate(270deg)');
-    $('#SnapABug_Button').css('-webkit-transform', 'rotate(270deg)');
-    $('#SnapABug_Button').css('transform', 'rotate(270deg)');
-}
-
-$(document).ready(function(){
-    $('#live-chat-button, #floating-chat-button').click(function(){
-        $('#floating-chat-button').hide();
-        return SnapEngage.startLink();
-    });
-
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 300) {
-            $('.scroll-top').fadeIn();
-        } else {
-            $('.scroll-top').fadeOut();
-        }
-    });
-
-    $('.scroll-top').click(function(){
-        $('html, body').animate({scrollTop : 0},800);
-        return false;
-    });
-
-});
