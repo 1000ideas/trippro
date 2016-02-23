@@ -55,4 +55,10 @@ class Signup < ActiveRecord::Base
     'Transam Travel' => 'TA',
     'Hariworld' => 'HW'
   }
+
+  COUNTRIES = {
+    'United States' => 'US',
+    'Canada' => 'CA'
+  }
+
 end
